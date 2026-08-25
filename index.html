@@ -1340,8 +1340,235 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 26: MODULO 4 - BRIEFING ========== -->
+                <!-- ========== PAGINA 26: MODULO BONUS - BRIEFING ========== -->
         <div class="page" data-page="26">
+            <div class="max-w-2xl mx-auto px-4 py-8">
+                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">🎁 Modulo Bonus · Giorno 8 (Sera)</span>
+                <div class="time-badge">⏱️ Tempo stimato: 15 minuti di lettura/ascolto + pratica</div>
+                <h2 class="heading-font font-bold text-2xl text-white mb-4">🛡️ Lo Scudo Anti-AI & Pulizia Watermark</h2>
+                
+                <div class="briefing-box">
+                    <p class="label">🔊 ASCOLTA IL BRIEFING</p>
+                    <p class="text-neutral-300 text-sm mt-2">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
+                </div>
+
+                <div class="audio-box" onclick="playAudioBriefing(8)">
+                    <p class="label">▶️ RIPRODUCI BRIEFING</p>
+                    <p class="text-neutral-300 text-sm mt-2">🎧 "Briefing Bonus: Lo Scudo Anti-AI"</p>
+                    <p class="text-neutral-400 text-sm mt-1">Durata: 2 minuti | Come non farti beccare da Turnitin</p>
+                </div>
+
+                <p class="text-neutral-300 leading-relaxed mb-4">Hai scritto la bozza con l'aiuto dell'IA. Bene. Ma adesso devi ripulirla. Questo modulo ti dà lo scudo per trasformare il testo sintetico in testo umano. Accademico. Tuo.</p>
+                
+                <div class="card bg-neutral-800 rounded-lg p-5">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">📚 Lezioni del Modulo Bonus</h3>
+                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 1:</strong> Perché il Professore (e Turnitin) Se Ne Accorgono</p>
+                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 2:</strong> La Regola d'Oro dei Prompt Umani</p>
+                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 3:</strong> I 3 Prompt Copia-Incolla Anti-Rilevatore</p>
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 4:</strong> Tool Pratici + Checklist + Quiz</p>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+                <div class="quiz-block" data-correct="1">
+                    <p class="text-neutral-200 font-medium mb-3">Cosa impara a fare in questo modulo?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Copiare senza farsi scoprire</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Ripulire il testo IA e renderlo umano</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Evitare di usare l'IA del tutto</button>
+                    </div>
+                    <div class="feedback text-sm mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PAGINA 27: MODULO BONUS - LEZIONE 1 ========== -->
+        <div class="page" data-page="27">
+            <div class="max-w-2xl mx-auto px-4 py-8">
+                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Bonus · Lezione 1</span>
+                <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
+                <h2 class="heading-font font-bold text-2xl text-white mb-4">Perché il Professore (e Turnitin) Se Ne Accorgono</h2>
+                <div class="flash-strategy">
+                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "L'IA scrive come un robot. Tu devi riscrivere come un umano. La differenza è il ritmo."</p>
+                </div>
+                <p class="text-neutral-300 leading-relaxed mb-4">Immagina di ascoltare una canzone suonata da un robot: note perfette, stesso ritmo, zero pause, nessuna emozione. Dopo dieci secondi capisci che non è un essere umano.</p>
+                <p class="text-neutral-300 leading-relaxed mb-4">I testi generati dall'IA fanno esattamente la stessa cosa. Sono troppo uniformi. Troppo puliti. E i software anti-plagio/anti-AI (come Turnitin) fiutano questa perfezione a distanza.</p>
+                
+                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">📊 I Due Concetti Chiave da Conoscere</h3>
+                    
+                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">1. Burstiness (L'Esplosività del Ritmo)</strong></p>
+                    <p class="text-neutral-400 text-sm mb-3">Gli umani alternano frasi cortissime a frasi più lunghe e complesse. L'IA sputa fuori frasi tutte uguali, della stessa identica lunghezza.</p>
+                    
+                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-red-400">❌ Esempio IA (monotono):</strong></p>
+                    <p class="text-neutral-400 text-sm mb-3 font-mono">"Il marketing digitale offre molte opportunità. Le aziende possono crescere rapidamente. Gli strumenti analitici aiutano a monitorare i dati."</p>
+                    
+                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-green-400">✅ Esempio Umano (dinamico):</strong></p>
+                    <p class="text-neutral-400 text-sm mb-3 font-mono">"Il marketing digitale spacca le regole. Le aziende crescono in un attimo. E i dati? Li tieni d'occhio con un click."</p>
+                    
+                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">2. Perplessità (L'Imprevedibilità)</strong></p>
+                    <p class="text-neutral-400 text-sm">L'IA sceglie sempre la parola più probabile e prevedibile del dizionario. Gli umani inseriscono termini inaspettati, metafore o sfumature uniche. Più sei imprevedibile, più sembri umano.</p>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
+                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho capito che l'IA produce testo troppo uniforme</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">So distinguere un testo robotico da uno umano</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Conosco i concetti di burstiness e perplessità</span></label>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+                <div class="quiz-block" data-correct="1">
+                    <p class="text-neutral-200 font-medium mb-3">Cos'è la "burstiness"?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) La velocità di scrittura</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) La variazione nella lunghezza delle frasi</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Il numero di note a piè di pagina</button>
+                    </div>
+                    <div class="feedback text-sm mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PAGINA 28: MODULO BONUS - LEZIONE 2 ========== -->
+        <div class="page" data-page="28">
+            <div class="max-w-2xl mx-auto px-4 py-8">
+                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Bonus · Lezione 2</span>
+                <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
+                <h2 class="heading-font font-bold text-2xl text-white mb-4">La Regola d'Oro dei Prompt Umani</h2>
+                <div class="flash-strategy">
+                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Non dire all'IA 'scrivi'. Dille 'scrivi come un umano'. Lei capisce. Tu vinci."</p>
+                </div>
+                <p class="text-neutral-300 leading-relaxed mb-4">Non dire a ChatGPT "scrivi un paragrafo". L'IA capisce i termini tecnici: se le parli di burstiness e perplessità, sa esattamente cosa fare per camuffare la sua natura sintetica.</p>
+                
+                <div class="step-box">
+                    <p class="label">📋 AZIONE DA SVOLGERE</p>
+                    <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
+                    <p class="text-neutral-300 text-sm">2. Apri ChatGPT (chat.openai.com)</p>
+                    <p class="text-neutral-300 text-sm">3. Incolla il prompt insieme al tuo testo</p>
+                    <p class="text-neutral-300 text-sm">4. Premi Invio e ottieni il testo ripulito</p>
+                </div>
+
+                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
+                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Scrivi il seguente testo con alta burstiness e alta perplessità. Varia continuamente la lunghezza delle frasi (alterna frasi da 4 parole ad altre da 25). Usa parole inaspettate ma accademicamente corrette. Evita la struttura robotica uniforme. Scrivi come uno studente brillante ma naturale.</pre>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
+                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho copiato il prompt base</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho incollato il prompt in ChatGPT con il mio testo</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho ottenuto un testo con ritmo più naturale</span></label>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+                <div class="quiz-block" data-correct="2">
+                    <p class="text-neutral-200 font-medium mb-3">Cosa devi dire a ChatGPT per ottenere testo più umano?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) "Scrivi più veloce"</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) "Usa parole difficili"</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) "Alta burstiness e alta perplessità"</button>
+                    </div>
+                    <div class="feedback text-sm mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PAGINA 29: MODULO BONUS - LEZIONE 3 ========== -->
+        <div class="page" data-page="29">
+            <div class="max-w-2xl mx-auto px-4 py-8">
+                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Bonus · Lezione 3</span>
+                <div class="time-badge">⏱️ Tempo stimato: 20 minuti</div>
+                <h2 class="heading-font font-bold text-2xl text-white mb-4">I 3 Prompt "Copia-Incolla" Anti-Rilevatore</h2>
+                <div class="flash-strategy">
+                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Tre prompt. Tre passaggi. Zero tracce sintetiche."</p>
+                </div>
+                
+                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">🛡️ PROMPT 1: Il Distruttore di Pattern</h3>
+                    <p class="text-neutral-400 text-sm mb-3">Da usare su ChatGPT o NotebookLM quando hai un testo generato da pulire.</p>
+                    <div class="prompt-box bg-neutral-900 border border-neutral-600 rounded-lg p-4" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Riscrivi il seguente testo eliminando ogni traccia di scrittura sintetica. Regole ferree: 1) Alta burstiness: alterna frasi brevissime (3-5 parole) a frasi più ampie. 2) Alta perplessità: sostituisci i termini ovvi con sinonimi brillanti ma formali. 3) Aggiungi una leggera imperfezione sintattica naturale (es. iniziare una frase con una congiunzione). 4) Mantieni il rigore accademico al 100%. Testo da ripulire: [INCOLLA QUI IL TESTO]</pre>
+                    </div>
+                </div>
+
+                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">🎭 PROMPT 2: Il Trasformista Accademico</h3>
+                    <p class="text-neutral-400 text-sm mb-3">Per sbloccare i paragrafi freddi e trasformarli in testo brillante.</p>
+                    <div class="prompt-box bg-neutral-900 border border-neutral-600 rounded-lg p-4" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Agisci come un editor accademico umano. Riscrivi questo paragrafo mantenendo intatti i concetti ma stravolgendo la forma. Regole: 1) Mai due frasi consecutive della stessa lunghezza. 2) Cambia il 30% delle parole con alternative meno comuni. 3) Inserisci un esempio pratico o un'analogia. 4) Via tutte le frasi fatte da robot. Testo da trasformare: [INCOLLA QUI IL TESTO]</pre>
+                    </div>
+                </div>
+
+                <div class="card bg-neutral-800 rounded-lg p-5">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">🔍 PROMPT 3: Il Test di Controllo Finale</h3>
+                    <p class="text-neutral-400 text-sm mb-3">Per verificare che il testo sia pulito prima della consegna.</p>
+                    <div class="prompt-box bg-neutral-900 border border-neutral-600 rounded-lg p-4" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Analizza questo testo come farebbe un severo software anti-AI (tipo Turnitin). Individua i passaggi troppo lineari o ripetitivi e riscrivili con alta burstiness, ritmo spezzato e tono accademico naturale. Testo: [INCOLLA QUI IL TESTO]</pre>
+                    </div>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
+                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato il Prompt 1 su almeno un paragrafo</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato il Prompt 2 per riscrivere un testo freddo</span></label>
+                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato il Prompt 3 per verificare il risultato</span></label>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+                <div class="quiz-block" data-correct="0">
+                    <p class="text-neutral-200 font-medium mb-3">Quale prompt usi per verificare se il testo è pulito?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Prompt 3: Il Test di Controllo Finale</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Prompt 1: Il Distruttore di Pattern</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Prompt 2: Il Trasformista Accademico</button>
+                    </div>
+                    <div class="feedback text-sm mt-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PAGINA 30: MODULO BONUS - LEZIONE 4 ========== -->
+        <div class="page" data-page="30">
+            <div class="max-w-2xl mx-auto px-4 py-8">
+                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Bonus · Lezione 4</span>
+                <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
+                <h2 class="heading-font font-bold text-2xl text-white mb-4">Tool Pratici + Checklist + Quiz Finale</h2>
+                <div class="flash-strategy">
+                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La voce è il miglior rilevatore anti-IA del mondo. Usala."</p>
+                </div>
+                
+                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">🛠️ I Tool Pratici da Usare Subito</h3>
+                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">1. ChatGPT / Claude</strong><br>Incolla il testo grezzo + uno dei prompt sopra. Fatto.</p>
+                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">2. NotebookLM</strong><br>Carica le tue fonti, chiedi all'IA di abbozzare il capitolo, poi passalo al setaccio con il Prompt 1.</p>
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">3. Controllo umano (Il test del microfono)</strong><br>Leggi il paragrafo ad alta voce. Se mentre lo leggi ti viene da prendere fiato in modo innaturale, va spezzato. La tua voce è il miglior filtro anti-IA del mondo.</p>
+                </div>
+
+                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
+                    <h3 class="heading-font font-bold text-lg text-white mb-3">📋 Checklist Finale del Modulo Bonus</h3>
+                    <div class="space-y-2">
+                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho capito che l'IA va guidata con i concetti di burstiness e perplessità</span></label>
+                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato almeno uno dei prompt di riscrittura sul testo generato</span></label>
+                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto il test della voce (letto ad alta voce)</span></label>
+                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Il testo mantiene il rigore accademico ma ha un ritmo umano e scorrevole</span></label>
+                    </div>
+                </div>
+
+                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Finale del Modulo Bonus</h3>
+                <div class="quiz-block" data-correct="1">
+                    <p class="text-neutral-200 font-medium mb-3">Perché i software come Turnitin beccano i testi IA?</p>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Perché usano parole troppo difficili</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Perché la struttura è troppo uniforme e prevedibile</button>
+                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Perché il font è diverso</button>
+                    </div>
+                    <div class="feedback text-sm mt-2"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ========== CONTINUA CON LE PAGINE SUCCESSIVE (rinumerate) ========== -->
+        <!-- ========== PAGINA 31: MODULO 4 - BRIEFING ========== -->
+        <div class="page" data-page="31">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Giorno 9-10</span>
                 <div class="time-badge">⏱️ Tempo stimato: 2 giorni (8 ore totali)</div>
@@ -1381,8 +1608,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 27: MODULO 4.1 - EDITING ========== -->
-        <div class="page" data-page="27">
+        <!-- ========== PAGINA 32: MODULO 4.1 - EDITING ========== -->
+        <div class="page" data-page="32">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 1</span>
                 <div class="time-badge">⏱️ Tempo stimato: 90 minuti</div>
@@ -1433,8 +1660,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 28: MODULO 4.2 - FORMATTAZIONE ========== -->
-        <div class="page" data-page="28">
+        <!-- ========== PAGINA 33: MODULO 4.2 - FORMATTAZIONE ========== -->
+        <div class="page" data-page="33">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 2</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1477,8 +1704,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 29: MODULO 4.3 - CHECKLIST CITAZIONI ========== -->
-        <div class="page" data-page="29">
+        <!-- ========== PAGINA 34: MODULO 4.3 - CHECKLIST CITAZIONI ========== -->
+        <div class="page" data-page="34">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 3</span>
                 <div class="time-badge">⏱️ Tempo stimato: 45 minuti</div>
@@ -1521,8 +1748,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 30: MODULO 4.4 - REVISIONE FINALE ========== -->
-        <div class="page" data-page="30">
+        <!-- ========== PAGINA 35: MODULO 4.4 - REVISIONE FINALE ========== -->
+        <div class="page" data-page="35">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 4</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1565,8 +1792,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 31: MODULO 5 - BRIEFING ========== -->
-        <div class="page" data-page="31">
+        <!-- ========== PAGINA 36: MODULO 5 - BRIEFING ========== -->
+        <div class="page" data-page="36">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 5 · Giorno 11-12</span>
                 <div class="time-badge">⏱️ Tempo stimato: 2 giorni (6-8 ore totali)</div>
@@ -1594,8 +1821,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 32: MODULO 5.1 - SLIDE ========== -->
-        <div class="page" data-page="32">
+        <!-- ========== PAGINA 37: MODULO 5.1 - SLIDE ========== -->
+        <div class="page" data-page="37">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 5 · Lezione 1</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1637,8 +1864,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 33: MODULO 5.2 - DISCORSO ========== -->
-        <div class="page" data-page="33">
+        <!-- ========== PAGINA 38: MODULO 5.2 - DISCORSO ========== -->
+        <div class="page" data-page="38">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 5 · Lezione 2</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1680,8 +1907,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 34: MODULO 5.3 - DOMANDE KILLER ========== -->
-        <div class="page" data-page="34">
+        <!-- ========== PAGINA 39: MODULO 5.3 - DOMANDE KILLER ========== -->
+        <div class="page" data-page="39">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 5 · Lezione 3</span>
                 <div class="time-badge">⏱️ Tempo stimato: 45 minuti</div>
@@ -1723,8 +1950,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 35: MODULO 6 - BRIEFING ========== -->
-        <div class="page" data-page="35">
+        <!-- ========== PAGINA 40: MODULO 6 - BRIEFING ========== -->
+        <div class="page" data-page="40">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 6 · Giorno 13</span>
                 <div class="time-badge">⏱️ Tempo stimato: 1 giorno (4-5 ore)</div>
@@ -1751,8 +1978,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 36: MODULO 6.1 - ANTI-PLAGIO ========== -->
-        <div class="page" data-page="36">
+        <!-- ========== PAGINA 41: MODULO 6.1 - ANTI-PLAGIO ========== -->
+        <div class="page" data-page="41">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 6 · Lezione 1</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1794,8 +2021,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 37: MODULO 6.2 - STAMPA ========== -->
-        <div class="page" data-page="37">
+        <!-- ========== PAGINA 42: MODULO 6.2 - STAMPA ========== -->
+        <div class="page" data-page="42">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 6 · Lezione 2</span>
                 <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
@@ -1839,8 +2066,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 38: MODULO 7 - BRIEFING ========== -->
-        <div class="page" data-page="38">
+        <!-- ========== PAGINA 43: MODULO 7 - BRIEFING ========== -->
+        <div class="page" data-page="43">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Giorno 14</span>
                 <div class="time-badge">⏱️ Tempo stimato: 1 giorno (2-3 ore)</div>
@@ -1867,8 +2094,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 39: MODULO 7.1 - POST-CONSEGNA ========== -->
-        <div class="page" data-page="39">
+        <!-- ========== PAGINA 44: MODULO 7.1 - POST-CONSEGNA ========== -->
+        <div class="page" data-page="44">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Lezione 1</span>
                 <div class="time-badge">⏱️ Tempo stimato: 90 minuti</div>
@@ -1910,8 +2137,8 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 40: MODULO 7.2 - GIORNO DISCUSSIONE ========== -->
-        <div class="page" data-page="40">
+        <!-- ========== PAGINA 45: MODULO 7.2 - GIORNO DISCUSSIONE ========== -->
+        <div class="page" data-page="45">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Lezione 2</span>
                 <div class="time-badge">⏱️ Tempo stimato: 30 minuti (lettura)</div>
@@ -1940,9 +2167,9 @@
             </div>
         </div>
 
-        <!-- ========== PAGINE 41-50: PAGINE RIEMPITIVE MA UTILI ========== -->
-        <!-- Pagina 41: Domande Frequenti -->
-        <div class="page" data-page="41">
+        <!-- ========== PAGINE 46-55: PAGINE RIEMPITIVE MA UTILI ========== -->
+        <!-- Pagina 46: Domande Frequenti -->
+        <div class="page" data-page="46">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
@@ -1958,8 +2185,8 @@
             </div>
         </div>
 
-        <!-- Pagina 42: Errori da Evitare -->
-        <div class="page" data-page="42">
+        <!-- Pagina 47: Errori da Evitare -->
+        <div class="page" data-page="47">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
@@ -1975,8 +2202,8 @@
             </div>
         </div>
 
-        <!-- Pagina 43: Checklist Finale Completa -->
-        <div class="page" data-page="43">
+        <!-- Pagina 48: Checklist Finale Completa -->
+        <div class="page" data-page="48">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Checklist Finale</span>
                 <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
@@ -1998,8 +2225,8 @@
             </div>
         </div>
 
-        <!-- Pagina 44: Consigli del Relatore -->
-        <div class="page" data-page="44">
+        <!-- Pagina 49: Consigli del Relatore -->
+        <div class="page" data-page="49">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
@@ -2014,8 +2241,8 @@
             </div>
         </div>
 
-        <!-- Pagina 45: Template Comunicazione Relatore -->
-        <div class="page" data-page="45">
+        <!-- Pagina 50: Template Comunicazione Relatore -->
+        <div class="page" data-page="50">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
@@ -2045,8 +2272,8 @@ Cordiali saluti,
             </div>
         </div>
 
-        <!-- Pagina 46: Come Chiedere Feedback -->
-        <div class="page" data-page="46">
+        <!-- Pagina 51: Come Chiedere Feedback -->
+        <div class="page" data-page="51">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
@@ -2064,8 +2291,8 @@ Cordiali saluti,
             </div>
         </div>
 
-        <!-- Pagina 47: Gestione Stress Pre-Discussione -->
-        <div class="page" data-page="47">
+        <!-- Pagina 52: Gestione Stress Pre-Discussione -->
+        <div class="page" data-page="52">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
@@ -2090,8 +2317,8 @@ Cordiali saluti,
             </div>
         </div>
 
-        <!-- Pagina 48: Cosa Fare il Giorno Prima -->
-        <div class="page" data-page="48">
+        <!-- Pagina 53: Cosa Fare il Giorno Prima -->
+        <div class="page" data-page="53">
             <div class="max-w-2xl mx-auto px-4 py-8">
                 <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Risorse Extra</span>
                 <div class="time-badge">⏱️ Tempo stimato: 10 minuti</div>
@@ -2108,8 +2335,8 @@ Cordiali saluti,
             </div>
         </div>
 
-        <!-- Pagina 49: CONGRATULAZIONI -->
-        <div class="page" data-page="49">
+        <!-- Pagina 54: CONGRATULAZIONI -->
+        <div class="page" data-page="54">
             <div class="max-w-2xl mx-auto px-4 py-8 text-center">
                 <div class="w-full h-48 bg-gradient-to-br from-amber-500/30 to-green-500/20 rounded-xl mb-8 flex items-center justify-center">
                     <i data-lucide="trophy" style="width:80px;height:80px;color:#f59e0b"></i>
@@ -2123,8 +2350,8 @@ Cordiali saluti,
             </div>
         </div>
 
-        <!-- Pagina 50: CHIUSURA -->
-        <div class="page" data-page="50">
+        <!-- Pagina 55: CHIUSURA -->
+        <div class="page" data-page="55">
             <div class="max-w-2xl mx-auto px-4 py-8 text-center">
                 <h2 class="heading-font font-bold text-2xl text-white mb-4">📖 Fine del Metodo</h2>
                 <p class="text-neutral-300 leading-relaxed mb-4">Questo metodo non funziona se lo leggi soltanto. Funziona se lo applichi.</p>
@@ -2139,7 +2366,7 @@ Cordiali saluti,
 
     <!-- ==================== JAVASCRIPT COMPLETO ==================== -->
     <script>
-        const TOTAL_PAGES = 50;
+        const TOTAL_PAGES = 55;
         let currentPage = 1;
 
         // Dati per l'indice
@@ -2169,31 +2396,37 @@ Cordiali saluti,
             {page:23,label:'M3: Superare Pagina Bianca'},
             {page:24,label:'M3: Struttura Capitolo'},
             {page:25,label:'M3: Riepilogo'},
-            {page:26,label:'M4: Briefing Editing'},
-            {page:27,label:'M4: Editing Anti-Professore'},
-            {page:28,label:'M4: Formattazione Automatica'},
-            {page:29,label:'M4: Checklist Citazioni'},
-            {page:30,label:'M4: Revisione Finale'},
-            {page:31,label:'M5: Briefing Presentazione'},
-            {page:32,label:'M5: Slide Minimali'},
-            {page:33,label:'M5: Discorso 5 Minuti'},
-            {page:34,label:'M5: Domande Killer'},
-            {page:35,label:'M6: Briefing Rifiniture'},
-            {page:36,label:'M6: Anti-Plagio'},
-            {page:37,label:'M6: Stampa e Burocrazia'},
-            {page:38,label:'M7: Briefing Consegna'},
-            {page:39,label:'M7: Post-Consegna'},
-            {page:40,label:'M7: Giorno Discussione'},
-            {page:41,label:'FAQ'},
-            {page:42,label:'Errori da Evitare'},
-            {page:43,label:'Checklist Finale Completa'},
-            {page:44,label:'Consigli dai Relatori'},
-            {page:45,label:'Template Email Relatore'},
-            {page:46,label:'Come Chiedere Feedback'},
-            {page:47,label:'Gestione Stress'},
-            {page:48,label:'Cosa Fare il Giorno Prima'},
-            {page:49,label:'Congratulazioni'},
-            {page:50,label:'Chiusura'}
+            {page:26,label:'Bonus: Scudo Anti-AI — Briefing'},
+            {page:27,label:'Bonus: Perché Turnitin Se Ne Accorge'},
+            {page:28,label:'Bonus: Regola d\'Oro dei Prompt'},
+            {page:29,label:'Bonus: 3 Prompt Anti-Rilevatore'},
+            {page:30,label:'Bonus: Tool + Checklist + Quiz'},
+            {page:31,label:'M4: Briefing Editing'},
+            {page:32,label:'M4: Briefing Editing'},
+            {page:33,label:'M4: Editing Anti-Professore'},
+            {page:34,label:'M4: Formattazione Automatica'},
+            {page:35,label:'M4: Checklist Citazioni'},
+            {page:36,label:'M4: Revisione Finale'},
+            {page:37,label:'M5: Briefing Presentazione'},
+            {page:38,label:'M5: Slide Minimali'},
+            {page:39,label:'M5: Discorso 5 Minuti'},
+            {page:40,label:'M5: Domande Killer'},
+            {page:41,label:'M6: Briefing Rifiniture'},
+            {page:42,label:'M6: Anti-Plagio'},
+            {page:43,label:'M6: Stampa e Burocrazia'},
+            {page:44,label:'M7: Briefing Consegna'},
+            {page:45,label:'M7: Post-Consegna'},
+            {page:46,label:'M7: Giorno Discussione'},
+            {page:47,label:'FAQ'},
+            {page:48,label:'Errori da Evitare'},
+            {page:49,label:'Checklist Finale Completa'},
+            {page:50,label:'Consigli dai Relatori'},
+            {page:51,label:'Template Email Relatore'},
+            {page:52,label:'Come Chiedere Feedback'},
+            {page:53,label:'Gestione Stress'},
+            {page:54,label:'Cosa Fare il Giorno Prima'},
+            {page:55,label:'Congratulazioni'},
+            {page:56,label:'Chiusura'}
         ];
 
         function init() {
@@ -2294,6 +2527,7 @@ Cordiali saluti,
                 5: "briefing-modulo-5-presentazione.mp3",
                 6: "briefing-modulo-6-rifiniture.mp3",
                 7: "briefing-modulo-7-consegna.mp3"
+                8: "briefing-modulo-bonus-scudo-anti-ai.mp3"
             };
 
             const fileName = files[modulo];
