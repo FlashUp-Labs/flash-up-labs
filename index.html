@@ -2369,64 +2369,77 @@ Cordiali saluti,
         const TOTAL_PAGES = 55;
         let currentPage = 1;
 
-        // Dati per l'indice
+        // ==================== CONFIGURAZIONE AUDIO ====================
+        // MODIFICA QUI I LINK AUDIO: basta cambiare l'URL tra virgolette
+        const AUDIO_CONFIG = {
+            mindset: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/mindset-lezione-audio.mp3",
+            modulo1: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-1-fondamenta.mp3",
+            modulo2: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-2-ricerca.mp3",
+            modulo3: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-3-scrittura.mp3",
+            modulo4: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-4-editing.mp3",
+            modulo5: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-5-presentazione.mp3",
+            modulo6: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-6-rifiniture.mp3",
+            modulo7: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-7-consegna.mp3",
+            bonus: "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/briefing-modulo-bonus-scudo-anti-ai.mp3"
+        };
+
+        // Dati per l'indice - CORRETTO
         const tocData = [
-            {page:1,label:'Copertina'},
-            {page:2,label:'Leggenda: Come Usare la Guida'},
-            {page:3,label:'Leggenda: NotebookLM Step-by-Step'},
-            {page:4,label:'Leggenda: Google Scholar Step-by-Step'},
-            {page:5,label:'Setup Ambiente (Zero Distrazioni)'},
-            {page:6,label:'Mindset: Lezione Audio'},
-            {page:7,label:'Mindset: Scardinare Credenze'},
-            {page:8,label:'Brainstorming: Scegliere Argomento'},
-            {page:9,label:'Brainstorming: Trovare il Gap'},
-            {page:10,label:'M1: Briefing Fondamenta'},
-            {page:11,label:'M1: Paradosso della Perfezione'},
-            {page:12,label:'M1: Timer 14 Giorni'},
-            {page:13,label:'M1: Gestione del Panico'},
-            {page:14,label:'M2: Briefing Ricerca Fonti'},
-            {page:15,label:'M2: Google Scholar Avanzato'},
-            {page:16,label:'M2: Scrematura Veloce'},
-            {page:17,label:'M2: Database Fonti'},
-            {page:18,label:'M2: Organizzazione NotebookLM'},
-            {page:19,label:'M2: Riepilogo'},
-            {page:20,label:'M3: Briefing Scrittura'},
-            {page:21,label:'M3: Metodo Pezzo per Pezzo'},
-            {page:22,label:'M3: 10 Pagine al Giorno'},
-            {page:23,label:'M3: Superare Pagina Bianca'},
-            {page:24,label:'M3: Struttura Capitolo'},
-            {page:25,label:'M3: Riepilogo'},
-            {page:26,label:'Bonus: Scudo Anti-AI — Briefing'},
-            {page:27,label:'Bonus: Perché Turnitin Se Ne Accorge'},
-            {page:28,label:'Bonus: Regola d\'Oro dei Prompt'},
-            {page:29,label:'Bonus: 3 Prompt Anti-Rilevatore'},
-            {page:30,label:'Bonus: Tool + Checklist + Quiz'},
-            {page:31,label:'M4: Briefing Editing'},
-            {page:32,label:'M4: Briefing Editing'},
-            {page:33,label:'M4: Editing Anti-Professore'},
-            {page:34,label:'M4: Formattazione Automatica'},
-            {page:35,label:'M4: Checklist Citazioni'},
-            {page:36,label:'M4: Revisione Finale'},
-            {page:37,label:'M5: Briefing Presentazione'},
-            {page:38,label:'M5: Slide Minimali'},
-            {page:39,label:'M5: Discorso 5 Minuti'},
-            {page:40,label:'M5: Domande Killer'},
-            {page:41,label:'M6: Briefing Rifiniture'},
-            {page:42,label:'M6: Anti-Plagio'},
-            {page:43,label:'M6: Stampa e Burocrazia'},
-            {page:44,label:'M7: Briefing Consegna'},
-            {page:45,label:'M7: Post-Consegna'},
-            {page:46,label:'M7: Giorno Discussione'},
-            {page:47,label:'FAQ'},
-            {page:48,label:'Errori da Evitare'},
-            {page:49,label:'Checklist Finale Completa'},
-            {page:50,label:'Consigli dai Relatori'},
-            {page:51,label:'Template Email Relatore'},
-            {page:52,label:'Come Chiedere Feedback'},
-            {page:53,label:'Gestione Stress'},
-            {page:54,label:'Cosa Fare il Giorno Prima'},
-            {page:55,label:'Congratulazioni'},
-            {page:56,label:'Chiusura'}
+            {page:1, label:'Copertina'},
+            {page:2, label:'Leggenda: Come Usare la Guida'},
+            {page:3, label:'Leggenda: NotebookLM Step-by-Step'},
+            {page:4, label:'Leggenda: Google Scholar Step-by-Step'},
+            {page:5, label:'Setup Ambiente (Zero Distrazioni)'},
+            {page:6, label:'Mindset: Lezione Audio'},
+            {page:7, label:'Mindset: Scardinare Credenze'},
+            {page:8, label:'Brainstorming: Scegliere Argomento'},
+            {page:9, label:'Brainstorming: Trovare il Gap'},
+            {page:10, label:'M1: Briefing Fondamenta'},
+            {page:11, label:'M1: Paradosso della Perfezione'},
+            {page:12, label:'M1: Timer 14 Giorni'},
+            {page:13, label:'M1: Gestione del Panico'},
+            {page:14, label:'M2: Briefing Ricerca Fonti'},
+            {page:15, label:'M2: Google Scholar Avanzato'},
+            {page:16, label:'M2: Scrematura Veloce'},
+            {page:17, label:'M2: Database Fonti'},
+            {page:18, label:'M2: Organizzazione NotebookLM'},
+            {page:19, label:'M2: Riepilogo'},
+            {page:20, label:'M3: Briefing Scrittura'},
+            {page:21, label:'M3: Metodo Pezzo per Pezzo'},
+            {page:22, label:'M3: 10 Pagine al Giorno'},
+            {page:23, label:'M3: Superare Pagina Bianca'},
+            {page:24, label:'M3: Struttura Capitolo'},
+            {page:25, label:'M3: Riepilogo'},
+            {page:26, label:'Bonus: Scudo Anti-AI — Briefing'},
+            {page:27, label:'Bonus: Perché Turnitin Se Ne Accorge'},
+            {page:28, label:'Bonus: Regola d\'Oro dei Prompt'},
+            {page:29, label:'Bonus: 3 Prompt Anti-Rilevatore'},
+            {page:30, label:'Bonus: Tool + Checklist + Quiz'},
+            {page:31, label:'M4: Briefing Editing'},
+            {page:32, label:'M4: Editing Anti-Professore'},
+            {page:33, label:'M4: Formattazione Automatica'},
+            {page:34, label:'M4: Checklist Citazioni'},
+            {page:35, label:'M4: Revisione Finale'},
+            {page:36, label:'M5: Briefing Presentazione'},
+            {page:37, label:'M5: Slide Minimali'},
+            {page:38, label:'M5: Discorso 5 Minuti'},
+            {page:39, label:'M5: Domande Killer'},
+            {page:40, label:'M6: Briefing Rifiniture'},
+            {page:41, label:'M6: Anti-Plagio'},
+            {page:42, label:'M6: Stampa e Burocrazia'},
+            {page:43, label:'M7: Briefing Consegna'},
+            {page:44, label:'M7: Post-Consegna'},
+            {page:45, label:'M7: Giorno Discussione'},
+            {page:46, label:'FAQ'},
+            {page:47, label:'Errori da Evitare'},
+            {page:48, label:'Checklist Finale Completa'},
+            {page:49, label:'Consigli dai Relatori'},
+            {page:50, label:'Template Email Relatore'},
+            {page:51, label:'Come Chiedere Feedback'},
+            {page:52, label:'Gestione Stress'},
+            {page:53, label:'Cosa Fare il Giorno Prima'},
+            {page:54, label:'Congratulazioni'},
+            {page:55, label:'Chiusura'}
         ];
 
         function init() {
@@ -2500,18 +2513,14 @@ Cordiali saluti,
                 });
             });
         }
+
         // ==================== PLAYER AUDIO AVANZATO ====================
         let currentAudio = null;
         let currentAudioId = null;
         let currentAudioButton = null;
 
-        function log(msg) {
-            console.log("[AUDIO]", msg);
-        }
-
         function playAudioMindset() {
-            const audioUrl = "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/mindset-lezione-audio.mp3";
-            toggleAudio(audioUrl, 'mindset');
+            toggleAudio(AUDIO_CONFIG.mindset, 'mindset');
         }
 
         function playAudioBriefing(modulo) {
@@ -2519,42 +2528,29 @@ Cordiali saluti,
                 modulo = parseInt(modulo.replace('m', ''));
             }
             
-            const files = {
-                1: "briefing-modulo-1-fondamenta.mp3",
-                2: "briefing-modulo-2-ricerca.mp3",
-                3: "briefing-modulo-3-scrittura.mp3",
-                4: "briefing-modulo-4-editing.mp3",
-                5: "briefing-modulo-5-presentazione.mp3",
-                6: "briefing-modulo-6-rifiniture.mp3",
-                7: "briefing-modulo-7-consegna.mp3",
-                8: "briefing-modulo-bonus-scudo-anti-ai.mp3"
-            };
+            const key = 'modulo' + modulo;
+            const url = AUDIO_CONFIG[key];
+            if (!url) return;
 
-            const fileName = files[modulo];
-            if (!fileName) return;
-
-            const audioUrl = "https://pub-d611435da0cf421f9f7a107897ba5dd0.r2.dev/Tesi%20Flash/" + fileName;
-            toggleAudio(audioUrl, 'modulo-' + modulo);
+            toggleAudio(url, 'modulo-' + modulo);
         }
 
         function toggleAudio(url, id) {
             const clickedBox = event.target.closest('.audio-box');
             
-            // Se clicco sullo stesso audio → PLAY/PAUSA
             if (currentAudioId === id && currentAudio) {
                 if (currentAudio.paused) {
                     currentAudio.play();
                     updateAudioUI(clickedBox, 'playing');
-                    updatePlayPauseButton(clickedBox, false); // Mostra PAUSA
+                    updatePlayPauseButton(clickedBox, false);
                 } else {
                     currentAudio.pause();
                     updateAudioUI(clickedBox, 'paused');
-                    updatePlayPauseButton(clickedBox, true); // Mostra PLAY
+                    updatePlayPauseButton(clickedBox, true);
                 }
                 return;
             }
 
-            // Ferma audio precedente
             if (currentAudio) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
@@ -2565,32 +2561,27 @@ Cordiali saluti,
                 }
             }
 
-            // Crea nuovo audio
             const audio = new Audio(url);
             currentAudio = audio;
             currentAudioId = id;
             currentAudioButton = clickedBox;
 
-            // Mostra UI di caricamento
             if (clickedBox) {
                 showAudioControls(clickedBox);
             }
 
-            // Riproduci
             audio.play().then(() => {
                 updateAudioUI(clickedBox, 'playing');
-                updatePlayPauseButton(clickedBox, false); // Mostra PAUSA
+                updatePlayPauseButton(clickedBox, false);
             }).catch(err => {
                 console.log("Errore:", err.message);
                 updateAudioUI(clickedBox, 'error');
             });
 
-            // Aggiorna barra di avanzamento
             audio.ontimeupdate = function() {
                 updateProgressBar(clickedBox, audio.currentTime, audio.duration);
             };
 
-            // Quando l'audio finisce
             audio.onended = function() {
                 updateAudioUI(clickedBox, 'ended');
                 resetAudioBox(clickedBox);
@@ -2600,7 +2591,6 @@ Cordiali saluti,
             };
         }
 
-        // Mostra i controlli nel box audio
         function showAudioControls(box) {
             if (!box) return;
             box.innerHTML = `
@@ -2621,7 +2611,6 @@ Cordiali saluti,
             `;
         }
 
-        // Aggiorna il testo del bottone Play/Pausa
         function updatePlayPauseButton(box, showPlay) {
             if (!box) return;
             const btn = box.querySelector('#btn-play-pause');
@@ -2636,7 +2625,6 @@ Cordiali saluti,
             }
         }
 
-        // Aggiorna la barra di avanzamento
         function updateProgressBar(box, currentTime, duration) {
             if (!box) return;
             const fill = box.querySelector('.audio-progress-fill');
@@ -2648,14 +2636,12 @@ Cordiali saluti,
             }
         }
 
-        // Formatta il tempo in mm:ss
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
             return mins + ':' + (secs < 10 ? '0' : '') + secs;
         }
 
-        // Barra di avanzamento cliccabile
         function seekAudio(event, bar) {
             if (!currentAudio || !currentAudio.duration) return;
             const rect = bar.getBoundingClientRect();
@@ -2663,7 +2649,6 @@ Cordiali saluti,
             currentAudio.currentTime = percent * currentAudio.duration;
         }
 
-        // Aggiorna lo stato visivo del box
         function updateAudioUI(box, state) {
             if (!box) return;
             if (state === 'playing') {
@@ -2680,7 +2665,6 @@ Cordiali saluti,
             }
         }
 
-        // Reset del box audio
         function resetAudioBox(box) {
             if (!box) return;
             box.innerHTML = `
@@ -2690,17 +2674,16 @@ Cordiali saluti,
             box.classList.remove('active', 'paused', 'error');
         }
 
-        // Controlli audio
         function togglePlayPause() {
             if (currentAudio) {
                 if (currentAudio.paused) {
                     currentAudio.play();
                     updateAudioUI(currentAudioButton, 'playing');
-                    updatePlayPauseButton(currentAudioButton, false); // Mostra PAUSA
+                    updatePlayPauseButton(currentAudioButton, false);
                 } else {
                     currentAudio.pause();
                     updateAudioUI(currentAudioButton, 'paused');
-                    updatePlayPauseButton(currentAudioButton, true); // Mostra PLAY
+                    updatePlayPauseButton(currentAudioButton, true);
                 }
             }
         }
@@ -2722,7 +2705,7 @@ Cordiali saluti,
                 currentAudio.currentTime = 0;
                 currentAudio.play();
                 updateAudioUI(currentAudioButton, 'playing');
-                updatePlayPauseButton(currentAudioButton, false); // Mostra PAUSA
+                updatePlayPauseButton(currentAudioButton, false);
             }
         }
 
