@@ -63,6 +63,52 @@
         transition: width 0.3s ease;
     }    
     </style>
+
+<!-- ========================================== -->
+    <!-- INIZIO SCRIPT PORTIERE ANTIFURTO / TOKEN   -->
+    <!-- ========================================== -->
+    <script>
+    const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/dRmcN513PaeJ4aF6UP2kw04';
+    const WORKER_VERIFY_URL = 'https://tesiflash.giuseppemattina26.workers.dev/verify'; 
+
+    async function checkAccess() {
+        const currentPath = window.location.pathname;
+
+        if (currentPath.includes('note_legali') || currentPath.includes('privacy') || currentPath.includes('cookie') || currentPath.includes('termini')) {
+            return; 
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+
+        if (!token) {
+            window.location.href = STRIPE_CHECKOUT_URL;
+            return;
+        }
+
+        try {
+            const response = await fetch(`${WORKER_VERIFY_URL}?token=${token}`);
+            const data = await response.json();
+
+            if (!data.valid) {
+                window.location.href = STRIPE_CHECKOUT_URL;
+                return;
+            }
+
+            console.log("Accesso consentito!");
+            
+        } catch (e) {
+            console.error("Errore di verifica", e);
+            window.location.href = STRIPE_CHECKOUT_URL;
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkAccess);
+    </script>
+    <!-- ========================================== -->
+    <!-- FINE SCRIPT PORTIERE ANTIFURTO / TOKEN     -->
+    <!-- ========================================== -->
+    
 </head>
 <body class="min-h-screen w-full">
     <!-- Progress -->
