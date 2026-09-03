@@ -8036,9 +8036,40 @@
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho aperto GPTZero e creato il mio account gratuito</span></label>
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho installato l'estensione Chrome di GPTZero</span></label>
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho passato il testo nell'AI Detector di GPTZero</span></label>
-            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato fatti e citazioni con l'Hallucination Detector</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho riformulato le sezioni sopra il 15% di similitudine</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che il testo non sembri generato da AI</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che le citazioni dirette siano esatte e con virgolette</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato manualmente tutte le fonti bibliografiche</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Quale percentuale di similitudine è generalmente accettabile in una tesi?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) 30%</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Sotto il 15%</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) 50%</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="2">
+            <p class="text-neutral-200 font-medium mb-3">Qual è la funzione dell'Hallucination Detector di GPTZero?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Rileva se il testo è stato scritto da un'AI</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Controlla la grammatica e l'ortografia</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Verifica se il testo contiene fatti inventati o fonti inesistenti</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========== PAGINA 42: MODULO 6.2 - STAMPA E BUROCRAZIA ========== -->
         
-      <!-- ========== PAGINA 42: MODULO 6.2 - STAMPA E RILEGATURA (VERSIONE COMPLETA) ========== -->
 <div class="page" data-page="42">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <!-- Intestazione Modulo -->
@@ -8087,10 +8118,32 @@
             </div>
         </div>
 
-        <!-- SEZIONE 2: FORNITORI CONSIGLIATI -->
+        <!-- SEZIONE 2: TEMPI DI CONSEGNA -->
+        <div class="bg-neutral-800 border border-amber-500/30 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">⏰ TEMPI</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i> 2. Tempi di Consegna (Quanto Prima Prenotare)
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">✅ IDEALE: 7 GIORNI PRIMA</p>
+                    <p class="text-neutral-400 text-xs">Nessuno stress, prezzi migliori, copisteria disponibile, tempo per eventuali correzioni.</p>
+                </div>
+                <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+                    <p class="font-bold text-yellow-400 text-xs mb-1">⚠️ ACCETTABILE: 3 GIORNI PRIMA</p>
+                    <p class="text-neutral-400 text-xs">Alcune copisterie potrebbero essere piene. Prezzi leggermente più alti. Poco margine per errori.</p>
+                </div>
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ RISCHIOSO: 1 GIORNO PRIMA</p>
+                    <p class="text-neutral-400 text-xs">Prezzi alti, code, rischio di non finire in tempo, stress alle stelle. Da evitare assolutamente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEZIONE 3: FORNITORI CONSIGLIATI -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="external-link" style="width:20px;height:20px;"></i> 2. Fornitori di Stampa e Rilegatura
+                <i data-lucide="external-link" style="width:20px;height:20px;"></i> 3. Fornitori di Stampa e Rilegatura
             </h3>
             <p class="text-neutral-300 text-sm mb-4">
                 Ecco i principali servizi online specializzati in stampa e rilegatura tesi. Confronta prezzi e tempi di consegna prima di scegliere.
@@ -8135,10 +8188,10 @@
             </div>
         </div>
 
-        <!-- SEZIONE 3: SUGGERIMENTI PER RISPARMIARE -->
+        <!-- SEZIONE 4: SUGGERIMENTI PER RISPARMIARE -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="lightbulb" style="width:20px;height:20px;"></i> 3. Suggerimenti per Risparmiare Tempo e Denaro
+                <i data-lucide="lightbulb" style="width:20px;height:20px;"></i> 4. Suggerimenti per Risparmiare Tempo e Denaro
             </h3>
 
             <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
@@ -8193,107 +8246,538 @@
     </div>
 </div>
 
-        <!-- ========== PAGINA 43: MODULO 7 - BRIEFING ========== -->
-        <div class="page" data-page="43">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Giorno 14</span>
-                <div class="time-badge">⏱️ Tempo stimato: 1 giorno (2-3 ore)</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">🎓 Modulo 7: Consegna e Post-Consegna</h2>
-                
-                <div class="briefing-box">
-                    <p class="label">🔊 ASCOLTA IL BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
-                </div>
+        
+        
+       <!-- ========== PAGINA 43: MODULO 7 - BRIEFING ========== -->
+<div class="page" data-page="43">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="graduation-cap" style="width:16px;height:16px;"></i> Modulo 7 · Giorno 14
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 1 giorno (2-3 ore) · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="award" style="width:28px;height:28px;color:#f59e0b;"></i> 🎓 Modulo 7: Consegna e Post-Consegna
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Hai consegnato. Ora preparati alla discussione orale.
+        </p>
 
-                <div class="audio-box" onclick="playAudioBriefing('m7')">
-                    <p class="label">▶️ RIPRODUCI BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">🎧 "Briefing Modulo 7: Consegna e Post-Consegna"</p>
-                    <p class="text-neutral-400 text-sm mt-1">Durata: 4 minuti | Cosa fare dopo la consegna</p>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La consegna è solo metà del traguardo. La discussione è la tua occasione per dimostrare che hai capito quello che hai scritto."</p>
+        </div>
 
-                <p class="text-neutral-300 leading-relaxed mb-4">Hai consegnato. Ora preparati alla discussione orale.</p>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📚 Lezioni del Modulo</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 1:</strong> Post-Consegna: Preparazione alla Difesa</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 2:</strong> Il Giorno della Discussione</p>
+        <!-- BRIEFING AUDIO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="headphones" style="width:20px;height:20px;"></i> 🔊 Briefing Audio
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
+            
+            <div class="audio-box bg-neutral-900/60 border border-neutral-700 rounded-lg p-4 cursor-pointer" onclick="playAudioBriefing('m7')">
+                <p class="text-neutral-200 text-sm font-bold">▶️ RIPRODUCI BRIEFING</p>
+                <p class="text-neutral-300 text-sm mt-1">🎧 "Briefing Modulo 7: Consegna e Post-Consegna"</p>
+                <p class="text-neutral-400 text-xs mt-1">Durata: 4 minuti | Cosa fare dopo la consegna</p>
+            </div>
+        </div>
+
+        <!-- PERCHÉ QUESTO MODULO È IMPORTANTE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="lightbulb" style="width:20px;height:20px;"></i> 1. Perché la Discussione Fa la Differenza
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                La discussione può alzare (o abbassare) il voto di parecchi punti. Ecco perché:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">DIMOSTRA COMPETENZA</strong> — La commissione capisce se hai davvero fatto il lavoro</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">DIFENDE LE SCELTE</strong> — Spieghi perché hai scelto quel metodo, quelle fonti</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">GUADAGNA PUNTI</strong> — Una buona discussione può farti salire di 3-5 punti</p>
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">CONFERMA IL VOTO</strong> — Una cattiva discussione può farti perdere punti</p>
+            </div>
+        </div>
+
+        <!-- COLLEGAMENTO CON MODULO 5 -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="link" style="width:20px;height:20px;"></i> 2. Collegamento con il Modulo 5 (Che Hai Già Fatto)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Nel Modulo 5 (Pagine 36-39) hai già preparato:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Slide minimali</strong> — 10 slide pronte con la regola del 10-20-30</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Discorso da 5 minuti</strong> — provato e cronometrato</p>
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">Risposte alle domande killer</strong> — 5 domande preparate con metodo STAR</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">📌 <strong class="text-white">ORA FAI SOLO IL RIPASSO:</strong> Rivedi le slide, riprova il discorso, rileggi le risposte.</p>
+            </div>
+        </div>
+
+        <!-- ROADMAP DEL GIORNO 14 -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="map" style="width:20px;height:20px;"></i> 🗺️ Roadmap del Giorno 14
+            </h3>
+            
+            <div class="space-y-3">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">🌅 MATTINA (1 ora)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Consegna fisica della tesi (o caricamento online)</p>
+                    <p class="text-neutral-400 text-xs">• Verifica che tutti i moduli siano firmati</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">🌆 POMERIGGIO (1-2 ore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 1: Preparazione alla Difesa</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 2: Il Giorno della Discussione</p>
+                    <p class="text-neutral-400 text-xs">• Ripasso slide, discorso e risposte</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">🌙 SERA (30 min)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Ripasso finale</p>
+                    <p class="text-neutral-400 text-xs">• Preparazione vestiti e documenti</p>
+                    <p class="text-neutral-400 text-xs">• Riposo</p>
                 </div>
             </div>
         </div>
+
+        <!-- CHECKLIST DI USCITA FINALE -->
+        <div class="bg-neutral-800 border border-green-500/30 rounded-xl p-5 mb-6">
+            <h3 class="text-green-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="check-circle" style="width:20px;height:20px;"></i> 3. La Checklist di Uscita Finale (10 Verifiche)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Prima della discussione, verifica che TUTTE queste cose siano fatte:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-2">
+                <p class="text-neutral-400 text-xs mb-1">1. ✅ Tesi consegnata (fisica o online)</p>
+                <p class="text-neutral-400 text-xs mb-1">2. ✅ Moduli amministrativi firmati</p>
+                <p class="text-neutral-400 text-xs mb-1">3. ✅ Slide pronte e provate</p>
+                <p class="text-neutral-400 text-xs mb-1">4. ✅ Discorso provato 3 volte</p>
+                <p class="text-neutral-400 text-xs mb-1">5. ✅ Risposte alle domande preparate</p>
+                <p class="text-neutral-400 text-xs mb-1">6. ✅ Vestiti pronti per la discussione</p>
+                <p class="text-neutral-400 text-xs mb-1">7. ✅ Documenti pronti (libretto, badge)</p>
+                <p class="text-neutral-400 text-xs mb-1">8. ✅ Backup della presentazione su chiavetta</p>
+                <p class="text-neutral-400 text-xs mb-1">9. ✅ Orario e luogo della discussione verificati</p>
+                <p class="text-neutral-400 text-xs">10. ✅ Buona notte di sonno prima del grande giorno</p>
+            </div>
+        </div>
+
+        <!-- LEZIONI DEL MODULO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 📚 Lezioni del Modulo
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 1:</strong> Post-Consegna: Preparazione alla Difesa</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 2:</strong> Il Giorno della Discussione</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- I 3 ERRORI FATALI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="alert-octagon" style="width:20px;height:20px;"></i> ⚠️ I 3 Errori Fatali dell'Ultimo Giorno
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 1: Non Ripassare</p>
+                    <p class="text-neutral-400 text-xs">Consegnare e pensare di essere a posto. <strong class="text-white">Soluzione:</strong> Ripassa slide e discorso almeno 3 volte.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 2: Panico</p>
+                    <p class="text-neutral-400 text-xs">Farsi sopraffare dall'ansia. <strong class="text-white">Soluzione:</strong> Usa la respirazione 4-7-8 e il Protocollo STOP della Pagina 13.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 3: Non Riposare</p>
+                    <p class="text-neutral-400 text-xs">Studiare fino alle 3 di notte. <strong class="text-white">Soluzione:</strong> Dormi almeno 7 ore. La mente fresca vale più di un ripasso extra.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Cosa devi fare dopo la consegna della tesi?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Dimenticare tutto e rilassarti</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Ripassare slide, discorso e risposte per la discussione</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Riscrivere la tesi</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Quante ore di sonno dovresti dormire prima della discussione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Almeno 7 ore</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) 2-3 ore (tanto si dorme dopo)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Non dormire per ripassare</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
 
         <!-- ========== PAGINA 44: MODULO 7.1 - POST-CONSEGNA ========== -->
-        <div class="page" data-page="44">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Lezione 1</span>
-                <div class="time-badge">⏱️ Tempo stimato: 90 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Post-Consegna: Preparazione alla Difesa</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Dopo la consegna, il gioco non è finito. Prepara la difesa orale. Non farti trovare impreparato."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Dopo la consegna, hai 1-2 settimane prima della discussione. Usa quel tempo per ripassare, preparare le risposte e provare il discorso.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">2. Incollalo in ChatGPT</p>
-                    <p class="text-neutral-300 text-sm">3. Ottieni il piano di preparazione</p>
-                    <p class="text-neutral-300 text-sm">4. Segui il piano ogni giorno</p>
-                </div>
+<div class="page" data-page="44">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="book-open-check" style="width:16px;height:16px;"></i> Modulo 7 · Lezione 1
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 90 minuti · Lettura: 10 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="target" style="width:28px;height:28px;color:#f59e0b;"></i> 🎯 Post-Consegna: Preparazione alla Difesa
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Dopo la consegna, hai 1-2 settimane prima della discussione. Usa quel tempo per ripassare, preparare le risposte e provare il discorso.
+        </p>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Crea un piano di preparazione per la discussione orale della mia tesi su [ARGOMENTO]. Ho 2 settimane. Dividi in: 1) Cosa ripassare ogni giorno, 2) Sessioni di prova, 3) Gestione dello stress. Sii realista e pratico.</pre>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Dopo la consegna, il gioco non è finito. Prepara la difesa orale. Non farti trovare impreparato."</p>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho creato un riassunto di 1 pagina per la difesa orale</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho programmato 3 sessioni di prova con un amico</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho preparato le risposte alle domande killer</span></label>
+        <!-- IL PIANO DELLE 2 SETTIMANE -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📅 PIANO</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="calendar-days" style="width:20px;height:20px;"></i> 1. Il Piano delle 2 Settimane
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Organizza il tempo tra la consegna e la discussione:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+                    <p class="font-bold text-blue-400 text-xs mb-1">🔵 SETTIMANA 1: RIPASSO APPROFONDITO</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 1-2: Rileggi la tesi completa</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 3-4: Identifica i punti deboli</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 5-6: Prepara il riassunto di difesa</p>
+                    <p class="text-neutral-400 text-xs">• Giorno 7: Ripasso generale</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="0">
-                    <p class="text-neutral-200 font-medium mb-3">Cosa fare DOPO aver consegnato la tesi?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Preparare la difesa orale</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Continuare a modificare il testo</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Dimenticarsene fino al giorno della discussione</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🟢 SETTIMANA 2: PROVE E SIMULAZIONI</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 8-9: Prova il discorso ad alta voce</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 10-11: Simulazioni con un amico</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Giorno 12-13: Ripasso finale</p>
+                    <p class="text-neutral-400 text-xs">• Giorno 14: Riposo</p>
                 </div>
             </div>
         </div>
 
-        <!-- ========== PAGINA 45: MODULO 7.2 - GIORNO DISCUSSIONE ========== -->
-        <div class="page" data-page="45">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 7 · Lezione 2</span>
-                <div class="time-badge">⏱️ Tempo stimato: 30 minuti (lettura)</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Il Giorno della Discussione</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La discussione non è un esame. È una conversazione tra esperti. Tu sei l'esperto della tua tesi."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Il giorno della discussione: arriva in anticipo, porta una copia della tesi, respira. Sei preparato. Hai seguito il metodo.</p>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">✅ Cosa Fare il Giorno della Discussione</h3>
-                    <p class="text-neutral-300 text-sm mb-2">1. Dormi almeno 7 ore la notte prima</p>
-                    <p class="text-neutral-300 text-sm mb-2">2. Fai colazione (anche se non hai fame)</p>
-                    <p class="text-neutral-300 text-sm mb-2">3. Arriva 30 minuti prima</p>
-                    <p class="text-neutral-300 text-sm mb-2">4. Porta una copia stampata della tesi</p>
-                    <p class="text-neutral-300 text-sm mb-2">5. Porta una bottiglietta d'acqua</p>
-                    <p class="text-neutral-300 text-sm">6. Rileggi il tuo riassunto di 1 pagina prima di entrare</p>
-                </div>
+        <!-- LA TECNICA DEL RIASSUNTO DI DIFESA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="file-text" style="width:20px;height:20px;"></i> 2. La Tecnica del "Riassunto di Difesa" (1 Pagina)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Crea un documento di 1 pagina con i punti chiave della tua tesi:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COSA CONTIENE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">Domanda di ricerca</strong> (1 riga)</p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">Metodo usato</strong> (2 righe)</p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">3 risultati chiave</strong> (3 righe ciascuno)</p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">Limiti ammessi</strong> (2 righe)</p>
+                <p class="text-neutral-400 text-xs">• <strong class="text-white">Risposta alla domanda</strong> (1 riga)</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">USALO COSÌ:</strong> Leggilo ogni mattina. In 5 minuti ripassi tutta la tesi. È la tua ancora di salvezza.</p>
+            </div>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Finale</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho preparato tutto il materiale per la discussione</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho dormito abbastanza</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Sono pronto a mostrare il mio lavoro</span></label>
+        <!-- LA STRATEGIA DELLE SIMULAZIONI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="users" style="width:20px;height:20px;"></i> 3. La Strategia delle "Simulazioni di Discussione"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Fai prove realistiche con un amico che fa la parte della commissione:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME FARE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Chiedi a un amico di leggere la tua tesi</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Fai la presentazione completa (slide + discorso)</p>
+                <p class="text-neutral-400 text-xs mb-1">3. L'amico ti fa le domande più difficili che riesce a pensare</p>
+                <p class="text-neutral-400 text-xs">4. Ripeti almeno 2-3 volte con persone diverse</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">PERCHÉ FUNZIONA:</strong> Le domande dell'amico saranno più difficili di quelle della commissione. Se rispondi a lui, rispondi a tutti.</p>
+            </div>
+        </div>
+
+        <!-- LA GESTIONE DEI PUNTI DEBOLI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="shield-alert" style="width:20px;height:20px;"></i> 4. La Gestione dei "Punti Deboli"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Ogni tesi ha punti deboli. La commissione li troverà. Prepara le risposte:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME IDENTIFICARLI:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• Sezioni che hai scritto in fretta</p>
+                <p class="text-neutral-400 text-xs mb-1">• Affermazioni con poche fonti</p>
+                <p class="text-neutral-400 text-xs mb-1">• Metodologie non approfondite</p>
+                <p class="text-neutral-400 text-xs">• Limiti che hai già ammesso nella tesi</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">REGOLA:</strong> Per ogni punto debole, prepara una risposta che lo trasformi in una scelta consapevole.</p>
+            </div>
+        </div>
+
+        <!-- IL RIPASSO ATTIVO VS PASSIVO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="volume-2" style="width:20px;height:20px;"></i> 5. Ripasso Attivo vs Passivo
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Rileggere non basta. Serve ripetere ad alta voce:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ RIPASSO PASSIVO (Non Funziona)</p>
+                    <p class="text-neutral-400 text-xs">Rileggere la tesi in silenzio. Il cervello si annoia e non memorizza.</p>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">✅ RIPASSO ATTIVO (Funziona)</p>
+                    <p class="text-neutral-400 text-xs">Ripetere ad alta voce i punti chiave. Spiegare la tesi a un amico. Fare finta di presentare.</p>
                 </div>
             </div>
         </div>
 
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE (90 MINUTI)</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
+            <p class="text-neutral-300 text-sm">2. Incollalo in ChatGPT</p>
+            <p class="text-neutral-300 text-sm">3. Ottieni il piano di preparazione personalizzato</p>
+            <p class="text-neutral-300 text-sm">4. Crea il riassunto di difesa (1 pagina)</p>
+            <p class="text-neutral-300 text-sm">5. Identifica i punti deboli e prepara le risposte</p>
+            <p class="text-neutral-300 text-sm">6. Organizza 3 simulazioni con amici</p>
+        </div>
+
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Crea un piano di preparazione per la discussione orale della mia tesi su [ARGOMENTO]. Ho 2 settimane. Dividi in: 1) Cosa ripassare ogni giorno, 2) Sessioni di prova con un amico, 3) Gestione dello stress, 4) Identificazione dei punti deboli e come preparare le risposte, 5) Creazione del riassunto di difesa di 1 pagina. Sii realista e pratico.</pre>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Preparazione Difesa</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho creato il piano delle 2 settimane</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho creato il riassunto di difesa (1 pagina)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho identificato i punti deboli e preparato le risposte</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho programmato 3 sessioni di prova con un amico</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato il ripasso attivo (ad alta voce, non in silenzio)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho preparato le risposte alle domande killer</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Cosa fare DOPO aver consegnato la tesi?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Preparare la difesa orale</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Continuare a modificare il testo</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Dimenticarsene fino al giorno della discussione</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è la differenza tra ripasso attivo e passivo?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Attivo = in gruppo, Passivo = da solo</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Attivo = ripetere ad alta voce, Passivo = rileggere in silenzio</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Attivo = con il computer, Passivo = con il libro</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+        
+      <!-- ========== PAGINA 45: MODULO 7.2 - GIORNO DISCUSSIONE ========== -->
+<div class="page" data-page="45">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="trophy" style="width:16px;height:16px;"></i> Modulo 7 · Lezione 2
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 30 minuti (lettura) · Lettura: 10 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="award" style="width:28px;height:28px;color:#f59e0b;"></i> 🏆 Il Giorno della Discussione
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Il giorno della discussione: arriva in anticipo, porta una copia della tesi, respira. Sei preparato. Hai seguito il metodo.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La discussione non è un esame. È una conversazione tra esperti. Tu sei l'esperto della tua tesi."</p>
+        </div>
+
+        <!-- LA TIMELINE DEL GIORNO -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">⏰ TIMELINE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i> 1. La Timeline del Giorno (Dalla Sveglia alla Discussione)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Organizza la giornata in modo da arrivare al momento della discussione calmo e preparato:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🌅 2 ORE PRIMA: SVEGLIA E COLAZIONE</p>
+                    <p class="text-neutral-400 text-xs">Dormi almeno 7 ore. Fai colazione anche se non hai fame. Il cervello ha bisogno di energia.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">👔 1 ORA PRIMA: PREPARAZIONE</p>
+                    <p class="text-neutral-400 text-xs">Vestiti in modo professionale. Controlla di avere tutti i documenti. Fai la respirazione 4-7-8.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🏛️ 30 MINUTI PRIMA: ARRIVO</p>
+                    <p class="text-neutral-400 text-xs">Arriva in anticipo. Trova l'aula. Fai una passeggiata per calmare i nervi.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📖 10 MINUTI PRIMA: RIPASSO FINALE</p>
+                    <p class="text-neutral-400 text-xs">Rileggi il riassunto di difesa di 1 pagina. Ripeti il discorso a mente. Respira.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎤 MOMENTO DELLA DISCUSSIONE</p>
+                    <p class="text-neutral-400 text-xs">Entra con il sorriso. Sei l'esperto. Hai lavorato 14 giorni per questo momento.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LA GESTIONE DELL'ANSIA PRE-DISCUSSIONE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="heart-pulse" style="width:20px;height:20px;"></i> 2. La Gestione dell'Ansia Pre-Discussione
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                3 tecniche per calmarti prima di entrare:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🌬️ 1. RESPIRAZIONE 4-7-8</p>
+                    <p class="text-neutral-400 text-xs">4 secondi inspira, 7 trattieni, 8 espira. Ripeti 4 volte. Calma il sistema nervoso in 2 minuti.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">💪 2. POSIZIONE DI POTENZA</p>
+                    <p class="text-neutral-400 text-xs">Stai dritto, spalle indietro, mento alto. La postura influenza l'atteggiamento mentale.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🗣️ 3. SUSSURRA IL DISCORSO</p>
+                    <p class="text-neutral-400 text-xs">Prima di entrare, sussurra il discorso a te stesso. Riscalda la voce e la memoria.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LA MENTALIZZAZIONE POSITIVA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="brain" style="width:20px;height:20px;"></i> 3. La Mentalizzazione Positiva
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Come entrare con l'atteggiamento giusto:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">RIPETI A TE STESSO:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• "Ho lavorato 14 giorni con metodo"</p>
+                <p class="text-neutral-400 text-xs mb-1">• "Conosco la mia tesi meglio di chiunque"</p>
+                <p class="text-neutral-400 text-xs mb-1">• "Le domande sono un'opportunità per brillare"</p>
+                <p class="text-neutral-400 text-xs">• "La commissione vuole vedermi laureare"</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">RICORDA:</strong> Non sei lì per essere giudicato. Sei lì per presentare un lavoro che hai fatto. La commissione è curiosa, non ostile.</p>
+            </div>
+        </div>
+
+        <!-- LA CHECKLIST DEI DOCUMENTI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="folder-check" style="width:20px;height:20px;"></i> 4. La Checklist dei Documenti (Cosa Portare)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Prepara tutto la sera prima:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-1">
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Copia stampata della tesi</strong> (per te)</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Chiavetta USB</strong> con presentazione + PDF tesi</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Riassunto di difesa</strong> (1 pagina)</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Bottiglietta d'acqua</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Libretto universitario</strong> (se richiesto)</p>
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">Penna e quaderno</strong> per eventuali appunti</p>
+            </div>
+        </div>
+
+        <!-- IL DISCORSO FINALE DI INCORAGGIAMENTO -->
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🎓 FINALE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="star" style="width:20px;height:20px;"></i> 5. Il Discorso Finale (Leggi Questo Prima di Entrare)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                14 giorni fa avevi una pagina bianca. Oggi hai una tesi completa, preparata e pronta per essere discussa.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">RICORDA QUESTO:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• Hai seguito un metodo che funziona</p>
+                <p class="text-neutral-400 text-xs mb-1">• Hai superato il panico, il perfezionismo, la procrastinazione</p>
+                <p class="text-neutral-400 text-xs mb-1">• Hai raccolto fonti, organizzato materiale, scritto e editato</p>
+                <p class="text-neutral-400 text-xs mb-1">• Hai pulito il testo AI e verificato con GPTZero</p>
+                <p class="text-neutral-400 text-xs">• Hai preparato slide, discorso e risposte</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">ORA VAI.</strong> Entra in quella stanza e mostra quello che sai. La laurea è tua.</p>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Finale del Giorno della Discussione</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho preparato tutti i documenti la sera prima</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho dormito almeno 7 ore</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto colazione</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Sono arrivato in anticipo</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto la respirazione 4-7-8</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho riletto il riassunto di difesa</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho letto il discorso finale di incoraggiamento</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è l'atteggiamento giusto prima della discussione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) "Speriamo bene" (fatalismo)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) "Sono l'esperto della mia tesi" (sicurezza)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) "Tanto non ce la faccio" (pessimismo)</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Cosa devi assolutamente portare il giorno della discussione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Copia della tesi + chiavetta USB + riassunto di difesa + acqua</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Solo il telefono</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Niente, tanto è tutto online</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+
+        
         <!-- ========== PAGINE 46-55: PAGINE RIEMPITIVE MA UTILI ========== -->
         <!-- Pagina 46: Domande Frequenti -->
         <div class="page" data-page="46">
