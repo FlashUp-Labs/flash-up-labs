@@ -2140,7 +2140,7 @@
                     <div class="bg-neutral-800/80 p-3 rounded-lg border border-neutral-700">
                         <p class="font-bold text-white mb-1 text-xs">📋 PASSO 1: Accedi a GPTZero</p>
                         <p class="text-neutral-400 text-xs">
-                            Dopo aver cliccato il pulsante sopra, ti troverai sulla pagina principale di GPTZero. <strong class="text-white">Crea un account gratuito</strong> con la tua email per sbloccare scansioni più lunghe.
+                            Dopo aver cliccato il pulsante sopra, ti troverai sulla pagina principale di GPTZero. <a href="https://gptzero.me/?via=tesiflash" target="_blank" rel="noopener noreferrer nofollow" class="text-amber-400 font-semibold hover:underline">Crea un account gratuito</a> con la tua email per sbloccare scansioni più lunghe.
                         </p>
                     </div>
 
@@ -2257,15 +2257,29 @@
             </div>
         </div>
 
-        <!-- PROMPT BOX -->
-        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
-            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Verifica il mio testo per potenziali problemi di plagio e AI detection. Segnala: 1) Frasi troppo simili a fonti note, 2) Parafrasi troppo vicine all'originale, 3) Citazioni senza virgolette, 4) Parti che potrebbero sembrare generate da AI, 5) Fatti o riferimenti che potrebbero essere inventati (allucinazioni). Suggerisci come riformulare in modo originale e personale. Ecco il testo: [INCOLLA TESTO].</pre>
+        <!-- PROMPT BOX CON SPIEGAZIONE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="message-square-text" style="width:20px;height:20px;"></i> 5. Prompt Alternativo: Verifica con ChatGPT
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                <strong class="text-white">A cosa serve questo prompt?</strong> Puoi usarlo come <strong class="text-white">seconda verifica</strong> dopo aver usato GPTZero. Incolla il testo della tua tesi in ChatGPT insieme a questo prompt per ottenere suggerimenti su come riformulare le parti che potrebbero risultare problematiche.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">QUANDO USARLO:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• Dopo che GPTZero ha segnalato sezioni con alta probabilità di AI</p>
+                <p class="text-neutral-400 text-xs mb-1">• Per riformulare paragrafi troppo simili alle fonti originali</p>
+                <p class="text-neutral-400 text-xs">• Come controllo incrociato prima della consegna finale</p>
+            </div>
+            <div class="prompt-box bg-neutral-900/60 border border-neutral-700 rounded-lg p-4 cursor-pointer" onclick="copyPrompt(this)">
+                <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Verifica il mio testo per potenziali problemi di plagio e AI detection. Segnala: 1) Frasi troppo simili a fonti note, 2) Parafrasi troppo vicine all'originale, 3) Citazioni senza virgolette, 4) Parti che potrebbero sembrare generate da AI, 5) Fatti o riferimenti che potrebbero essere inventati (allucinazioni). Suggerisci come riformulare in modo originale e personale. Ecco il testo: [INCOLLA TESTO].</pre>
+            </div>
         </div>
 
         <!-- DOMANDE FREQUENTI -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="help-circle" style="width:20px;height:20px;"></i> 5. Domande Frequenti su GPTZero
+                <i data-lucide="help-circle" style="width:20px;height:20px;"></i> 6. Domande Frequenti su GPTZero
             </h3>
 
             <div class="space-y-3">
@@ -2293,6 +2307,15 @@
                     <p class="font-bold text-white mb-1 text-xs">❓ Cosa significano le opzioni "Polished by AI" e "Paraphrased by AI"?</p>
                     <p class="text-neutral-400 text-xs">Sono esempi predefiniti che mostrano come GPTZero rileva testo che è stato migliorato o parafrasato da un'AI, anche se originariamente scritto da un umano. Usali per capire come funziona lo strumento.</p>
                 </div>
+            </div>
+
+            <!-- PULSANTE AGGIUNTIVO DOPO LE FAQ -->
+            <div class="mt-4 bg-amber-500/10 border border-amber-500/30 rounded-lg p-4">
+                <p class="text-amber-300 text-xs font-bold mb-2">🚀 PRONTO A INIZIARE?</p>
+                <a href="https://gptzero.me/?via=tesiflash" target="_blank" rel="noopener noreferrer nofollow" class="block w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-4 rounded-lg text-center transition-all transform hover:scale-[1.02] shadow-lg shadow-amber-500/20">
+                    🌐 Inizia Subito con GPTZero
+                    <span class="block text-xs font-normal mt-1 opacity-80">Controlla la tua tesi prima della consegna</span>
+                </a>
             </div>
         </div>
 
@@ -2333,7 +2356,6 @@
 
     </div>
 </div>
-
       <!-- ========== PAGINA 42: MODULO 6.2 - STAMPA E RILEGATURA (VERSIONE COMPLETA) ========== -->
 <div class="page" data-page="42">
     <div class="max-w-2xl mx-auto px-4 py-8">
