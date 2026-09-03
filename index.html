@@ -5996,218 +5996,878 @@
     </div>
 </div>
 
-        <!-- ========== PAGINA 32: MODULO 4.1 - EDITING ========== -->
-        <div class="page" data-page="32">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 1</span>
-                <div class="time-badge">⏱️ Tempo stimato: 90 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Editing a Prova di Professore</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Il professore cerca errori. Tu eliminali prima che lui li trovi. Editing non è creatività, è caccia all'errore."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Tre passaggi: 1) Controllo struttura (ogni sezione risponde alla sua domanda?), 2) Controllo formattazione (font, margini, numeri pagina), 3) Controllo citazioni (ogni affermazione ha una fonte). Falli in ordine. Non mischiare.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Apri il tuo documento Word/Google Docs</p>
-                    <p class="text-neutral-300 text-sm">2. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">3. Incollalo in ChatGPT con il tuo capitolo</p>
-                    <p class="text-neutral-300 text-sm">4. Applica le correzioni suggerite</p>
-                    <p class="text-neutral-300 text-sm">5. Ripeti per ogni capitolo</p>
-                </div>
+       <!-- ========== PAGINA 32: MODULO 4.1 - EDITING ========== -->
+<div class="page" data-page="32">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="scissors" style="width:16px;height:16px;"></i> Modulo 4 · Lezione 1
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 90 minuti · Lettura: 10 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="file-check" style="width:28px;height:28px;color:#f59e0b;"></i> ✂️ Editing a Prova di Professore
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Tre passaggi: 1) Controllo struttura, 2) Controllo formattazione, 3) Controllo citazioni. Falli in ordine. Non mischiare.
+        </p>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Fai un editing spietato del mio capitolo [X] sulla mia tesi su [ARGOMENTO]. Cerca: 1) Ripetizioni, 2) Periodi troppo lunghi (>30 parole), 3) Affermazioni senza citazione, 4) Connettivi logici mancanti. Correggi senza cambiare il significato. Ecco il testo: [INCOLLA TESTO].</pre>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Il professore cerca errori. Tu eliminali prima che lui li trovi. Editing non è creatività, è caccia all'errore."</p>
+        </div>
 
-                <div class="turbo-box">
-                    <p class="label">🤖 TURBO-TOOL AI: NOTEBOOKLM</p>
-                    <p class="text-neutral-300 text-sm mt-2"><strong>Cosa fare:</strong></p>
-                    <p class="text-neutral-400 text-sm mt-1">1. Carica il capitolo su NotebookLM</p>
-                    <p class="text-neutral-400 text-sm">2. Chiedi: "Trova le ripetizioni, i periodi troppo lunghi e le affermazioni senza citazione. Elenca i problemi in ordine di gravità."</p>
-                    <p class="text-neutral-400 text-sm">3. Usa il feedback per correggere</p>
-                </div>
+        <!-- I 10 ERRORI CHE IL PROFESSORE CERCA -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🔍 CACCIA</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="search" style="width:20px;height:20px;"></i> 1. I 10 Errori che il Professore Cerca (e Trova)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Ecco gli errori più comuni che i professori trovano nelle tesi. Controlla ognuno:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-1">
+                <p class="text-neutral-400 text-xs mb-1">1. ❌ Periodi troppo lunghi (oltre 30 parole senza pause)</p>
+                <p class="text-neutral-400 text-xs mb-1">2. ❌ Ripetizioni della stessa parola nella stessa frase</p>
+                <p class="text-neutral-400 text-xs mb-1">3. ❌ Affermazioni senza citazione ("è noto che..." senza fonte)</p>
+                <p class="text-neutral-400 text-xs mb-1">4. ❌ Connettivi logici mancanti (frasi accostate senza collegamento)</p>
+                <p class="text-neutral-400 text-xs mb-1">5. ❌ Errori di concordanza (soggetto plurale + verbo singolare)</p>
+                <p class="text-neutral-400 text-xs mb-1">6. ❌ Uso incoerente dei tempi verbali</p>
+                <p class="text-neutral-400 text-xs mb-1">7. ❌ Parole riempitive ("molto", "abbastanza", "davvero")</p>
+                <p class="text-neutral-400 text-xs mb-1">8. ❌ Frasi fatte e cliché ("come ben sappiamo")</p>
+                <p class="text-neutral-400 text-xs mb-1">9. ❌ Formattazione incoerente (spazi doppi, virgolette miste)</p>
+                <p class="text-neutral-400 text-xs">10. ❌ Citazioni incomplete (senza autore o anno)</p>
+            </div>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato la struttura di ogni sezione</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato la formattazione (font, margini, pagine)</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che ogni affermazione abbia una citazione</span></label>
+        <!-- LA TECNICA DEI 3 PASSAGGI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="layers" style="width:20px;height:20px;"></i> 2. La Tecnica dei "3 Passaggi di Editing"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non fare tutto in una volta. Usa 3 passaggi separati:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+                    <p class="font-bold text-blue-400 text-xs mb-1">🔵 PASSAGGIO 1: STRUTTURA (30 min)</p>
+                    <p class="text-neutral-400 text-xs">Controlla che ogni sezione risponda alla sua domanda. Verifica che i capitoli seguano la logica I-S-E-C-T.</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="2">
-                    <p class="text-neutral-200 font-medium mb-3">Qual è l'ordine corretto dell'editing?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Citazioni → Formattazione → Struttura</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Formattazione → Citazioni → Struttura</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Struttura → Formattazione → Citazioni</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🟢 PASSAGGIO 2: CONTENUTO (30 min)</p>
+                    <p class="text-neutral-400 text-xs">Elimina ripetizioni, frasi contorte, paragrafi deboli. Rafforza i punti chiave.</p>
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3">
+                    <p class="font-bold text-amber-400 text-xs mb-1">🟡 PASSAGGIO 3: LINGUA (30 min)</p>
+                    <p class="text-neutral-400 text-xs">Correggi grammatica, ortografia, refusi. Usa LanguageTool o Grammarly per accelerare.</p>
                 </div>
             </div>
         </div>
 
-        <!-- ========== PAGINA 33: MODULO 4.2 - FORMATTAZIONE ========== -->
-        <div class="page" data-page="33">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 2</span>
-                <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Formattazione Automatica</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Se formatti a mano, perderai 3 giorni e il professore troverà comunque un errore. Automatizza."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Usa Zotero o Mendeley per la bibliografia automatica. Imposta lo stile richiesto (APA, MLA, Chicago) e lascia che il software formatti al posto tuo. Per il testo, usa i fogli di stile di Word o Google Docs.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Scarica Zotero da zotero.org (gratis)</p>
-                    <p class="text-neutral-300 text-sm">2. Importa i PDF dalla cartella TESI/FONTI</p>
-                    <p class="text-neutral-300 text-sm">3. Clicca su "Crea bibliografia" e scegli lo stile richiesto</p>
-                    <p class="text-neutral-300 text-sm">4. Copia la bibliografia generata nel tuo documento</p>
-                    <p class="text-neutral-300 text-sm">5. Per le citazioni nel testo, usa il plugin Word di Zotero</p>
-                </div>
+        <!-- LE PAROLE DA ELIMINARE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="trash-2" style="width:20px;height:20px;"></i> 3. La Lista delle "Parole da Eliminare"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Queste parole appesantiscono il testo senza aggiungere valore. Eliminale o sostituiscile:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-1">
+                <p class="text-neutral-400 text-xs mb-1">❌ "Molto" → ✅ Elimina o sostituisci con un termine più preciso</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ "Abbastanza" → ✅ Elimina (è vago)</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ "Davvero" → ✅ Elimina (è colloquiale)</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ "Come ben sappiamo" → ✅ Elimina (è un cliché)</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ "È importante notare" → ✅ Sostituisci con "Si osservi" o elimina</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ "In questo capitolo parleremo di" → ✅ Sostituisci con "Questo capitolo analizza"</p>
+                <p class="text-neutral-400 text-xs">❌ "Sembra essere" → ✅ Sostituisci con "È" o "Appare"</p>
+            </div>
+        </div>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Verifica le mie citazioni secondo lo stile [APA/MLA/Chicago]. Ecco la lista delle mie fonti in formato grezzo: [INCOLLA FONTI]. Formatta ogni voce correttamente e segnala le informazioni mancanti (DOI, numero di pagina, ecc.).</pre>
-                </div>
+        <!-- LA TECNICA DEL LEGGERE AL CONTRARIO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="rotate-ccw" style="width:20px;height:20px;"></i> 4. La Tecnica del "Leggere al Contrario"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Per trovare errori di battitura che il cervello corregge automaticamente, leggi il testo <strong class="text-white">al contrario</strong>.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME FARE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Parti dall'ultima parola dell'ultima frase</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Leggi parola per parola all'indietro</p>
+                <p class="text-neutral-400 text-xs mb-1">3. Ogni parola è isolata → il cervello non la "corregge"</p>
+                <p class="text-neutral-400 text-xs">4. Errori di battitura, doppie lettere, refusi → saltano all'occhio</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">USALO SU:</strong> Abstract, introduzione, conclusione. Le parti che tutti leggono con più attenzione.</p>
+            </div>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho configurato Zotero/Mendeley con lo stile corretto</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho generato la bibliografia automaticamente</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che ogni citazione nel testo abbia la corrispondente voce in bibliografia</span></label>
+        <!-- IL TEST DELLA FRASE KILLER -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="target" style="width:20px;height:20px;"></i> 5. Il Test della "Frase Killer"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Per ogni frase, chiediti: <strong class="text-white">"Se la eliminassi, il paragrafo perderebbe qualcosa?"</strong>
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-green-400">SE LA RISPOSTA È SÌ:</strong></p>
+                    <p class="text-neutral-400 text-xs">La frase aggiunge valore. Tienila.</p>
                 </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-red-400">SE LA RISPOSTA È NO:</strong></p>
+                    <p class="text-neutral-400 text-xs">La frase è filler. Eliminala senza pietà.</p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">REGOLA:</strong> Se elimini il 10% delle frasi e il testo funziona ancora, stai facendo un buon editing.</p>
+            </div>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="0">
-                    <p class="text-neutral-200 font-medium mb-3">Qual è lo strumento migliore per la bibliografia automatica?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Zotero o Mendeley</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Microsoft Paint</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Blocco note</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE (90 MINUTI)</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Apri il tuo documento Word/Google Docs</p>
+            <p class="text-neutral-300 text-sm">2. Passaggio 1: Controlla la struttura (30 min)</p>
+            <p class="text-neutral-300 text-sm">3. Passaggio 2: Elimina ripetizioni e frasi deboli (30 min)</p>
+            <p class="text-neutral-300 text-sm">4. Passaggio 3: Correggi grammatica e refusi (30 min)</p>
+            <p class="text-neutral-300 text-sm">5. Applica il test della "Frase Killer" a ogni paragrafo</p>
+            <p class="text-neutral-300 text-sm">6. Leggi al contrario l'abstract e la conclusione</p>
+            <p class="text-neutral-300 text-sm">7. Usa il prompt qui sotto per una verifica automatica</p>
+        </div>
+
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Fai un editing spietato del mio capitolo [X] sulla mia tesi su [ARGOMENTO]. Cerca: 1) Ripetizioni, 2) Periodi troppo lunghi (>30 parole), 3) Affermazioni senza citazione, 4) Connettivi logici mancanti, 5) Parole riempitive da eliminare, 6) Frasi che non aggiungono valore. Correggi senza cambiare il significato. Ecco il testo: [INCOLLA TESTO].</pre>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Editing</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato i 10 errori che il professore cerca</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato i 3 passaggi di editing (struttura, contenuto, lingua)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho eliminato le parole riempitive dalla lista</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato la tecnica del "leggere al contrario" su abstract e conclusione</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato il test della "Frase Killer" a ogni paragrafo</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che ogni affermazione abbia una citazione</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="2">
+            <p class="text-neutral-200 font-medium mb-3">Qual è l'ordine corretto dell'editing?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Citazioni → Formattazione → Struttura</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Formattazione → Citazioni → Struttura</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Struttura → Contenuto → Lingua</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">A cosa serve la tecnica del "leggere al contrario"?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) A trovare errori di battitura che il cervello ignora</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) A controllare la coerenza logica</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) A verificare le citazioni</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+
+        <!-- ========== PAGINA 33: MODULO 4.2 - FORMATTAZIONE AUTOMATICA ========== -->
+<div class="page" data-page="33">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="settings-2" style="width:16px;height:16px;"></i> Modulo 4 · Lezione 2
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 60 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="wand-2" style="width:28px;height:28px;color:#f59e0b;"></i> ⚙️ Formattazione Automatica con Zotero
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Nelle pagine 59-62 trovi i template Google Docs già formattati con le spiegazioni dettagliate per titoli, margini e stili. Qui impari a <strong class="text-white">gestire la bibliografia in automatico</strong> con Zotero, così non devi formattare nulla a mano.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Se formatti a mano, perderai 3 giorni e il professore troverà comunque un errore. Automatizza la bibliografia con Zotero."</p>
+        </div>
+
+        <!-- PERCHÉ ZOTERO E NON A MANO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="lightbulb" style="width:20px;height:20px;"></i> 1. Perché Zotero Ti Salva 3 Giorni di Lavoro
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Formattare la bibliografia a mano è l'errore più comune. Ecco il confronto:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ A MANO (3 giorni di dolore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Riscrivi ogni citazione manualmente</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Sbagli il formato (virgole, punti, corsivi)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Dimentichi DOI o numeri di pagina</p>
+                    <p class="text-neutral-400 text-xs">• Se il relatore cambia stile, rifai tutto</p>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">✅ CON ZOTERO (30 minuti totali)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Importi i PDF e Zotero estrae i dati automaticamente</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Scegli lo stile (APA, MLA, Chicago) con un clic</p>
+                    <p class="text-neutral-400 text-xs mb-1">• La bibliografia si genera da sola</p>
+                    <p class="text-neutral-400 text-xs">• Se cambi stile, rigeneri in 10 secondi</p>
                 </div>
             </div>
         </div>
 
-        <!-- ========== PAGINA 34: MODULO 4.3 - CHECKLIST CITAZIONI ========== -->
-        <div class="page" data-page="34">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 3</span>
-                <div class="time-badge">⏱️ Tempo stimato: 45 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Checklist Citazioni</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Una citazione mancante può costarti il voto. Non rischiare. Controlla tutto."</p>
+        <!-- COME CONFIGURARE ZOTERO -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">⚙️ SETUP</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> 2. Come Configurare Zotero in 15 Minuti
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📥 PASSO 1: INSTALLAZIONE</p>
+                    <p class="text-neutral-400 text-xs">Scarica Zotero da <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer nofollow" class="text-amber-400 hover:underline">zotero.org</a> (gratis). Installa anche il plugin per Word/Google Docs.</p>
                 </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Ogni affermazione che non è tua deve avere una citazione. Ogni citazione nel testo deve avere la corrispondente voce in bibliografia. Se non puoi citarla, non scriverla.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Apri il tuo documento</p>
-                    <p class="text-neutral-300 text-sm">2. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">3. Incollalo in ChatGPT con il tuo testo</p>
-                    <p class="text-neutral-300 text-sm">4. Verifica ogni citazione segnalata</p>
-                    <p class="text-neutral-300 text-sm">5. Aggiungi le citazioni mancanti</p>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📂 PASSO 2: IMPORTA I PDF</p>
+                    <p class="text-neutral-400 text-xs">Trascina i PDF dalla cartella TESI/FONTI dentro Zotero. Lui estrae automaticamente autore, titolo, rivista, DOI.</p>
                 </div>
-
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Controlla il mio testo per citazioni mancanti o errate. Ogni affermazione che non è mia deve avere una fonte. Segnala: 1) Affermazioni senza citazione, 2) Citazioni senza corrispondenza in bibliografia, 3) Citazioni formattate male. Ecco il testo: [INCOLLA TESTO].</pre>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎨 PASSO 3: SCEGLI LO STILE</p>
+                    <p class="text-neutral-400 text-xs">Clicca su "Crea bibliografia" e scegli lo stile richiesto (APA, MLA, Chicago, Harvard).</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che ogni affermazione abbia una citazione</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che ogni citazione nel testo corrisponda alla bibliografia</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho formattato le citazioni secondo lo stile richiesto</span></label>
-                </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="1">
-                    <p class="text-neutral-200 font-medium mb-3">Cosa fare se non puoi citare una fonte per un'affermazione?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Lasciarla senza citazione</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Eliminare l'affermazione o trovare una fonte</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Inventare una citazione</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📝 PASSO 4: GENERA LA BIBLIOGRAFIA</p>
+                    <p class="text-neutral-400 text-xs">Copia la bibliografia generata nel tuo documento. Fine. 30 secondi.</p>
                 </div>
             </div>
         </div>
 
-        <!-- ========== PAGINA 35: MODULO 4.4 - REVISIONE FINALE ========== -->
-        <div class="page" data-page="35">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 4 · Lezione 4</span>
-                <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Revisione Finale con NotebookLM</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Prima di consegnare, fai leggere la tesi a un'intelligenza artificiale. Troverà errori che tu hai ignorato."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Carica l'intera tesi su NotebookLM e chiedi una revisione completa. L'IA analizzerà coerenza, struttura, ripetizioni, errori logici. È come avere un secondo relatore gratuito.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Esporta la tesi in PDF</p>
-                    <p class="text-neutral-300 text-sm">2. Caricala su NotebookLM</p>
-                    <p class="text-neutral-300 text-sm">3. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">4. Incollalo nella chat di NotebookLM</p>
-                    <p class="text-neutral-300 text-sm">5. Applica le correzioni finali</p>
-                </div>
+        <!-- LE CITAZIONI NEL TESTO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="quote" style="width:20px;height:20px;"></i> 3. Le Citazioni nel Testo (Plugin Word)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Il plugin Word di Zotero ti permette di inserire citazioni nel testo senza scriverle a mano:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME FUNZIONA:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Scrivi il tuo testo in Word</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Quando devi citare, clicca su "Aggiungi citazione" nel menu Zotero</p>
+                <p class="text-neutral-400 text-xs mb-1">3. Seleziona la fonte dal database</p>
+                <p class="text-neutral-400 text-xs">4. Zotero inserisce la citazione formattata automaticamente</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">VANTAGGIO:</strong> Alla fine, Zotero genera la bibliografia completa con TUTTE le fonti citate nel testo. Mai una citazione mancante.</p>
+            </div>
+        </div>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Fai una revisione completa della mia tesi. Cerca: 1) Incoerenze logiche tra capitoli, 2) Ripetizioni di concetti, 3) Sezioni troppo lunghe o troppo corte, 4) Errori di transizione. Elenca i problemi in ordine di gravità con suggerimenti specifici.</pre>
+        <!-- GLI ERRORI COMUNI DA EVITARE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="alert-octagon" style="width:20px;height:20px;"></i> 4. I 5 Errori da Evitare con Zotero
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">1.</strong> Importare i PDF senza verificare i dati estratti (a volte sbaglia l'anno)</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho caricato la tesi completa su NotebookLM</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato le correzioni suggerite</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto un'ultima lettura completa</span></label>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">2.</strong> Non scegliere lo stile corretto (chiedi al relatore quale stile vuole)</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="1">
-                    <p class="text-neutral-200 font-medium mb-3">Perché usare NotebookLM per la revisione finale?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Perché è gratis</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Perché trova errori che hai ignorato</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Perché fa le correzioni al posto tuo</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">3.</strong> Non installare il plugin Word (senza plugin, non puoi citare nel testo)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">4.</strong> Avere fonti duplicate nel database</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs">❌ <strong class="text-white">5.</strong> Non fare il backup del database Zotero</p>
                 </div>
             </div>
         </div>
 
-        <!-- ========== PAGINA 36: MODULO 5 - BRIEFING ========== -->
-        <div class="page" data-page="36">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 5 · Giorno 11-12</span>
-                <div class="time-badge">⏱️ Tempo stimato: 2 giorni (6-8 ore totali)</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">🎤 Modulo 5: Presentazione e Difesa</h2>
-                
-                <div class="briefing-box">
-                    <p class="label">🔊 ASCOLTA IL BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
-                </div>
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE (60 MINUTI)</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Scarica Zotero da zotero.org (gratis)</p>
+            <p class="text-neutral-300 text-sm">2. Installa anche il plugin per Word/Google Docs</p>
+            <p class="text-neutral-300 text-sm">3. Importa i PDF dalla cartella TESI/FONTI</p>
+            <p class="text-neutral-300 text-sm">4. Verifica che i dati estratti siano corretti (autore, anno, DOI)</p>
+            <p class="text-neutral-300 text-sm">5. Scegli lo stile richiesto (chiedi al relatore)</p>
+            <p class="text-neutral-300 text-sm">6. Clicca su "Crea bibliografia" e copia nel documento</p>
+            <p class="text-neutral-300 text-sm">7. Per le citazioni nel testo, usa il plugin Word</p>
+        </div>
 
-                <div class="audio-box" onclick="playAudioBriefing('m5')">
-                    <p class="label">▶️ RIPRODUCI BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">🎧 "Briefing Modulo 5: Presentazione e Difesa"</p>
-                    <p class="text-neutral-400 text-sm mt-1">Durata: 6 minuti | Come preparare slide e discorso</p>
-                </div>
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Ho importato le mie fonti in Zotero ma alcune hanno dati mancanti. Ecco l'elenco delle fonti con i problemi: [INCOLLA FONTI]. Aiutami a completare: 1) DOI mancanti, 2) Numeri di pagina, 3) Nomi di riviste abbreviati. Cerca le informazioni corrette e restituiscimi i dati completi per ogni fonte.</pre>
+        </div>
 
-                <p class="text-neutral-300 leading-relaxed mb-4">La tesi è scritta. Ora devi presentarla. Questo modulo ti prepara alla discussione orale.</p>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📚 Lezioni del Modulo</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 1:</strong> Slide Minimali che Colpiscono</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 2:</strong> Il Discorso da 5 Minuti</p>
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Formattazione Automatica</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scaricato e installato Zotero con il plugin Word</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho importato tutti i PDF dalla cartella TESI/FONTI</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che i dati estratti siano corretti (autore, anno, DOI)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scelto lo stile richiesto dal relatore</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho generato la bibliografia automaticamente</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che ogni citazione nel testo abbia la corrispondente voce in bibliografia</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Qual è lo strumento migliore per la bibliografia automatica?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Zotero o Mendeley</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Microsoft Paint</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Blocco note</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Cosa devi verificare DOPO aver importato i PDF in Zotero?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Che i file siano ancora nella cartella originale</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Che i dati estratti siano corretti (autore, anno, DOI)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Che il computer abbia abbastanza spazio</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+
+        
+      <!-- ========== PAGINA 34: MODULO 4.3 - CHECKLIST CITAZIONI ========== -->
+<div class="page" data-page="34">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="quote" style="width:16px;height:16px;"></i> Modulo 4 · Lezione 3
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 45 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="list-checks" style="width:28px;height:28px;color:#f59e0b;"></i> 📋 Checklist Citazioni
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Ogni affermazione che non è tua deve avere una citazione. Ogni citazione nel testo deve avere la corrispondente voce in bibliografia. Se non puoi citarla, non scriverla.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Una citazione mancante può costarti il voto. Non rischiare. Controlla tutto."</p>
+        </div>
+
+        <!-- I 2 TIPI DI CITAZIONE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="git-branch" style="width:20px;height:20px;"></i> 1. I 2 Tipi di Citazione (Diretta vs Parafrasi)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non tutte le citazioni sono uguali. Ecco la differenza:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📌 CITAZIONE DIRETTA (tra virgolette)</p>
+                    <p class="text-neutral-400 text-xs mb-1">Copi le parole esatte dell'autore. Obbligatorie le virgolette + autore + anno + pagina.</p>
+                    <p class="text-neutral-400 text-xs"><em>Esempio: Come afferma Rossi (2023, p. 45), "i social media hanno rivoluzionato il marketing".</em></p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">✍️ PARAFRASI (senza virgolette)</p>
+                    <p class="text-neutral-400 text-xs mb-1">Riscrivi il concetto con parole tue. Serve autore + anno (la pagina è opzionale).</p>
+                    <p class="text-neutral-400 text-xs"><em>Esempio: Secondo Rossi (2023), il marketing tradizionale è stato profondamente trasformato dai social network.</em></p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">REGOLA:</strong> Usa la citazione diretta solo per definizioni o frasi memorabili. Per il resto, parafrasa.</p>
+            </div>
+        </div>
+
+        <!-- LA DENSITÀ DI CITAZIONE -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📊 REGOLA</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="bar-chart-3" style="width:20px;height:20px;"></i> 2. La Regola della "Densità di Citazione"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Quante citazioni servono per pagina? Ecco le linee guida:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📌 MINIMO SINDACALE:</p>
+                    <p class="text-neutral-400 text-xs mb-1">• 2-3 citazioni per pagina (per una tesi compilativa)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• 1 citazione ogni 3-4 paragrafi (per una tesi analitica)</p>
+                    <p class="text-neutral-400 text-xs">• Ogni affermazione non ovvia DEVE avere una fonte</p>
+            </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-2">
+                <p class="text-neutral-400 text-xs">❌ Se hai una pagina senza citazioni → è un problema. Aggiungi fonti o elimina le affermazioni non supportate.</p>
+            </div>
+        </div>
+
+        <!-- IL TRIANGOLO DELLA CITAZIONE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="triangle" style="width:20px;height:20px;"></i> 3. Il Triangolo della Citazione (Autore + Anno + Pagina/DOI)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Una citazione completa ha sempre 3 elementi:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">👤 AUTORE</p>
+                    <p class="text-neutral-400 text-xs">Chi ha scritto la fonte? (Cognome, Nome o Organizzazione)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📅 ANNO</p>
+                    <p class="text-neutral-400 text-xs">Quando è stata pubblicata? (Obbligatorio sempre)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📄 PAGINA o DOI</p>
+                    <p class="text-neutral-400 text-xs">Dove si trova esattamente? (Pagina per citazioni dirette, DOI per articoli)</p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">❌ Se manca uno dei 3 → la citazione è incompleta. Correggi prima di consegnare.</p>
+            </div>
+        </div>
+
+        <!-- LE CITAZIONI INDIRETTE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="corner-up-right" style="width:20px;height:20px;"></i> 4. La Gestione delle Citazioni Indirette
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Quando leggi un autore che cita un altro autore, si chiama citazione indiretta:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">FORMULA CORRETTA:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">"Rossi (2020) afferma che... (come citato in Bianchi, 2023, p. 15)"</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">REGOLA:</strong> In bibliografia si cita solo il testo che hai letto davvero (Bianchi, 2023), non quello citato (Rossi, 2020).</p>
+            </div>
+        </div>
+
+        <!-- LE CITAZIONI FANTASMA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="ghost" style="width:20px;height:20px;"></i> 5. La Verifica delle "Citazioni Fantasma"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Le citazioni fantasma sono fonti in bibliografia che <strong class="text-white">non appaiono mai nel testo</strong>. I professori le notano subito.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME VERIFICARE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Leggi la bibliografia e segna ogni fonte</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Cerca nel testo ogni autore segnato</p>
+                <p class="text-neutral-400 text-xs mb-1">3. Se una fonte non appare nel testo → o la citi o la elimini</p>
+                <p class="text-neutral-400 text-xs">4. Se un autore nel testo non è in bibliografia → aggiungilo</p>
+            </div>
+        </div>
+
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE (45 MINUTI)</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Apri il tuo documento</p>
+            <p class="text-neutral-300 text-sm">2. Verifica che ogni affermazione non ovvia abbia una citazione</p>
+            <p class="text-neutral-300 text-sm">3. Controlla che ogni citazione abbia Autore + Anno + Pagina/DOI</p>
+            <p class="text-neutral-300 text-sm">4. Verifica che ogni citazione nel testo sia in bibliografia</p>
+            <p class="text-neutral-300 text-sm">5. Verifica che ogni fonte in bibliografia sia citata nel testo</p>
+            <p class="text-neutral-300 text-sm">6. Controlla la densità di citazione (2-3 per pagina)</p>
+            <p class="text-neutral-300 text-sm">7. Usa il prompt qui sotto per una verifica automatica</p>
+        </div>
+
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Controlla il mio testo per citazioni mancanti o errate. Ogni affermazione che non è mia deve avere una fonte. Segnala: 1) Affermazioni senza citazione, 2) Citazioni senza corrispondenza in bibliografia, 3) Fonti in bibliografia mai citate nel testo, 4) Citazioni formattate male, 5) Citazioni indirette non segnalate come tali. Ecco il testo: [INCOLLA TESTO]. Ecco la bibliografia: [INCOLLA BIBLIOGRAFIA].</pre>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Citazioni</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che ogni affermazione abbia una citazione</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che ogni citazione abbia Autore + Anno + Pagina/DOI</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato la densità di citazione (2-3 per pagina)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che ogni citazione nel testo corrisponda alla bibliografia</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho eliminato le citazioni fantasma (in bibliografia ma mai citate)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho formattato le citazioni secondo lo stile richiesto</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Cosa fare se non puoi citare una fonte per un'affermazione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Lasciarla senza citazione</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Eliminare l'affermazione o trovare una fonte</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Inventare una citazione</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Cosa sono le "citazioni fantasma"?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Fonti in bibliografia che non appaiono mai nel testo</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Citazioni inventate di sana pianta</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Citazioni di autori scomparsi</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+
+        
+       <!-- ========== PAGINA 35: MODULO 4.4 - REVISIONE FINALE ========== -->
+<div class="page" data-page="35">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="scan-search" style="width:16px;height:16px;"></i> Modulo 4 · Lezione 4
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 60 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="bot" style="width:28px;height:28px;color:#f59e0b;"></i> 🤖 Revisione Finale con NotebookLM
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Carica l'intera tesi su NotebookLM e chiedi una revisione completa. L'IA analizzerà coerenza, struttura, ripetizioni, errori logici. È come avere un secondo relatore gratuito.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Prima di consegnare, fai leggere la tesi a un'intelligenza artificiale. Troverà errori che tu hai ignorato."</p>
+        </div>
+
+        <!-- LA REVISIONE A 4 STRATI -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📐 METODO</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="layers" style="width:20px;height:20px;"></i> 1. La Revisione a 4 Strati (Non Fare Tutto Insieme)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non chiedere a NotebookLM di "controllare tutto". Fai 4 passaggi separati:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-blue-500/10 border border-blue-500/30 rounded-lg p-3">
+                    <p class="font-bold text-blue-400 text-xs mb-1">🔵 STRATO 1: STRUTTURA (15 min)</p>
+                    <p class="text-neutral-400 text-xs">"Analizza la struttura generale. I capitoli sono bilanciati? Le transizioni funzionano? L'indice è coerente?"</p>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🟢 STRATO 2: CONTENUTO (15 min)</p>
+                    <p class="text-neutral-400 text-xs">"Controlla la coerenza dei contenuti. Ci sono ripetizioni? Contraddizioni? Punti non sviluppati?"</p>
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3">
+                    <p class="font-bold text-amber-400 text-xs mb-1">🟡 STRATO 3: LINGUA (15 min)</p>
+                    <p class="text-neutral-400 text-xs">"Controlla la lingua. Ci sono errori grammaticali? Frasi contorte? Termini impropri?"</p>
+                </div>
+                <div class="bg-purple-500/10 border border-purple-500/30 rounded-lg p-3">
+                    <p class="font-bold text-purple-400 text-xs mb-1">🟣 STRATO 4: FORMATTAZIONE (15 min)</p>
+                    <p class="text-neutral-400 text-xs">"Controlla la formattazione. Le citazioni sono uniformi? I titoli sono coerenti? I margini sono corretti?"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- I 7 PROBLEMI DA CERCARE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="search" style="width:20px;height:20px;"></i> 2. I 7 Problemi da Cercare nella Revisione
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Ecco i problemi più comuni che NotebookLM ti aiuterà a trovare:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-1">
+                <p class="text-neutral-400 text-xs mb-1">1. ❌ Incoerenze logiche tra capitoli (Capitolo 2 contraddice Capitolo 1)</p>
+                <p class="text-neutral-400 text-xs mb-1">2. ❌ Ripetizioni di concetti (stessa idea spiegata 3 volte)</p>
+                <p class="text-neutral-400 text-xs mb-1">3. ❌ Sezioni troppo lunghe o troppo corte (sproporzioni)</p>
+                <p class="text-neutral-400 text-xs mb-1">4. ❌ Errori di transizione (capitoli che non si collegano)</p>
+                <p class="text-neutral-400 text-xs mb-1">5. ❌ Affermazioni non supportate (senza citazione)</p>
+                <p class="text-neutral-400 text-xs mb-1">6. ❌ Terminologia incoerente (usi termini diversi per lo stesso concetto)</p>
+                <p class="text-neutral-400 text-xs">7. ❌ Paragrafi troppo densi o troppo vuoti</p>
+            </div>
+        </div>
+
+        <!-- LA TECNICA DELLA LETTURA INVERSA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="rotate-ccw" style="width:20px;height:20px;"></i> 3. La Tecnica della "Lettura Inversa" (Per Trovare Errori Nascosti)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Leggi la tesi <strong class="text-white">dalla fine all'inizio</strong>, capitolo per capitolo:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">COME FARE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Inizia dalla Conclusione (Capitolo 5)</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Poi Analisi (Capitolo 4)</p>
+                <p class="text-neutral-400 text-xs mb-1">3. Poi Metodo (Capitolo 3)</p>
+                <p class="text-neutral-400 text-xs mb-1">4. Poi Stato dell'Arte (Capitolo 2)</p>
+                <p class="text-neutral-400 text-xs">5. Infine Introduzione (Capitolo 1)</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">PERCHÉ FUNZIONA:</strong> Leggendo al contrario, il cervello non "riempie i buchi" con le aspettative. Gli errori saltano all'occhio.</p>
+            </div>
+        </div>
+
+        <!-- LA VERIFICA DELLA COERENZA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="link" style="width:20px;height:20px;"></i> 4. La Verifica della Coerenza tra Capitoli
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Controlla che i capitoli si colleghino tra loro con questa checklist:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">1.</strong> Il Capitolo 1 introduce la domanda di ricerca che il Capitolo 5 risponde?</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">2.</strong> Il Capitolo 2 presenta la letteratura che il Capitolo 4 usa per l'analisi?</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">3.</strong> Il Capitolo 3 spiega il metodo che il Capitolo 4 applica?</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">4.</strong> Ogni capitolo termina con una transizione al successivo?</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs">✅ <strong class="text-white">5.</strong> La bibliografia contiene tutte le fonti citate nei 5 capitoli?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE (60 MINUTI)</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Esporta la tesi in PDF</p>
+            <p class="text-neutral-300 text-sm">2. Caricala su NotebookLM</p>
+            <p class="text-neutral-300 text-sm">3. Strato 1: Chiedi analisi della struttura (15 min)</p>
+            <p class="text-neutral-300 text-sm">4. Strato 2: Chiedi analisi del contenuto (15 min)</p>
+            <p class="text-neutral-300 text-sm">5. Strato 3: Chiedi analisi della lingua (15 min)</p>
+            <p class="text-neutral-300 text-sm">6. Strato 4: Chiedi analisi della formattazione (15 min)</p>
+            <p class="text-neutral-300 text-sm">7. Applica le correzioni finali</p>
+        </div>
+
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Fai una revisione completa della mia tesi su [ARGOMENTO]. Ecco il testo: [INCOLLA TESTO]. Cerca: 1) Incoerenze logiche tra capitoli, 2) Ripetizioni di concetti, 3) Sezioni troppo lunghe o troppo corte, 4) Errori di transizione, 5) Affermazioni non supportate, 6) Terminologia incoerente. Elenca i problemi in ordine di gravità con suggerimenti specifici per ogni correzione.</pre>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Revisione Finale</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho caricato la tesi completa su NotebookLM</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato i 4 strati di revisione (struttura, contenuto, lingua, formattazione)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato i 7 problemi comuni</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto la lettura inversa (dalla conclusione all'introduzione)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato la coerenza tra capitoli</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato le correzioni suggerite da NotebookLM</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto un'ultima lettura completa</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Perché usare NotebookLM per la revisione finale?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Perché è gratis</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Perché trova errori che hai ignorato</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Perché fa le correzioni al posto tuo</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Qual è la tecnica della "lettura inversa"?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Leggere la tesi dalla conclusione all'introduzione per trovare errori nascosti</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Capovolgere le pagine</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Leggere solo i titoli</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+
+      <!-- ========== PAGINA 36: MODULO 5 - BRIEFING ========== -->
+<div class="page" data-page="36">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="presentation" style="width:16px;height:16px;"></i> Modulo 5 · Giorno 11-12
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 2 giorni (6-8 ore totali) · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="mic" style="width:28px;height:28px;color:#f59e0b;"></i> 🎤 Modulo 5: Presentazione e Difesa
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            La tesi è scritta. Ora devi presentarla. Questo modulo ti prepara alla discussione orale: slide, discorso e risposte alle domande della commissione.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La commissione ha già letto la tua tesi. La presentazione non è un riassunto: è la tua occasione per brillare e difendere il tuo lavoro."</p>
+        </div>
+
+        <!-- BRIEFING AUDIO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="headphones" style="width:20px;height:20px;"></i> 🔊 Briefing Audio
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
+            
+            <div class="audio-box bg-neutral-900/60 border border-neutral-700 rounded-lg p-4 cursor-pointer" onclick="playAudioBriefing('m5')">
+                <p class="text-neutral-200 text-sm font-bold">▶️ RIPRODUCI BRIEFING</p>
+                <p class="text-neutral-300 text-sm mt-1">🎧 "Briefing Modulo 5: Presentazione e Difesa"</p>
+                <p class="text-neutral-400 text-xs mt-1">Durata: 6 minuti | Come preparare slide e discorso</p>
+            </div>
+        </div>
+
+        <!-- PERCHÉ QUESTO MODULO È IMPORTANTE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="lightbulb" style="width:20px;height:20px;"></i> 1. Perché la Presentazione Fa la Differenza
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                La commissione ha già letto la tesi. La presentazione è la tua occasione per:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">DIMOSTRARE COMPETENZA</strong> — Non ripeti la tesi, mostri che l'hai capita</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">DIFENDERE LE SCELTE</strong> — Spieghi perché hai scelto quel metodo, quelle fonti, quella struttura</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">BRILLARE NELLE DOMANDE</strong> — Rispondi con sicurezza e mostri la tua preparazione</p>
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">GUADAGNARE PUNTI</strong> — Una buona presentazione può alzare il voto</p>
+            </div>
+        </div>
+
+        <!-- COSA AVRAI IN MANO ALLA FINE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="flag" style="width:20px;height:20px;"></i> 🎯 Cosa Avrai in Mano alla Fine dei 2 Giorni
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Slide minimali</strong> — 8-12 slide pulite e professionali</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Discorso da 5 minuti</strong> — provato e cronometrato</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Risposte preparate</strong> — per le 10 domande più probabili</p>
+                    <p class="text-neutral-400 text-xs">✅ <strong class="text-white">Sicurezza</strong> — hai provato tutto almeno 3 volte</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROADMAP DEI 2 GIORNI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="map" style="width:20px;height:20px;"></i> 🗺️ Roadmap dei 2 Giorni
+            </h3>
+            
+            <div class="space-y-3">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">📅 GIORNO 11 (3-4 ore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 1: Slide Minimali che Colpiscono</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Esercizio: Creare le 8-12 slide</p>
+                    <p class="text-neutral-400 text-xs">• Esercizio: Scegliere il design e i contenuti</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">📅 GIORNO 12 (3-4 ore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 2: Il Discorso da 5 Minuti</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 3: Gestire le Domande Killer</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Esercizio: Provare il discorso 3 volte</p>
+                    <p class="text-neutral-400 text-xs">• Esercizio: Preparare le risposte alle 10 domande probabili</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- I 3 PILASTRI -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🏛️ PILASTRI</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="triangle" style="width:20px;height:20px;"></i> 2. I 3 Pilastri della Presentazione
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📊 SLIDE MINIMALI</p>
+                    <p class="text-neutral-400 text-xs">Poche parole, molti concetti. Le slide supportano il discorso, non lo sostituiscono.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎤 DISCORSO CHIARO</p>
+                    <p class="text-neutral-400 text-xs">5 minuti, struttura precisa, linguaggio semplice. Provato fino allo sfinimento.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🛡️ RISPOSTE SICURE</p>
+                    <p class="text-neutral-400 text-xs">10 domande probabili preparate. Se non sai la risposta, sai come gestirla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEZIONI DEL MODULO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 📚 Lezioni del Modulo
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 1:</strong> Slide Minimali che Colpiscono</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 2:</strong> Il Discorso da 5 Minuti</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
                     <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 3:</strong> Gestire le Domande Killer</p>
                 </div>
             </div>
         </div>
+
+        <!-- I 3 ERRORI FATALI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="alert-octagon" style="width:20px;height:20px;"></i> ⚠️ I 3 Errori Fatali della Presentazione
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 1: Slide Troppo Piene</p>
+                    <p class="text-neutral-400 text-xs">30 righe di testo per slide. <strong class="text-white">Soluzione:</strong> Massimo 5 parole per slide. Il testo lo dici tu.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 2: Discorso Improvvisato</p>
+                    <p class="text-neutral-400 text-xs">Parlare a braccio senza aver provato. <strong class="text-white">Soluzione:</strong> Prova il discorso almeno 3 volte con timer.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 3: Domande Senza Risposta</p>
+                    <p class="text-neutral-400 text-xs">Non aver preparato le domande probabili. <strong class="text-white">Soluzione:</strong> Prepara 10 domande con relative risposte.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è il segreto di una buona presentazione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Slide piene di testo per non dimenticare nulla</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Slide minimali + discorso provato + risposte preparate</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Improvvisare per sembrare spontaneo</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Cosa deve fare la presentazione?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Dimostrare competenza e difendere le scelte fatte</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Riassumere la tesi dall'inizio alla fine</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Mostrare quante pagine hai scritto</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
 
         <!-- ========== PAGINA 37: MODULO 5.1 - SLIDE ========== -->
         <div class="page" data-page="37">
