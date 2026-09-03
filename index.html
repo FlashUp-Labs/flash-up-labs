@@ -2028,48 +2028,184 @@
             </div>
         </div>
 
-        <!-- ========== PAGINA 41: MODULO 6.1 - ANTI-PLAGIO ========== -->
-        <div class="page" data-page="41">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 6 · Lezione 1</span>
-                <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Controllo Anti-Plagio</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Il plagio non è solo copiare. È anche parafrasare male. Controlla prima che lo faccia il software dell'università."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Usa Turnitin o strumenti simili prima della consegna. Se trovi similitudini sopra il 15%, riscrivi quelle sezioni.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">2. Incollalo in ChatGPT con il tuo testo</p>
-                    <p class="text-neutral-300 text-sm">3. Verifica le sezioni segnalate</p>
-                    <p class="text-neutral-300 text-sm">4. Riscrivi le parti troppo simili alle fonti</p>
-                </div>
+       <!-- ========== PAGINA 41: MODULO 6.1 - CONTROLLO ANTI-PLAGIO & AI DETECTION ========== -->
+<div class="page" data-page="41">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        
+        <!-- Intestazione Modulo -->
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="shield-check" style="width:16px;height:16px;"></i> Modulo 6 · Lezione 1
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 60 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="scan-search" style="width:28px;height:28px;color:#f59e0b;"></i> 🔍 Controllo Anti-Plagio e AI Detection
+        </h2>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Verifica il mio testo per potenziali problemi di plagio. Segnala: 1) Frasi troppo simili a fonti note, 2) Parafrasi troppo vicine all'originale, 3) Citazioni senza virgolette. Suggerisci come riformulare in modo originale. Ecco il testo: [INCOLLA TESTO].</pre>
-                </div>
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Nell'era dell'AI, il problema non è solo copiare da altre fonti, ma anche presentare testo generato o rielaborato da ChatGPT come proprio. Le università si stanno attrezzando con software di detection sempre più sofisticati. Ecco come proteggerti e consegnare un lavoro autentico.
+        </p>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho passato il testo in un software anti-plagio</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho riformulato le sezioni sopra il 15% di similitudine</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che le citazioni dirette siano esatte</span></label>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Il plagio non è solo copiare. È anche parafrasare male o usare l'AI senza rielaborazione critica. Controlla prima che lo faccia il software dell'università."</p>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="1">
-                    <p class="text-neutral-200 font-medium mb-3">Quale percentuale di similitudine è generalmente accettabile?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) 30%</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Sotto il 15%</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) 50%</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+        <!-- SEZIONE 1: PERCHÉ È IMPORTANTE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="alert-triangle" style="width:20px;height:20px;"></i> 1. Perché Devi Controllare Prima della Consegna
+            </h3>
+            
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="font-bold text-white mb-2 text-xs">📌 I RISCHI SE NON CONTROLLI:</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">Annullamento della tesi</strong> se il plagio supera la soglia</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">Mancata ammissione alla discussione</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">Segnalazione disciplinare</strong> sul libretto universitario</p>
+                <p class="text-neutral-400 text-xs mb-1">❌ <strong class="text-white">Danno alla reputazione accademica</strong></p>
+                <p class="text-neutral-400 text-xs">❌ <strong class="text-white">Rischio di dover riscrivere interi capitoli</strong> in extremis</p>
+            </div>
+
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="font-bold text-white mb-2 text-xs">✅ COSA CONTROLLARE:</p>
+                <p class="text-neutral-400 text-xs mb-1">• Percentuale di similitudine con fonti esistenti (soglia tipica: < 15%)</p>
+                <p class="text-neutral-400 text-xs mb-1">• Presenza di testo generato da AI non rielaborato</p>
+                <p class="text-neutral-400 text-xs mb-1">• Citazioni dirette senza virgolette o riferimenti</p>
+                <p class="text-neutral-400 text-xs mb-1">• Parafrasi troppo vicine all'originale</p>
+                <p class="text-neutral-400 text-xs">• Correttezza formale delle note e della bibliografia</p>
+            </div>
+        </div>
+
+        <!-- SEZIONE 2: GPTZERO - IL TOOL CONSIGLIATO -->
+        <div class="bg-neutral-800 border border-amber-500/30 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">⭐ CONSIGLIATO</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="zap" style="width:20px;height:20px;"></i> 2. Lo Strumento Indispensabile: GPTZero
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                <strong class="text-white">GPTZero</strong> è il detector di AI più accurato al mondo, utilizzato da oltre <strong class="text-white">3.500 università</strong> e istituti di istruzione. È lo standard di riferimento per verificare se un testo è stato scritto da un essere umano o generato da un'AI come ChatGPT.
+            </p>
+
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mb-4">
+                <p class="font-bold text-white mb-3 text-xs">📊 PERCHÉ GPTZERO È IL MIGLIORE:</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Accuratezza del 99%</strong> nel rilevare testo AI vs. umano</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Rilevazione "documenti misti"</strong> (umano + AI) con 96,5% di precisione</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Evidenziazione frase per frase</strong> con colori per capire cosa riscrivere</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Supporta 5+ lingue</strong> con alta precisione (incluso l'italiano)</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Rileva tutti i modelli AI</strong>: ChatGPT, GPT-4, GPT-5, Gemini, Claude, Llama, DeepSeek</p>
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">De-biased per studenti non madrelingua</strong> (ESL) – riduce i falsi positivi</p>
+            </div>
+
+            <!-- PULSANTI GPTZERO -->
+            <div class="space-y-3 mb-4">
+                <a href="https://gptzero.me/?via=tesiflash" target="_blank" rel="noopener noreferrer nofollow" class="block w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-4 rounded-lg text-center transition-all transform hover:scale-[1.02] shadow-lg shadow-amber-500/20">
+                    🌐 Prova GPTZero Online – Gratis
+                    <span class="block text-xs font-normal mt-1 opacity-80">Scansione istantanea fino a 10.000 caratteri</span>
+                </a>
+                <a href="https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap?pli=1" target="_blank" rel="noopener noreferrer nofollow" class="block w-full bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 px-4 rounded-lg text-center transition-all transform hover:scale-[1.02] border border-neutral-600">
+                    🧩 Scarica l'Estensione Chrome di GPTZero
+                    <span class="block text-xs font-normal mt-1 opacity-80">Analizza Google Docs, email e qualsiasi pagina web in tempo reale</span>
+                </a>
+            </div>
+
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-2">💡 <strong class="text-white">SUGGERIMENTO PRO:</strong> Installa prima l'estensione Chrome e crea un account. In questo modo, quando aprirai la versione web, sarai già loggato e avrai accesso a scansioni più lunghe.</p>
+            </div>
+        </div>
+
+        <!-- SEZIONE 3: COME USARE GPTZERO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="mouse-pointer-click" style="width:20px;height:20px;"></i> 3. Come Usare GPTZero in 3 Semplici Passi
+            </h3>
+
+            <div class="space-y-3">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📋 PASSO 1: Incolla il Testo o Carica il Documento</p>
+                    <p class="text-neutral-400 text-xs">Vai su GPTZero, incolla il testo della tua tesi o carica il file (PDF, DOCX). Premi "Scan". Per testi oltre 10.000 caratteri, crea un account gratuito.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📊 PASSO 2: Analizza i Risultati</p>
+                    <p class="text-neutral-400 text-xs">GPTZero ti mostrerà la percentuale di testo probabilmente generato da AI e le frasi specifiche evidenziate in giallo o rosso. Leggi attentamente le segnalazioni.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">✍️ PASSO 3: Rielabora le Parti Segnalate</p>
+                    <p class="text-neutral-400 text-xs">Riscrivi le sezioni evidenziate con parole tue, aggiungendo analisi critica, esempi concreti e collegamenti al tuo argomento specifico. Non limitarti a cambiare sinonimi: cambia la struttura della frase.</p>
                 </div>
             </div>
         </div>
+
+        <!-- SEZIONE 4: AZIONE DA SVOLGERE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="list-checks" style="width:20px;height:20px;"></i> 4. La Tua Azione da Svolgere
+            </h3>
+            <div class="step-box">
+                <p class="label">📋 AZIONE DA SVOLGERE ORA</p>
+                <p class="text-neutral-300 text-sm mt-2">1. <strong class="text-white">Clicca sul pulsante GPTZero</strong> qui sopra e crea un account gratuito</p>
+                <p class="text-neutral-300 text-sm">2. <strong class="text-white">Installa l'estensione Chrome</strong> per analisi in tempo reale</p>
+                <p class="text-neutral-300 text-sm">3. <strong class="text-white">Prendi un capitolo della tua tesi</strong> e incollalo in GPTZero</p>
+                <p class="text-neutral-300 text-sm">4. <strong class="text-white">Verifica la percentuale di AI detection</strong></p>
+                <p class="text-neutral-300 text-sm">5. <strong class="text-white">Riscrivi le sezioni segnalate</strong> con parole tue</p>
+                <p class="text-neutral-300 text-sm">6. <strong class="text-white">Ripeti la scansione</strong> finché la percentuale non scende</p>
+            </div>
+        </div>
+
+        <!-- PROMPT BOX -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Verifica il mio testo per potenziali problemi di plagio e AI detection. Segnala: 1) Frasi troppo simili a fonti note, 2) Parafrasi troppo vicine all'originale, 3) Citazioni senza virgolette, 4) Parti che potrebbero sembrare generate da AI. Suggerisci come riformulare in modo originale e personale. Ecco il testo: [INCOLLA TESTO].</pre>
+        </div>
+
+        <!-- DOMANDE FREQUENTI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="help-circle" style="width:20px;height:20px;"></i> 5. Domande Frequenti su GPTZero
+            </h3>
+
+            <div class="space-y-3">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">❓ GPTZero è davvero accurato?</p>
+                    <p class="text-neutral-400 text-xs">Sì. Benchmark indipendenti mostrano un'accuratezza del 99% nel classificare correttamente testo AI vs. umano. È il detector più affidabile sul mercato, validato da università come Penn State.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">❓ Rileva solo ChatGPT o anche altri modelli AI?</p>
+                    <p class="text-neutral-400 text-xs">Rileva tutti i principali modelli: ChatGPT (GPT-3, GPT-4, GPT-5), Gemini, Claude, Llama, DeepSeek e molti altri. Il modello viene costantemente aggiornato.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">❓ Funziona in italiano?</p>
+                    <p class="text-neutral-400 text-xs">Sì. GPTZero supporta con alta precisione inglese, tedesco, portoghese, francese, spagnolo e viene utilizzato in oltre 100 paesi, inclusa l'Italia.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">❓ È gratuito?</p>
+                    <p class="text-neutral-400 text-xs">Sì, puoi iniziare gratuitamente con scansioni fino a 10.000 caratteri. Per documenti più lunghi (come un'intera tesi), puoi creare un account gratuito o valutare i piani premium.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Anti-Plagio & AI Detection</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho creato un account su GPTZero</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho installato l'estensione Chrome di GPTZero</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho passato il testo in un software anti-plagio</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho riformulato le sezioni sopra il 15% di similitudine</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che il testo non sembri generato da AI</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato che le citazioni dirette siano esatte e con virgolette</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Quale percentuale di similitudine è generalmente accettabile in una tesi?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) 30%</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Sotto il 15%</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) 50%</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+    </div>
+</div>
 
       <!-- ========== PAGINA 42: MODULO 6.2 - STAMPA E RILEGATURA (VERSIONE COMPLETA) ========== -->
 <div class="page" data-page="42">
