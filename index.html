@@ -68,8 +68,8 @@
     <!-- INIZIO SCRIPT PORTIERE ANTIFURTO / TOKEN   -->
     <!-- ========================================== -->
     
-    <script>
-    const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/dRmcN513PaeJ4aF6UP2kw04';
+   <script>
+    const SALES_PAGE_URL = 'https://tesiflash.help/';
     const WORKER_VERIFY_URL = 'https://tesiflash.giuseppemattina26.workers.dev/verify'; 
 
     async function checkAccess() {
@@ -83,7 +83,7 @@
         const token = urlParams.get('token');
 
         if (!token) {
-            window.location.href = STRIPE_CHECKOUT_URL;
+            window.location.href = SALES_PAGE_URL;
             return;
         }
 
@@ -92,20 +92,20 @@
             const data = await response.json();
 
             if (!data.valid) {
-                window.location.href = STRIPE_CHECKOUT_URL;
+                window.location.href = SALES_PAGE_URL;
                 return;
             }
 
             console.log("Accesso consentito!");
-            
+             
         } catch (e) {
             console.error("Errore di verifica", e);
-            window.location.href = STRIPE_CHECKOUT_URL;
+            window.location.href = SALES_PAGE_URL;
         }
     }
 
     window.addEventListener('DOMContentLoaded', checkAccess);
-    </script>
+</script>
    
     <!-- ========================================== -->
     <!-- FINE SCRIPT PORTIERE ANTIFURTO / TOKEN     -->
