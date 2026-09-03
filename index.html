@@ -1353,117 +1353,448 @@
     </div>
 </div>
 
-           <!-- ========== PAGINA 8: BRAINSTORMING 1 ========== -->
-        <div class="page" data-page="8">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Sezione 3 · Brainstorming</span>
-                <div class="time-badge">⏱️ Tempo stimato: 45 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">💡 Come Scegliere l'Argomento Giusto</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "L'argomento perfetto non esiste. Esiste l'argomento che ti fa scrivere 10 pagine al giorno senza vomitare."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">La scelta dell'argomento è il momento più critico. Sbagli qui e trascini il dolore per 14 giorni. Azzeccala e la scrittura diventa quasi piacevole.</p>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">✅ Criteri di Scelta</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">1. Ti interessa davvero?</strong> Se non ti interessa, non la finisci. Punto.</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">2. Ci sono abbastanza fonti?</strong> Cerca su Google Scholar. Se trovi meno di 20 articoli, cambia argomento.</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">3. Il relatore lo approva?</strong> Non scegliere un argomento che il tuo relatore odia. Chiedigli prima.</p>
-                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">4. È abbastanza specifico?</strong> "Il marketing" è troppo vago. "L'impatto del social media marketing sulle PMI italiane nel 2020-2024" è perfetto.</p>
-                </div>
+     <!-- ========== PAGINA 8: BRAINSTORMING 1 ========== -->
+<div class="page" data-page="8">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="lightbulb" style="width:16px;height:16px;"></i> Sezione 3 · Brainstorming
+        </span>
+        <div class="time-badge">⏱️ Tempo stimato: 60 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="target" style="width:28px;height:28px;color:#f59e0b;"></i> 💡 Come Scegliere l'Argomento Giusto
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            La scelta dell'argomento è il momento più critico. Sbagli qui e trascini il dolore per 14 giorni. Azzeccala e la scrittura diventa quasi piacevole.
+        </p>
 
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
-                    <p class="text-neutral-300 text-sm">2. Apri ChatGPT (chat.openai.com)</p>
-                    <p class="text-neutral-300 text-sm">3. Incolla il prompt e premi Invio</p>
-                    <p class="text-neutral-300 text-sm">4. Leggi i suggerimenti e scegline uno</p>
-                    <p class="text-neutral-300 text-sm">5. Verifica su Google Scholar che ci siano abbastanza fonti</p>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "L'argomento perfetto non esiste. Esiste l'argomento che ti fa scrivere 10 pagine al giorno senza vomitare."</p>
+        </div>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Sono uno studente universitario e devo scegliere l'argomento della mia tesi. Il mio corso di laurea è [CORSO]. Le mie materie preferite sono [MATERIE]. Ho 14 giorni per completare la tesi. Suggeriscimi 5 argomenti di tesi che siano: 1) Specifici e delimitati, 2) Con abbondanti fonti accademiche, 3) Fattibili in 14 giorni, 4) Interessanti da presentare. Per ogni argomento, indica la domanda di ricerca principale e 3 possibili capitoli.</pre>
+        <!-- ORIENTAMENTO: TIPO DI TESI -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🎯 PARTI DA QUI</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="compass" style="width:20px;height:20px;"></i> 0. Che Tipo di Tesi Stai Facendo?
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non tutte le tesi sono uguali. Se hai <strong class="text-white">14 giorni</strong>, devi orientarti verso un tipo specifico:
+            </p>
+            
+            <div class="space-y-2">
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">✅ PERFETTA PER 14 GIORNI: Literature Review (Tesi Compilativa)</p>
+                    <p class="text-neutral-400 text-xs">Analizzi e confronti studi esistenti su un argomento. Non devi raccogliere dati. Non devi fare esperimenti. Devi leggere, organizzare e sintetizzare. Questo è il metodo Tesi Flash.</p>
                 </div>
-
-                <div class="card bg-neutral-800 rounded-lg p-5 mt-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📝 Esempio Concreto</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Argomento vago:</strong> "Il marketing digitale"</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Argomento specifico:</strong> "L'impatto del social media marketing sulle PMI italiane nel settore food & beverage (2020-2024)"</p>
-                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Perché funziona:</strong> È delimitato geograficamente (Italia), temporalmente (2020-2024), settorialmente (food & beverage), e concettualmente (social media marketing).</p>
+                <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+                    <p class="font-bold text-yellow-400 text-xs mb-1">⚠️ FATTIBILE CON CAUTELA: Case Study o Analisi Teorica</p>
+                    <p class="text-neutral-400 text-xs">Analizzi un caso specifico (un'azienda, un fenomeno) o una teoria. Funziona se hai già i materiali a disposizione. Non cercare nuovi dati.</p>
                 </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Brainstorming</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho chiesto a ChatGPT 5 possibili argomenti</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato su Google Scholar che ci siano almeno 20 fonti</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scelto un argomento e l'ho scritto in una frase specifica</span></label>
-                </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="1">
-                    <p class="text-neutral-200 font-medium mb-3">Qual è il criterio più importante nella scelta dell'argomento?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Che sia originale e mai trattato prima</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Che abbia abbastanza fonti e ti interessi davvero</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Che sia facile da scrivere in 3 giorni</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ DA EVITARE IN 14 GIORNI: Tesi Empirica o Sperimentale</p>
+                    <p class="text-neutral-400 text-xs">Raccolta dati, questionari, interviste, analisi statistica. Richiede mesi. Se il tuo relatore la pretende, negozia o posticipa la consegna.</p>
                 </div>
             </div>
         </div>
+
+        <!-- CRITERI DI SCELTA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="list-checks" style="width:20px;height:20px;"></i> 1. I 4 Criteri di Scelta
+            </h3>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-2">
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">1. Ti interessa davvero?</strong><br><span class="text-neutral-400 text-xs">Se non ti interessa, non la finisci. Punto.</span></p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">2. Ci sono abbastanza fonti?</strong><br><span class="text-neutral-400 text-xs">Cerca su Google Scholar. Se trovi meno di 20 articoli, cambia argomento.</span></p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">3. Il relatore lo approva?</strong><br><span class="text-neutral-400 text-xs">Non scegliere un argomento che il tuo relatore odia. Chiedigli prima.</span></p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">4. È abbastanza specifico?</strong><br><span class="text-neutral-400 text-xs">"Il marketing" è troppo vago. "L'impatto del social media marketing sulle PMI italiane nel 2020-2024" è perfetto.</span></p>
+            </div>
+        </div>
+
+        <!-- PICO FRAMEWORK -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="crosshair" style="width:20px;height:20px;"></i> 2. Il Test del Perimetro Stretto (Metodo PICO Semplificato)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Se un argomento non risponde a questa <strong class="text-white">tripletta</strong>, è troppo vago. Devi delimitare:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">👥 POPOLAZIONE / TARGET</p>
+                    <p class="text-neutral-400 text-xs">Chi o cosa analizzi?<br>Esempio: "PMI del settore food & beverage"</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🔍 VARIABILE / FENOMENO</p>
+                    <p class="text-neutral-400 text-xs">Cosa studi esattamente?<br>Esempio: "Strategie di social media marketing"</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📅 CONTESTO TEMPORALE / GEOGRAFICO</p>
+                    <p class="text-neutral-400 text-xs">Quando e dove?<br>Esempio: "Italia, post-pandemia 2020-2024"</p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">✅ <strong class="text-white">ARGOMENTO COMPLETO:</strong> "L'impatto del social media marketing sulle PMI italiane nel settore food & beverage (2020-2024)"</p>
+            </div>
+        </div>
+
+        <!-- TEST DEL COLLO DI BOTTIGLIA -->
+        <div class="bg-neutral-800 border border-amber-500/30 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🔒 REGOLA D'ORO</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="lock-open" style="width:20px;height:20px;"></i> 3. Il Test del Collo di Bottiglia delle Fonti
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Trovare 20 articoli su Google Scholar <strong class="text-white">non basta</strong>. Spesso scopri a metà percorso che sono dietro paywall insormontabili.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="font-bold text-white mb-2 text-xs">📌 REGOLA D'ORO PRIMA DI CONFERMARE L'ARGOMENTO:</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ Devi avere già scaricato <strong class="text-white">almeno 5 PDF completi</strong> sul tuo computer</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ Se dipendi da riviste a pagamento e la tua università non ha le credenziali attive, <strong class="text-white">cambia argomento</strong></p>
+                <p class="text-neutral-400 text-xs">✅ Usa il filtro <code class="text-amber-400 font-mono">filetype:pdf</code> su Google Scholar per trovare fonti gratuite</p>
+            </div>
+        </div>
+
+        <!-- TEST DEI 3 ANNI RECENTI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="calendar-clock" style="width:20px;height:20px;"></i> 4. Il Test dei "3 Anni Recenti"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Oltre alle 20 fonti totali, verifica che <strong class="text-white">almeno 5 fonti siano degli ultimi 3 anni</strong>.
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-1">✅ Se trovi studi recenti → l'argomento è <strong class="text-white">vivo e attuale</strong></p>
+                <p class="text-neutral-400 text-xs">❌ Se trovi solo roba vecchia → l'argomento è <strong class="text-white">morto o troppo di nicchia</strong>. Cambialo.</p>
+            </div>
+        </div>
+
+        <!-- REGOLA DELLE 3 ANCORE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="anchor" style="width:20px;height:20px;"></i> 5. La Regola delle "3 Ancore"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Prima di confermare l'argomento, identifica:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">👤 1 AUTORE DI RIFERIMENTO</p>
+                    <p class="text-neutral-400 text-xs">Il guru del settore. Colui che tutti citano.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📄 1 STUDIO SEMINALE</p>
+                    <p class="text-neutral-400 text-xs">Il paper fondamentale che ha definito il campo.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">⚔️ 1 DIBATTITO APERTO</p>
+                    <p class="text-neutral-400 text-xs">Dove gli studiosi non sono d'accordo. È lì che si inserisce la tua tesi.</p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">PERCHÉ È IMPORTANTE:</strong> Se non riesci a identificare queste 3 ancore, l'argomento non ha profondità accademica sufficiente.</p>
+            </div>
+        </div>
+
+        <!-- TEST "E QUINDI?" -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="help-circle" style="width:20px;height:20px;"></i> 6. La Domanda "E Quindi?"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Fai questa domanda alla tua domanda di ricerca: <strong class="text-white">"E quindi? A chi interessa questa risposta?"</strong>
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">SUPERA IL TEST:</strong> "L'impatto del social media marketing sulle PMI alimentari" → Interessa a imprenditori, marketer, policy maker</p>
+                <p class="text-neutral-400 text-xs">❌ <strong class="text-white">NON SUPERA IL TEST:</strong> "La storia della pubblicità locale a Pavia" → Interessa a nessuno (tranne forse 3 storici locali)</p>
+            </div>
+        </div>
+
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Clicca sul box qui sotto per copiare il prompt</p>
+            <p class="text-neutral-300 text-sm">2. Apri ChatGPT (chat.openai.com)</p>
+            <p class="text-neutral-300 text-sm">3. Incolla il prompt e premi Invio</p>
+            <p class="text-neutral-300 text-sm">4. Leggi i suggerimenti e scegline 2-3 potenziali</p>
+            <p class="text-neutral-300 text-sm">5. Cerca le parole chiave suggerite su Google Scholar</p>
+            <p class="text-neutral-300 text-sm">6. Scarica almeno 5 PDF completi</p>
+            <p class="text-neutral-300 text-sm">7. Applica i 6 filtri (PICO, Collo di Bottiglia, 3 Anni, 3 Ancore, E Quindi?)</p>
+            <p class="text-neutral-300 text-sm">8. Conferma l'argomento e scrivilo in una frase specifica</p>
+        </div>
+
+        <!-- PROMPT POTENZIATO -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Sono uno studente universitario e devo scegliere l'argomento della mia tesi. Il mio corso di laurea è [CORSO]. Le mie materie preferite sono [MATERIE]. Ho 14 giorni per completare la tesi. Suggeriscimi 5 argomenti di tesi che siano: 1) Specifici e delimitati, 2) Con abbondanti fonti accademiche, 3) Fattibili in 14 giorni come Literature Review, 4) Interessanti da presentare. Per ogni argomento, indica: a) La domanda di ricerca principale, b) 3 possibili capitoli, c) Le parole chiave esatte da cercare su Google Scholar per trovare le fonti, d) Il tipo di fonti da cercare (articoli, libri, report).</pre>
+        </div>
+
+        <!-- ESEMPIO CONCRETO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="eye" style="width:20px;height:20px;"></i> 📝 Esempio Concreto
+            </h3>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-2">
+                <p class="text-neutral-300 text-sm"><strong class="text-red-400">Argomento vago:</strong> "Il marketing digitale"</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-green-400">Argomento specifico:</strong> "L'impatto del social media marketing sulle PMI italiane nel settore food & beverage (2020-2024)"</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Perché funziona:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">✅ È delimitato geograficamente (Italia)</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ È delimitato temporalmente (2020-2024)</p>
+                <p class="text-neutral-400 text-xs mb-1">✅ È delimitato settorialmente (food & beverage)</p>
+                <p class="text-neutral-400 text-xs">✅ È delimitato concettualmente (social media marketing)</p>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Brainstorming Completa</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho identificato il tipo di tesi (Literature Review consigliata)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho chiesto a ChatGPT 5 possibili argomenti con parole chiave per Scholar</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato su Google Scholar che ci siano almeno 20 fonti</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scaricato almeno 5 PDF completi (Test del Collo di Bottiglia)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho applicato il PICO Framework (Popolazione, Variabile, Contesto)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato che almeno 5 fonti siano degli ultimi 3 anni</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho identificato le 3 Ancore (autore, studio seminale, dibattito)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">L'argomento supera il test "E quindi?"</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scelto un argomento e l'ho scritto in una frase specifica</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è il criterio più importante nella scelta dell'argomento?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Che sia originale e mai trattato prima</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Che abbia abbastanza fonti e ti interessi davvero</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Che sia facile da scrivere in 3 giorni</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Prima di confermare l'argomento, cosa devi assolutamente verificare?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Di avere già scaricato almeno 5 PDF completi sul computer</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Che l'argomento piaccia al relatore</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Che ci siano almeno 100 fonti su Google Scholar</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
 
         <!-- ========== PAGINA 9: BRAINSTORMING 2 - GAP ========== -->
-        <div class="page" data-page="9">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Sezione 3 · Brainstorming</span>
-                <div class="time-badge">⏱️ Tempo stimato: 60 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">🎯 Trovare il Gap nella Letteratura</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Una tesi da 10 e lode non ripete ciò che altri hanno già detto. Trova il buco e riempilo."</p>
-                </div>
-                <p class="text-neutral-300 leading-relaxed mb-4">Il gap è la domanda a cui nessuno ha ancora risposto. Trovarlo è più facile di quanto pensi: leggi le sezioni "limiti" e "future research" degli articoli recenti. Lì gli autori stessi ti dicono cosa manca.</p>
-                
-                <div class="step-box">
-                    <p class="label">📋 AZIONE DA SVOLGERE</p>
-                    <p class="text-neutral-300 text-sm mt-2">1. Vai su Google Scholar e scarica 5 articoli recenti sul tuo argomento</p>
-                    <p class="text-neutral-300 text-sm">2. Apri NotebookLM (notebooklm.google.com)</p>
-                    <p class="text-neutral-300 text-sm">3. Clicca "Crea nuovo notebook"</p>
-                    <p class="text-neutral-300 text-sm">4. Clicca "Aggiungi file" e carica i 5 PDF</p>
-                    <p class="text-neutral-300 text-sm">5. Nella chat, incolla il prompt qui sotto</p>
-                    <p class="text-neutral-300 text-sm">6. Leggi i gap identificati e scegli il più promettente</p>
+<div class="page" data-page="9">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="crosshair" style="width:16px;height:16px;"></i> Sezione 3 · Brainstorming
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 60 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="target" style="width:28px;height:28px;color:#f59e0b;"></i> 🎯 Trovare il Gap nella Letteratura
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Il gap è la domanda a cui nessuno ha ancora risposto. Trovarlo è più facile di quanto pensi: leggi le sezioni "limiti" e "future research" degli articoli recenti. Lì gli autori stessi ti dicono cosa manca.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Una tesi da 10 e lode non ripete ciò che altri hanno già detto. Trova il buco e riempilo."</p>
+        </div>
+
+        <!-- TIPOLOGIA DEI GAP -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="traffic-cone" style="width:20px;height:20px;"></i> 1. I 3 Tipi di Gap (Semaforo di Fattibilità)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non tutti i gap sono uguali. Per una tesi in 14 giorni, devi puntare sui gap <strong class="text-white">verdi</strong> ed evitare quelli <strong class="text-white">rossi</strong>.
+            </p>
+            
+            <div class="space-y-2">
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🟢 GAP GEOGRAFICO / TEMPORALE (Ottimo)</p>
+                    <p class="text-neutral-400 text-xs">"Molti studi lo analizzano negli USA tra il 2010 e il 2018, nessuno lo ha fatto in Italia post-pandemia."</p>
+                    <p class="text-neutral-400 text-xs mt-1"><strong class="text-white">Perché funziona:</strong> Basta applicare teorie esistenti a un contesto nuovo. Non devi inventare nulla.</p>
                 </div>
 
-                <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4" onclick="copyPrompt(this)">
-                    <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Analizza questi 5 articoli e identifica il "gap" nella letteratura. Cerca: 1) Le domande che gli autori dicono di non aver affrontato, 2) I limiti dichiarati, 3) Le aree di ricerca future suggerite. Elenca i 3 gap più promettenti che potrei affrontare in una tesi.</pre>
+                <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+                    <p class="font-bold text-yellow-400 text-xs mb-1">🟡 GAP DI CATEGORIA / TARGET (Buono)</p>
+                    <p class="text-neutral-400 text-xs">"È stato studiato per le grandi aziende, ma mancano dati specifici per le micro-imprese."</p>
+                    <p class="text-neutral-400 text-xs mt-1"><strong class="text-white">Perché funziona:</strong> Restringi il target e analizzi come le conclusioni cambiano. Richiede più attenzione ma è fattibile.</p>
                 </div>
 
-                <div class="card bg-neutral-800 rounded-lg p-5 mt-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📝 Esempio Concreto</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Argomento:</strong> Social media e autostima negli adolescenti</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Gap trovato:</strong> La maggior parte degli studi si concentra su Instagram e Facebook, ma pochi analizzano TikTok</p>
-                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Domanda di ricerca:</strong> "Qual è l'impatto dell'uso prolungato di TikTok sull'autostima degli adolescenti italiani (14-18 anni) rispetto a Instagram?"</p>
-                </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Gap</h3>
-                <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scaricato 5 articoli recenti da Google Scholar</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho caricato gli articoli su NotebookLM</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho chiesto a NotebookLM di identificare i gap</span></label>
-                    <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho formulato una domanda di ricerca specifica</span></label>
-                </div>
-
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="2">
-                    <p class="text-neutral-200 font-medium mb-3">Dove trovi solitamente il gap nella letteratura?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Nelle conclusioni degli articoli</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Nei titoli degli articoli</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Nelle sezioni "limiti" e "future research"</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">🔴 GAP METODOLOGICO / SPERIMENTALE (Da evitare)</p>
+                    <p class="text-neutral-400 text-xs">"Nessuno ha mai fatto un esperimento clinico di 6 mesi su 500 persone."</p>
+                    <p class="text-neutral-400 text-xs mt-1"><strong class="text-white">Perché evitarlo:</strong> Richiede mesi di raccolta dati, approvazioni etiche, analisi statistica. Non hai tempo.</p>
                 </div>
             </div>
         </div>
+
+        <!-- DIFFERENZA GAP VS BUCO NERO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="moon-star" style="width:20px;height:20px;"></i> 2. La Differenza tra "Gap" e "Buco Nero"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Attenzione: un gap non è un argomento che <strong class="text-white">nessuno ha mai toccato</strong>. Se nessuno l'ha mai studiato, spesso c'è un motivo.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-2">✅ GAP VERO</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Ci sono studi vicini ma non identici</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Le fonti esistono e sono accessibili</p>
+                    <p class="text-neutral-400 text-xs">• La letteratura è matura ma incompleta</p>
+                </div>
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-2">❌ BUCO NERO</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Nessuno studio nemmeno lontanamente simile</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Non ci sono fonti su cui basarti</p>
+                    <p class="text-neutral-400 text-xs">• Probabilmente non è rilevante o è impossibile</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TECNICA DEL TRIANGOLO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="triangle" style="width:20px;height:20px;"></i> 3. La Tecnica del "Triangolo del Gap"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Il gap perfetto si trova all'<strong class="text-white">intersezione di 3 elementi</strong>. Due temi già studiati e la loro combinazione ancora inesplorata.
+            </p>
+            
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-2">📌 <strong class="text-white">FORMULA:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">Tema A</strong> (studiato) = Social media</p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-white">Tema B</strong> (studiato) = Autostima negli adolescenti</p>
+                <p class="text-neutral-400 text-xs mb-1">• <strong class="text-amber-400">Intersezione A+B</strong> (poco studiata) = TikTok e autostima negli adolescenti italiani</p>
+            </div>
+            
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">PERCHÉ FUNZIONA:</strong> Hai basi teoriche solide per entrambi i temi, ma la loro combinazione è originale. Non parti da zero.</p>
+            </div>
+        </div>
+
+        <!-- AZIONE DA SVOLGERE -->
+        <div class="step-box mb-6">
+            <p class="label">📋 AZIONE DA SVOLGERE</p>
+            <p class="text-neutral-300 text-sm mt-2">1. Vai su Google Scholar e scarica 5 articoli recenti sul tuo argomento</p>
+            <p class="text-neutral-300 text-sm">2. Apri NotebookLM (notebooklm.google.com)</p>
+            <p class="text-neutral-300 text-sm">3. Clicca "Crea nuovo notebook"</p>
+            <p class="text-neutral-300 text-sm">4. Clicca "Aggiungi file" e carica i 5 PDF</p>
+            <p class="text-neutral-300 text-sm">5. Nella chat, incolla il prompt qui sotto</p>
+            <p class="text-neutral-300 text-sm">6. Leggi i gap identificati e scegli il più promettente</p>
+            <p class="text-neutral-300 text-sm">7. Verifica su Google Scholar che il gap esista davvero</p>
+        </div>
+
+        <!-- PROMPT POTENZIATO -->
+        <div class="prompt-box bg-neutral-800 border border-neutral-700 rounded-lg p-4 mb-6" onclick="copyPrompt(this)">
+            <pre class="text-neutral-200 text-sm whitespace-pre-wrap">Analizza questi 5 articoli e identifica il "gap" nella letteratura. Cerca: 1) Le domande che gli autori dicono di non aver affrontato, 2) I limiti dichiarati, 3) Le aree di ricerca future suggerite. Per ogni gap identificato, indica: a) Il tipo di gap (geografico, temporale, di categoria, metodologico), b) La fattibilità in 14 giorni (alta, media, bassa), c) Quali articoli tra quelli caricati mi aiuteranno a colmarlo, d) Le parole chiave da cercare su Google Scholar per trovare altre fonti sul gap. Elenca i 3 gap più promettenti e fattibili per una tesi di 14 giorni.</pre>
+        </div>
+
+        <!-- VERIFICA INCROCIATA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="search-check" style="width:20px;height:20px;"></i> 4. La Verifica Incrociata su Google Scholar
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Dopo che NotebookLM identifica un gap, <strong class="text-white">non fidarti ciecamente</strong>. L'IA può sbagliare o interpretare male. Verifica sempre:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-1">1. <strong class="text-white">Cerca le parole chiave del gap</strong> su Google Scholar</p>
+                <p class="text-neutral-400 text-xs mb-1">2. <strong class="text-white">Controlla quanti studi esistono</strong> già su quel gap specifico</p>
+                <p class="text-neutral-400 text-xs mb-1">3. <strong class="text-white">Se trovi 50+ studi</strong> → il gap è già stato colmato, cercane un altro</p>
+                <p class="text-neutral-400 text-xs mb-1">4. <strong class="text-white">Se trovi 0-5 studi</strong> → il gap esiste davvero</p>
+                <p class="text-neutral-400 text-xs">5. <strong class="text-white">Se trovi 0 studi totali</strong> → è un buco nero, non un gap</p>
+            </div>
+        </div>
+
+        <!-- TEST 14 GIORNI -->
+        <div class="bg-neutral-800 border border-amber-500/30 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">⏰ TEST</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i> 5. Il Test "Il Gap è Riempibile in 14 Giorni?"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Prima di confermare il gap, rispondi onestamente a queste domande:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">1.</strong> Ho almeno 10 fonti che posso usare per colmare questo gap?</p>
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">2.</strong> Posso scrivere 3 capitoli su questo gap senza raccogliere dati nuovi?</p>
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">3.</strong> Il gap è abbastanza specifico da essere coperto in 40-60 pagine?</p>
+                    <p class="text-neutral-400 text-xs"><strong class="text-white">4.</strong> Se dovessi spiegare questo gap a un amico in 30 secondi, capirebbe qual è il problema?</p>
+                </div>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">✅ Se hai risposto <strong class="text-white">SÌ a tutte e 4</strong> → il gap è perfetto.</p>
+                <p class="text-neutral-400 text-xs">❌ Se hai risposto <strong class="text-white">NO a una o più</strong> → rivedi il gap o cambialo.</p>
+            </div>
+        </div>
+
+        <!-- ESEMPIO CONCRETO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="eye" style="width:20px;height:20px;"></i> 📝 Esempio Concreto
+            </h3>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-2">
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Argomento:</strong> Social media e autostima negli adolescenti</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Gap trovato:</strong> La maggior parte degli studi si concentra su Instagram e Facebook, ma pochi analizzano TikTok</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Tipo di gap:</strong> 🟢 Geografico/Temporale + 🟡 Di Categoria (TikTok è nuovo)</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Domanda di ricerca:</strong> "Qual è l'impatto dell'uso prolungato di TikTok sull'autostima degli adolescenti italiani (14-18 anni) rispetto a Instagram?"</p>
+                <p class="text-neutral-300 text-sm"><strong class="text-green-400">Verifica 14 giorni:</strong> ✅ Superata (ci sono studi su Instagram, studi su TikTok, e studi sull'autostima in Italia. L'intersezione è il gap)</p>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Gap Completa</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho scaricato 5 articoli recenti da Google Scholar</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho caricato gli articoli su NotebookLM</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho chiesto a NotebookLM di identificare i gap</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho classificato il gap (🟢 geografico, 🟡 categoria, 🔴 metodologico)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato su Google Scholar che il gap esista davvero</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Il gap supera il test "Riempibile in 14 giorni?"</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho formulato una domanda di ricerca specifica</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="2">
+            <p class="text-neutral-200 font-medium mb-3">Dove trovi solitamente il gap nella letteratura?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Nelle conclusioni degli articoli</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Nei titoli degli articoli</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Nelle sezioni "limiti" e "future research"</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Qual è il tipo di gap migliore per una tesi in 14 giorni?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Geografico o temporale (applicare teorie esistenti a contesti nuovi)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Metodologico (creare nuovi esperimenti)</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Nessun gap, ripetere studi esistenti</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è la differenza tra un "gap" e un "buco nero"?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Sono la stessa cosa</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Il gap ha studi vicini ma non identici, il buco nero non ha nessuno studio</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Il gap è impossibile da colmare</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
 
         <!-- ========== PAGINA 10: MODULO 1 - BRIEFING ========== -->
         <div class="page" data-page="10">
