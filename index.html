@@ -5592,46 +5592,217 @@
 </div>
 
         <!-- ========== PAGINA 30: MODULO BONUS - LEZIONE 4 ========== -->
-        <div class="page" data-page="30">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Bonus · Lezione 4</span>
-                <div class="time-badge">⏱️ Tempo stimato: 15 minuti</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">Tool Pratici + Checklist + Quiz Finale</h2>
-                <div class="flash-strategy">
-                    <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La voce è il miglior rilevatore anti-IA del mondo. Usala."</p>
-                </div>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">🛠️ I Tool Pratici da Usare Subito</h3>
-                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">1. ChatGPT / Claude</strong><br>Incolla il testo grezzo + uno dei prompt sopra. Fatto.</p>
-                    <p class="text-neutral-300 text-sm mb-3"><strong class="text-amber-400">2. NotebookLM</strong><br>Carica le tue fonti, chiedi all'IA di abbozzare il capitolo, poi passalo al setaccio con il Prompt 1.</p>
-                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">3. Controllo umano (Il test del microfono)</strong><br>Leggi il paragrafo ad alta voce. Se mentre lo leggi ti viene da prendere fiato in modo innaturale, va spezzato. La tua voce è il miglior filtro anti-IA del mondo.</p>
-                </div>
+<div class="page" data-page="30">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="wrench" style="width:16px;height:16px;"></i> Bonus · Lezione 4
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 15 minuti · Lettura: 8 minuti</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="check-circle" style="width:28px;height:28px;color:#f59e0b;"></i> ✅ Tool Pratici + Checklist + Quiz Finale
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Ultima lezione del Modulo Bonus. Mettiamo insieme tutti gli strumenti e verifichiamo che il tuo testo sia davvero pulito.
+        </p>
 
-                <div class="card bg-neutral-800 rounded-lg p-5 mb-4">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📋 Checklist Finale del Modulo Bonus</h3>
-                    <div class="space-y-2">
-                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho capito che l'IA va guidata con i concetti di burstiness e perplessità</span></label>
-                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato almeno uno dei prompt di riscrittura sul testo generato</span></label>
-                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto il test della voce (letto ad alta voce)</span></label>
-                        <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Il testo mantiene il rigore accademico ma ha un ritmo umano e scorrevole</span></label>
-                    </div>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La voce è il miglior rilevatore anti-IA del mondo. Usala. Poi verifica con GPTZero."</p>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Finale del Modulo Bonus</h3>
-                <div class="quiz-block" data-correct="1">
-                    <p class="text-neutral-200 font-medium mb-3">Perché i software come Turnitin beccano i testi IA?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Perché usano parole troppo difficili</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Perché la struttura è troppo uniforme e prevedibile</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Perché il font è diverso</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+        <!-- IL FLUSSO DI LAVORO COMPLETO -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🔄 FLUSSO</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="workflow" style="width:20px;height:20px;"></i> 1. Il Flusso di Lavoro Completo (6 Passaggi)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Ecco la sequenza completa per pulire il testo AI:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📝 PASSO 1: SCRITTURA INIZIALE</p>
+                    <p class="text-neutral-400 text-xs">Scrivi il capitolo con l'aiuto dell'IA (ChatGPT o NotebookLM).</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🛡️ PASSO 2: PROMPT 1 (Distruttore di Pattern)</p>
+                    <p class="text-neutral-400 text-xs">Elimina i pattern sintetici più evidenti.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎭 PASSO 3: PROMPT 2 (Trasformista Accademico)</p>
+                    <p class="text-neutral-400 text-xs">Rendi il testo più naturale e brillante.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🔍 PASSO 4: PROMPT 3 (Verificatore)</p>
+                    <p class="text-neutral-400 text-xs">Controlla che non ci siano residui sintetici.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🤖 PASSO 5: GPTZERO (Verifica Finale)</p>
+                    <p class="text-neutral-400 text-xs">Verifica con il detector che il testo sia pulito.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎤 PASSO 6: TEST DELLA VOCE</p>
+                    <p class="text-neutral-400 text-xs">Leggi ad alta voce. Se suona naturale, sei pronto.</p>
                 </div>
             </div>
         </div>
+
+        <!-- COLLEGAMENTO CON GPTZERO -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🔍 VERIFICA</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="scan-search" style="width:20px;height:20px;"></i> 2. Il Collegamento con GPTZero (Verifica Finale)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Dopo aver applicato i 3 prompt, verifica il risultato con GPTZero:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mb-3">
+                <p class="text-neutral-400 text-xs mb-1">📌 <strong class="text-white">COME USARE GPTZERO:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. Vai su GPTZero e crea un account gratuito</p>
+                <p class="text-neutral-400 text-xs mb-1">2. Incolla il testo ripulito (max 10.000 caratteri)</p>
+                <p class="text-neutral-400 text-xs mb-1">3. Controlla la percentuale di probabilità AI</p>
+                <p class="text-neutral-400 text-xs">4. Se è sotto il 30% → sei a posto. Se è sopra → ripeti i prompt.</p>
+            </div>
+            <a href="https://gptzero.me/?via=tesiflash" target="_blank" rel="noopener noreferrer nofollow" class="block w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 px-4 rounded-lg text-center transition-all transform hover:scale-[1.02] shadow-lg shadow-amber-500/20">
+                🔍 Verifica con GPTZero
+                <span class="block text-xs font-normal mt-1 opacity-80">Scopri se il tuo testo è davvero pulito</span>
+            </a>
+        </div>
+
+        <!-- LA GUIDA AL TEST DEL MICROFONO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="mic" style="width:20px;height:20px;"></i> 3. La Guida al "Test del Microfono"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Leggere ad alta voce è il modo più rapido per capire se il testo suona umano. Ecco come farlo:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📖 COME LEGGERE:</p>
+                    <p class="text-neutral-400 text-xs mb-1">1. Leggi il testo ad alta voce, senza fretta</p>
+                    <p class="text-neutral-400 text-xs mb-1">2. Ascolta dove ti manca il fiato</p>
+                    <p class="text-neutral-400 text-xs">3. Se devi rileggere una frase 2 volte per capirla, è troppo complessa</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">👂 COSA ASCOLTARE:</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ Ritmo naturale (frasi corte e lunghe alternate)</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ Pause logiche (dove prenderesti fiato parlando)</p>
+                    <p class="text-neutral-400 text-xs mb-1">❌ Monotonia (tutte le frasi uguali)</p>
+                    <p class="text-neutral-400 text-xs">❌ Frasi troppo lunghe (oltre 25 parole senza pause)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- I 5 SEGNALI CHE IL TESTO È PRONTO -->
+        <div class="bg-neutral-800 border border-green-500/30 rounded-xl p-5 mb-6">
+            <h3 class="text-green-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="check-circle" style="width:20px;height:20px;"></i> 4. I 5 Segnali che il Testo è Pronto
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Il tuo testo è pronto quando:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">1.</strong> Lo leggi ad alta voce senza intoppi</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">2.</strong> GPTZero lo classifica come "probabilmente umano" (sotto il 30%)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">3.</strong> Le frasi hanno lunghezze variabili (da 3 a 25 parole)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">4.</strong> Non ci sono più di 2 parole spia per paragrafo</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs">✅ <strong class="text-white">5.</strong> Senti che "suona come te" quando lo leggi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOL PRATICI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="wrench" style="width:20px;height:20px;"></i> 5. I Tool Pratici da Usare Subito
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🤖 CHATGPT / CLAUDE</p>
+                    <p class="text-neutral-400 text-xs">Incolla il testo grezzo + uno dei prompt sopra. Fatto.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">📓 NOTEBOOKLM</p>
+                    <p class="text-neutral-400 text-xs">Carica le tue fonti, chiedi all'IA di abbozzare il capitolo, poi passalo al setaccio con il Prompt 1.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🔍 GPTZERO</p>
+                    <p class="text-neutral-400 text-xs">Verifica finale che il testo sia pulito. Se è sotto il 30%, sei a posto.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">🎤 LA TUA VOCE</p>
+                    <p class="text-neutral-400 text-xs">Leggi ad alta voce. Se suona naturale, è pronto. Se suona strano, riscrivi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIEPILOGO DEL MODULO BONUS -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="flag-checkered" style="width:20px;height:20px;"></i> 6. Riepilogo del Modulo Bonus (Cosa Hai Imparato)
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Lezione 1:</strong> Hai capito come i software rilevano il testo AI (burstiness e perplessità)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Lezione 2:</strong> Hai imparato il prompt con "alta burstiness e perplessità"</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Lezione 3:</strong> Hai 3 prompt pronti per ripulire il testo</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs">✅ <strong class="text-white">Lezione 4:</strong> Hai il flusso completo + GPTZero + test della voce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHECKLIST FINALE -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📋 Checklist Finale del Modulo Bonus</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho capito che l'IA va guidata con i concetti di burstiness e perplessità</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato almeno uno dei prompt di riscrittura sul testo generato</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho seguito il flusso completo (Prompt 1 → 2 → 3)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato con GPTZero che il testo sia pulito</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho fatto il test della voce (letto ad alta voce)</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Il testo mantiene il rigore accademico ma ha un ritmo umano e scorrevole</span></label>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Finale del Modulo Bonus</h3>
+        <div class="quiz-block" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Perché i software come Turnitin beccano i testi IA?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Perché usano parole troppo difficili</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Perché la struttura è troppo uniforme e prevedibile</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Perché il font è diverso</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Qual è il flusso corretto per pulire il testo AI?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Prompt 1 → Prompt 2 → Prompt 3 → GPTZero → Test della voce</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) GPTZero → Prompt 1 → Prompt 2 → Prompt 3</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Test della voce → Prompt 3 → Prompt 2 → Prompt 1</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
         
-        <!-- ========== CONTINUA CON LE PAGINE SUCCESSIVE (rinumerate) ========== -->
         <!-- ========== PAGINA 31: MODULO 4 - BRIEFING ========== -->
         <div class="page" data-page="31">
             <div class="max-w-2xl mx-auto px-4 py-8">
