@@ -10168,7 +10168,7 @@ Cordiali saluti,
             });
         }
 
-        // ==================== PLAYER AUDIO AVANZATO ====================
+   // ==================== PLAYER AUDIO AVANZATO ====================
         let currentAudio = null;
         let currentAudioId = null;
         let currentAudioButton = null;
@@ -10178,15 +10178,24 @@ Cordiali saluti,
         }
 
         function playAudioBriefing(modulo) {
-            if (typeof modulo === 'string') {
-                modulo = parseInt(modulo.replace('m', ''));
+            let key;
+            
+            if (modulo === 'bonus') {
+                key = 'bonus';
+            } else {
+                if (typeof modulo === 'string') {
+                    modulo = parseInt(modulo.replace('m', ''));
+                }
+                key = 'modulo' + modulo;
             }
             
-            const key = 'modulo' + modulo;
             const url = AUDIO_CONFIG[key];
-            if (!url) return;
-
-            toggleAudio(url, 'modulo-' + modulo);
+            if (!url) {
+                console.error('Audio non trovato per:', key);
+                return;
+            }
+            
+            toggleAudio(url, key);
         }
 
         function toggleAudio(url, id) {
