@@ -2612,47 +2612,261 @@
     </div>
 </div>
         
-        <!-- ========== PAGINA 14: MODULO 2 - BRIEFING ========== -->
-        <div class="page" data-page="14">
-            <div class="max-w-2xl mx-auto px-4 py-8">
-                <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2">Modulo 2 · Giorno 3-4</span>
-                <div class="time-badge">⏱️ Tempo stimato: 2 giorni (8-10 ore totali)</div>
-                <h2 class="heading-font font-bold text-2xl text-white mb-4">🔍 Modulo 2: Ricerca e Database Fonti</h2>
-                
-                <div class="briefing-box">
-                    <p class="label">🔊 ASCOLTA IL BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
-                </div>
+       <!-- ========== PAGINA 14: MODULO 2 - BRIEFING ========== -->
+<div class="page" data-page="14">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="database" style="width:16px;height:16px;"></i> Modulo 2 · Giorno 3-4
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo stimato: 2 giorni (8-10 ore totali)</div>
+        
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="search" style="width:28px;height:28px;color:#f59e0b;"></i> 🔍 Modulo 2: Ricerca e Database Fonti
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Questo modulo è il cuore della ricerca. Senza fonti solide, la tua tesi è un castello di sabbia. In questi 2 giorni raccoglierai e organizzerai tutto il materiale che ti servirà per scrivere.
+        </p>
 
-                <div class="audio-box" onclick="playAudioBriefing('m2')">
-                    <p class="label">▶️ RIPRODUCI BRIEFING</p>
-                    <p class="text-neutral-300 text-sm mt-2">🎧 "Briefing Modulo 2: Ricerca e Database Fonti"</p>
-                    <p class="text-neutral-400 text-sm mt-1">Durata: 5 minuti | Come trovare e organizzare le fonti</p>
-                </div>
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "La ricerca non è accumulare PDF. La ricerca è trovare 20 fonti giuste e saperle usare. Meno è meglio."</p>
+        </div>
 
-                <p class="text-neutral-300 leading-relaxed mb-4">Questo modulo è il cuore della ricerca. Senza fonti solide, la tua tesi è un castello di sabbia. In questi 2 giorni raccoglierai e organizzerai tutto il materiale che ti servirà per scrivere.</p>
-                
-                <div class="card bg-neutral-800 rounded-lg p-5">
-                    <h3 class="heading-font font-bold text-lg text-white mb-3">📚 Lezioni del Modulo</h3>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 1:</strong> Google Scholar Avanzato</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 2:</strong> Tecnica di Scrematura Veloce (Fast Reading)</p>
-                    <p class="text-neutral-300 text-sm mb-2"><strong class="text-amber-400">Lezione 3:</strong> Creazione del Database Fonti</p>
-                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 4:</strong> Organizzazione con NotebookLM</p>
-                </div>
+        <!-- BRIEFING AUDIO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="headphones" style="width:20px;height:20px;"></i> 🔊 Briefing Audio
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">Prima di iniziare questo modulo, ascolta il briefing audio.</p>
+            
+            <div class="audio-box bg-neutral-900/60 border border-neutral-700 rounded-lg p-4 cursor-pointer" onclick="playAudioBriefing('m2')">
+                <p class="text-neutral-200 text-sm font-bold">▶️ RIPRODUCI BRIEFING</p>
+                <p class="text-neutral-300 text-sm mt-1">🎧 "Briefing Modulo 2: Ricerca e Database Fonti"</p>
+                <p class="text-neutral-400 text-xs mt-1">Durata: 5 minuti | Come trovare e organizzare le fonti</p>
+            </div>
+        </div>
 
-                <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
-                <div class="quiz-block" data-correct="2">
-                    <p class="text-neutral-200 font-medium mb-3">Quante fonti accademiche dovresti avere come minimo?</p>
-                    <div class="space-y-2">
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) 5</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) 10</button>
-                        <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) 20</button>
-                    </div>
-                    <div class="feedback text-sm mt-2"></div>
+        <!-- OBIETTIVI CONCRETI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="flag" style="width:20px;height:20px;"></i> 🎯 Cosa Avrai in Mano alla Fine dei 2 Giorni
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">20 fonti accademiche</strong> — articoli, libri, report selezionati e verificati</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Database fonti</strong> — foglio Excel con Autore, Anno, Titolo, Tipo, Note chiave</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">5 fonti seminali identificate</strong> — i pilastri su cui si basa la tua tesi</p>
+                    <p class="text-neutral-400 text-xs mb-1">✅ <strong class="text-white">Tutte le fonti caricate su NotebookLM</strong> — pronte per l'analisi</p>
+                    <p class="text-neutral-400 text-xs">✅ <strong class="text-white">Mappa delle fonti</strong> — sai quale fonte supporta quale capitolo</p>
                 </div>
             </div>
         </div>
 
+        <!-- ROADMAP DEI 2 GIORNI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="map" style="width:20px;height:20px;"></i> 🗺️ Roadmap dei 2 Giorni
+            </h3>
+            
+            <div class="space-y-3">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">📅 GIORNO 3 (4-5 ore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 1: Google Scholar Avanzato</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 2: Tecnica di Scrematura Veloce (Fast Reading)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Esercizio: Trovare le prime 10 fonti con Google Scholar</p>
+                    <p class="text-neutral-400 text-xs">• Esercizio: Scremare e classificare le fonti per rilevanza</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-amber-400 text-xs mb-2">📅 GIORNO 4 (4-5 ore)</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 3: Creazione del Database Fonti</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Lezione 4: Organizzazione con NotebookLM</p>
+                    <p class="text-neutral-400 text-xs mb-1">• Esercizio: Completare il database con 20 fonti</p>
+                    <p class="text-neutral-400 text-xs">• Esercizio: Caricare tutte le fonti su NotebookLM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PIRAMIDE DELLA QUALITÀ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="pyramid" style="width:20px;height:20px;"></i> 1. La Piramide della Qualità delle Fonti
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non tutte le fonti hanno lo stesso valore. Ecco la gerarchia, dalla migliore alla peggiore:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🥇 LIVELLO 1: ARTICOLI PEER-REVIEWED</p>
+                    <p class="text-neutral-400 text-xs">Pubblicati su riviste accademiche. Valutati da esperti anonimi. Sono il gold standard.</p>
+                </div>
+                <div class="bg-green-500/10 border border-green-500/30 rounded-lg p-3">
+                    <p class="font-bold text-green-400 text-xs mb-1">🥈 LIVELLO 2: LIBRI ACCADEMICI</p>
+                    <p class="text-neutral-400 text-xs">Pubblicati da case editrici universitarie o specializzate. Ottimi per teorie e framework.</p>
+                </div>
+                <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+                    <p class="font-bold text-yellow-400 text-xs mb-1">🥉 LIVELLO 3: REPORT ISTITUZIONALI</p>
+                    <p class="text-neutral-400 text-xs">Pubblicati da enti governativi, ONG, organizzazioni internazionali. Utili per dati e statistiche.</p>
+                </div>
+                <div class="bg-orange-500/10 border border-orange-500/30 rounded-lg p-3">
+                    <p class="font-bold text-orange-400 text-xs mb-1">⚠️ LIVELLO 4: TESI E DISSERTAZIONI</p>
+                    <p class="text-neutral-400 text-xs">Altre tesi di laurea. Utili come esempio di struttura, ma non come fonte primaria.</p>
+                </div>
+                <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-3">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ LIVELLO 5: SITI WEB E BLOG</p>
+                    <p class="text-neutral-400 text-xs">Da usare solo per contesto generale. Mai come fonte accademica principale.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGOLA DELLA SATURAZIONE -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">🎯 SEGNALE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="droplets" style="width:20px;height:20px;"></i> 2. La Regola della "Saturazione"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Come capire quando hai abbastanza fonti e puoi smettere di cercare?
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-1">📌 <strong class="text-white">IL SEGNALE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">• Inizi a trovare <strong class="text-white">sempre le stesse fonti</strong> citate</p>
+                <p class="text-neutral-400 text-xs mb-1">• I nuovi articoli non aggiungono <strong class="text-white">informazioni nuove</strong></p>
+                <p class="text-neutral-400 text-xs">• Hai già <strong class="text-white">20 fonti di qualità</strong> (Livelli 1-3)</p>
+            </div>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 mt-3">
+                <p class="text-neutral-400 text-xs">💡 <strong class="text-white">REGOLA:</strong> Raggiunta la saturazione, SMETTI di cercare. Ogni ora extra di ricerca è un'ora rubata alla scrittura.</p>
+            </div>
+        </div>
+
+        <!-- STRATEGIA PALLA DI NEVE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="snowflake" style="width:20px;height:20px;"></i> 3. La Strategia "Palla di Neve"
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                È il metodo più efficiente per costruire il tuo database fonti. Ecco come funziona:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">PASSO 1:</strong> Trova 5 articoli seminali sul tuo argomento</p>
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">PASSO 2:</strong> Leggi le loro bibliografie (sezione "References")</p>
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">PASSO 3:</strong> Identifica le fonti più citate in quelle bibliografie</p>
+                    <p class="text-neutral-400 text-xs mb-1"><strong class="text-white">PASSO 4:</strong> Scarica quelle fonti e ripeti il processo</p>
+                    <p class="text-neutral-400 text-xs"><strong class="text-white">RISULTATO:</strong> Da 5 articoli iniziali, ottieni 20-30 fonti rilevanti in poche ore</p>
+            </div>
+        </div>
+
+        <!-- DATABASE MINIMO SINDACALE -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="table" style="width:20px;height:20px;"></i> 4. Il Database Fonti Minimo Sindacale
+            </h3>
+            <p class="text-neutral-300 text-sm mb-3">
+                Non serve un software complicato. Basta un foglio Excel con <strong class="text-white">5 colonne</strong>:
+            </p>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                <p class="text-neutral-400 text-xs mb-1">📌 <strong class="text-white">COLONNE DEL DATABASE:</strong></p>
+                <p class="text-neutral-400 text-xs mb-1">1. <strong class="text-white">Autore</strong> (Cognome, Nome)</p>
+                <p class="text-neutral-400 text-xs mb-1">2. <strong class="text-white">Anno</strong> (di pubblicazione)</p>
+                <p class="text-neutral-400 text-xs mb-1">3. <strong class="text-white">Titolo</strong> (completo)</p>
+                <p class="text-neutral-400 text-xs mb-1">4. <strong class="text-white">Tipo</strong> (Articolo peer-reviewed, Libro, Report, ecc.)</p>
+                <p class="text-neutral-400 text-xs">5. <strong class="text-white">Note chiave</strong> (2-3 parole su cosa contiene e per quale capitolo serve)</p>
+            </div>
+        </div>
+
+        <!-- I 3 ERRORI FATALI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="alert-octagon" style="width:20px;height:20px;"></i> ⚠️ I 3 Errori Fatali della Ricerca
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 1: Procrastinare con la Ricerca</p>
+                    <p class="text-neutral-400 text-xs">Passare giorni a cercare fonti senza mai iniziare a scrivere. <strong class="text-white">Soluzione:</strong> Massimo 2 giorni di ricerca. Poi scrivi.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 2: Accumulare Senza Leggere</p>
+                    <p class="text-neutral-400 text-xs">Scaricare 50 PDF che non leggerai mai. <strong class="text-white">Soluzione:</strong> Scarica solo quello che scremi e valuti subito utile.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-red-400 text-xs mb-1">❌ ERRORE 3: Fonti di Bassa Qualità</p>
+                    <p class="text-neutral-400 text-xs">Citare blog e siti web invece di articoli peer-reviewed. <strong class="text-white">Soluzione:</strong> Rispetta la piramide della qualità.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LEZIONI DEL MODULO -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 📚 Lezioni del Modulo
+            </h3>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 1:</strong> Google Scholar Avanzato</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 2:</strong> Tecnica di Scrematura Veloce (Fast Reading)</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 3:</strong> Creazione del Database Fonti</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="text-neutral-300 text-sm"><strong class="text-amber-400">Lezione 4:</strong> Organizzazione con NotebookLM</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHECKLIST DI USCITA -->
+        <div class="bg-neutral-800 border border-green-500/30 rounded-xl p-5 mb-6">
+            <h3 class="text-green-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="check-circle" style="width:20px;height:20px;"></i> ✅ Checklist di Uscita dal Modulo 2
+            </h3>
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 space-y-2">
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho ascoltato il briefing audio</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho completato le 4 lezioni</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho raccolto almeno 20 fonti (Livelli 1-3 della piramide)</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho creato il database fonti (foglio Excel con 5 colonne)</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho identificato 5 fonti seminali</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho caricato tutte le fonti su NotebookLM</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho mappato le fonti per capitolo</span></label>
+                <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-green-500"><span class="text-neutral-200 text-sm">Ho raggiunto la saturazione (trovo sempre le stesse fonti)</span></label>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">📝 Quiz Rapido</h3>
+        <div class="quiz-block" data-correct="2">
+            <p class="text-neutral-200 font-medium mb-3">Quante fonti accademiche dovresti avere come minimo?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) 5</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) 10</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) 20</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="0">
+            <p class="text-neutral-200 font-medium mb-3">Cosa significa "raggiungere la saturazione" nella ricerca?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Iniziare a trovare sempre le stesse fonti citate</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Avere più di 100 fonti</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Non trovare più nessuna fonte nuova</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+
+        <div class="quiz-block mt-4" data-correct="1">
+            <p class="text-neutral-200 font-medium mb-3">Qual è il livello più alto nella piramide della qualità delle fonti?</p>
+            <div class="space-y-2">
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">A) Siti web e blog</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">B) Articoli peer-reviewed</button>
+                <button class="quiz-option w-full text-left p-3 rounded border border-neutral-700 text-neutral-300 text-sm" onclick="answerQuiz(this)">C) Tesi di altri studenti</button>
+            </div>
+            <div class="feedback text-sm mt-2"></div>
+        </div>
+    </div>
+</div>
+    
         <!-- ========== PAGINA 15: MODULO 2.1 - GOOGLE SCHOLAR ========== -->
         <div class="page" data-page="15">
             <div class="max-w-2xl mx-auto px-4 py-8">
