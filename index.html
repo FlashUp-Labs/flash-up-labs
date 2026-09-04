@@ -14624,27 +14624,33 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     // Aggiorna riepilogo
     function aggiornaRiepilogo() {
-        document.getElementById('riepilogo-esami').textContent = esamiPreparazione.length;
-        document.getElementById('riepilogo-scadenze').textContent = scadenze.length;
-        document.getElementById('riepilogo-obiettivi').textContent = obiettivi.length;
+        const riepEsami = document.getElementById('riepilogo-esami');
+        const riepScadenze = document.getElementById('riepilogo-scadenze');
+        const riepObiettivi = document.getElementById('riepilogo-obiettivi');
+        const riepCompletati = document.getElementById('riepilogo-completati');
+        const prossime = document.getElementById('prossime-scadenze');
+        
+        if (riepEsami) riepEsami.textContent = esamiPreparazione.length;
+        if (riepScadenze) riepScadenze.textContent = scadenze.length;
+        if (riepObiettivi) riepObiettivi.textContent = obiettivi.length;
         
         const completati = obiettivi.filter(o => o.completato).length;
-        document.getElementById('riepilogo-completati').textContent = completati;
+        if (riepCompletati) riepCompletati.textContent = completati;
         
-        // Prossime scadenze (le prime 3 non passate)
-        const oggi = new Date().toISOString().split('T')[0];
-        const future = scadenze
-            .filter(s => !s.data || s.data >= oggi)
-            .sort((a, b) => (a.data || '').localeCompare(b.data || ''))
-            .slice(0, 3);
-        
-        const prossime = document.getElementById('prossime-scadenze');
-        if (future.length === 0) {
-            prossime.innerHTML = '<p>Nessuna scadenza imminente</p>';
-        } else {
-            prossime.innerHTML = future.map(s => 
-                `<p>📅 <strong class="text-white">${s.data || 'Data da definire'}</strong> — ${s.descrizione}</p>`
-            ).join('');
+        if (prossime) {
+            const oggi = new Date().toISOString().split('T')[0];
+            const future = scadenze
+                .filter(s => !s.data || s.data >= oggi)
+                .sort((a, b) => (a.data || '').localeCompare(b.data || ''))
+                .slice(0, 3);
+            
+            if (future.length === 0) {
+                prossime.innerHTML = '<p>Nessuna scadenza imminente</p>';
+            } else {
+                prossime.innerHTML = future.map(s => 
+                    `<p>📅 <strong class="text-white">${s.data || 'Data da definire'}</strong> — ${s.descrizione}</p>`
+                ).join('');
+            }
         }
     }
 
