@@ -13621,12 +13621,294 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     </div>
 </div>
+
+
+        <!-- ========== PAGINA 75: TESIFLASH LIBRETTO UNIVERSITARIO ========== -->
+<div class="page" data-page="75">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="calculator" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="graduation-cap" style="width:28px;height:28px;color:#f59e0b;"></i> 📊 TesiFlash Libretto Universitario
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-6">
+            Il tuo libretto universitario digitale: calcola media ponderata, voto di partenza e simula il voto di laurea. <strong class="text-white">Tutto resta sul tuo dispositivo</strong>. Nessun account, nessuna email, nessun server.
+        </p>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Conosci la tua media. Saprai esattamente dove concentrarti per alzare il voto di laurea."</p>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 1: CONFIGURAZIONE CARRIERA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="settings" style="width:20px;height:20px;"></i> 1. Configura la Tua Carriera
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci i dati del tuo corso di laurea. Tutto resta salvato sul tuo browser.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🎓 Nome del Corso</label>
+                    <input type="text" id="carriera-corso" placeholder="es. Ingegneria Informatica" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Tipo di Laurea</label>
+                    <select id="carriera-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <option value="triennale">Triennale (180 CFU)</option>
+                        <option value="magistrale">Magistrale (120 CFU)</option>
+                        <option value="ciclo-unico">Ciclo Unico (300 CFU)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno di Immatricolazione</label>
+                    <input type="number" id="carriera-anno" placeholder="es. 2023" min="2000" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏛️ Ateneo (facoltativo)</label>
+                    <input type="text" id="carriera-ateneo" placeholder="es. Università di Bologna" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 Base Voto di Laurea</label>
+                    <input type="number" id="carriera-base" value="110" min="100" max="110" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 2: INSERIMENTO ESAMI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 2. Inserisci i Tuoi Esami
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Aggiungi ogni esame con voto e CFU. La media si aggiorna in tempo reale.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Nome Esame</label>
+                    <input type="text" id="esame-nome" placeholder="es. Analisi Matematica" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Voto (18-30 e lode)</label>
+                        <input type="number" id="esame-voto" placeholder="es. 28" min="18" max="31" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 CFU</label>
+                        <input type="number" id="esame-cfu" placeholder="es. 12" min="1" max="30" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+                <button onclick="aggiungiEsame()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    ➕ Aggiungi Esame
+                </button>
+            </div>
+
+            <!-- Lista esami -->
+            <div id="lista-esami" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 3: DASHBOARD STATISTICHE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📊 LIVE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="bar-chart" style="width:20px;height:20px;"></i> 3. Le Tue Statistiche
+            </h3>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Media Ponderata</p>
+                    <p id="stat-media" class="text-2xl font-bold text-amber-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">CFU Accumulati</p>
+                    <p id="stat-cfu" class="text-2xl font-bold text-amber-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Voto di Partenza</p>
+                    <p id="stat-partenza" class="text-2xl font-bold text-green-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Esami Sostenuti</p>
+                    <p id="stat-esami" class="text-2xl font-bold text-white">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 4: SIMULATORE VOTO FINALE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="target" style="width:20px;height:20px;"></i> 4. Simulatore Voto di Laurea
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci i punti tesi e i bonus per vedere il voto finale stimato.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🎯 Punti Tesi (0-8)</label>
+                    <input type="number" id="sim-tesi" value="5" min="0" max="8" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏆 Bonus (lodi, pubblicazioni, ecc.)</label>
+                    <input type="number" id="sim-bonus" value="0" min="0" max="5" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Voto Finale Stimato</p>
+                    <p id="sim-finale" class="text-3xl font-bold text-amber-400">—</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 5: AZIONI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta o Stampa
+            </h3>
+            <div class="flex gap-3">
+                <button onclick="window.print()" class="flex-1 bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    🖨️ Stampa / Salva PDF
+                </button>
+                <button onclick="resetLibretto()" class="flex-1 bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                    🗑️ Azzera Tutto
+                </button>
+            </div>
+            <p class="text-neutral-400 text-xs mt-3">
+                💡 Con "Stampa / Salva PDF" si apre la finestra di stampa del browser. Scegli "Salva come PDF" per scaricare il riepilogo.
+            </p>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Libretto</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho configurato il mio corso di laurea</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho inserito almeno 5 esami con voti e CFU</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato la media ponderata</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho simulato il voto finale con i punti tesi</span></label>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // JAVASCRIPT PER IL LIBRETTO UNIVERSITARIO
+    // ============================================================
+    
+    let esami = JSON.parse(localStorage.getItem('tesiflash_esami') || '[]');
+
+    function aggiungiEsame() {
+        const nome = document.getElementById('esame-nome').value.trim();
+        const voto = parseInt(document.getElementById('esame-voto').value);
+        const cfu = parseInt(document.getElementById('esame-cfu').value);
+        
+        if (!nome || !voto || !cfu) {
+            alert('Compila tutti i campi esame');
+            return;
+        }
+        
+        if (voto < 18 || voto > 31) {
+            alert('Il voto deve essere tra 18 e 31 (31 = 30 e lode)');
+            return;
+        }
+        
+        esami.push({ nome, voto, cfu });
+        localStorage.setItem('tesiflash_esami', JSON.stringify(esami));
+        
+        document.getElementById('esame-nome').value = '';
+        document.getElementById('esame-voto').value = '';
+        document.getElementById('esame-cfu').value = '';
+        
+        renderEsami();
+        calcolaStatistiche();
+    }
+
+    function rimuoviEsame(index) {
+        esami.splice(index, 1);
+        localStorage.setItem('tesiflash_esami', JSON.stringify(esami));
+        renderEsami();
+        calcolaStatistiche();
+    }
+
+    function renderEsami() {
+        const lista = document.getElementById('lista-esami');
+        if (esami.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun esame inserito</p>';
+            return;
+        }
+        
+        lista.innerHTML = esami.map((e, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <div>
+                    <p class="text-white text-sm font-bold">${e.nome}</p>
+                    <p class="text-neutral-400 text-xs">Voto: ${e.voto === 31 ? '30 e lode' : e.voto} · CFU: ${e.cfu}</p>
+                </div>
+                <button onclick="rimuoviEsame(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+            </div>
+        `).join('');
+    }
+
+    function calcolaStatistiche() {
+        const numEsami = esami.length;
+        const cfuTotali = esami.reduce((sum, e) => sum + e.cfu, 0);
+        
+        if (numEsami === 0) {
+            document.getElementById('stat-media').textContent = '—';
+            document.getElementById('stat-cfu').textContent = '—';
+            document.getElementById('stat-partenza').textContent = '—';
+            document.getElementById('stat-esami').textContent = '0';
+            document.getElementById('sim-finale').textContent = '—';
+            return;
+        }
+        
+        const mediaPonderata = esami.reduce((sum, e) => sum + (e.voto * e.cfu), 0) / cfuTotali;
+        const votoPartenza = (mediaPonderata * 110) / 30;
+        
+        document.getElementById('stat-media').textContent = mediaPonderata.toFixed(2);
+        document.getElementById('stat-cfu').textContent = cfuTotali;
+        document.getElementById('stat-partenza').textContent = votoPartenza.toFixed(1);
+        document.getElementById('stat-esami').textContent = numEsami;
+        
+        // Simulatore
+        const puntiTesi = parseInt(document.getElementById('sim-tesi').value) || 0;
+        const bonus = parseInt(document.getElementById('sim-bonus').value) || 0;
+        const votoFinale = votoPartenza + puntiTesi + bonus;
+        document.getElementById('sim-finale').textContent = Math.min(votoFinale, 110).toFixed(1);
+    }
+
+    function resetLibretto() {
+        if (confirm('Sei sicuro di voler cancellare tutti gli esami?')) {
+            esami = [];
+            localStorage.setItem('tesiflash_esami', JSON.stringify(esami));
+            renderEsami();
+            calcolaStatistiche();
+        }
+    }
+
+    // Carica dati iniziali
+    renderEsami();
+    calcolaStatistiche();
+</script>
         
     </main>
 
     <!-- ==================== JAVASCRIPT COMPLETO ==================== -->
     <script>
-        const TOTAL_PAGES = 74;
+        const TOTAL_PAGES = 75;
         let currentPage = 1;
 
         // ==================== CONFIGURAZIONE AUDIO ====================
