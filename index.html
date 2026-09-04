@@ -14194,7 +14194,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 
 
-        <!-- ========== PAGINA 76: PIANIFICATORE ESAMI E SCADENZE ========== -->
+  <!-- ========== PAGINA 76: PIANIFICATORE ESAMI E SCADENZE ========== -->
 <div class="page" data-page="76">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -14250,9 +14250,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             </div>
         </div>
 
-        <!-- ============================================================
-             SEZIONE 1: AGGIUNGI ESAME DA PREPARARE
-             ============================================================ -->
+        <!-- SEZIONE 1: AGGIUNGI ESAME DA PREPARARE -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="book-marked" style="width:20px;height:20px;"></i> 1. Aggiungi Esame da Preparare
@@ -14279,10 +14277,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📈 Livello di Preparazione</label>
                     <select id="piano-esame-livello" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                        <option value="da-iniziare">Da iniziare</option>
-                        <option value="in-preparazione">In preparazione</option>
-                        <option value="quasi-pronto">Quasi pronto</option>
-                        <option value="pronto">Pronto</option>
+                        <option value="da-iniziare">🔴 Da iniziare</option>
+                        <option value="in-preparazione">🟡 In preparazione</option>
+                        <option value="quasi-pronto">🟢 Quasi pronto</option>
+                        <option value="pronto">✅ Pronto</option>
                     </select>
                 </div>
                 <button onclick="aggiungiEsameDaPreparare()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
@@ -14290,13 +14288,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </button>
             </div>
 
-            <!-- Lista esami da preparare -->
             <div id="lista-esami-preparazione" class="mt-4 space-y-2"></div>
         </div>
 
-        <!-- ============================================================
-             SEZIONE 2: AGGIUNGI SCADENZA
-             ============================================================ -->
+        <!-- SEZIONE 2: AGGIUNGI SCADENZA -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="clock" style="width:20px;height:20px;"></i> 2. Aggiungi Scadenza Importante
@@ -14318,11 +14313,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">🏷️ Tipo</label>
                         <select id="scadenza-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                            <option value="prenotazione">Prenotazione esame</option>
-                            <option value="consegna">Consegna tesi</option>
-                            <option value="riunione">Riunione relatore</option>
-                            <option value="amministrativa">Scadenza amministrativa</option>
-                            <option value="altro">Altro</option>
+                            <option value="prenotazione">📝 Prenotazione esame</option>
+                            <option value="consegna">📄 Consegna tesi</option>
+                            <option value="riunione">👥 Riunione relatore</option>
+                            <option value="amministrativa">🏛️ Scadenza amministrativa</option>
+                            <option value="altro">📌 Altro</option>
                         </select>
                     </div>
                 </div>
@@ -14331,13 +14326,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </button>
             </div>
 
-            <!-- Lista scadenze -->
             <div id="lista-scadenze" class="mt-4 space-y-2"></div>
         </div>
 
-        <!-- ============================================================
-             SEZIONE 3: OBIETTIVO GIORNALIERO
-             ============================================================ -->
+        <!-- SEZIONE 3: OBIETTIVO GIORNALIERO -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="target" style="width:20px;height:20px;"></i> 3. Obiettivi Giornalieri
@@ -14356,13 +14348,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </button>
             </div>
 
-            <!-- Lista obiettivi -->
             <div id="lista-obiettivi" class="mt-4 space-y-2"></div>
         </div>
 
-        <!-- ============================================================
-             SEZIONE 4: DASHBOARD RIEPILOGO
-             ============================================================ -->
+        <!-- SEZIONE 4: DASHBOARD RIEPILOGO -->
         <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📊 LIVE</div>
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
@@ -14388,7 +14377,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </div>
             </div>
 
-            <!-- Prossime scadenze -->
             <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-3">
                 <p class="font-bold text-white text-sm mb-2">⏰ Prossime Scadenze</p>
                 <div id="prossime-scadenze" class="space-y-1 text-xs text-neutral-400">
@@ -14397,9 +14385,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             </div>
         </div>
 
-        <!-- ============================================================
-             SEZIONE 5: AZIONI
-             ============================================================ -->
+        <!-- SEZIONE 5: AZIONI -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta o Stampa
@@ -14438,7 +14424,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     let scadenze = JSON.parse(localStorage.getItem('tesiflash_piano_scadenze') || '[]');
     let obiettivi = JSON.parse(localStorage.getItem('tesiflash_piano_obiettivi') || '[]');
 
-    // Funzione per aggiungere esame da preparare
     function aggiungiEsameDaPreparare() {
         const nome = document.getElementById('piano-esame-nome').value.trim();
         const data = document.getElementById('piano-esame-data').value;
@@ -14462,7 +14447,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Funzione per rimuovere esame
     function rimuoviEsamePreparazione(index) {
         esamiPreparazione.splice(index, 1);
         localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
@@ -14470,7 +14454,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Funzione per completare esame
     function completaEsame(index) {
         esamiPreparazione[index].completato = !esamiPreparazione[index].completato;
         localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
@@ -14478,9 +14461,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Render esami da preparare
     function renderEsamiPreparazione() {
         const lista = document.getElementById('lista-esami-preparazione');
+        if (!lista) return;
+        
         if (esamiPreparazione.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun esame da preparare</p>';
             return;
@@ -14508,7 +14492,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         `).join('');
     }
 
-    // Funzione per aggiungere scadenza
     function aggiungiScadenza() {
         const descrizione = document.getElementById('scadenza-descrizione').value.trim();
         const data = document.getElementById('scadenza-data').value;
@@ -14530,7 +14513,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Funzione per rimuovere scadenza
     function rimuoviScadenza(index) {
         scadenze.splice(index, 1);
         localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
@@ -14538,15 +14520,15 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Render scadenze
     function renderScadenze() {
         const lista = document.getElementById('lista-scadenze');
+        if (!lista) return;
+        
         if (scadenze.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna scadenza inserita</p>';
             return;
         }
         
-        // Ordina per data
         scadenze.sort((a, b) => (a.data || '').localeCompare(b.data || ''));
         
         lista.innerHTML = scadenze.map((s, i) => `
@@ -14567,7 +14549,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         `).join('');
     }
 
-    // Funzione per aggiungere obiettivo
     function aggiungiObiettivo() {
         const testo = document.getElementById('obiettivo-testo').value.trim();
         
@@ -14585,7 +14566,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Funzione per completare obiettivo
     function completaObiettivo(index) {
         obiettivi[index].completato = !obiettivi[index].completato;
         localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
@@ -14593,7 +14573,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Funzione per rimuovere obiettivo
     function rimuoviObiettivo(index) {
         obiettivi.splice(index, 1);
         localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
@@ -14601,9 +14580,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         aggiornaRiepilogo();
     }
 
-    // Render obiettivi
     function renderObiettivi() {
         const lista = document.getElementById('lista-obiettivi');
+        if (!lista) return;
+        
         if (obiettivi.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun obiettivo impostato per oggi</p>';
             return;
@@ -14622,7 +14602,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         `).join('');
     }
 
-    // Aggiorna riepilogo
     function aggiornaRiepilogo() {
         const riepEsami = document.getElementById('riepilogo-esami');
         const riepScadenze = document.getElementById('riepilogo-scadenze');
@@ -14640,21 +14619,20 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         if (prossime) {
             const oggi = new Date().toISOString().split('T')[0];
             const future = scadenze
-                .filter(s => !s.data || s.data >= oggi)
-                .sort((a, b) => (a.data || '').localeCompare(b.data || ''))
+                .filter(s => s.data && s.data >= oggi)
+                .sort((a, b) => a.data.localeCompare(b.data))
                 .slice(0, 3);
             
             if (future.length === 0) {
                 prossime.innerHTML = '<p>Nessuna scadenza imminente</p>';
             } else {
                 prossime.innerHTML = future.map(s => 
-                    `<p>📅 <strong class="text-white">${s.data || 'Data da definire'}</strong> — ${s.descrizione}</p>`
+                    `<p>📅 <strong class="text-white">${s.data}</strong> — ${s.descrizione}</p>`
                 ).join('');
             }
         }
     }
 
-    // Export JSON
     function exportPianoJSON() {
         const dati = {
             esamiPreparazione: esamiPreparazione,
@@ -14671,7 +14649,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         URL.revokeObjectURL(url);
     }
 
-    // Reset
     function resetPiano() {
         if (confirm('Sei sicuro di voler cancellare tutti i dati? Questa operazione non è reversibile.')) {
             esamiPreparazione = [];
@@ -14690,7 +14667,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     renderObiettivi();
     aggiornaRiepilogo();
 </script>
-
 
 
         <!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE ========== -->
