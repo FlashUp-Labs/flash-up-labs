@@ -15360,6 +15360,426 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </script>
 
 
+        <!-- ========== PAGINA 79: DASHBOARD DI PRODUTTIVITÀ ========== -->
+<div class="page" data-page="79">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="activity" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="trending-up" style="width:28px;height:28px;color:#f59e0b;"></i> 📊 Dashboard di Produttività
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+            Monitora le tue ore di studio, le pagine scritte e i tuoi progressi. <strong class="text-white">Tutto resta salvato sul tuo browser.</strong>
+        </p>
+
+        <!-- BADGE TRUST -->
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Privacy Totale Garantita</p>
+                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. Tutto avviene sul tuo browser.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Ciò che misuri, migliora. Ciò che monitori, completi."</p>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 1: TIMER POMODORO
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="timer" style="width:20px;height:20px;"></i> 1. Timer Pomodoro
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                25 minuti di lavoro + 5 minuti di pausa. Il metodo che ti fa concentrare.
+            </p>
+
+            <div class="bg-neutral-900/60 p-6 rounded-lg border border-neutral-800 text-center mb-3">
+                <p id="timer-display" class="text-5xl font-bold text-amber-400 mb-4">25:00</p>
+                <p id="timer-stato" class="text-neutral-400 text-sm mb-4">Pronto per iniziare</p>
+                <div class="flex gap-3 justify-center">
+                    <button onclick="startTimer()" class="bg-green-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-green-500 transition text-sm">
+                        ▶️ Start
+                    </button>
+                    <button onclick="pauseTimer()" class="bg-yellow-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-yellow-500 transition text-sm">
+                        ⏸️ Pausa
+                    </button>
+                    <button onclick="resetTimer()" class="bg-red-600 text-white font-bold px-6 py-2 rounded-lg hover:bg-red-500 transition text-sm">
+                        🔄 Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                <p class="font-bold text-white text-sm mb-2">📊 Cicli Completati Oggi</p>
+                <p id="timer-cicli" class="text-2xl font-bold text-green-400">0</p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 2: REGISTRO ORE STUDIO
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i> 2. Registro Ore di Studio
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Aggiungi le ore che hai studiato per ogni materia.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Materia</label>
+                    <input type="text" id="studio-materia" placeholder="es. Diritto Privato" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">⏱️ Ore Studiate</label>
+                    <input type="number" id="studio-ore" placeholder="es. 2" min="0.5" max="12" step="0.5" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <button onclick="aggiungiOreStudio()" class="w-full bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    ➕ Aggiungi Ore
+                </button>
+            </div>
+
+            <!-- Lista ore studio -->
+            <div id="lista-ore-studio" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 3: REGISTRO PAGINE SCRITTE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="file-text" style="width:20px;height:20px;"></i> 3. Registro Pagine Scritte
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Monitora quante pagine hai scritto per la tua tesi.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Capitolo</label>
+                    <input type="text" id="pagine-capitolo" placeholder="es. Capitolo 1" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine Scritte</label>
+                    <input type="number" id="pagine-numero" placeholder="es. 3" min="1" max="50" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <button onclick="aggiungiPagine()" class="w-full bg-amber-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-amber-500 transition text-sm">
+                    ➕ Aggiungi Pagine
+                </button>
+            </div>
+
+            <!-- Lista pagine scritte -->
+            <div id="lista-pagine" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 4: RIEPILOGO PRODUTTIVITÀ
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📊 LIVE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="bar-chart-3" style="width:20px;height:20px;"></i> 4. Il Tuo Riepilogo
+            </h3>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Ore Totali</p>
+                    <p id="riepilogo-ore" class="text-2xl font-bold text-blue-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Pagine Totali</p>
+                    <p id="riepilogo-pagine" class="text-2xl font-bold text-amber-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Materie Studiate</p>
+                    <p id="riepilogo-materie" class="text-2xl font-bold text-green-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Capitoli Lavorati</p>
+                    <p id="riepilogo-capitoli" class="text-2xl font-bold text-white">0</p>
+                </div>
+            </div>
+
+            <!-- Grafico testo -->
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-3">
+                <p class="font-bold text-white text-sm mb-3">📈 Andamento Studio (Ultimi 7 Giorni)</p>
+                <div id="grafico-andamento" class="space-y-2">
+                    <p class="text-neutral-500 text-xs text-center">Aggiungi ore di studio per vedere il grafico</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 5: AZIONI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta o Stampa
+            </h3>
+            <div class="flex gap-3 flex-wrap">
+                <button onclick="window.print()" class="flex-1 min-w-[140px] bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    🖨️ Stampa / Salva PDF
+                </button>
+                <button onclick="exportProdJSON()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    📥 Export JSON
+                </button>
+                <button onclick="resetProd()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                    🗑️ Azzera Tutto
+                </button>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Produttività</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho usato il timer Pomodoro</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho registrato le ore di studio</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho registrato le pagine scritte</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato il riepilogo</span></label>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // JAVASCRIPT: DASHBOARD DI PRODUTTIVITÀ
+    // ============================================================
+    
+    let oreStudio = JSON.parse(localStorage.getItem('tesiflash_ore_studio') || '[]');
+    let pagineScritte = JSON.parse(localStorage.getItem('tesiflash_pagine') || '[]');
+    let cicliPomodoro = parseInt(localStorage.getItem('tesiflash_cicli_pomodoro') || '0');
+    
+    // Timer Pomodoro
+    let timerInterval = null;
+    let timerMinuti = 25;
+    let timerSecondi = 0;
+    let timerAttivo = false;
+    let timerInPausa = false;
+
+    function startTimer() {
+        if (timerAttivo) return;
+        timerAttivo = true;
+        timerInPausa = false;
+        document.getElementById('timer-stato').textContent = 'Lavoro in corso...';
+        
+        timerInterval = setInterval(() => {
+            if (timerSecondi === 0) {
+                if (timerMinuti === 0) {
+                    // Ciclo completato
+                    cicliPomodoro++;
+                    localStorage.setItem('tesiflash_cicli_pomodoro', cicliPomodoro);
+                    document.getElementById('timer-cicli').textContent = cicliPomodoro;
+                    resetTimer();
+                    alert('✅ Ciclo completato! Prenditi 5 minuti di pausa.');
+                    return;
+                }
+                timerMinuti--;
+                timerSecondi = 59;
+            } else {
+                timerSecondi--;
+            }
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function pauseTimer() {
+        if (!timerAttivo) return;
+        timerAttivo = false;
+        timerInPausa = true;
+        document.getElementById('timer-stato').textContent = 'In pausa';
+        clearInterval(timerInterval);
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        timerMinuti = 25;
+        timerSecondi = 0;
+        timerAttivo = false;
+        timerInPausa = false;
+        document.getElementById('timer-stato').textContent = 'Pronto per iniziare';
+        updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+        document.getElementById('timer-display').textContent = 
+            String(timerMinuti).padStart(2, '0') + ':' + String(timerSecondi).padStart(2, '0');
+    }
+
+    // Registro ore studio
+    function aggiungiOreStudio() {
+        const materia = document.getElementById('studio-materia').value.trim();
+        const ore = parseFloat(document.getElementById('studio-ore').value);
+        
+        if (!materia || !ore) {
+            alert('Compila i campi materia e ore');
+            return;
+        }
+        
+        oreStudio.push({ materia, ore, data: new Date().toISOString().split('T')[0] });
+        localStorage.setItem('tesiflash_ore_studio', JSON.stringify(oreStudio));
+        
+        document.getElementById('studio-materia').value = '';
+        document.getElementById('studio-ore').value = '';
+        
+        renderOreStudio();
+        aggiornaRiepilogo();
+    }
+
+    function rimuoviOreStudio(index) {
+        oreStudio.splice(index, 1);
+        localStorage.setItem('tesiflash_ore_studio', JSON.stringify(oreStudio));
+        renderOreStudio();
+        aggiornaRiepilogo();
+    }
+
+    function renderOreStudio() {
+        const lista = document.getElementById('lista-ore-studio');
+        if (oreStudio.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna ora registrata</p>';
+            return;
+        }
+        
+        lista.innerHTML = oreStudio.map((o, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <div>
+                    <p class="text-white text-sm font-bold">${o.materia}</p>
+                    <p class="text-neutral-400 text-xs">${o.ore} ore · ${o.data}</p>
+                </div>
+                <button onclick="rimuoviOreStudio(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+            </div>
+        `).join('');
+    }
+
+    // Registro pagine
+    function aggiungiPagine() {
+        const capitolo = document.getElementById('pagine-capitolo').value.trim();
+        const pagine = parseInt(document.getElementById('pagine-numero').value);
+        
+        if (!capitolo || !pagine) {
+            alert('Compila i campi capitolo e pagine');
+            return;
+        }
+        
+        pagineScritte.push({ capitolo, pagine, data: new Date().toISOString().split('T')[0] });
+        localStorage.setItem('tesiflash_pagine', JSON.stringify(pagineScritte));
+        
+        document.getElementById('pagine-capitolo').value = '';
+        document.getElementById('pagine-numero').value = '';
+        
+        renderPagine();
+        aggiornaRiepilogo();
+    }
+
+    function rimuoviPagine(index) {
+        pagineScritte.splice(index, 1);
+        localStorage.setItem('tesiflash_pagine', JSON.stringify(pagineScritte));
+        renderPagine();
+        aggiornaRiepilogo();
+    }
+
+    function renderPagine() {
+        const lista = document.getElementById('lista-pagine');
+        if (pagineScritte.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna pagina registrata</p>';
+            return;
+        }
+        
+        lista.innerHTML = pagineScritte.map((p, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <div>
+                    <p class="text-white text-sm font-bold">${p.capitolo}</p>
+                    <p class="text-neutral-400 text-xs">${p.pagine} pagine · ${p.data}</p>
+                </div>
+                <button onclick="rimuoviPagine(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+            </div>
+        `).join('');
+    }
+
+    // Riepilogo
+    function aggiornaRiepilogo() {
+        const oreTotali = oreStudio.reduce((sum, o) => sum + o.ore, 0);
+        const pagineTotali = pagineScritte.reduce((sum, p) => sum + p.pagine, 0);
+        const materieUniche = new Set(oreStudio.map(o => o.materia)).size;
+        const capitoliUnici = new Set(pagineScritte.map(p => p.capitolo)).size;
+        
+        document.getElementById('riepilogo-ore').textContent = oreTotali.toFixed(1);
+        document.getElementById('riepilogo-pagine').textContent = pagineTotali;
+        document.getElementById('riepilogo-materie').textContent = materieUniche;
+        document.getElementById('riepilogo-capitoli').textContent = capitoliUnici;
+        
+        // Grafico andamento (ultimi 7 giorni)
+        const oggi = new Date();
+        const grafico = document.getElementById('grafico-andamento');
+        
+        let html = '';
+        for (let i = 6; i >= 0; i--) {
+            const data = new Date(oggi);
+            data.setDate(data.getDate() - i);
+            const dataStr = data.toISOString().split('T')[0];
+            const oreGiorno = oreStudio
+                .filter(o => o.data === dataStr)
+                .reduce((sum, o) => sum + o.ore, 0);
+            
+            const barra = Math.min(Math.round(oreGiorno * 10), 50);
+            
+            html += `
+                <div class="flex items-center gap-2">
+                    <span class="text-neutral-400 text-xs w-16">${dataStr.split('-').reverse().join('/')}</span>
+                    <div class="flex-1 bg-neutral-800 rounded-full h-4">
+                        <div style="width:${barra}%" class="bg-amber-500 h-4 rounded-full"></div>
+                    </div>
+                    <span class="text-white text-xs font-bold w-10">${oreGiorno.toFixed(1)}h</span>
+                </div>
+            `;
+        }
+        
+        grafico.innerHTML = html;
+    }
+
+    // Export
+    function exportProdJSON() {
+        const dati = {
+            oreStudio: oreStudio,
+            pagineScritte: pagineScritte,
+            cicliPomodoro: cicliPomodoro,
+            esportato: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'tesiflash-produttivita-' + new Date().toISOString().split('T')[0] + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    // Reset
+    function resetProd() {
+        if (confirm('Sei sicuro di voler cancellare tutti i dati? Questa operazione non è reversibile.')) {
+            oreStudio = [];
+            pagineScritte = [];
+            cicliPomodoro = 0;
+            localStorage.setItem('tesiflash_ore_studio', JSON.stringify(oreStudio));
+            localStorage.setItem('tesiflash_pagine', JSON.stringify(pagineScritte));
+            localStorage.setItem('tesiflash_cicli_pomodoro', '0');
+            location.reload();
+        }
+    }
+
+    // Carica dati iniziali
+    document.getElementById('timer-cicli').textContent = cicliPomodoro;
+    renderOreStudio();
+    renderPagine();
+    aggiornaRiepilogo();
+</script>
 
         
         
@@ -15367,7 +15787,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     <!-- ==================== JAVASCRIPT COMPLETO ==================== -->
     <script>
-        const TOTAL_PAGES = 78;
+        const TOTAL_PAGES = 79;
         let currentPage = 1;
 
         // ==================== CONFIGURAZIONE AUDIO ====================
@@ -15463,7 +15883,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             {page:75, label:'📊 Libretto Universitario'},
             {page:76, label:'📅 Pianificatore Esami e Scadenze'},
             {page:77, label:'📚 Generatore di Citazioni'},
-            {page:78, label:'🔄 Convertitore Voti e Scale'}
+            {page:78, label:'🔄 Convertitore Voti e Scale'},
+            {page:79, label:'📊 Dashboard di Produttività'}
             
             
            
