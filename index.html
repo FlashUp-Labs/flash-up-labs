@@ -14601,23 +14601,12 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         `).join('');
     }
 
-    function pianoAggiornaRiepilogo() {
-        console.log('=== DEBUG RIEPILOGO ===');
-        console.log('Esami:', pianoEsami.length);
-        console.log('Scadenze:', pianoScadenze.length);
-        console.log('Obiettivi:', pianoObiettivi.length);
-        
+        function pianoAggiornaRiepilogo() {
         const riepEsami = document.getElementById('riepilogo-esami');
         const riepScadenze = document.getElementById('riepilogo-scadenze');
         const riepObiettivi = document.getElementById('riepilogo-obiettivi');
         const riepCompletati = document.getElementById('riepilogo-completati');
         const prossime = document.getElementById('prossime-scadenze');
-        
-        console.log('riepEsami:', riepEsami ? 'trovato' : 'NULL');
-        console.log('riepScadenze:', riepScadenze ? 'trovato' : 'NULL');
-        console.log('riepObiettivi:', riepObiettivi ? 'trovato' : 'NULL');
-        console.log('riepCompletati:', riepCompletati ? 'trovato' : 'NULL');
-        console.log('prossime:', prossime ? 'trovato' : 'NULL');
         
         if (riepEsami) riepEsami.textContent = pianoEsami.length;
         if (riepScadenze) riepScadenze.textContent = pianoScadenze.length;
@@ -14670,7 +14659,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             location.reload();
         }
     }
-
+    
     // ============================================================
     // INIZIALIZZAZIONE CON DOMCONTENTLOADED
     // ============================================================
