@@ -14193,8 +14193,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </script>
 
 
-
-  <!-- ========== PAGINA 76: PIANIFICATORE ESAMI E SCADENZE ========== -->
+        <!-- ========== PAGINA 76: PIANIFICATORE ESAMI E SCADENZE ========== -->
 <div class="page" data-page="76">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -14283,7 +14282,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                         <option value="pronto">✅ Pronto</option>
                     </select>
                 </div>
-                <button onclick="aggiungiEsameDaPreparare()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                <button onclick="pianoAggiungiEsame()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
                     ➕ Aggiungi Esame
                 </button>
             </div>
@@ -14321,7 +14320,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                         </select>
                     </div>
                 </div>
-                <button onclick="aggiungiScadenza()" class="w-full bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                <button onclick="pianoAggiungiScadenza()" class="w-full bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
                     ➕ Aggiungi Scadenza
                 </button>
             </div>
@@ -14343,7 +14342,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">🎯 Obiettivo del giorno</label>
                     <input type="text" id="obiettivo-testo" placeholder="es. Studiare capitoli 1-3 di Diritto" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
-                <button onclick="aggiungiObiettivo()" class="w-full bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm">
+                <button onclick="pianoAggiungiObiettivo()" class="w-full bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm">
                     ➕ Aggiungi Obiettivo
                 </button>
             </div>
@@ -14394,10 +14393,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <button onclick="window.print()" class="flex-1 min-w-[140px] bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
                     🖨️ Stampa / Salva PDF
                 </button>
-                <button onclick="exportPianoJSON()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                <button onclick="pianoExportJSON()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
                     📥 Export JSON
                 </button>
-                <button onclick="resetPiano()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                <button onclick="pianoReset()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
                     🗑️ Azzera Tutto
                 </button>
             </div>
@@ -14417,14 +14416,14 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // JAVASCRIPT: PIANIFICATORE ESAMI E SCADENZE
+    // JAVASCRIPT: PIANIFICATORE ESAMI E SCADENZE (DEBUG VERSION)
     // ============================================================
     
-    let esamiPreparazione = JSON.parse(localStorage.getItem('tesiflash_piano_esami') || '[]');
-    let scadenze = JSON.parse(localStorage.getItem('tesiflash_piano_scadenze') || '[]');
-    let obiettivi = JSON.parse(localStorage.getItem('tesiflash_piano_obiettivi') || '[]');
+    let pianoEsami = JSON.parse(localStorage.getItem('tesiflash_piano_esami') || '[]');
+    let pianoScadenze = JSON.parse(localStorage.getItem('tesiflash_piano_scadenze') || '[]');
+    let pianoObiettivi = JSON.parse(localStorage.getItem('tesiflash_piano_obiettivi') || '[]');
 
-    function aggiungiEsameDaPreparare() {
+    function pianoAggiungiEsame() {
         const nome = document.getElementById('piano-esame-nome').value.trim();
         const data = document.getElementById('piano-esame-data').value;
         const cfu = parseInt(document.getElementById('piano-esame-cfu').value);
@@ -14435,42 +14434,42 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             return;
         }
         
-        esamiPreparazione.push({ nome, data, cfu, livello, completato: false });
-        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
+        pianoEsami.push({ nome, data, cfu, livello, completato: false });
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(pianoEsami));
         
         document.getElementById('piano-esame-nome').value = '';
         document.getElementById('piano-esame-data').value = '';
         document.getElementById('piano-esame-cfu').value = '';
         document.getElementById('piano-esame-livello').value = 'da-iniziare';
         
-        renderEsamiPreparazione();
-        aggiornaRiepilogo();
+        pianoRenderEsami();
+        pianoAggiornaRiepilogo();
     }
 
-    function rimuoviEsamePreparazione(index) {
-        esamiPreparazione.splice(index, 1);
-        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
-        renderEsamiPreparazione();
-        aggiornaRiepilogo();
+    function pianoRimuoviEsame(index) {
+        pianoEsami.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(pianoEsami));
+        pianoRenderEsami();
+        pianoAggiornaRiepilogo();
     }
 
-    function completaEsame(index) {
-        esamiPreparazione[index].completato = !esamiPreparazione[index].completato;
-        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
-        renderEsamiPreparazione();
-        aggiornaRiepilogo();
+    function pianoCompletaEsame(index) {
+        pianoEsami[index].completato = !pianoEsami[index].completato;
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(pianoEsami));
+        pianoRenderEsami();
+        pianoAggiornaRiepilogo();
     }
 
-    function renderEsamiPreparazione() {
+    function pianoRenderEsami() {
         const lista = document.getElementById('lista-esami-preparazione');
         if (!lista) return;
         
-        if (esamiPreparazione.length === 0) {
+        if (pianoEsami.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun esame da preparare</p>';
             return;
         }
         
-        lista.innerHTML = esamiPreparazione.map((e, i) => `
+        lista.innerHTML = pianoEsami.map((e, i) => `
             <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
                 <div class="flex-1">
                     <p class="text-white text-sm font-bold ${e.completato ? 'line-through text-neutral-500' : ''}">${e.nome}</p>
@@ -14483,16 +14482,16 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     </p>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="completaEsame(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
+                    <button onclick="pianoCompletaEsame(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
                         ${e.completato ? '↩️' : '✅'}
                     </button>
-                    <button onclick="rimuoviEsamePreparazione(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+                    <button onclick="pianoRimuoviEsame(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
                 </div>
             </div>
         `).join('');
     }
 
-    function aggiungiScadenza() {
+    function pianoAggiungiScadenza() {
         const descrizione = document.getElementById('scadenza-descrizione').value.trim();
         const data = document.getElementById('scadenza-data').value;
         const tipo = document.getElementById('scadenza-tipo').value;
@@ -14502,36 +14501,36 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             return;
         }
         
-        scadenze.push({ descrizione, data, tipo });
-        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
+        pianoScadenze.push({ descrizione, data, tipo });
+        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(pianoScadenze));
         
         document.getElementById('scadenza-descrizione').value = '';
         document.getElementById('scadenza-data').value = '';
         document.getElementById('scadenza-tipo').value = 'prenotazione';
         
-        renderScadenze();
-        aggiornaRiepilogo();
+        pianoRenderScadenze();
+        pianoAggiornaRiepilogo();
     }
 
-    function rimuoviScadenza(index) {
-        scadenze.splice(index, 1);
-        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
-        renderScadenze();
-        aggiornaRiepilogo();
+    function pianoRimuoviScadenza(index) {
+        pianoScadenze.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(pianoScadenze));
+        pianoRenderScadenze();
+        pianoAggiornaRiepilogo();
     }
 
-    function renderScadenze() {
+    function pianoRenderScadenze() {
         const lista = document.getElementById('lista-scadenze');
         if (!lista) return;
         
-        if (scadenze.length === 0) {
+        if (pianoScadenze.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna scadenza inserita</p>';
             return;
         }
         
-        scadenze.sort((a, b) => (a.data || '').localeCompare(b.data || ''));
+        pianoScadenze.sort((a, b) => (a.data || '').localeCompare(b.data || ''));
         
-        lista.innerHTML = scadenze.map((s, i) => `
+        lista.innerHTML = pianoScadenze.map((s, i) => `
             <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
                 <div>
                     <p class="text-white text-sm font-bold">${s.descrizione}</p>
@@ -14544,12 +14543,12 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                           '📌 Altro'}
                     </p>
                 </div>
-                <button onclick="rimuoviScadenza(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+                <button onclick="pianoRimuoviScadenza(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
             </div>
         `).join('');
     }
 
-    function aggiungiObiettivo() {
+    function pianoAggiungiObiettivo() {
         const testo = document.getElementById('obiettivo-testo').value.trim();
         
         if (!testo) {
@@ -14557,68 +14556,79 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             return;
         }
         
-        obiettivi.push({ testo, completato: false });
-        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+        pianoObiettivi.push({ testo, completato: false });
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(pianoObiettivi));
         
         document.getElementById('obiettivo-testo').value = '';
         
-        renderObiettivi();
-        aggiornaRiepilogo();
+        pianoRenderObiettivi();
+        pianoAggiornaRiepilogo();
     }
 
-    function completaObiettivo(index) {
-        obiettivi[index].completato = !obiettivi[index].completato;
-        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
-        renderObiettivi();
-        aggiornaRiepilogo();
+    function pianoCompletaObiettivo(index) {
+        pianoObiettivi[index].completato = !pianoObiettivi[index].completato;
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(pianoObiettivi));
+        pianoRenderObiettivi();
+        pianoAggiornaRiepilogo();
     }
 
-    function rimuoviObiettivo(index) {
-        obiettivi.splice(index, 1);
-        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
-        renderObiettivi();
-        aggiornaRiepilogo();
+    function pianoRimuoviObiettivo(index) {
+        pianoObiettivi.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(pianoObiettivi));
+        pianoRenderObiettivi();
+        pianoAggiornaRiepilogo();
     }
 
-    function renderObiettivi() {
+    function pianoRenderObiettivi() {
         const lista = document.getElementById('lista-obiettivi');
         if (!lista) return;
         
-        if (obiettivi.length === 0) {
+        if (pianoObiettivi.length === 0) {
             lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun obiettivo impostato per oggi</p>';
             return;
         }
         
-        lista.innerHTML = obiettivi.map((o, i) => `
+        lista.innerHTML = pianoObiettivi.map((o, i) => `
             <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
                 <p class="text-white text-sm ${o.completato ? 'line-through text-neutral-500' : ''}">${o.testo}</p>
                 <div class="flex gap-2">
-                    <button onclick="completaObiettivo(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
+                    <button onclick="pianoCompletaObiettivo(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
                         ${o.completato ? '↩️' : '✅'}
                     </button>
-                    <button onclick="rimuoviObiettivo(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+                    <button onclick="pianoRimuoviObiettivo(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
                 </div>
             </div>
         `).join('');
     }
 
-    function aggiornaRiepilogo() {
+    function pianoAggiornaRiepilogo() {
+        console.log('=== DEBUG RIEPILOGO ===');
+        console.log('Esami:', pianoEsami.length);
+        console.log('Scadenze:', pianoScadenze.length);
+        console.log('Obiettivi:', pianoObiettivi.length);
+        
         const riepEsami = document.getElementById('riepilogo-esami');
         const riepScadenze = document.getElementById('riepilogo-scadenze');
         const riepObiettivi = document.getElementById('riepilogo-obiettivi');
         const riepCompletati = document.getElementById('riepilogo-completati');
         const prossime = document.getElementById('prossime-scadenze');
         
-        if (riepEsami) riepEsami.textContent = esamiPreparazione.length;
-        if (riepScadenze) riepScadenze.textContent = scadenze.length;
-        if (riepObiettivi) riepObiettivi.textContent = obiettivi.length;
+        console.log('riepEsami:', riepEsami ? 'trovato' : 'NULL');
+        console.log('riepScadenze:', riepScadenze ? 'trovato' : 'NULL');
+        console.log('riepObiettivi:', riepObiettivi ? 'trovato' : 'NULL');
+        console.log('riepCompletati:', riepCompletati ? 'trovato' : 'NULL');
+        console.log('prossime:', prossime ? 'trovato' : 'NULL');
         
-        const completati = obiettivi.filter(o => o.completato).length;
+        if (riepEsami) riepEsami.textContent = pianoEsami.length;
+        if (riepScadenze) riepScadenze.textContent = pianoScadenze.length;
+        if (riepObiettivi) riepObiettivi.textContent = pianoObiettivi.length;
+        
+        const completati = pianoObiettivi.filter(o => o.completato).length;
         if (riepCompletati) riepCompletati.textContent = completati;
         
         if (prossime) {
             const oggi = new Date().toISOString().split('T')[0];
-            const future = scadenze
+            const future = pianoScadenze
                 .filter(s => s.data && s.data >= oggi)
                 .sort((a, b) => a.data.localeCompare(b.data))
                 .slice(0, 3);
@@ -14633,11 +14643,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         }
     }
 
-    function exportPianoJSON() {
+    function pianoExportJSON() {
         const dati = {
-            esamiPreparazione: esamiPreparazione,
-            scadenze: scadenze,
-            obiettivi: obiettivi,
+            esamiPreparazione: pianoEsami,
+            scadenze: pianoScadenze,
+            obiettivi: pianoObiettivi,
             esportato: new Date().toISOString()
         };
         const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
@@ -14649,23 +14659,28 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         URL.revokeObjectURL(url);
     }
 
-    function resetPiano() {
+    function pianoReset() {
         if (confirm('Sei sicuro di voler cancellare tutti i dati? Questa operazione non è reversibile.')) {
-            esamiPreparazione = [];
-            scadenze = [];
-            obiettivi = [];
-            localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
-            localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
-            localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+            pianoEsami = [];
+            pianoScadenze = [];
+            pianoObiettivi = [];
+            localStorage.setItem('tesiflash_piano_esami', JSON.stringify(pianoEsami));
+            localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(pianoScadenze));
+            localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(pianoObiettivi));
             location.reload();
         }
     }
 
-    // Carica dati iniziali
-    renderEsamiPreparazione();
-    renderScadenze();
-    renderObiettivi();
-    aggiornaRiepilogo();
+    // ============================================================
+    // INIZIALIZZAZIONE CON DOMCONTENTLOADED
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('=== PIANIFICATORE INIZIALIZZATO ===');
+        pianoRenderEsami();
+        pianoRenderScadenze();
+        pianoRenderObiettivi();
+        pianoAggiornaRiepilogo();
+    });
 </script>
 
 
