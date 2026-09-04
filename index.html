@@ -14194,6 +14194,1173 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 
 
+        <!-- ========== PAGINA 76: PIANIFICATORE ESAMI E SCADENZE ========== -->
+<div class="page" data-page="76">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="calendar-check" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="calendar-days" style="width:28px;height:28px;color:#f59e0b;"></i> 📅 Pianificatore Esami e Scadenze
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+            Organizza i tuoi esami, le scadenze e le sessioni in un unico posto. <strong class="text-white">Tutto resta salvato sul tuo browser.</strong>
+        </p>
+
+        <!-- BADGE TRUST -->
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Privacy Totale Garantita</p>
+                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. I dati restano salvati sul tuo browser.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Chi pianifica gli esami, si laurea in tempo. Chi improvvisa, paga le tasse fuori corso."</p>
+        </div>
+
+        <!-- PANORAMICA RAPIDA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="info" style="width:20px;height:20px;"></i> 📖 Come Funziona
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                In 4 semplici passi hai il controllo completo delle tue scadenze universitarie:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">1️⃣ AGGIUNGI GLI ESAMI DA PREPARARE</p>
+                    <p class="text-neutral-400 text-xs">Inserisci il nome dell'esame, la data prevista e il livello di preparazione attuale.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">2️⃣ INSERISCI LE SCADENZE</p>
+                    <p class="text-neutral-400 text-xs">Aggiungi date di prenotazione, consegna tesi, riunioni con il relatore.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">3️⃣ PIANIFICA LE SESSIONI DI STUDIO</p>
+                    <p class="text-neutral-400 text-xs">Imposta obiettivi giornalieri e monitora il tuo progresso.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">4️⃣ MONITORA IL PROGRESSO</p>
+                    <p class="text-neutral-400 text-xs">Controlla la dashboard con le statistiche e le prossime scadenze.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 1: AGGIUNGI ESAME DA PREPARARE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="book-marked" style="width:20px;height:20px;"></i> 1. Aggiungi Esame da Preparare
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci gli esami che devi ancora sostenere.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Nome Esame</label>
+                    <input type="text" id="piano-esame-nome" placeholder="es. Diritto Privato" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Data Prevista</label>
+                        <input type="date" id="piano-esame-data" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 CFU</label>
+                        <input type="number" id="piano-esame-cfu" placeholder="es. 9" min="1" max="30" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📈 Livello di Preparazione</label>
+                    <select id="piano-esame-livello" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <option value="da-iniziare">Da iniziare</option>
+                        <option value="in-preparazione">In preparazione</option>
+                        <option value="quasi-pronto">Quasi pronto</option>
+                        <option value="pronto">Pronto</option>
+                    </select>
+                </div>
+                <button onclick="aggiungiEsameDaPreparare()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    ➕ Aggiungi Esame
+                </button>
+            </div>
+
+            <!-- Lista esami da preparare -->
+            <div id="lista-esami-preparazione" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 2: AGGIUNGI SCADENZA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="clock" style="width:20px;height:20px;"></i> 2. Aggiungi Scadenza Importante
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci scadenze amministrative, di prenotazione o di consegna.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Descrizione Scadenza</label>
+                    <input type="text" id="scadenza-descrizione" placeholder="es. Prenotazione esame di Diritto" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Data</label>
+                        <input type="date" id="scadenza-data" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🏷️ Tipo</label>
+                        <select id="scadenza-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                            <option value="prenotazione">Prenotazione esame</option>
+                            <option value="consegna">Consegna tesi</option>
+                            <option value="riunione">Riunione relatore</option>
+                            <option value="amministrativa">Scadenza amministrativa</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+                </div>
+                <button onclick="aggiungiScadenza()" class="w-full bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    ➕ Aggiungi Scadenza
+                </button>
+            </div>
+
+            <!-- Lista scadenze -->
+            <div id="lista-scadenze" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 3: OBIETTIVO GIORNALIERO
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="target" style="width:20px;height:20px;"></i> 3. Obiettivi Giornalieri
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Imposta i tuoi obiettivi di studio per oggi.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🎯 Obiettivo del giorno</label>
+                    <input type="text" id="obiettivo-testo" placeholder="es. Studiare capitoli 1-3 di Diritto" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <button onclick="aggiungiObiettivo()" class="w-full bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm">
+                    ➕ Aggiungi Obiettivo
+                </button>
+            </div>
+
+            <!-- Lista obiettivi -->
+            <div id="lista-obiettivi" class="mt-4 space-y-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 4: DASHBOARD RIEPILOGO
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📊 LIVE</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="bar-chart" style="width:20px;height:20px;"></i> 4. Il Tuo Riepilogo
+            </h3>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Esami da Preparare</p>
+                    <p id="riepilogo-esami" class="text-2xl font-bold text-amber-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Scadenze Attive</p>
+                    <p id="riepilogo-scadenze" class="text-2xl font-bold text-blue-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Obiettivi Oggi</p>
+                    <p id="riepilogo-obiettivi" class="text-2xl font-bold text-green-400">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Completati</p>
+                    <p id="riepilogo-completati" class="text-2xl font-bold text-white">0</p>
+                </div>
+            </div>
+
+            <!-- Prossime scadenze -->
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-3">
+                <p class="font-bold text-white text-sm mb-2">⏰ Prossime Scadenze</p>
+                <div id="prossime-scadenze" class="space-y-1 text-xs text-neutral-400">
+                    <p>Nessuna scadenza imminente</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 5: AZIONI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta o Stampa
+            </h3>
+            <div class="flex gap-3 flex-wrap">
+                <button onclick="window.print()" class="flex-1 min-w-[140px] bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    🖨️ Stampa / Salva PDF
+                </button>
+                <button onclick="exportPianoJSON()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    📥 Export JSON
+                </button>
+                <button onclick="resetPiano()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                    🗑️ Azzera Tutto
+                </button>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Pianificatore</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho aggiunto gli esami da preparare</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho inserito le scadenze importanti</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho impostato gli obiettivi giornalieri</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato il riepilogo</span></label>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // JAVASCRIPT: PIANIFICATORE ESAMI E SCADENZE
+    // ============================================================
+    
+    let esamiPreparazione = JSON.parse(localStorage.getItem('tesiflash_piano_esami') || '[]');
+    let scadenze = JSON.parse(localStorage.getItem('tesiflash_piano_scadenze') || '[]');
+    let obiettivi = JSON.parse(localStorage.getItem('tesiflash_piano_obiettivi') || '[]');
+
+    // Funzione per aggiungere esame da preparare
+    function aggiungiEsameDaPreparare() {
+        const nome = document.getElementById('piano-esame-nome').value.trim();
+        const data = document.getElementById('piano-esame-data').value;
+        const cfu = parseInt(document.getElementById('piano-esame-cfu').value);
+        const livello = document.getElementById('piano-esame-livello').value;
+        
+        if (!nome) {
+            alert('Inserisci il nome dell'esame');
+            return;
+        }
+        
+        esamiPreparazione.push({ nome, data, cfu, livello, completato: false });
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
+        
+        document.getElementById('piano-esame-nome').value = '';
+        document.getElementById('piano-esame-data').value = '';
+        document.getElementById('piano-esame-cfu').value = '';
+        document.getElementById('piano-esame-livello').value = 'da-iniziare';
+        
+        renderEsamiPreparazione();
+        aggiornaRiepilogo();
+    }
+
+    // Funzione per rimuovere esame
+    function rimuoviEsamePreparazione(index) {
+        esamiPreparazione.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
+        renderEsamiPreparazione();
+        aggiornaRiepilogo();
+    }
+
+    // Funzione per completare esame
+    function completaEsame(index) {
+        esamiPreparazione[index].completato = !esamiPreparazione[index].completato;
+        localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
+        renderEsamiPreparazione();
+        aggiornaRiepilogo();
+    }
+
+    // Render esami da preparare
+    function renderEsamiPreparazione() {
+        const lista = document.getElementById('lista-esami-preparazione');
+        if (esamiPreparazione.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun esame da preparare</p>';
+            return;
+        }
+        
+        lista.innerHTML = esamiPreparazione.map((e, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <div class="flex-1">
+                    <p class="text-white text-sm font-bold ${e.completato ? 'line-through text-neutral-500' : ''}">${e.nome}</p>
+                    <p class="text-neutral-400 text-xs">
+                        ${e.cfu ? e.cfu + ' CFU · ' : ''}${e.data || 'Data da definire'} · 
+                        ${e.livello === 'da-iniziare' ? '🔴 Da iniziare' : 
+                          e.livello === 'in-preparazione' ? '🟡 In preparazione' : 
+                          e.livello === 'quasi-pronto' ? '🟢 Quasi pronto' : 
+                          '✅ Pronto'}
+                    </p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="completaEsame(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
+                        ${e.completato ? '↩️' : '✅'}
+                    </button>
+                    <button onclick="rimuoviEsamePreparazione(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Funzione per aggiungere scadenza
+    function aggiungiScadenza() {
+        const descrizione = document.getElementById('scadenza-descrizione').value.trim();
+        const data = document.getElementById('scadenza-data').value;
+        const tipo = document.getElementById('scadenza-tipo').value;
+        
+        if (!descrizione) {
+            alert('Inserisci la descrizione della scadenza');
+            return;
+        }
+        
+        scadenze.push({ descrizione, data, tipo });
+        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
+        
+        document.getElementById('scadenza-descrizione').value = '';
+        document.getElementById('scadenza-data').value = '';
+        document.getElementById('scadenza-tipo').value = 'prenotazione';
+        
+        renderScadenze();
+        aggiornaRiepilogo();
+    }
+
+    // Funzione per rimuovere scadenza
+    function rimuoviScadenza(index) {
+        scadenze.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
+        renderScadenze();
+        aggiornaRiepilogo();
+    }
+
+    // Render scadenze
+    function renderScadenze() {
+        const lista = document.getElementById('lista-scadenze');
+        if (scadenze.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna scadenza inserita</p>';
+            return;
+        }
+        
+        // Ordina per data
+        scadenze.sort((a, b) => (a.data || '').localeCompare(b.data || ''));
+        
+        lista.innerHTML = scadenze.map((s, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <div>
+                    <p class="text-white text-sm font-bold">${s.descrizione}</p>
+                    <p class="text-neutral-400 text-xs">
+                        ${s.data || 'Data da definire'} · 
+                        ${s.tipo === 'prenotazione' ? '📝 Prenotazione' : 
+                          s.tipo === 'consegna' ? '📄 Consegna tesi' : 
+                          s.tipo === 'riunione' ? '👥 Riunione relatore' : 
+                          s.tipo === 'amministrativa' ? '🏛️ Scadenza amministrativa' : 
+                          '📌 Altro'}
+                    </p>
+                </div>
+                <button onclick="rimuoviScadenza(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+            </div>
+        `).join('');
+    }
+
+    // Funzione per aggiungere obiettivo
+    function aggiungiObiettivo() {
+        const testo = document.getElementById('obiettivo-testo').value.trim();
+        
+        if (!testo) {
+            alert('Inserisci l'obiettivo');
+            return;
+        }
+        
+        obiettivi.push({ testo, completato: false });
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+        
+        document.getElementById('obiettivo-testo').value = '';
+        
+        renderObiettivi();
+        aggiornaRiepilogo();
+    }
+
+    // Funzione per completare obiettivo
+    function completaObiettivo(index) {
+        obiettivi[index].completato = !obiettivi[index].completato;
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+        renderObiettivi();
+        aggiornaRiepilogo();
+    }
+
+    // Funzione per rimuovere obiettivo
+    function rimuoviObiettivo(index) {
+        obiettivi.splice(index, 1);
+        localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+        renderObiettivi();
+        aggiornaRiepilogo();
+    }
+
+    // Render obiettivi
+    function renderObiettivi() {
+        const lista = document.getElementById('lista-obiettivi');
+        if (obiettivi.length === 0) {
+            lista.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessun obiettivo impostato per oggi</p>';
+            return;
+        }
+        
+        lista.innerHTML = obiettivi.map((o, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
+                <p class="text-white text-sm ${o.completato ? 'line-through text-neutral-500' : ''}">${o.testo}</p>
+                <div class="flex gap-2">
+                    <button onclick="completaObiettivo(${i})" class="text-green-400 hover:text-green-300 text-xs font-bold">
+                        ${o.completato ? '↩️' : '✅'}
+                    </button>
+                    <button onclick="rimuoviObiettivo(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Aggiorna riepilogo
+    function aggiornaRiepilogo() {
+        document.getElementById('riepilogo-esami').textContent = esamiPreparazione.length;
+        document.getElementById('riepilogo-scadenze').textContent = scadenze.length;
+        document.getElementById('riepilogo-obiettivi').textContent = obiettivi.length;
+        
+        const completati = obiettivi.filter(o => o.completato).length;
+        document.getElementById('riepilogo-completati').textContent = completati;
+        
+        // Prossime scadenze (le prime 3 non passate)
+        const oggi = new Date().toISOString().split('T')[0];
+        const future = scadenze
+            .filter(s => !s.data || s.data >= oggi)
+            .sort((a, b) => (a.data || '').localeCompare(b.data || ''))
+            .slice(0, 3);
+        
+        const prossime = document.getElementById('prossime-scadenze');
+        if (future.length === 0) {
+            prossime.innerHTML = '<p>Nessuna scadenza imminente</p>';
+        } else {
+            prossime.innerHTML = future.map(s => 
+                `<p>📅 <strong class="text-white">${s.data || 'Data da definire'}</strong> — ${s.descrizione}</p>`
+            ).join('');
+        }
+    }
+
+    // Export JSON
+    function exportPianoJSON() {
+        const dati = {
+            esamiPreparazione: esamiPreparazione,
+            scadenze: scadenze,
+            obiettivi: obiettivi,
+            esportato: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'tesiflash-piano-' + new Date().toISOString().split('T')[0] + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    // Reset
+    function resetPiano() {
+        if (confirm('Sei sicuro di voler cancellare tutti i dati? Questa operazione non è reversibile.')) {
+            esamiPreparazione = [];
+            scadenze = [];
+            obiettivi = [];
+            localStorage.setItem('tesiflash_piano_esami', JSON.stringify(esamiPreparazione));
+            localStorage.setItem('tesiflash_piano_scadenze', JSON.stringify(scadenze));
+            localStorage.setItem('tesiflash_piano_obiettivi', JSON.stringify(obiettivi));
+            location.reload();
+        }
+    }
+
+    // Carica dati iniziali
+    renderEsamiPreparazione();
+    renderScadenze();
+    renderObiettivi();
+    aggiornaRiepilogo();
+</script>
+
+
+
+        <!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE ========== -->
+<div class="page" data-page="77">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="quote" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="book-marked" style="width:28px;height:28px;color:#f59e0b;"></i> 📚 Generatore di Citazioni Accademiche
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+            Inserisci i dati della tua fonte e ottieni la citazione perfetta in <strong class="text-white">APA, MLA, Chicago e Harvard</strong>. Copia e incolla direttamente nella tua tesi.
+        </p>
+
+        <!-- BADGE TRUST -->
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Privacy Totale Garantita</p>
+                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. Tutto avviene sul tuo browser.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Non sbagliare mai una citazione. Copia, incolla, consegna."</p>
+        </div>
+
+        <!-- PANORAMICA RAPIDA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="info" style="width:20px;height:20px;"></i> 📖 Come Funziona
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                In 3 semplici passi hai la citazione perfetta:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">1️⃣ SCEGLI IL TIPO DI FONTE</p>
+                    <p class="text-neutral-400 text-xs">Libro, articolo, sito web o capitolo di libro.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">2️⃣ INSERISCI I DATI</p>
+                    <p class="text-neutral-400 text-xs">Autore, anno, titolo, editore/rivista, DOI o URL.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">3️⃣ COPIA LA CITAZIONE</p>
+                    <p class="text-neutral-400 text-xs">Scegli lo stile (APA, MLA, Chicago, Harvard) e copia con un clic.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 1: TIPO DI FONTE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 1. Scegli il Tipo di Fonte
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="setTipoFonte('libro')" id="btn-libro" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
+                    📖 Libro
+                </button>
+                <button onclick="setTipoFonte('articolo')" id="btn-articolo" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
+                    📄 Articolo
+                </button>
+                <button onclick="setTipoFonte('sito')" id="btn-sito" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
+                    🌐 Sito Web
+                </button>
+                <button onclick="setTipoFonte('capitolo')" id="btn-capitolo" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
+                    📑 Capitolo di Libro
+                </button>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 2: DATI DELLA FONTE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="edit" style="width:20px;height:20px;"></i> 2. Inserisci i Dati della Fonte
+            </h3>
+
+            <div id="campi-fonte" class="space-y-3">
+                <!-- I campi cambiano in base al tipo di fonte -->
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 3: RISULTATO
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📋 CITAZIONI</div>
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="copy" style="width:20px;height:20px;"></i> 3. La Tua Citazione
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Clicca su "Copia" per copiare la citazione nello stile desiderato.
+            </p>
+
+            <div id="risultati-citazioni" class="space-y-3">
+                <p class="text-neutral-500 text-xs text-center">Inserisci i dati della fonte per vedere la citazione</p>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Citazioni</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho generato la citazione per una fonte</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho copiato la citazione nello stile corretto</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato il DOI o l'URL</span></label>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // JAVASCRIPT: GENERATORE DI CITAZIONI ACCADEMICHE
+    // ============================================================
+    
+    let tipoFonte = 'libro';
+
+    function setTipoFonte(tipo) {
+        tipoFonte = tipo;
+        
+        // Reset bottoni
+        document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+            btn.classList.remove('border-amber-500');
+            btn.classList.add('border-neutral-700');
+        });
+        
+        // Attiva bottone selezionato
+        document.getElementById('btn-' + tipo).classList.remove('border-neutral-700');
+        document.getElementById('btn-' + tipo).classList.add('border-amber-500');
+        
+        renderCampiFonte();
+    }
+
+    function renderCampiFonte() {
+        const container = document.getElementById('campi-fonte');
+        
+        if (tipoFonte === 'libro') {
+            container.innerHTML = `
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (Cognome, Nome)</label>
+                    <input type="text" id="fonte-autore" placeholder="es. Rossi, Marco" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
+                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del Libro</label>
+                    <input type="text" id="fonte-titolo" placeholder="es. L'Impatto dei Social Media" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Città</label>
+                    <input type="text" id="fonte-citta" placeholder="es. Milano" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
+                    <input type="text" id="fonte-editore" placeholder="es. Mondadori" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+            `;
+        } else if (tipoFonte === 'articolo') {
+            container.innerHTML = `
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (Cognome, Nome)</label>
+                    <input type="text" id="fonte-autore" placeholder="es. Rossi, Marco" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
+                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Titolo dell'Articolo</label>
+                    <input type="text" id="fonte-titolo" placeholder="es. L'Impatto dei Social Media sulle PMI" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📰 Nome della Rivista</label>
+                    <input type="text" id="fonte-rivista" placeholder="es. Rivista di Sociologia" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 Volume</label>
+                        <input type="text" id="fonte-volume" placeholder="es. 15" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Numero</label>
+                        <input type="text" id="fonte-numero" placeholder="es. 2" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine</label>
+                        <input type="text" id="fonte-pagine" placeholder="es. 45-60" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🔗 DOI (facoltativo)</label>
+                    <input type="text" id="fonte-doi" placeholder="es. 10.1016/j.jbusres.2024.113456" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+            `;
+        } else if (tipoFonte === 'sito') {
+            container.innerHTML = `
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (se presente)</label>
+                    <input type="text" id="fonte-autore" placeholder="es. Verdi, Luca" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
+                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🌐 Titolo della Pagina</label>
+                    <input type="text" id="fonte-titolo" placeholder="es. Social Media e PMI" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Nome del Sito</label>
+                    <input type="text" id="fonte-sito" placeholder="es. Repubblica.it" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🔗 URL</label>
+                    <input type="text" id="fonte-url" placeholder="es. https://www.esempio.com" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+            `;
+        } else if (tipoFonte === 'capitolo') {
+            container.innerHTML = `
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore del Capitolo (Cognome, Nome)</label>
+                    <input type="text" id="fonte-autore" placeholder="es. Bianchi, Giulia" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
+                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📑 Titolo del Capitolo</label>
+                    <input type="text" id="fonte-titolo" placeholder="es. Il Marketing Digitale" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del Libro</label>
+                    <input type="text" id="fonte-libro" placeholder="es. Strategie di Marketing" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Curatore (se presente)</label>
+                    <input type="text" id="fonte-curatore" placeholder="es. a cura di Rossi, Mario" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
+                    <input type="text" id="fonte-editore" placeholder="es. Mondadori" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine</label>
+                    <input type="text" id="fonte-pagine" placeholder="es. 45-60" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+            `;
+        }
+        
+        // Aggiungi event listener per aggiornare in tempo reale
+        container.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', generaCitazioni);
+        });
+        
+        // Reset risultati
+        document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Inserisci i dati della fonte per vedere la citazione</p>';
+    }
+
+    function getValore(id) {
+        const el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+    }
+
+    function generaCitazioni() {
+        const autore = getValore('fonte-autore');
+        const anno = getValore('fonte-anno');
+        
+        if (!autore || !anno) {
+            return;
+        }
+        
+        let risultato = '';
+        
+        if (tipoFonte === 'libro') {
+            const titolo = getValore('fonte-titolo');
+            const citta = getValore('fonte-citta');
+            const editore = getValore('fonte-editore');
+            
+            if (!titolo || !citta || !editore) return;
+            
+            risultato = `
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📖 APA 7ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). *${titolo}*. ${citta}: ${editore}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📖 MLA 9ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. *${titolo}*. ${editore}, ${anno}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📖 Chicago 17ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. *${titolo}*. ${citta}: ${editore}, ${anno}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📖 Harvard</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). *${titolo}*. ${citta}: ${editore}.</pre>
+                    </div>
+                </div>
+            `;
+        } else if (tipoFonte === 'articolo') {
+            const titolo = getValore('fonte-titolo');
+            const rivista = getValore('fonte-rivista');
+            const volume = getValore('fonte-volume');
+            const numero = getValore('fonte-numero');
+            const pagine = getValore('fonte-pagine');
+            const doi = getValore('fonte-doi');
+            
+            if (!titolo || !rivista) return;
+            
+            risultato = `
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📄 APA 7ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). ${titolo}. *${rivista}*, ${volume}${numero ? '(' + numero + ')' : ''}${pagine ? ', ' + pagine : ''}.${doi ? ' https://doi.org/' + doi : ''}</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📄 MLA 9ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titolo}." *${rivista}*, vol. ${volume}${numero ? ', no. ' + numero : ''}, ${anno}, pp. ${pagine}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📄 Chicago 17ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titolo}." *${rivista}* ${volume}${numero ? ', no. ' + numero : ''} (${anno}): ${pagine}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📄 Harvard</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). "${titolo}," *${rivista}*, ${volume}${numero ? '(' + numero + ')' : ''}, pp. ${pagine}.</pre>
+                    </div>
+                </div>
+            `;
+        } else if (tipoFonte === 'sito') {
+            const titolo = getValore('fonte-titolo');
+            const sito = getValore('fonte-sito');
+            const url = getValore('fonte-url');
+            
+            if (!titolo || !url) return;
+            
+            risultato = `
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">🌐 APA 7ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo} (${anno}). *${titolo}*. ${sito}. ${url}</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">🌐 MLA 9ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || '"' + titolo + '"'}. "${titolo}." *${sito}*, ${anno}, ${url}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">🌐 Chicago 17ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo}. "${titolo}." *${sito}*. ${anno}. ${url}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">🌐 Harvard</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo} (${anno}). *${titolo}*. Disponibile su: ${url} (Accesso: oggi).</pre>
+                    </div>
+                </div>
+            `;
+        }
+        
+        document.getElementById('risultati-citazioni').innerHTML = risultato || '<p class="text-neutral-500 text-xs text-center">Compila tutti i campi per vedere la citazione</p>';
+    }
+
+    // Inizializza con tipo libro
+    setTipoFonte('libro');
+</script>
+
+
+
+        <!-- ========== PAGINA 78: CONVERTITORE VOTI E SCALE INTERNAZIONALI ========== -->
+<div class="page" data-page="78">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="refresh-cw" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="convert" style="width:28px;height:28px;color:#f59e0b;"></i> 🔄 Convertitore Voti e Scale
+        </h2>
+        
+        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+            Converti i tuoi voti tra le diverse scale italiane e internazionali. Ideale per Erasmus, domande di ammissione e curriculum.
+        </p>
+
+        <!-- BADGE TRUST -->
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Privacy Totale Garantita</p>
+                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. Tutto avviene sul tuo browser.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Conosci il tuo voto in ogni scala. Pronto per il mondo."</p>
+        </div>
+
+        <!-- PANORAMICA RAPIDA -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="info" style="width:20px;height:20px;"></i> 📖 Come Funziona
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Scegli il tipo di conversione che ti serve:
+            </p>
+            <div class="space-y-2">
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">1️⃣ VOTO SU 30 → SU 110</p>
+                    <p class="text-neutral-400 text-xs">Converti un voto d'esame (18-30) nel equivalente su scala 110.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">2️⃣ MEDIA PONDERATA → VOTO DI PARTENZA</p>
+                    <p class="text-neutral-400 text-xs">Converti la media in voto di laurea base.</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white mb-1 text-xs">3️⃣ SCALA ITALIANA → SCALA ESTERA (ECTS)</p>
+                    <p class="text-neutral-400 text-xs">Converti il voto italiano in scala ECTS europea.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 1: VOTO SU 30 → SU 110
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="arrow-right-left" style="width:20px;height:20px;"></i> 1. Voto su 30 → Voto su 110
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci il voto d'esame (18-30) e ottieni il equivalente su 110.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Voto su 30</label>
+                    <input type="number" id="conv-voto30" placeholder="es. 28" min="18" max="31" oninput="convertiVoto30a110()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Equivalente su 110</p>
+                    <p id="conv-risultato-110" class="text-3xl font-bold text-amber-400">—</p>
+                    <p class="text-neutral-500 text-xs mt-1" id="conv-formula-110">Formula: (Voto × 110) / 30</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 2: MEDIA → VOTO DI PARTENZA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="calculator" style="width:20px;height:20px;"></i> 2. Media Ponderata → Voto di Partenza
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Inserisci la tua media ponderata e ottieni il voto di partenza per la laurea.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 Media Ponderata (18-30)</label>
+                    <input type="number" id="conv-media" placeholder="es. 27.5" min="18" max="30" step="0.01" oninput="convertiMediaPartenza()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Voto di Partenza (su 110)</p>
+                    <p id="conv-risultato-partenza" class="text-3xl font-bold text-green-400">—</p>
+                    <p class="text-neutral-500 text-xs mt-1">Formula: (Media × 110) / 30</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 3: SCALA ITALIANA → SCALA ECTS
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="globe" style="width:20px;height:20px;"></i> 3. Voto Italiano → Scala ECTS
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Converti il voto italiano nella scala europea ECTS.
+            </p>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Voto su 30</label>
+                    <input type="number" id="conv-voto-ects" placeholder="es. 28" min="18" max="31" oninput="convertiECTS()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Grado ECTS</p>
+                    <p id="conv-risultato-ects" class="text-3xl font-bold text-blue-400">—</p>
+                </div>
+
+                <!-- Tabella di riferimento -->
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-3">
+                    <p class="font-bold text-white text-sm mb-2">📋 Tabella di Conversione ECTS</p>
+                    <table class="w-full text-left text-xs">
+                        <thead>
+                            <tr class="border-b border-neutral-700">
+                                <th class="py-2 px-2 text-white">Voto Italiano</th>
+                                <th class="py-2 px-2 text-white">ECTS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-neutral-800">
+                                <td class="py-2 px-2 text-neutral-300">30 e lode</td>
+                                <td class="py-2 px-2 text-blue-400 font-bold">A (Eccellente)</td>
+                            </tr>
+                            <tr class="border-b border-neutral-800">
+                                <td class="py-2 px-2 text-neutral-300">28-30</td>
+                                <td class="py-2 px-2 text-blue-400 font-bold">A (Eccellente)</td>
+                            </tr>
+                            <tr class="border-b border-neutral-800">
+                                <td class="py-2 px-2 text-neutral-300">25-27</td>
+                                <td class="py-2 px-2 text-green-400 font-bold">B (Molto buono)</td>
+                            </tr>
+                            <tr class="border-b border-neutral-800">
+                                <td class="py-2 px-2 text-neutral-300">21-24</td>
+                                <td class="py-2 px-2 text-yellow-400 font-bold">C (Buono)</td>
+                            </tr>
+                            <tr class="border-b border-neutral-800">
+                                <td class="py-2 px-2 text-neutral-300">18-20</td>
+                                <td class="py-2 px-2 text-orange-400 font-bold">D (Sufficiente)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 4: TABELLA CONVERSIONE GPA (USA)
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="us-flag" style="width:20px;height:20px;"></i> 4. Conversione GPA (USA)
+            </h3>
+            <p class="text-neutral-300 text-sm mb-4">
+                Tabella di conversione approssimativa per il sistema GPA americano (scala 0-4).
+            </p>
+
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                <table class="w-full text-left text-xs">
+                    <thead>
+                        <tr class="border-b border-neutral-700">
+                            <th class="py-2 px-2 text-white">Voto Italiano (30)</th>
+                            <th class="py-2 px-2 text-white">GPA (4.0)</th>
+                            <th class="py-2 px-2 text-white">Valutazione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-neutral-800">
+                            <td class="py-2 px-2 text-neutral-300">30 e lode</td>
+                            <td class="py-2 px-2 text-amber-400 font-bold">4.0</td>
+                            <td class="py-2 px-2 text-neutral-400">Excellent</td>
+                        </tr>
+                        <tr class="border-b border-neutral-800">
+                            <td class="py-2 px-2 text-neutral-300">29-30</td>
+                            <td class="py-2 px-2 text-amber-400 font-bold">3.7</td>
+                            <td class="py-2 px-2 text-neutral-400">Very Good</td>
+                        </tr>
+                        <tr class="border-b border-neutral-800">
+                            <td class="py-2 px-2 text-neutral-300">27-28</td>
+                            <td class="py-2 px-2 text-green-400 font-bold">3.3</td>
+                            <td class="py-2 px-2 text-neutral-400">Good</td>
+                        </tr>
+                        <tr class="border-b border-neutral-800">
+                            <td class="py-2 px-2 text-neutral-300">24-26</td>
+                            <td class="py-2 px-2 text-yellow-400 font-bold">3.0</td>
+                            <td class="py-2 px-2 text-neutral-400">Satisfactory</td>
+                        </tr>
+                        <tr class="border-b border-neutral-800">
+                            <td class="py-2 px-2 text-neutral-300">21-23</td>
+                            <td class="py-2 px-2 text-orange-400 font-bold">2.5</td>
+                            <td class="py-2 px-2 text-neutral-400">Adequate</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-2 text-neutral-300">18-20</td>
+                            <td class="py-2 px-2 text-red-400 font-bold">2.0</td>
+                            <td class="py-2 px-2 text-neutral-400">Sufficient</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-neutral-500 text-xs mt-3">
+                ⚠️ <strong class="text-white">Nota:</strong> La conversione GPA varia da università a università. Verifica sempre con il tuo ateneo o con l'istituzione di destinazione.
+            </p>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Convertitore</h3>
+        <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho convertito un voto su 30 in voto su 110</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho calcolato il voto di partenza dalla media</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato la conversione ECTS</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho confrontato con la scala GPA americana</span></label>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // JAVASCRIPT: CONVERTITORE VOTI E SCALE
+    // ============================================================
+    
+    function convertiVoto30a110() {
+        const voto = parseInt(document.getElementById('conv-voto30').value);
+        if (voto && voto >= 18 && voto <= 31) {
+            const voto110 = (voto * 110) / 30;
+            document.getElementById('conv-risultato-110').textContent = voto110.toFixed(1);
+        } else {
+            document.getElementById('conv-risultato-110').textContent = '—';
+        }
+    }
+
+    function convertiMediaPartenza() {
+        const media = parseFloat(document.getElementById('conv-media').value);
+        if (media && media >= 18 && media <= 30) {
+            const partenza = (media * 110) / 30;
+            document.getElementById('conv-risultato-partenza').textContent = partenza.toFixed(1);
+        } else {
+            document.getElementById('conv-risultato-partenza').textContent = '—';
+        }
+    }
+
+    function convertiECTS() {
+        const voto = parseInt(document.getElementById('conv-voto-ects').value);
+        let grado = '—';
+        
+        if (voto) {
+            if (voto >= 30) {
+                grado = 'A (Eccellente)';
+            } else if (voto >= 28) {
+                grado = 'A (Eccellente)';
+            } else if (voto >= 25) {
+                grado = 'B (Molto buono)';
+            } else if (voto >= 21) {
+                grado = 'C (Buono)';
+            } else if (voto >= 18) {
+                grado = 'D (Sufficiente)';
+            }
+        }
+        
+        document.getElementById('conv-risultato-ects').textContent = grado;
+    }
+</script>
+
+
+
         
         
     </main>
@@ -14293,7 +15460,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             {page:72, label:'🚀 Metodo Scrittura Flash Avanzato (Overleaf)'},
             {page:73, label:'📥 Template Overleaf + Risorse'},
             {page:74, label:'📚 Prompt Library e Codici LaTeX'},
-            {page:75, label:'📊 Libretto Universitario'}
+            {page:75, label:'📊 Libretto Universitario'},
+            {page:76, label:'📅 Pianificatore Esami e Scadenze'},
+            {page:77, label:'📚 Generatore di Citazioni'},
+            {page:78, label:'🔄 Convertitore Voti e Scale'}
             
             
            
