@@ -13635,11 +13635,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </h2>
         
         <p class="text-neutral-300 text-sm leading-relaxed mb-6">
-            Il tuo libretto universitario digitale: calcola media ponderata, voto di partenza e simula il voto di laurea. <strong class="text-white">Tutto resta sul tuo dispositivo</strong>. Nessun account, nessuna email, nessun server.
+            Il tuo hub universitario personale: configura la carriera, inserisci gli esami, monitora la media e simula il voto di laurea. <strong class="text-white">Tutto resta salvato sul tuo browser.</strong>
         </p>
 
         <div class="flash-strategy">
-            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Conosci la tua media. Saprai esattamente dove concentrarti per alzare il voto di laurea."</p>
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Conosci i tuoi numeri. Controlli il tuo futuro."</p>
         </div>
 
         <!-- ============================================================
@@ -13647,36 +13647,112 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="settings" style="width:20px;height:20px;"></i> 1. Configura la Tua Carriera
+                <i data-lucide="settings" style="width:20px;height:20px;"></i> 1. Crea la Tua Carriera
             </h3>
             <p class="text-neutral-300 text-sm mb-4">
-                Inserisci i dati del tuo corso di laurea. Tutto resta salvato sul tuo browser.
+                Bastano il corso e l'anno di immatricolazione. Tutto il resto è già precompilato con i valori più comuni in Italia — puoi modificarli in qualsiasi momento.
             </p>
 
-            <div class="space-y-3">
+            <div class="space-y-4">
+                <!-- Nome studente -->
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🎓 Nome del Corso</label>
-                    <input type="text" id="carriera-corso" placeholder="es. Ingegneria Informatica" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">👤 Il tuo Nome</label>
+                    <input type="text" id="carriera-nome" placeholder="es. Giulia" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <p class="text-neutral-500 text-xs mt-1">Facoltativo — resta solo su questo dispositivo</p>
                 </div>
+
+                <!-- Corso -->
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🎓 Corso di Laurea</label>
+                    <input type="text" id="carriera-corso" placeholder="es. Ingegneria Informatica" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <p class="text-neutral-500 text-xs mt-1">L'unico campo obbligatorio — compare nell'intestazione</p>
+                </div>
+
+                <!-- Tipo di laurea -->
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Tipo di Laurea</label>
-                    <select id="carriera-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                        <option value="triennale">Triennale (180 CFU)</option>
-                        <option value="magistrale">Magistrale (120 CFU)</option>
-                        <option value="ciclo-unico">Ciclo Unico (300 CFU)</option>
+                    <select id="carriera-tipo" onchange="aggiornaValoriPredefiniti(); aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <option value="triennale">Triennale</option>
+                        <option value="magistrale">Magistrale</option>
+                        <option value="ciclo-unico">Ciclo Unico</option>
                     </select>
+                    <p class="text-neutral-500 text-xs mt-1">Determina la durata predefinita</p>
                 </div>
+
+                <!-- Anno immatricolazione -->
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno di Immatricolazione</label>
-                    <input type="number" id="carriera-anno" placeholder="es. 2023" min="2000" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="number" id="carriera-anno" placeholder="es. 2026" min="2000" max="2035" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <p class="text-neutral-500 text-xs mt-1">L'anno accademico in cui hai iniziato</p>
                 </div>
+
+                <!-- Ateneo -->
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏛️ Ateneo (facoltativo)</label>
-                    <input type="text" id="carriera-ateneo" placeholder="es. Università di Bologna" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏛️ Ateneo</label>
+                    <input type="text" id="carriera-ateneo" placeholder="es. Università di Bologna" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <p class="text-neutral-500 text-xs mt-1">Non lo usiamo per nulla se non mostrarlo qui</p>
                 </div>
-                <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 Base Voto di Laurea</label>
-                    <input type="number" id="carriera-base" value="110" min="100" max="110" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+
+                <!-- Valori proposti - modificabili -->
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-4">
+                    <p class="font-bold text-white text-sm mb-3">⚙️ Valori proposti — modificabili anche dopo</p>
+
+                    <!-- Durata legale -->
+                    <div class="mb-3">
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">⏳ Durata Legale</label>
+                        <select id="carriera-durata" onchange="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                            <option value="2">2 anni</option>
+                            <option value="3" selected>3 anni</option>
+                            <option value="4">4 anni</option>
+                            <option value="5">5 anni</option>
+                            <option value="6">6 anni</option>
+                        </select>
+                        <p class="text-neutral-500 text-xs mt-1">Anni previsti dall'ordinamento</p>
+                    </div>
+
+                    <!-- CFU totali -->
+                    <div class="mb-3">
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 CFU Totali</label>
+                        <input type="number" id="carriera-cfu" value="180" min="60" max="360" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <p class="text-neutral-500 text-xs mt-1">180 per triennale, 120 per magistrale, 300 per ciclo unico</p>
+                    </div>
+
+                    <!-- Base voto -->
+                    <div class="mb-3">
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🎯 Base Voto di Laurea</label>
+                        <input type="number" id="carriera-base" value="110" min="100" max="110" oninput="aggiornaAnteprima()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <p class="text-neutral-500 text-xs mt-1">Il massimo raggiungibile</p>
+                    </div>
+
+                    <!-- Tema -->
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🎨 Tema</label>
+                        <select id="carriera-tema" onchange="cambiaTema()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                            <option value="auto">Auto (segue il sistema)</option>
+                            <option value="chiaro">Chiaro</option>
+                            <option value="scuro">Scuro</option>
+                        </select>
+                        <p class="text-neutral-500 text-xs mt-1">Lo cambi quando vuoi</p>
+                    </div>
+                </div>
+
+                <button onclick="salvaCarriera()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    💾 Salva Carriera
+                </button>
+                <p class="text-neutral-500 text-xs text-center mt-2">🔒 Nessun account, nessuna email. I dati restano sul tuo browser e non sono sincronizzati tra dispositivi diversi.</p>
+            </div>
+
+            <!-- ANTEPRIMA CARRIERA IN TEMPO REALE -->
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 mt-4">
+                <p class="font-bold text-white text-sm mb-3">👁️ La carriera che stai creando</p>
+                <div id="anteprima-carriera" class="space-y-2 text-sm">
+                    <p class="text-neutral-400"><strong class="text-white">Corso:</strong> <span id="anteprima-corso">non indicato</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">Ateneo:</strong> <span id="anteprima-ateneo">non indicato</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">Tipo:</strong> <span id="anteprima-tipo">Triennale</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">Durata legale:</strong> <span id="anteprima-durata">3 anni</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">CFU totali:</strong> <span id="anteprima-cfu">180</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">Voto di laurea:</strong> su <span id="anteprima-base">110</span></p>
+                    <p class="text-neutral-400"><strong class="text-white">Immatricolazione:</strong> <span id="anteprima-anno">—</span></p>
                 </div>
             </div>
         </div>
@@ -13699,13 +13775,17 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Voto (18-30 e lode)</label>
-                        <input type="number" id="esame-voto" placeholder="es. 28" min="18" max="31" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Voto</label>
+                        <input type="number" id="esame-voto" placeholder="es. 28" min="18" max="33" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 CFU</label>
                         <input type="number" id="esame-cfu" placeholder="es. 12" min="1" max="30" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Data Esame (facoltativa)</label>
+                    <input type="date" id="esame-data" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <button onclick="aggiungiEsame()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
                     ➕ Aggiungi Esame
@@ -13731,16 +13811,20 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     <p id="stat-media" class="text-2xl font-bold text-amber-400">—</p>
                 </div>
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">Media Aritmetica</p>
+                    <p id="stat-aritmetica" class="text-2xl font-bold text-blue-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
                     <p class="text-neutral-400 text-xs mb-1">CFU Accumulati</p>
                     <p id="stat-cfu" class="text-2xl font-bold text-amber-400">—</p>
                 </div>
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs mb-1">Voto di Partenza</p>
-                    <p id="stat-partenza" class="text-2xl font-bold text-green-400">—</p>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
                     <p class="text-neutral-400 text-xs mb-1">Esami Sostenuti</p>
                     <p id="stat-esami" class="text-2xl font-bold text-white">0</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center col-span-2">
+                    <p class="text-neutral-400 text-xs mb-1">Voto di Partenza (su 110)</p>
+                    <p id="stat-partenza" class="text-3xl font-bold text-green-400">—</p>
                 </div>
             </div>
         </div>
@@ -13759,11 +13843,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <div class="space-y-3">
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">🎯 Punti Tesi (0-8)</label>
-                    <input type="number" id="sim-tesi" value="5" min="0" max="8" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="number" id="sim-tesi" value="5" min="0" max="8" oninput="calcolaStatistiche()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏆 Bonus (lodi, pubblicazioni, ecc.)</label>
-                    <input type="number" id="sim-bonus" value="0" min="0" max="5" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏆 Bonus (lodi, laurea in corso, Erasmus)</label>
+                    <input type="number" id="sim-bonus" value="0" min="0" max="10" oninput="calcolaStatistiche()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-center">
                     <p class="text-neutral-400 text-xs mb-1">Voto Finale Stimato</p>
@@ -13779,26 +13863,30 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta o Stampa
             </h3>
-            <div class="flex gap-3">
-                <button onclick="window.print()" class="flex-1 bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+            <div class="flex gap-3 flex-wrap">
+                <button onclick="window.print()" class="flex-1 min-w-[140px] bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
                     🖨️ Stampa / Salva PDF
                 </button>
-                <button onclick="resetLibretto()" class="flex-1 bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                <button onclick="exportJSON()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    📥 Export JSON
+                </button>
+                <button onclick="resetLibretto()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
                     🗑️ Azzera Tutto
                 </button>
             </div>
             <p class="text-neutral-400 text-xs mt-3">
-                💡 Con "Stampa / Salva PDF" si apre la finestra di stampa del browser. Scegli "Salva come PDF" per scaricare il riepilogo.
+                💡 <strong class="text-white">Export JSON:</strong> Scarica un file di backup con tutti i tuoi dati. <strong class="text-white">Stampa/Salva PDF:</strong> Apre la finestra di stampa del browser.
             </p>
         </div>
 
         <!-- CHECKLIST -->
         <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Libretto</h3>
         <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
-            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho configurato il mio corso di laurea</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho configurato la mia carriera universitaria</span></label>
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho inserito almeno 5 esami con voti e CFU</span></label>
-            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato la media ponderata</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho controllato la media ponderata e aritmetica</span></label>
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho simulato il voto finale con i punti tesi</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho esportato il backup JSON</span></label>
         </div>
 
     </div>
@@ -13806,32 +13894,111 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // JAVASCRIPT PER IL LIBRETTO UNIVERSITARIO
+    // JAVASCRIPT: TESIFLASH LIBRETTO UNIVERSITARIO
     // ============================================================
     
     let esami = JSON.parse(localStorage.getItem('tesiflash_esami') || '[]');
+    let carriera = JSON.parse(localStorage.getItem('tesiflash_carriera') || 'null');
+
+    // Carica carriera salvata
+    if (carriera) {
+        document.getElementById('carriera-nome').value = carriera.nome || '';
+        document.getElementById('carriera-corso').value = carriera.corso || '';
+        document.getElementById('carriera-tipo').value = carriera.tipo || 'triennale';
+        document.getElementById('carriera-anno').value = carriera.anno || '';
+        document.getElementById('carriera-ateneo').value = carriera.ateneo || '';
+        document.getElementById('carriera-durata').value = carriera.durata || '3';
+        document.getElementById('carriera-cfu').value = carriera.cfu || 180;
+        document.getElementById('carriera-base').value = carriera.base || 110;
+        aggiornaAnteprima();
+    }
+
+    function aggiornaValoriPredefiniti() {
+        const tipo = document.getElementById('carriera-tipo').value;
+        if (tipo === 'triennale') {
+            document.getElementById('carriera-durata').value = '3';
+            document.getElementById('carriera-cfu').value = '180';
+        } else if (tipo === 'magistrale') {
+            document.getElementById('carriera-durata').value = '2';
+            document.getElementById('carriera-cfu').value = '120';
+        } else if (tipo === 'ciclo-unico') {
+            document.getElementById('carriera-durata').value = '5';
+            document.getElementById('carriera-cfu').value = '300';
+        }
+        aggiornaAnteprima();
+    }
+
+    function aggiornaAnteprima() {
+        const corso = document.getElementById('carriera-corso').value || 'non indicato';
+        const ateneo = document.getElementById('carriera-ateneo').value || 'non indicato';
+        const tipo = document.getElementById('carriera-tipo').value;
+        const durata = document.getElementById('carriera-durata').value;
+        const cfu = document.getElementById('carriera-cfu').value;
+        const base = document.getElementById('carriera-base').value;
+        const anno = document.getElementById('carriera-anno').value;
+        
+        document.getElementById('anteprima-corso').textContent = corso;
+        document.getElementById('anteprima-ateneo').textContent = ateneo;
+        document.getElementById('anteprima-tipo').textContent = tipo === 'triennale' ? 'Triennale' : tipo === 'magistrale' ? 'Magistrale' : 'Ciclo Unico';
+        document.getElementById('anteprima-durata').textContent = durata + ' anni';
+        document.getElementById('anteprima-cfu').textContent = cfu;
+        document.getElementById('anteprima-base').textContent = base;
+        document.getElementById('anteprima-anno').textContent = anno ? anno + '/' + (parseInt(anno) + 1) : '—';
+    }
+
+    function cambiaTema() {
+        const tema = document.getElementById('carriera-tema').value;
+        if (tema === 'chiaro') {
+            document.body.style.backgroundColor = '#ffffff';
+            document.body.style.color = '#000000';
+        } else if (tema === 'scuro') {
+            document.body.style.backgroundColor = '#0f0332';
+            document.body.style.color = '#ffffff';
+        } else {
+            document.body.style.backgroundColor = '';
+            document.body.style.color = '';
+        }
+    }
+
+    function salvaCarriera() {
+        carriera = {
+            nome: document.getElementById('carriera-nome').value.trim(),
+            corso: document.getElementById('carriera-corso').value.trim(),
+            tipo: document.getElementById('carriera-tipo').value,
+            anno: document.getElementById('carriera-anno').value,
+            ateneo: document.getElementById('carriera-ateneo').value.trim(),
+            durata: document.getElementById('carriera-durata').value,
+            cfu: parseInt(document.getElementById('carriera-cfu').value) || 180,
+            base: parseInt(document.getElementById('carriera-base').value) || 110,
+            tema: document.getElementById('carriera-tema').value
+        };
+        localStorage.setItem('tesiflash_carriera', JSON.stringify(carriera));
+        alert('✅ Carriera salvata!');
+    }
 
     function aggiungiEsame() {
         const nome = document.getElementById('esame-nome').value.trim();
         const voto = parseInt(document.getElementById('esame-voto').value);
         const cfu = parseInt(document.getElementById('esame-cfu').value);
+        const data = document.getElementById('esame-data').value;
         
         if (!nome || !voto || !cfu) {
-            alert('Compila tutti i campi esame');
+            alert('Compila i campi: nome, voto e CFU');
             return;
         }
         
-        if (voto < 18 || voto > 31) {
-            alert('Il voto deve essere tra 18 e 31 (31 = 30 e lode)');
+        if (voto < 18 || voto > 33) {
+            alert('Il voto deve essere tra 18 e 33 (33 = 30 e lode con bonus)');
             return;
         }
         
-        esami.push({ nome, voto, cfu });
+        esami.push({ nome, voto, cfu, data });
         localStorage.setItem('tesiflash_esami', JSON.stringify(esami));
         
         document.getElementById('esame-nome').value = '';
         document.getElementById('esame-voto').value = '';
         document.getElementById('esame-cfu').value = '';
+        document.getElementById('esame-data').value = '';
         
         renderEsami();
         calcolaStatistiche();
@@ -13855,7 +14022,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-center">
                 <div>
                     <p class="text-white text-sm font-bold">${e.nome}</p>
-                    <p class="text-neutral-400 text-xs">Voto: ${e.voto === 31 ? '30 e lode' : e.voto} · CFU: ${e.cfu}</p>
+                    <p class="text-neutral-400 text-xs">Voto: ${e.voto === 31 ? '30 e lode' : e.voto === 32 ? '30 e lode (32)' : e.voto === 33 ? '30 e lode (33)' : e.voto} · CFU: ${e.cfu}${e.data ? ' · ' + e.data : ''}</p>
                 </div>
                 <button onclick="rimuoviEsame(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold">🗑️</button>
             </div>
@@ -13868,6 +14035,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         
         if (numEsami === 0) {
             document.getElementById('stat-media').textContent = '—';
+            document.getElementById('stat-aritmetica').textContent = '—';
             document.getElementById('stat-cfu').textContent = '—';
             document.getElementById('stat-partenza').textContent = '—';
             document.getElementById('stat-esami').textContent = '0';
@@ -13875,10 +14043,17 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             return;
         }
         
+        // Media ponderata
         const mediaPonderata = esami.reduce((sum, e) => sum + (e.voto * e.cfu), 0) / cfuTotali;
+        
+        // Media aritmetica
+        const mediaAritmetica = esami.reduce((sum, e) => sum + e.voto, 0) / numEsami;
+        
+        // Voto di partenza (base 110)
         const votoPartenza = (mediaPonderata * 110) / 30;
         
         document.getElementById('stat-media').textContent = mediaPonderata.toFixed(2);
+        document.getElementById('stat-aritmetica').textContent = mediaAritmetica.toFixed(2);
         document.getElementById('stat-cfu').textContent = cfuTotali;
         document.getElementById('stat-partenza').textContent = votoPartenza.toFixed(1);
         document.getElementById('stat-esami').textContent = numEsami;
@@ -13890,19 +14065,41 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         document.getElementById('sim-finale').textContent = Math.min(votoFinale, 110).toFixed(1);
     }
 
+    function exportJSON() {
+        const dati = {
+            carriera: carriera,
+            esami: esami,
+            esportato: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'tesiflash-libretto-' + new Date().toISOString().split('T')[0] + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
     function resetLibretto() {
-        if (confirm('Sei sicuro di voler cancellare tutti gli esami?')) {
+        if (confirm('Sei sicuro di voler cancellare tutti i dati? Questa operazione non è reversibile.')) {
             esami = [];
             localStorage.setItem('tesiflash_esami', JSON.stringify(esami));
-            renderEsami();
-            calcolaStatistiche();
+            carriera = null;
+            localStorage.removeItem('tesiflash_carriera');
+            location.reload();
         }
     }
 
     // Carica dati iniziali
     renderEsami();
     calcolaStatistiche();
+    aggiornaAnteprima();
 </script>
+
+
+
+
+        
         
     </main>
 
