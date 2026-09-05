@@ -14673,7 +14673,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </script>
 
 
-        <!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE ========== -->
+<!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE ========== -->
 <div class="page" data-page="77">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -15055,6 +15055,46 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     <p class="font-bold text-white text-xs mb-2">🌐 Harvard</p>
                     <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
                         <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo} (${anno}). *${titolo}*. Disponibile su: ${url} (Accesso: oggi).</pre>
+                    </div>
+                </div>
+            `;
+        } else if (tipoFonte === 'capitolo') {
+            // ============================================================
+            // BLOCO PER CAPITOLO DI LIBRO - CORREZIONE BUG
+            // ============================================================
+            const titoloCapitolo = getValore('fonte-titolo');
+            const titoloLibro = getValore('fonte-libro');
+            const curatore = getValore('fonte-curatore');
+            const editore = getValore('fonte-editore');
+            const pagine = getValore('fonte-pagine');
+            
+            if (!titoloCapitolo || !titoloLibro || !editore) return;
+            
+            const curatoreFormattato = curatore ? curatore.replace('a cura di ', '') : '';
+            
+            risultato = `
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📑 APA 7ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). ${titoloCapitolo}. In ${curatore ? curatore + ', ' : ''}*${titoloLibro}* (pp. ${pagine}). ${editore}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📑 MLA 9ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titoloCapitolo}." *${titoloLibro}*, ${curatore ? 'a cura di ' + curatoreFormattato + ', ' : ''}${editore}, ${anno}, pp. ${pagine}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📑 Chicago 17ª Ed.</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titoloCapitolo}." In *${titoloLibro}*, ${curatore ? 'a cura di ' + curatoreFormattato + ', ' : ''}${pagine}. ${editore}, ${anno}.</pre>
+                    </div>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
+                    <p class="font-bold text-white text-xs mb-2">📑 Harvard</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). "${titoloCapitolo}," in ${curatore ? curatore + ', ' : ''}*${titoloLibro}*, ${editore}, pp. ${pagine}.</pre>
                     </div>
                 </div>
             `;
