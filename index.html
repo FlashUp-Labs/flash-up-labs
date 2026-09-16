@@ -16689,7 +16689,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <ol class="text-neutral-300 text-xs leading-relaxed list-decimal list-inside space-y-0.5">
                     <li>Vedi una sequenza di cifre per 2 secondi</li>
                     <li>Spariscono → appaiono dei pulsanti con le stesse cifre, ma in disordine</li>
-                    <li>Cliccale in <strong class="text-white">ordine crescente</strong> (dalla più piccola alla più grande)</li>
+                    <li>Cliccale in <strong class="text-white">ordine crescente</strong></li>
                     <li>Se indovini, vinci il round</li>
                 </ol>
             </div>
@@ -16913,7 +16913,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <p class="text-blue-400 font-bold text-xs mb-1">📌 Come si gioca</p>
                 <ul class="text-neutral-300 text-xs leading-relaxed list-disc list-inside space-y-0.5">
                     <li>Clicca la <strong class="text-white">prima lettera</strong> della parola, poi l'<strong class="text-white">ultima</strong></li>
-                    <li>Le parole sono in orizzontale, verticale o diagonale (anche al contrario)</li>
+                    <li>Le parole sono in <strong class="text-white">orizzontale, verticale o diagonale</strong></li>
                     <li>Trova tutte le parole per vincere</li>
                 </ul>
             </div>
@@ -17166,7 +17166,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     // ============================================================
-    // 2. MEMORY FLASH (RISCRITTO)
+    // 2. MEMORY FLASH
     // ============================================================
     let memoryStato = { cifre: [], soluzione: [], prossimo: 0, livello: 4, attivo: false, timeout: null, fase: 'idle' };
 
@@ -17205,7 +17205,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     function memoryGenera() {
         if (!memoryStato.attivo) return;
 
-        // Genera N cifre uniche 0-9
         const usati = new Set();
         memoryStato.cifre = [];
         while (memoryStato.cifre.length < memoryStato.livello) {
@@ -17216,7 +17215,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             }
         }
 
-        // Soluzione = cifre ordinate crescenti
         memoryStato.soluzione = [...memoryStato.cifre].sort((a, b) => a - b);
         memoryStato.prossimo = 0;
         memoryStato.fase = 'show';
@@ -17392,7 +17390,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         document.getElementById('simon-risultato').textContent = '';
         document.getElementById('simon-fase').textContent = '👀 Guarda la sequenza...';
 
-        // Genera sequenza iniziale
         for (let i = 0; i < simonStato.startLunghezza; i++) {
             simonStato.sequenza.push(SIMON_COLORI[Math.floor(Math.random() * 4)]);
         }
@@ -17430,7 +17427,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const mostra = () => {
             if (!simonStato.attivo) return;
             if (i >= simonStato.sequenza.length) {
-                // Fine sequenza → utente deve ripetere
                 simonStato.fase = 'input';
                 simonStato.input = [];
                 document.getElementById('simon-fase').textContent = '👉 Ripeti la sequenza!';
@@ -17451,7 +17447,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
         const idx = simonStato.input.length - 1;
         if (simonStato.input[idx] !== simonStato.sequenza[idx]) {
-            // Sbagliato
             simonStato.attivo = false;
             const record = simonStato.sequenza.length - 1;
             aggiornaRecord('tesiflash_pausa_simon', record);
@@ -17462,7 +17457,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         }
 
         if (simonStato.input.length === simonStato.sequenza.length) {
-            // Round completato → aggiungi un colore
             document.getElementById('simon-fase').textContent = '✅ Corretto! +1 colore';
             document.getElementById('simon-risultato').textContent = `Sequenza di ${simonStato.sequenza.length} completata!`;
             document.getElementById('simon-risultato').style.color = '#22c55e';
@@ -17645,10 +17639,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     // ============================================================
-    // 7. CRUCIPUZZLE (con verifica piazzamento)
+    // 7. CRUCIPUZZLE (tutte le direzioni)
     // ============================================================
     const CRUCI_TUTTE = ['TESI','LIBRO','ESAME','STUDIO','LAUREA','DOCENTE','RICERCA','CAPITOLO','BIBLIOTECA','LEZIONE','SQUOLA','APPUNTI'];
-    let cruciStato = { griglia: [], parole: [], trovate: [], prima: null, attivo: false, dim: 10 };
+    let cruciStato = { griglia: [], parole: [], trovate: [], prima: null, attivo: false, dim: 10, numParole: 6 };
 
     function cruciScegliLivello(numParole) {
         cruciStato.numParole = numParole;
@@ -17665,13 +17659,15 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const dim = numParole <= 4 ? 8 : (numParole <= 6 ? 10 : 12);
         cruciStato.dim = dim;
 
-        // Seleziona parole
-        const shuffled = [...CRUCI_TUTTE].sort(() => Math.random() - 0.5);
+        // Seleziona parole che ENTRANO nella griglia
+        const shuffled = [...CRUCI_TUTTE]
+            .filter(p => p.length <= dim)
+            .sort(() => Math.random() - 0.5);
         cruciStato.parole = shuffled.slice(0, numParole);
 
-        // Genera griglia garantendo che tutte le parole siano piazzate
+        // Genera griglia (max 30 tentativi)
         let tentativi = 0;
-        while (tentativi < 20) {
+        while (tentativi < 30) {
             tentativi++;
             if (generaGrigliaValida(dim, cruciStato.parole)) break;
         }
@@ -17697,29 +17693,38 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     function generaGrigliaValida(dim, parole) {
-        // Griglia vuota
         const griglia = Array.from({ length: dim }, () => Array(dim).fill(''));
 
         const direzioni = [
-            { dx: 1, dy: 0 },
-            { dx: 0, dy: 1 },
-            { dx: 1, dy: 1 },
-            { dx: 1, dy: -1 }
+            { dx: 1, dy: 0 },   // orizzontale →
+            { dx: 0, dy: 1 },   // verticale ↓
+            { dx: 1, dy: 1 },   // diagonale ↘
+            { dx: -1, dy: 1 }   // diagonale ↙
         ];
 
         let piazzate = 0;
         for (const parola of parole) {
             let piazzata = false;
             let tentativi = 0;
-            while (!piazzata && tentativi < 200) {
+            while (!piazzata && tentativi < 300) {
                 tentativi++;
                 const dir = direzioni[Math.floor(Math.random() * direzioni.length)];
-                const maxStartX = dim - 1;
-                const maxStartY = dim - 1;
-                const startX = Math.floor(Math.random() * (maxStartX + 1));
-                const startY = Math.floor(Math.random() * (maxStartY + 1));
 
-                // Verifica se ci sta
+                // Calcola il range valido di partenza per ogni direzione
+                const fineX = dir.dx * (parola.length - 1);
+                const fineY = dir.dy * (parola.length - 1);
+
+                const minX = Math.max(0, -fineX);
+                const maxX = Math.min(dim - 1, dim - 1 - fineX);
+                const minY = Math.max(0, -fineY);
+                const maxY = Math.min(dim - 1, dim - 1 - fineY);
+
+                if (minX > maxX || minY > maxY) continue;
+
+                const startX = minX + Math.floor(Math.random() * (maxX - minX + 1));
+                const startY = minY + Math.floor(Math.random() * (maxY - minY + 1));
+
+                // Verifica se ci sta senza conflitti
                 let ok = true;
                 for (let i = 0; i < parola.length; i++) {
                     const x = startX + dir.dx * i;
@@ -17729,7 +17734,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 }
                 if (!ok) continue;
 
-                // Piazza
+                // Piazza la parola
                 for (let i = 0; i < parola.length; i++) {
                     const x = startX + dir.dx * i;
                     const y = startY + dir.dy * i;
@@ -17788,7 +17793,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     function cellaInParola(parola, x, y) {
-        // Trova la parola nella griglia e verifica se la cella appartiene
         const dim = cruciStato.dim;
         const direzioni = [
             { dx: 1, dy: 0 },
@@ -17808,7 +17812,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                         }
                     }
                     if (match) {
-                        // Verifica se (x,y) è in questa posizione
                         for (let i = 0; i < parola.length; i++) {
                             if (xx + d.dx * i === x && yy + d.dy * i === y) return true;
                         }
