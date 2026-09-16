@@ -16000,6 +16000,355 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     </div>
 </div>
+
+
+        <!-- ========== PAGINA 81: CALENDARIO SETTIMANALE ========== -->
+<div class="page" data-page="81">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="calendar-days" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="calendar" style="width:28px;height:28px;color:#f59e0b;"></i> Calendario Settimanale
+        </h2>
+
+        <p class="text-neutral-300 text-sm leading-relaxed mb-4">
+            Organizza la settimana a colpo d'occhio. Aggiungi esami, scadenze, obiettivi e lezioni: tutto in un unico posto, sempre visibile.
+        </p>
+
+        <!-- BADGE INFO -->
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Dati sul tuo dispositivo</p>
+                <p class="text-neutral-400 text-xs">Tutto salvato nel tuo browser. Nessun account, nessun server, nessuna sincronizzazione esterna.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy mb-6">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Chi vede la settimana, non perde giorni. Chi improvvisa, rincorre."</p>
+        </div>
+
+        <!-- ============================================================
+             CONTROLLI: NAVIGAZIONE SETTIMANA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
+            <div class="flex items-center justify-between gap-3 mb-3">
+                <button onclick="cambiaSettimana(-1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
+                    <i data-lucide="chevron-left" style="width:16px;height:16px;display:inline;"></i>
+                </button>
+                <div class="text-center flex-1">
+                    <p id="settimana-label" class="text-white font-bold text-sm">—</p>
+                    <p id="settimana-range" class="text-neutral-400 text-xs">—</p>
+                </div>
+                <button onclick="cambiaSettimana(1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
+                    <i data-lucide="chevron-right" style="width:16px;height:16px;display:inline;"></i>
+                </button>
+            </div>
+            <button onclick="tornaOggi()" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs py-2 rounded-lg transition">
+                📍 Torna a questa settimana
+            </button>
+        </div>
+
+        <!-- ============================================================
+             AGGIUNTA RAPIDA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="plus-circle" style="width:20px;height:20px;"></i> Aggiungi un evento
+            </h3>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Titolo</label>
+                    <input type="text" id="cal-titolo" placeholder="es. Studiare capitolo 3" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Giorno</label>
+                        <select id="cal-giorno" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                            <option value="0">Lunedì</option>
+                            <option value="1">Martedì</option>
+                            <option value="2">Mercoledì</option>
+                            <option value="3">Giovedì</option>
+                            <option value="4">Venerdì</option>
+                            <option value="5">Sabato</option>
+                            <option value="6">Domenica</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🏷️ Tipo</label>
+                        <select id="cal-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                            <option value="studio">🟢 Studio</option>
+                            <option value="esame">🔴 Esame</option>
+                            <option value="scadenza">🟠 Scadenza</option>
+                            <option value="lezione">🔵 Lezione</option>
+                            <option value="tassa">🟡 Tassa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button onclick="aggiungiEvento()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    ➕ Aggiungi al calendario
+                </button>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             LEGENDA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
+            <p class="text-neutral-300 text-xs font-bold mb-2">🏷️ Legenda</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-green-500/20 text-green-300 border border-green-500/30">🟢 Studio</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-red-500/20 text-red-300 border border-red-500/30">🔴 Esame</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">🟠 Scadenza</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">🔵 Lezione</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">🟡 Tassa</span>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             CALENDARIO SETTIMANALE
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6 overflow-x-auto">
+            <div id="calendario" class="grid grid-cols-7 gap-2 min-w-[700px]">
+                <!-- generato da JS -->
+            </div>
+        </div>
+
+        <!-- ============================================================
+             AZIONI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> Esporta o Azzera
+            </h3>
+            <div class="flex gap-3 flex-wrap">
+                <button onclick="exportCalendario()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
+                    📥 Export JSON
+                </button>
+                <button onclick="resetCalendario()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                    🗑️ Azzera Tutto
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // ============================================================
+    // CALENDARIO SETTIMANALE
+    // ============================================================
+    let eventiCal = JSON.parse(localStorage.getItem('tesiflash_calendario') || '[]');
+    let offsetSettimana = 0; // 0 = questa settimana, -1 = precedente, +1 = prossima
+
+    // Ritorna il lunedì della settimana corrente + offset
+    function getLunediSettimana(offset) {
+        const oggi = new Date();
+        const giorno = oggi.getDay(); // 0 = domenica, 1 = lunedì...
+        const diff = (giorno === 0 ? -6 : 1 - giorno); // sposta al lunedì
+        const lunedi = new Date(oggi);
+        lunedi.setDate(oggi.getDate() + diff + (offset * 7));
+        lunedi.setHours(0, 0, 0, 0);
+        return lunedi;
+    }
+
+    function formattaData(data) {
+        return data.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' });
+    }
+
+    function getNomeGiorno(index) {
+        return ['LUN', 'MAR', 'MER', 'GIO', 'VEN', 'SAB', 'DOM'][index];
+    }
+
+    function cambiaSettimana(delta) {
+        offsetSettimana += delta;
+        renderCalendario();
+    }
+
+    function tornaOggi() {
+        offsetSettimana = 0;
+        renderCalendario();
+    }
+
+    function renderCalendario() {
+        const lunedi = getLunediSettimana(offsetSettimana);
+        const domenica = new Date(lunedi);
+        domenica.setDate(lunedi.getDate() + 6);
+
+        // Label settimana
+        document.getElementById('settimana-label').textContent = offsetSettimana === 0 ? 'Questa settimana' : (offsetSettimana === -1 ? 'Settimana scorsa' : (offsetSettimana === 1 ? 'Prossima settimana' : `Settimana ${offsetSettimana > 0 ? '+' : ''}${offsetSettimana}`));
+        document.getElementById('settimana-range').textContent = `${formattaData(lunedi)} — ${formattaData(domenica)}`;
+
+        const oggi = new Date();
+        oggi.setHours(0, 0, 0, 0);
+
+        const container = document.getElementById('calendario');
+        container.innerHTML = '';
+
+        for (let i = 0; i < 7; i++) {
+            const dataGiorno = new Date(lunedi);
+            dataGiorno.setDate(lunedi.getDate() + i);
+            const isOggi = dataGiorno.getTime() === oggi.getTime();
+
+            const eventiGiorno = eventiCal.filter(e => e.giorno === i);
+
+            const col = document.createElement('div');
+            col.className = `bg-neutral-900/60 border ${isOggi ? 'border-amber-500' : 'border-neutral-800'} rounded-lg p-2 min-h-[180px] flex flex-col`;
+            col.dataset.giorno = i;
+
+            // Header giorno
+            col.innerHTML = `
+                <div class="text-center mb-2 pb-2 border-b border-neutral-800">
+                    <p class="text-[10px] font-bold ${isOggi ? 'text-amber-400' : 'text-neutral-400'}">${getNomeGiorno(i)}</p>
+                    <p class="text-[10px] ${isOggi ? 'text-amber-400' : 'text-neutral-500'}">${formattaData(dataGiorno)}</p>
+                </div>
+                <div class="space-y-1 flex-1" data-dropzone="${i}">
+                    ${eventiGiorno.map((e, idx) => renderCardEvento(e, eventiCal.indexOf(e))).join('')}
+                </div>
+            `;
+
+            container.appendChild(col);
+        }
+
+        // Drop zone: permette di spostare card tra giorni
+        container.querySelectorAll('[data-dropzone]').forEach(zone => {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                zone.classList.add('bg-amber-500/10');
+            });
+            zone.addEventListener('dragleave', () => {
+                zone.classList.remove('bg-amber-500/10');
+            });
+            zone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                zone.classList.remove('bg-amber-500/10');
+                const idEvento = e.dataTransfer.getData('text/plain');
+                const nuovoGiorno = parseInt(zone.dataset.dropzone);
+                spostaEvento(idEvento, nuovoGiorno);
+            });
+        });
+
+        // Re-inizializza icone Lucide
+        if (window.lucide) lucide.createIcons();
+    }
+
+    function renderCardEvento(evento, index) {
+        const colori = {
+            studio: 'bg-green-500/20 border-green-500/40 text-green-100',
+            esame: 'bg-red-500/20 border-red-500/40 text-red-100',
+            scadenza: 'bg-orange-500/20 border-orange-500/40 text-orange-100',
+            lezione: 'bg-blue-500/20 border-blue-500/40 text-blue-100',
+            tassa: 'bg-yellow-500/20 border-yellow-500/40 text-yellow-100'
+        };
+        const classe = colori[evento.tipo] || colori.studio;
+        const completato = evento.completato ? 'opacity-50 line-through' : '';
+
+        return `
+            <div draggable="true"
+                 data-id="${evento.id}"
+                 class="${classe} ${completato} border rounded-md p-1.5 cursor-move text-[10px] leading-tight group relative"
+                 ondragstart="dragStart(event, '${evento.id}')">
+                <div class="flex items-start gap-1">
+                    <input type="checkbox"
+                           ${evento.completato ? 'checked' : ''}
+                           onchange="toggleCompletato('${evento.id}')"
+                           class="mt-0.5 accent-amber-500 flex-shrink-0"
+                           style="width:12px;height:12px;">
+                    <span class="flex-1 break-words font-semibold">${evento.titolo}</span>
+                    <button onclick="rimuoviEvento('${evento.id}')"
+                            class="opacity-0 group-hover:opacity-100 text-red-300 hover:text-red-100 flex-shrink-0 transition"
+                            title="Elimina">✕</button>
+                </div>
+            </div>
+        `;
+    }
+
+    function dragStart(e, id) {
+        e.dataTransfer.setData('text/plain', id);
+    }
+
+    function spostaEvento(id, nuovoGiorno) {
+        const evento = eventiCal.find(e => e.id === id);
+        if (evento) {
+            evento.giorno = nuovoGiorno;
+            salvaCalendario();
+            renderCalendario();
+        }
+    }
+
+    function toggleCompletato(id) {
+        const evento = eventiCal.find(e => e.id === id);
+        if (evento) {
+            evento.completato = !evento.completato;
+            salvaCalendario();
+            renderCalendario();
+        }
+    }
+
+    function rimuoviEvento(id) {
+        eventiCal = eventiCal.filter(e => e.id !== id);
+        salvaCalendario();
+        renderCalendario();
+    }
+
+    function aggiungiEvento() {
+        const titolo = document.getElementById('cal-titolo').value.trim();
+        const giorno = parseInt(document.getElementById('cal-giorno').value);
+        const tipo = document.getElementById('cal-tipo').value;
+
+        if (!titolo) {
+            alert('Inserisci un titolo');
+            return;
+        }
+
+        eventiCal.push({
+            id: 'ev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+            titolo: titolo,
+            giorno: giorno,
+            tipo: tipo,
+            completato: false,
+            creato: new Date().toISOString()
+        });
+
+        salvaCalendario();
+        document.getElementById('cal-titolo').value = '';
+        renderCalendario();
+    }
+
+    function salvaCalendario() {
+        localStorage.setItem('tesiflash_calendario', JSON.stringify(eventiCal));
+    }
+
+    function exportCalendario() {
+        const dati = {
+            eventi: eventiCal,
+            esportato: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'tesiflash-calendario-' + new Date().toISOString().split('T')[0] + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function resetCalendario() {
+        if (confirm('Cancellare tutti gli eventi del calendario? Operazione non reversibile.')) {
+            eventiCal = [];
+            salvaCalendario();
+            renderCalendario();
+        }
+    }
+
+    // Inizializza
+    renderCalendario();
+</script>
         
         
     </main>
