@@ -16602,14 +16602,14 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </h2>
 
         <p class="text-neutral-300 text-sm leading-relaxed mb-4">
-            5 giochi cognitivi per tenere la mente sveglia tra una sessione di studio e l'altra. Sfide vere, <strong class="text-white">non quiz</strong>: il tuo cervello lavora davvero.
+            6 giochi cognitivi per tenere la mente sveglia tra una sessione di studio e l'altra. Ogni gioco ha <strong class="text-white">START / STOP / RICOMINCIA</strong>.
         </p>
 
         <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
             <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
             <div>
                 <p class="text-green-400 font-bold text-sm">🔒 Dati sul tuo dispositivo</p>
-                <p class="text-neutral-400 text-xs">Punteggi e record salvati nel tuo browser. Nessun account, nessun server.</p>
+                <p class="text-neutral-400 text-xs">Punteggi, record e badge salvati nel tuo browser. Nessun account, nessun server.</p>
             </div>
         </div>
 
@@ -16621,25 +16621,15 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              SELETTORE GIOCHI
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-3 mb-6">
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                <button onclick="mostraGioco('stroop')" data-gioco="stroop" class="btn-gioco bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition">
-                    🎨 Stroop
-                </button>
-                <button onclick="mostraGioco('memory')" data-gioco="memory" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">
-                    🧠 Memory
-                </button>
-                <button onclick="mostraGioco('nback')" data-gioco="nback" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">
-                    🔢 N-Back
-                </button>
-                <button onclick="mostraGioco('reaction')" data-gioco="reaction" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">
-                    ⚡ Reazione
-                </button>
-                <button onclick="mostraGioco('dual')" data-gioco="dual" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">
-                    🎯 Dual Task
-                </button>
-                <button onclick="mostraGioco('stats')" data-gioco="stats" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">
-                    📊 Statistiche
-                </button>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button onclick="mostraGioco('stroop')" data-gioco="stroop" class="btn-gioco bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition">🎨 Stroop</button>
+                <button onclick="mostraGioco('memory')" data-gioco="memory" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">🧠 Memory</button>
+                <button onclick="mostraGioco('nback')" data-gioco="nback" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">🔢 N-Back</button>
+                <button onclick="mostraGioco('reaction')" data-gioco="reaction" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">⚡ Reazione</button>
+                <button onclick="mostraGioco('dual')" data-gioco="dual" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">🎯 Dual</button>
+                <button onclick="mostraGioco('clock')" data-gioco="clock" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">⏱️ Clock</button>
+                <button onclick="mostraGioco('badge')" data-gioco="badge" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">🏆 Badge</button>
+                <button onclick="mostraGioco('stats')" data-gioco="stats" class="btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">📊 Stats</button>
             </div>
         </div>
 
@@ -16654,7 +16644,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
             <div class="bg-neutral-900/60 rounded-lg p-8 text-center mb-4">
                 <p id="stroop-parola" class="text-4xl font-black mb-2">—</p>
-                <p id="stroop-progresso" class="text-neutral-500 text-xs">Risposta 0/15</p>
+                <p id="stroop-progresso" class="text-neutral-500 text-xs">Round 0/15</p>
                 <p id="stroop-tempo" class="text-neutral-500 text-xs mt-1">Tempo: 0.0s</p>
             </div>
 
@@ -16665,9 +16655,10 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <button onclick="stroopRispondi('giallo')" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-lg transition">GIALLO</button>
             </div>
 
-            <button onclick="stroopRicomincia()" class="w-full bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-xs">
-                🔄 Ricomincia
-            </button>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="stroopInizializza()" id="stroop-btn-start" class="bg-amber-500 text-black font-bold px-4 py-2 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="stroopStop()" class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-red-500 transition text-sm">⏹️ Stop</button>
+            </div>
 
             <p id="stroop-risultato" class="text-center mt-3 font-bold text-sm"></p>
         </div>
@@ -16679,7 +16670,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="eye" style="width:20px;height:20px;"></i> Memory Flash
             </h3>
-            <p class="text-neutral-400 text-xs mb-4">Ricorda i numeri che appaiono. Poi cliccaci in ordine crescente.</p>
+            <p class="text-neutral-400 text-xs mb-4"><strong class="text-white">1.</strong> Guarda i numeri · <strong class="text-white">2.</strong> Spariscono · <strong class="text-white">3.</strong> Cliccali in ordine crescente.</p>
 
             <div class="bg-neutral-900/60 rounded-lg p-6 text-center mb-4 min-h-[140px] flex flex-col items-center justify-center">
                 <p id="memory-fase" class="text-neutral-400 text-xs mb-2">Premi START per iniziare</p>
@@ -16687,11 +16678,12 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <p id="memory-progresso" class="text-neutral-500 text-xs mt-2"></p>
             </div>
 
-            <div id="memory-bottoni" class="grid grid-cols-4 gap-2 mb-3"></div>
+            <div id="memory-bottoni" class="grid grid-cols-3 gap-2 mb-3"></div>
 
-            <button onclick="memoryInizializza()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
-                ▶️ Start
-            </button>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="memoryStart()" class="bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="memoryStop()" class="bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">⏹️ Stop</button>
+            </div>
 
             <p id="memory-risultato" class="text-center mt-3 font-bold text-sm"></p>
         </div>
@@ -16701,9 +16693,9 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              ============================================================ -->
         <div id="gioco-nback" class="gioco-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="layers" style="width:20px;height:20px;"></i> N-Back (Memoria di Lavoro)
+                <i data-lucide="layers" style="width:20px;height:20px;"></i> N-Back (2-Back)
             </h3>
-            <p class="text-neutral-400 text-xs mb-4">Premi <strong class="text-white">MATCH</strong> se la lettera è uguale a quella di <strong class="text-white">2 posizioni fa</strong>.</p>
+            <p class="text-neutral-400 text-xs mb-4">Premi <strong class="text-white">MATCH</strong> se la lettera è uguale a quella di <strong class="text-white">2 posizioni fa</strong>. Altrimenti <strong class="text-white">SALTA</strong>. Avanza da solo ogni 2 secondi.</p>
 
             <div class="bg-neutral-900/60 rounded-lg p-8 text-center mb-4">
                 <p id="nback-lettera" class="text-6xl font-black text-white mb-3">—</p>
@@ -16712,17 +16704,14 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             </div>
 
             <div class="grid grid-cols-2 gap-2 mb-3">
-                <button onclick="nbackRispondi(true)" class="bg-amber-500 hover:bg-amber-400 text-black font-bold py-5 rounded-lg transition text-base">
-                    ✅ MATCH
-                </button>
-                <button onclick="nbackRispondi(false)" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold py-5 rounded-lg hover:bg-neutral-700 transition text-base">
-                    ➡️ SALTA
-                </button>
+                <button onclick="nbackRispondi(true)" class="bg-amber-500 hover:bg-amber-400 text-black font-bold py-5 rounded-lg transition text-base">✅ MATCH</button>
+                <button onclick="nbackRispondi(false)" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold py-5 rounded-lg hover:bg-neutral-700 transition text-base">➡️ SALTA</button>
             </div>
 
-            <button onclick="nbackInizializza()" class="w-full bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-xs">
-                🔄 Ricomincia
-            </button>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="nbackInizializza()" class="bg-amber-500 text-black font-bold px-4 py-2 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="nbackStop()" class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-red-500 transition text-sm">⏹️ Stop</button>
+            </div>
 
             <p id="nback-risultato" class="text-center mt-3 font-bold text-sm"></p>
         </div>
@@ -16734,73 +16723,111 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
                 <i data-lucide="zap" style="width:20px;height:20px;"></i> Reaction Time
             </h3>
-            <p class="text-neutral-400 text-xs mb-4">Clicca il cerchio <strong class="text-green-400">VERDE</strong> appena appare. NON cliccare quello <strong class="text-red-400">ROSSO</strong>.</p>
+            <p class="text-neutral-400 text-xs mb-4">Clicca <strong class="text-green-400">VERDE</strong> il più veloce possibile. <strong class="text-red-400">ROSSO</strong> = NON cliccare!</p>
 
-            <div id="reaction-area" class="bg-neutral-900/60 rounded-lg p-4 mb-4 relative" style="height:280px; cursor:pointer;">
-                <div id="reaction-cerchio" class="absolute rounded-full transition-all duration-100" style="width:80px;height:80px;left:50%;top:50%;transform:translate(-50%,-50%);display:none;"></div>
-                <p id="reaction-istruzioni" class="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm text-center px-4">
-                    Clicca START per iniziare
-                </p>
+            <div id="reaction-area" class="bg-neutral-900/60 rounded-lg mb-4 relative overflow-hidden" style="height:320px; cursor:pointer;">
+                <p id="reaction-istruzioni" class="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm text-center px-4">Premi START per iniziare</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-3 mb-3">
+            <div class="grid grid-cols-3 gap-2 mb-3">
                 <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs">Round</p>
-                    <p id="reaction-round" class="text-xl font-bold text-white">0/20</p>
+                    <p class="text-neutral-400 text-[10px]">Round</p>
+                    <p id="reaction-round" class="text-lg font-bold text-white">0/20</p>
                 </div>
                 <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs">Tempo medio</p>
-                    <p id="reaction-tempo" class="text-xl font-bold text-amber-400">—</p>
+                    <p class="text-neutral-400 text-[10px]">Ultimo</p>
+                    <p id="reaction-ultimo" class="text-lg font-bold text-amber-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-[10px]">Media</p>
+                    <p id="reaction-media" class="text-lg font-bold text-green-400">—</p>
                 </div>
             </div>
 
-            <button onclick="reactionInizializza()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
-                ▶️ Start
-            </button>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="reactionInizializza()" class="bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="reactionStop()" class="bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">⏹️ Stop</button>
+            </div>
 
             <p id="reaction-risultato" class="text-center mt-3 font-bold text-sm"></p>
         </div>
 
         <!-- ============================================================
-             GIOCO 5: DUAL TASK
+             GIOCO 5: DUAL TASK (DOPPIO STROOP)
              ============================================================ -->
         <div id="gioco-dual" class="gioco-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
             <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="git-merge" style="width:20px;height:20px;"></i> Dual Task
+                <i data-lucide="git-merge" style="width:20px;height:20px;"></i> Dual Task (Doppio Stroop)
             </h3>
-            <p class="text-neutral-400 text-xs mb-4">Due compiti insieme. Prima scegli il <strong class="text-white">colore</strong> della parola, poi se il numero è <strong class="text-white">pari o dispari</strong>.</p>
+            <p class="text-neutral-400 text-xs mb-4">Due parole colorate. Scegli il <strong class="text-white">colore reale</strong> (non quello scritto) di entrambe. Veloce!</p>
 
-            <div class="bg-neutral-900/60 rounded-lg p-5 mb-4 text-center">
-                <p id="dual-parola" class="text-3xl font-black mb-3">—</p>
-                <p id="dual-numero" class="text-3xl font-bold text-white mb-3">—</p>
-                <p id="dual-progresso" class="text-neutral-500 text-xs">Round 0/15</p>
-            </div>
-
-            <!-- Fase 1: colore -->
-            <div id="dual-fase-colore">
-                <p class="text-neutral-400 text-xs mb-2 text-center font-bold">1️⃣ Scegli il COLORE della parola</p>
-                <div class="grid grid-cols-2 gap-2 mb-3">
-                    <button onclick="dualRispondiColore('rosso')" class="bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-lg transition">ROSSO</button>
-                    <button onclick="dualRispondiColore('blu')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-lg transition">BLU</button>
-                    <button onclick="dualRispondiColore('verde')" class="bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-lg transition">VERDE</button>
-                    <button onclick="dualRispondiColore('giallo')" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-lg transition">GIALLO</button>
+            <div class="bg-neutral-900/60 rounded-lg p-5 mb-4">
+                <div class="grid grid-cols-2 gap-3 mb-3">
+                    <div class="text-center">
+                        <p class="text-neutral-500 text-[10px] mb-1">PAROLA 1</p>
+                        <p id="dual-parola1" class="text-3xl font-black">—</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-neutral-500 text-[10px] mb-1">PAROLA 2</p>
+                        <p id="dual-parola2" class="text-3xl font-black">—</p>
+                    </div>
                 </div>
+                <p id="dual-progresso" class="text-neutral-500 text-xs text-center">Round 0/12</p>
+                <p id="dual-fase-label" class="text-amber-400 text-xs text-center mt-1 font-bold">—</p>
             </div>
 
-            <!-- Fase 2: pari/dispari -->
-            <div id="dual-fase-numero" class="hidden">
-                <p class="text-neutral-400 text-xs mb-2 text-center font-bold">2️⃣ Il numero è PARI o DISPARI?</p>
-                <div class="grid grid-cols-2 gap-2 mb-3">
-                    <button onclick="dualRispondiNumero('pari')" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 rounded-lg transition">PARI</button>
-                    <button onclick="dualRispondiNumero('dispari')" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-4 rounded-lg transition">DISPARI</button>
-                </div>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+                <button onclick="dualRispondi('rosso')" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-lg transition">ROSSO</button>
+                <button onclick="dualRispondi('blu')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg transition">BLU</button>
+                <button onclick="dualRispondi('verde')" class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-lg transition">VERDE</button>
+                <button onclick="dualRispondi('giallo')" class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 rounded-lg transition">GIALLO</button>
             </div>
 
-            <button onclick="dualInizializza()" class="w-full bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-xs">
-                🔄 Ricomincia
-            </button>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="dualInizializza()" class="bg-amber-500 text-black font-bold px-4 py-2 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="dualStop()" class="bg-red-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-red-500 transition text-sm">⏹️ Stop</button>
+            </div>
 
             <p id="dual-risultato" class="text-center mt-3 font-bold text-sm"></p>
+        </div>
+
+        <!-- ============================================================
+             GIOCO 6: STOP THE CLOCK
+             ============================================================ -->
+        <div id="gioco-clock" class="gioco-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="timer" style="width:20px;height:20px;"></i> Stop the Clock
+            </h3>
+            <p class="text-neutral-400 text-xs mb-4">Il cronometro parte. Fermalo <strong class="text-white">esattamente</strong> al secondo target!</p>
+
+            <div class="bg-neutral-900/60 rounded-lg p-6 text-center mb-4">
+                <p id="clock-target" class="text-amber-400 text-sm font-bold mb-2">Target: — s</p>
+                <p id="clock-display" class="text-6xl font-black text-white">0.00</p>
+                <p id="clock-diff" class="text-neutral-500 text-xs mt-2">—</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 mb-3">
+                <button onclick="clockScegliTarget(5)" class="bg-neutral-900 border border-neutral-700 text-white font-bold py-2 rounded-lg hover:bg-neutral-700 transition text-xs">5s</button>
+                <button onclick="clockScegliTarget(10)" class="bg-neutral-900 border border-neutral-700 text-white font-bold py-2 rounded-lg hover:bg-neutral-700 transition text-xs">10s</button>
+                <button onclick="clockScegliTarget(30)" class="bg-neutral-900 border border-neutral-700 text-white font-bold py-2 rounded-lg hover:bg-neutral-700 transition text-xs">30s</button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="clockInizializza()" class="bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">▶️ Start</button>
+                <button onclick="clockStop()" id="clock-btn-stop" class="bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">⏹️ FERMA</button>
+            </div>
+
+            <p id="clock-risultato" class="text-center mt-3 font-bold text-sm"></p>
+        </div>
+
+        <!-- ============================================================
+             BADGE
+             ============================================================ -->
+        <div id="gioco-badge" class="gioco-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
+            <h3 class="text-amber-400 font-bold text-base mb-4 flex items-center gap-2">
+                <i data-lucide="award" style="width:20px;height:20px;"></i> I tuoi badge
+            </h3>
+            <div id="badge-lista" class="grid grid-cols-2 gap-3"></div>
         </div>
 
         <!-- ============================================================
@@ -16808,41 +16835,45 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              ============================================================ -->
         <div id="gioco-stats" class="gioco-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
             <h3 class="text-amber-400 font-bold text-base mb-4 flex items-center gap-2">
-                <i data-lucide="bar-chart" style="width:20px;height:20px;"></i> Le tue statistiche
+                <i data-lucide="bar-chart" style="width:20px;height:20px;"></i> Statistiche
             </h3>
 
             <div class="grid grid-cols-2 gap-3 mb-4">
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs mb-1">🎨 Record Stroop</p>
-                    <p id="stat-stroop" class="text-2xl font-bold text-amber-400">—</p>
+                    <p class="text-neutral-400 text-xs mb-1">🎨 Stroop</p>
+                    <p id="stat-stroop" class="text-xl font-bold text-amber-400">—</p>
                 </div>
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs mb-1">🧠 Record Memory</p>
-                    <p id="stat-memory" class="text-2xl font-bold text-blue-400">—</p>
+                    <p class="text-neutral-400 text-xs mb-1">🧠 Memory</p>
+                    <p id="stat-memory" class="text-xl font-bold text-blue-400">—</p>
                 </div>
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs mb-1">🔢 Record N-Back</p>
-                    <p id="stat-nback" class="text-2xl font-bold text-green-400">—</p>
+                    <p class="text-neutral-400 text-xs mb-1">🔢 N-Back</p>
+                    <p id="stat-nback" class="text-xl font-bold text-green-400">—</p>
                 </div>
                 <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
-                    <p class="text-neutral-400 text-xs mb-1">⚡ Miglior tempo reazione</p>
-                    <p id="stat-reaction" class="text-2xl font-bold text-purple-400">—</p>
+                    <p class="text-neutral-400 text-xs mb-1">⚡ Reaction</p>
+                    <p id="stat-reaction" class="text-xl font-bold text-purple-400">—</p>
                 </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center col-span-2">
-                    <p class="text-neutral-400 text-xs mb-1">🎯 Record Dual Task</p>
-                    <p id="stat-dual" class="text-2xl font-bold text-orange-400">—</p>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">🎯 Dual</p>
+                    <p id="stat-dual" class="text-xl font-bold text-orange-400">—</p>
+                </div>
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800 text-center">
+                    <p class="text-neutral-400 text-xs mb-1">⏱️ Clock</p>
+                    <p id="stat-clock" class="text-xl font-bold text-pink-400">—</p>
                 </div>
             </div>
 
             <button onclick="resetStats()" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold px-4 py-3 rounded-lg transition text-sm">
-                🗑️ Azzera statistiche
+                🗑️ Azzera tutto
             </button>
         </div>
 
         <!-- NOTE FINALI -->
         <div class="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 mb-4">
             <p class="text-neutral-400 text-xs leading-relaxed">
-                💡 <strong class="text-white">Consiglio:</strong> usa la Pausa Mentale tra una sessione di studio e l'altra (tecnica del pomodoro). 1-3 minuti di gioco attivo ricaricano la concentrazione meglio di 10 minuti di scroll sui social.
+                💡 <strong class="text-white">Consiglio:</strong> 1-3 minuti di gioco attivo tra una sessione di studio e l'altra ricaricano la concentrazione meglio di 10 minuti di scroll.
             </p>
         </div>
 
@@ -16851,9 +16882,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // PAUSA MENTALE — 5 GIOCHI COGNITIVI
+    // UTILITY
     // ============================================================
-
     function mostraGioco(nome) {
         document.querySelectorAll('.gioco-container').forEach(el => el.classList.add('hidden'));
         document.getElementById('gioco-' + nome).classList.remove('hidden');
@@ -16862,22 +16892,59 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             btn.className = 'btn-gioco bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700';
         });
         const btnAttivo = document.querySelector('[data-gioco="' + nome + '"]');
-        if (btnAttivo) {
-            btnAttivo.className = 'btn-gioco bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition';
-        }
+        if (btnAttivo) btnAttivo.className = 'btn-gioco bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition';
 
-        if (nome === 'stroop') stroopInizializza();
-        if (nome === 'memory') memoryInizializza();
-        if (nome === 'nback') nbackInizializza();
-        if (nome === 'reaction') reactionInizializza();
-        if (nome === 'dual') dualInizializza();
+        if (nome === 'memory') memoryStart();
+        if (nome === 'badge') renderBadge();
         if (nome === 'stats') statsAggiorna();
 
         if (window.lucide) lucide.createIcons();
     }
 
+    function aggiornaRecord(chiave, valore, inverso) {
+        const record = inverso
+            ? parseFloat(localStorage.getItem(chiave) || '999')
+            : parseInt(localStorage.getItem(chiave) || '0');
+        if (inverso ? valore < record : valore > record) {
+            localStorage.setItem(chiave, valore);
+        }
+    }
+
     // ============================================================
-    // 1. STROOP TEST
+    // BADGE SYSTEM
+    // ============================================================
+    const BADGE_DEF = [
+        { id: 'b1', icona: '🥉', nome: 'Novizio', desc: 'Completa un gioco', check: () => {
+            return ['tesiflash_pausa_stroop','tesiflash_pausa_memory','tesiflash_pausa_nback','tesiflash_pausa_reaction','tesiflash_pausa_dual','tesiflash_pausa_clock'].some(k => localStorage.getItem(k));
+        }},
+        { id: 'b2', icona: '🥈', nome: 'Attento', desc: 'Stroop 10+/15', check: () => parseInt(localStorage.getItem('tesiflash_pausa_stroop')||'0') >= 10 },
+        { id: 'b3', icona: '🥇', nome: 'Memoria di ferro', desc: 'Memory 6+ numeri', check: () => parseInt(localStorage.getItem('tesiflash_pausa_memory')||'0') >= 6 },
+        { id: 'b4', icona: '💎', nome: 'N-Back Master', desc: 'N-Back 20+/25', check: () => parseInt(localStorage.getItem('tesiflash_pausa_nback')||'0') >= 20 },
+        { id: 'b5', icona: '⚡', nome: 'Fulmine', desc: 'Reaction < 0.30s', check: () => {
+            const r = parseFloat(localStorage.getItem('tesiflash_pausa_reaction')||'999');
+            return r < 0.30;
+        }},
+        { id: 'b6', icona: '🎯', nome: 'Multitasking', desc: 'Dual Task 10+/12', check: () => parseInt(localStorage.getItem('tesiflash_pausa_dual')||'0') >= 10 },
+        { id: 'b7', icona: '⏱️', nome: 'Cecchino del tempo', desc: 'Clock a ±0.10s', check: () => parseFloat(localStorage.getItem('tesiflash_pausa_clock')||'999') <= 0.10 },
+        { id: 'b8', icona: '🔥', nome: 'Costante', desc: 'Gioca 3 giorni di fila', check: () => parseInt(localStorage.getItem('tesiflash_pausa_streak')||'0') >= 3 }
+    ];
+
+    function renderBadge() {
+        const container = document.getElementById('badge-lista');
+        container.innerHTML = BADGE_DEF.map(b => {
+            const sbloccato = b.check();
+            return `
+                <div class="p-3 rounded-lg border ${sbloccato ? 'bg-amber-500/10 border-amber-500/40' : 'bg-neutral-900/60 border-neutral-800 opacity-50'}">
+                    <div class="text-2xl mb-1">${sbloccato ? b.icona : '🔒'}</div>
+                    <p class="text-white text-xs font-bold">${b.nome}</p>
+                    <p class="text-neutral-400 text-[10px]">${b.desc}</p>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ============================================================
+    // 1. STROOP
     // ============================================================
     const STROOP_COLORI = [
         { nome: 'rosso', hex: '#ef4444' },
@@ -16886,37 +16953,39 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         { nome: 'giallo', hex: '#eab308' }
     ];
 
-    let stroopStato = { corrente: 0, totale: 15, corrette: 0, parola: '', colore: '', startTime: 0, tempi: [] };
+    let stroopStato = { corrente: 0, totale: 15, corrette: 0, colore: '', startTime: 0, tempi: [], attivo: false };
 
     function stroopInizializza() {
-        stroopStato = { corrente: 0, totale: 15, corrette: 0, parola: '', colore: '', startTime: Date.now(), tempi: [] };
+        stroopStato = { corrente: 0, totale: 15, corrette: 0, colore: '', startTime: Date.now(), tempi: [], attivo: true };
         stroopNuovaDomanda();
     }
 
+    function stroopStop() {
+        stroopStato.attivo = false;
+        document.getElementById('stroop-risultato').textContent = '⏹️ Fermato';
+        document.getElementById('stroop-risultato').style.color = '#f59e0b';
+    }
+
     function stroopNuovaDomanda() {
-        if (stroopStato.corrente >= stroopStato.totale) {
-            stroopFine();
-            return;
-        }
+        if (!stroopStato.attivo) return;
+        if (stroopStato.corrente >= stroopStato.totale) { stroopFine(); return; }
         stroopStato.corrente++;
         stroopStato.startTime = Date.now();
 
         const parolaScelta = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
         const coloreScelto = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
-
-        stroopStato.parola = parolaScelta.nome;
         stroopStato.colore = coloreScelto.nome;
 
         const el = document.getElementById('stroop-parola');
         el.textContent = parolaScelta.nome.toUpperCase();
         el.style.color = coloreScelto.hex;
 
-        document.getElementById('stroop-progresso').textContent = `Risposta ${stroopStato.corrente}/${stroopStato.totale}`;
-        document.getElementById('stroop-tempo').textContent = `Tempo: 0.0s`;
+        document.getElementById('stroop-progresso').textContent = `Round ${stroopStato.corrente}/${stroopStato.totale}`;
         document.getElementById('stroop-risultato').textContent = '';
     }
 
     function stroopRispondi(colore) {
+        if (!stroopStato.attivo) return;
         if (stroopStato.corrente > stroopStato.totale) return;
         const tempo = (Date.now() - stroopStato.startTime) / 1000;
         stroopStato.tempi.push(tempo);
@@ -16924,132 +16993,119 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const risultato = document.getElementById('stroop-risultato');
         if (colore === stroopStato.colore) {
             stroopStato.corrette++;
-            risultato.textContent = `✅ Corretto! (${tempo.toFixed(2)}s)`;
+            risultato.textContent = `✅ (${tempo.toFixed(2)}s)`;
             risultato.style.color = '#22c55e';
-            setTimeout(stroopNuovaDomanda, 300);
+            setTimeout(stroopNuovaDomanda, 250);
         } else {
-            risultato.textContent = `❌ Era ${stroopStato.colore.toUpperCase()}`;
+            risultato.textContent = `❌ Era ${stroopStato.colore}`;
             risultato.style.color = '#ef4444';
             setTimeout(stroopNuovaDomanda, 500);
         }
     }
 
     function stroopFine() {
-        const tempoMedio = stroopStato.tempi.length > 0
-            ? (stroopStato.tempi.reduce((a, b) => a + b, 0) / stroopStato.tempi.length).toFixed(2)
-            : '—';
+        stroopStato.attivo = false;
+        const media = stroopStato.tempi.length ? (stroopStato.tempi.reduce((a,b)=>a+b,0)/stroopStato.tempi.length).toFixed(2) : '—';
         document.getElementById('stroop-parola').textContent = `🎉 ${stroopStato.corrette}/${stroopStato.totale}`;
-        document.getElementById('stroop-progresso').textContent = 'Completato!';
-        document.getElementById('stroop-tempo').textContent = `Tempo medio: ${tempoMedio}s`;
-        document.getElementById('stroop-risultato').textContent = stroopStato.corrette >= 12 ? '🏆 Ottimo!' : `Hai fatto ${stroopStato.corrette} corrette`;
+        document.getElementById('stroop-tempo').textContent = `Tempo medio: ${media}s`;
+        document.getElementById('stroop-risultato').textContent = stroopStato.corrette >= 12 ? '🏆 Ottimo!' : `${stroopStato.corrette} corrette`;
         document.getElementById('stroop-risultato').style.color = '#f59e0b';
-
-        const record = parseInt(localStorage.getItem('tesiflash_pausa_stroop') || '0');
-        if (stroopStato.corrette > record) {
-            localStorage.setItem('tesiflash_pausa_stroop', stroopStato.corrette);
-        }
-    }
-
-    function stroopRicomincia() {
-        stroopInizializza();
+        aggiornaRecord('tesiflash_pausa_stroop', stroopStato.corrette);
     }
 
     // ============================================================
     // 2. MEMORY FLASH
     // ============================================================
-    let memoryStato = { numeri: [], selezionati: [], prossimo: 0, fase: 'idle', lunghezza: 4 };
+    let memoryStato = { numeri: [], prossimo: 1, lunghezza: 4, attivo: false, timeout: null, fase: 'idle' };
 
-    function memoryInizializza() {
-        memoryStato = { numeri: [], selezionati: [], prossimo: 1, fase: 'show', lunghezza: 4 };
+    function memoryStart() {
+        memoryStato = { numeri: [], prossimo: 1, lunghezza: 4, attivo: true, timeout: null, fase: 'show' };
         memoryGenera();
     }
 
+    function memoryStop() {
+        memoryStato.attivo = false;
+        if (memoryStato.timeout) clearTimeout(memoryStato.timeout);
+        document.getElementById('memory-risultato').textContent = '⏹️ Fermato';
+        document.getElementById('memory-risultato').style.color = '#f59e0b';
+    }
+
     function memoryGenera() {
+        if (!memoryStato.attivo) return;
         const usati = new Set();
         memoryStato.numeri = [];
         while (memoryStato.numeri.length < memoryStato.lunghezza) {
             const n = Math.floor(Math.random() * 9) + 1;
-            if (!usati.has(n)) {
-                usati.add(n);
-                memoryStato.numeri.push(n);
-            }
+            if (!usati.has(n)) { usati.add(n); memoryStato.numeri.push(n); }
         }
-        memoryStato.selezionati = [];
         memoryStato.prossimo = 1;
         memoryStato.fase = 'show';
 
-        document.getElementById('memory-fase').textContent = '👀 Memorizza i numeri!';
+        document.getElementById('memory-fase').textContent = `👀 Memorizza (livello ${memoryStato.lunghezza})`;
         document.getElementById('memory-display').textContent = memoryStato.numeri.join('  ');
         document.getElementById('memory-display').style.color = '#f59e0b';
-        document.getElementById('memory-progresso').textContent = `${memoryStato.lunghezza} numeri in 2 secondi`;
+        document.getElementById('memory-progresso').textContent = '2 secondi...';
         document.getElementById('memory-bottoni').innerHTML = '';
         document.getElementById('memory-risultato').textContent = '';
 
-        setTimeout(memoryMostraBottoni, 2000);
+        memoryStato.timeout = setTimeout(memoryMostraBottoni, 2000);
     }
 
     function memoryMostraBottoni() {
+        if (!memoryStato.attivo) return;
         memoryStato.fase = 'input';
-        document.getElementById('memory-fase').textContent = '🔢 Clicca i numeri in ordine crescente';
-        document.getElementById('memory-display').textContent = '?  ?  ?  ?';
+        document.getElementById('memory-fase').textContent = '🔢 Clicca in ordine crescente';
+        document.getElementById('memory-display').textContent = '?  ?  ?  ?'.substring(0, memoryStato.lunghezza * 3);
         document.getElementById('memory-display').style.color = '#525252';
-        document.getElementById('memory-progresso').textContent = 'Clicca il numero più piccolo';
+        document.getElementById('memory-progresso').textContent = `Prossimo: ${memoryStato.prossimo}`;
 
         const bottoni = document.getElementById('memory-bottoni');
         const shuffled = [...memoryStato.numeri].sort(() => Math.random() - 0.5);
         bottoni.innerHTML = shuffled.map(n => 
-            `<button onclick="memoryClicca(${n})" data-num="${n}" class="bg-neutral-900 border border-neutral-700 text-white font-bold py-3 rounded-lg hover:bg-neutral-700 transition text-base">${n}</button>`
+            `<button onclick="memoryClicca(${n})" data-num="${n}" class="bg-neutral-900 border border-neutral-700 text-white font-bold py-4 rounded-lg hover:bg-neutral-700 transition text-lg">${n}</button>`
         ).join('');
     }
 
     function memoryClicca(num) {
-        if (memoryStato.fase !== 'input') return;
+        if (memoryStato.fase !== 'input' || !memoryStato.attivo) return;
 
         if (num === memoryStato.prossimo) {
-            memoryStato.selezionati.push(num);
             memoryStato.prossimo++;
-
             const btn = document.querySelector(`[data-num="${num}"]`);
-            if (btn) {
-                btn.className = 'bg-green-600 text-white font-bold py-3 rounded-lg transition text-base';
-                btn.disabled = true;
-            }
+            if (btn) { btn.className = 'bg-green-600 text-white font-bold py-4 rounded-lg transition text-lg'; btn.disabled = true; }
 
-            if (memoryStato.selezionati.length === memoryStato.numeri.length) {
+            if (memoryStato.prossimo > memoryStato.numeri.length) {
                 memoryStato.fase = 'done';
                 document.getElementById('memory-fase').textContent = '✅ Corretto!';
-                document.getElementById('memory-risultato').textContent = `🎉 Sequenza completata con ${memoryStato.lunghezza} numeri!`;
+                document.getElementById('memory-risultato').textContent = `🎉 Livello ${memoryStato.lunghezza} superato!`;
                 document.getElementById('memory-risultato').style.color = '#22c55e';
+                aggiornaRecord('tesiflash_pausa_memory', memoryStato.lunghezza);
 
-                // Salva record
-                const record = parseInt(localStorage.getItem('tesiflash_pausa_memory') || '0');
-                if (memoryStato.lunghezza > record) {
-                    localStorage.setItem('tesiflash_pausa_memory', memoryStato.lunghezza);
-                }
+                // Aggiorna streak
+                aggiornaStreak();
 
-                // Prossimo livello
                 memoryStato.lunghezza++;
-                setTimeout(memoryGenera, 1500);
+                memoryStato.timeout = setTimeout(memoryGenera, 1500);
             } else {
                 document.getElementById('memory-progresso').textContent = `Prossimo: ${memoryStato.prossimo}`;
             }
         } else {
-            memoryStato.fase = 'done';
+            memoryStato.attivo = false;
             document.getElementById('memory-fase').textContent = '❌ Sbagliato!';
-            document.getElementById('memory-risultato').textContent = `Hai raggiunto ${memoryStato.lunghezza - 1} numeri`;
+            document.getElementById('memory-risultato').textContent = `Hai raggiunto il livello ${memoryStato.lunghezza - 1}`;
             document.getElementById('memory-risultato').style.color = '#ef4444';
+            aggiornaRecord('tesiflash_pausa_memory', memoryStato.lunghezza - 1);
         }
     }
 
     // ============================================================
-    // 3. N-BACK (2-Back)
+    // 3. N-BACK
     // ============================================================
-    const LETTERE = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    const LETTERE = ['A','B','C','D','E','F','G','H'];
     const N_BACK = 2;
-    let nbackStato = { sequenza: [], indice: 0, corrette: 0, totale: 25, attesaRisposta: false };
+    let nbackStato = { sequenza: [], indice: 0, corrette: 0, totale: 25, attesa: false, timeout: null, attivo: false };
 
     function nbackInizializza() {
-        // Genera sequenza con ~30% di match
         nbackStato.sequenza = [];
         for (let i = 0; i < nbackStato.totale + N_BACK; i++) {
             if (i >= N_BACK && Math.random() < 0.3) {
@@ -17060,50 +17116,52 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         }
         nbackStato.indice = 0;
         nbackStato.corrette = 0;
-        nbackStato.attesaRisposta = false;
+        nbackStato.attesa = false;
+        nbackStato.attivo = true;
 
         document.getElementById('nback-risultato').textContent = '';
-        document.getElementById('nback-stato').textContent = `Punteggio: 0`;
+        document.getElementById('nback-stato').textContent = 'Punteggio: 0';
         nbackMostraLettera();
     }
 
+    function nbackStop() {
+        nbackStato.attivo = false;
+        nbackStato.attesa = false;
+        if (nbackStato.timeout) clearTimeout(nbackStato.timeout);
+        document.getElementById('nback-risultato').textContent = '⏹️ Fermato';
+        document.getElementById('nback-risultato').style.color = '#f59e0b';
+    }
+
     function nbackMostraLettera() {
-        if (nbackStato.indice >= nbackStato.totale) {
-            nbackFine();
-            return;
-        }
+        if (!nbackStato.attivo) return;
+        if (nbackStato.indice >= nbackStato.totale) { nbackFine(); return; }
         nbackStato.indice++;
-        nbackStato.attesaRisposta = true;
+        nbackStato.attesa = true;
 
         document.getElementById('nback-lettera').textContent = nbackStato.sequenza[nbackStato.indice - 1 + N_BACK];
         document.getElementById('nback-progresso').textContent = `Round ${nbackStato.indice}/${nbackStato.totale}`;
 
-        // Auto-skip dopo 2 secondi se l'utente non risponde
         nbackStato.timeout = setTimeout(() => {
-            if (nbackStato.attesaRisposta) {
-                nbackValuta(false);
-            }
+            if (nbackStato.attesa && nbackStato.attivo) nbackValuta(false);
         }, 2000);
     }
 
     function nbackRispondi(isMatch) {
-        if (!nbackStato.attesaRisposta) return;
+        if (!nbackStato.attesa || !nbackStato.attivo) return;
         clearTimeout(nbackStato.timeout);
         nbackValuta(isMatch);
     }
 
     function nbackValuta(isMatch) {
-        nbackStato.attesaRisposta = false;
-        const idxCorrente = nbackStato.indice - 1 + N_BACK;
-        const letteraCorrente = nbackStato.sequenza[idxCorrente];
-        const letteraNBack = nbackStato.sequenza[idxCorrente - N_BACK];
-        const isMatchReale = letteraCorrente === letteraNBack;
+        nbackStato.attesa = false;
+        const idx = nbackStato.indice - 1 + N_BACK;
+        const isMatchReale = nbackStato.sequenza[idx] === nbackStato.sequenza[idx - N_BACK];
 
         const risultato = document.getElementById('nback-risultato');
         if (isMatch === isMatchReale) {
             nbackStato.corrette++;
             document.getElementById('nback-stato').textContent = `Punteggio: ${nbackStato.corrette}`;
-            risultato.textContent = '✅';
+            risultato.textContent = isMatchReale ? '✅ Match giusto!' : '✅ Salto giusto';
             risultato.style.color = '#22c55e';
         } else {
             risultato.textContent = isMatchReale ? '❌ Era un MATCH!' : '❌ Non era match';
@@ -17114,15 +17172,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     function nbackFine() {
+        nbackStato.attivo = false;
         document.getElementById('nback-lettera').textContent = `🎉 ${nbackStato.corrette}/${nbackStato.totale}`;
-        document.getElementById('nback-progresso').textContent = 'Completato!';
-        document.getElementById('nback-risultato').textContent = nbackStato.corrette >= 18 ? '🏆 Memoria di ferro!' : `Hai fatto ${nbackStato.corrette} punti`;
+        document.getElementById('nback-risultato').textContent = nbackStato.corrette >= 18 ? '🏆 Memoria di ferro!' : `${nbackStato.corrette} punti`;
         document.getElementById('nback-risultato').style.color = '#f59e0b';
-
-        const record = parseInt(localStorage.getItem('tesiflash_pausa_nback') || '0');
-        if (nbackStato.corrette > record) {
-            localStorage.setItem('tesiflash_pausa_nback', nbackStato.corrette);
-        }
+        aggiornaRecord('tesiflash_pausa_nback', nbackStato.corrette);
     }
 
     // ============================================================
@@ -17131,233 +17185,270 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     let reactionStato = { round: 0, totale: 20, tempi: [], errori: 0, attivo: false, timeout: null, startTime: 0 };
 
     function reactionInizializza() {
-        reactionStato = { round: 0, totale: 20, tempi: [], errori: 0, attivo: false, timeout: null, startTime: 0 };
+        reactionStato = { round: 0, totale: 20, tempi: [], errori: 0, attivo: true, timeout: null, startTime: 0 };
         document.getElementById('reaction-round').textContent = `0/${reactionStato.totale}`;
-        document.getElementById('reaction-tempo').textContent = '—';
+        document.getElementById('reaction-ultimo').textContent = '—';
+        document.getElementById('reaction-media').textContent = '—';
         document.getElementById('reaction-risultato').textContent = '';
-        document.getElementById('reaction-istruzioni').textContent = 'Clicca START per iniziare';
-        document.getElementById('reaction-istruzioni').style.display = 'flex';
-        document.getElementById('reaction-cerchio').style.display = 'none';
+        document.getElementById('reaction-istruzioni').textContent = 'Preparati...';
+        document.getElementById('reaction-area').innerHTML = '<p id="reaction-istruzioni" class="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm text-center px-4">Preparati...</p>';
 
-        // Attiva il click sull'area
-        const area = document.getElementById('reaction-area');
-        area.onclick = reactionClickArea;
+        reactionProssimoRound();
     }
 
-    function reactionClickArea(e) {
-        if (!reactionStato.attivo) {
-            // Se non è ancora partito, avvia il primo round
-            if (reactionStato.round === 0) {
-                reactionStato.attivo = true;
-                reactionProssimoRound();
-            }
-            return;
-        }
-        // Click sullo sfondo = errore (non sul cerchio)
-        if (e.target.id === 'reaction-area' || e.target.id === 'reaction-istruzioni') {
-            reactionStato.errori++;
-        }
+    function reactionStop() {
+        reactionStato.attivo = false;
+        if (reactionStato.timeout) clearTimeout(reactionStato.timeout);
+        document.getElementById('reaction-risultato').textContent = '⏹️ Fermato';
+        document.getElementById('reaction-risultato').style.color = '#f59e0b';
     }
 
     function reactionProssimoRound() {
-        if (reactionStato.round >= reactionStato.totale) {
-            reactionFine();
-            return;
-        }
+        if (!reactionStato.attivo) return;
+        if (reactionStato.round >= reactionStato.totale) { reactionFine(); return; }
         reactionStato.round++;
         document.getElementById('reaction-round').textContent = `${reactionStato.round}/${reactionStato.totale}`;
-        document.getElementById('reaction-istruzioni').textContent = 'Attendi...';
-        document.getElementById('reaction-istruzioni').style.display = 'flex';
 
-        const cerchio = document.getElementById('reaction-cerchio');
-        cerchio.style.display = 'none';
+        const area = document.getElementById('reaction-area');
+        area.innerHTML = '<p class="absolute inset-0 flex items-center justify-center text-neutral-500 text-xs">Attendi...</p>';
 
-        // Ritardo casuale 1-3 secondi
-        const ritardo = 1000 + Math.random() * 2000;
+        // Ritardo VELOCE: 400-1200ms
+        const ritardo = 400 + Math.random() * 800;
 
         reactionStato.timeout = setTimeout(() => {
-            // 70% verde, 30% rosso
-            const isVerde = Math.random() < 0.7;
+            if (!reactionStato.attivo) return;
+            const isVerde = Math.random() < 0.75;
             const colore = isVerde ? '#22c55e' : '#ef4444';
 
-            // Posizione casuale
-            const area = document.getElementById('reaction-area');
-            const maxX = area.clientWidth - 80;
-            const maxY = area.clientHeight - 80;
-            const x = Math.random() * maxX;
-            const y = Math.random() * maxY;
+            const areaW = area.clientWidth;
+            const areaH = area.clientHeight;
+            const dim = 100;
+            const x = Math.random() * (areaW - dim);
+            const y = Math.random() * (areaH - dim);
 
-            cerchio.style.left = x + 'px';
-            cerchio.style.top = y + 'px';
-            cerchio.style.transform = 'none';
-            cerchio.style.background = colore;
-            cerchio.style.boxShadow = `0 0 30px ${colore}`;
-            cerchio.style.display = 'block';
-            cerchio.dataset.colore = isVerde ? 'verde' : 'rosso';
-            cerchio.onclick = (e) => { e.stopPropagation(); reactionClick(e); };
+            area.innerHTML = `<div id="reaction-target" class="absolute rounded-full cursor-pointer transition-all duration-100" style="width:${dim}px;height:${dim}px;left:${x}px;top:${y}px;background:${colore};box-shadow:0 0 30px ${colore};"></div>`;
 
-            document.getElementById('reaction-istruzioni').style.display = 'none';
+            document.getElementById('reaction-target').onclick = (e) => {
+                e.stopPropagation();
+                reactionClick(isVerde);
+            };
+
             reactionStato.startTime = Date.now();
         }, ritardo);
     }
 
-    function reactionClick(e) {
+    function reactionClick(isVerde) {
         if (!reactionStato.attivo) return;
-        const cerchio = document.getElementById('reaction-cerchio');
-        const colore = cerchio.dataset.colore;
         const tempo = (Date.now() - reactionStato.startTime) / 1000;
 
-        cerchio.style.display = 'none';
         const risultato = document.getElementById('reaction-risultato');
-
-        if (colore === 'verde') {
+        if (isVerde) {
             reactionStato.tempi.push(tempo);
-            const media = (reactionStato.tempi.reduce((a, b) => a + b, 0) / reactionStato.tempi.length).toFixed(2);
-            document.getElementById('reaction-tempo').textContent = `${media}s`;
+            document.getElementById('reaction-ultimo').textContent = `${tempo.toFixed(2)}s`;
+            const media = (reactionStato.tempi.reduce((a,b)=>a+b,0)/reactionStato.tempi.length).toFixed(2);
+            document.getElementById('reaction-media').textContent = `${media}s`;
             risultato.textContent = `✅ ${tempo.toFixed(2)}s`;
             risultato.style.color = '#22c55e';
         } else {
             reactionStato.errori++;
-            risultato.textContent = `❌ Era ROSSO! Non dovevi cliccare`;
+            risultato.textContent = '❌ Era ROSSO!';
             risultato.style.color = '#ef4444';
         }
 
-        setTimeout(reactionProssimoRound, 600);
+        setTimeout(reactionProssimoRound, 500);
     }
 
     function reactionFine() {
         reactionStato.attivo = false;
-        const media = reactionStato.tempi.length > 0
-            ? (reactionStato.tempi.reduce((a, b) => a + b, 0) / reactionStato.tempi.length).toFixed(2)
-            : '—';
-
-        document.getElementById('reaction-tempo').textContent = `${media}s`;
-        document.getElementById('reaction-risultato').textContent = `🎉 Tempo medio: ${media}s · Errori: ${reactionStato.errori}`;
+        const media = reactionStato.tempi.length ? (reactionStato.tempi.reduce((a,b)=>a+b,0)/reactionStato.tempi.length) : 999;
+        document.getElementById('reaction-risultato').textContent = `🎉 Media: ${media.toFixed(2)}s · Errori: ${reactionStato.errori}`;
         document.getElementById('reaction-risultato').style.color = '#f59e0b';
-        document.getElementById('reaction-istruzioni').textContent = 'Completato! Clicca Start per rigiocare';
-        document.getElementById('reaction-istruzioni').style.display = 'flex';
-
-        // Record: minor tempo medio vince
-        const record = parseFloat(localStorage.getItem('tesiflash_pausa_reaction') || '999');
-        if (parseFloat(media) < record && media !== '—') {
-            localStorage.setItem('tesiflash_pausa_reaction', media);
-        }
+        document.getElementById('reaction-area').innerHTML = '<p class="absolute inset-0 flex items-center justify-center text-neutral-400 text-sm">Completato! Premi Start per rigiocare</p>';
+        aggiornaRecord('tesiflash_pausa_reaction', media, true);
     }
 
     // ============================================================
-    // 5. DUAL TASK
+    // 5. DUAL TASK (DOPPIO STROOP)
     // ============================================================
-    let dualStato = { round: 0, totale: 15, corrette: 0, fase: 'colore', corrColore: '', numCorrente: 0, tipoCorretto: '' };
+    let dualStato = { round: 0, totale: 12, corrette: 0, col1: '', col2: '', fase: 1, attivo: false };
 
     function dualInizializza() {
-        dualStato = { round: 0, totale: 15, corrette: 0, fase: 'colore', corrColore: '', numCorrente: 0, tipoCorretto: '' };
+        dualStato = { round: 0, totale: 12, corrette: 0, col1: '', col2: '', fase: 1, attivo: true };
         dualNuovoRound();
     }
 
+    function dualStop() {
+        dualStato.attivo = false;
+        document.getElementById('dual-risultato').textContent = '⏹️ Fermato';
+        document.getElementById('dual-risultato').style.color = '#f59e0b';
+    }
+
     function dualNuovoRound() {
-        if (dualStato.round >= dualStato.totale) {
-            dualFine();
-            return;
-        }
+        if (!dualStato.attivo) return;
+        if (dualStato.round >= dualStato.totale) { dualFine(); return; }
         dualStato.round++;
-        dualStato.fase = 'colore';
+        dualStato.fase = 1;
 
         document.getElementById('dual-progresso').textContent = `Round ${dualStato.round}/${dualStato.totale}`;
         document.getElementById('dual-risultato').textContent = '';
-        document.getElementById('dual-fase-colore').classList.remove('hidden');
-        document.getElementById('dual-fase-numero').classList.add('hidden');
 
-        // Parola Stroop
-        const parolaScelta = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
-        const coloreScelto = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
-        dualStato.corrColore = coloreScelto.nome;
+        const p1 = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
+        const c1 = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
+        const p2 = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
+        const c2 = STROOP_COLORI[Math.floor(Math.random() * STROOP_COLORI.length)];
 
-        const parolaEl = document.getElementById('dual-parola');
-        parolaEl.textContent = parolaScelta.nome.toUpperCase();
-        parolaEl.style.color = coloreScelto.hex;
+        dualStato.col1 = c1.nome;
+        dualStato.col2 = c2.nome;
 
-        // Numero pari/dispari
-        dualStato.numCorrente = Math.floor(Math.random() * 90) + 10;
-        dualStato.tipoCorretto = dualStato.numCorrente % 2 === 0 ? 'pari' : 'dispari';
-        document.getElementById('dual-numero').textContent = dualStato.numCorrente;
+        const el1 = document.getElementById('dual-parola1');
+        el1.textContent = p1.nome.toUpperCase();
+        el1.style.color = c1.hex;
+
+        const el2 = document.getElementById('dual-parola2');
+        el2.textContent = p2.nome.toUpperCase();
+        el2.style.color = c2.hex;
+
+        document.getElementById('dual-fase-label').textContent = '👉 Colore della PAROLA 1';
     }
 
-    function dualRispondiColore(colore) {
-        if (dualStato.fase !== 'colore') return;
+    function dualRispondi(colore) {
+        if (!dualStato.attivo) return;
         const risultato = document.getElementById('dual-risultato');
 
-        if (colore === dualStato.corrColore) {
-            risultato.textContent = '✅ Colore corretto';
-            risultato.style.color = '#22c55e';
-        } else {
-            risultato.textContent = `❌ Colore sbagliato (era ${dualStato.corrColore})`;
-            risultato.style.color = '#ef4444';
+        if (dualStato.fase === 1) {
+            if (colore === dualStato.col1) {
+                risultato.textContent = '✅ Parola 1 ok';
+                risultato.style.color = '#22c55e';
+            } else {
+                risultato.textContent = `❌ Parola 1 era ${dualStato.col1}`;
+                risultato.style.color = '#ef4444';
+            }
+            dualStato.fase = 2;
+            document.getElementById('dual-fase-label').textContent = '👉 Colore della PAROLA 2';
+        } else if (dualStato.fase === 2) {
+            if (colore === dualStato.col2) {
+                dualStato.corrette++;
+                risultato.textContent = '✅ Round completato!';
+                risultato.style.color = '#22c55e';
+            } else {
+                risultato.textContent = `❌ Parola 2 era ${dualStato.col2}`;
+                risultato.style.color = '#ef4444';
+            }
+            setTimeout(dualNuovoRound, 700);
         }
-
-        dualStato.fase = 'numero';
-        document.getElementById('dual-fase-colore').classList.add('hidden');
-        document.getElementById('dual-fase-numero').classList.remove('hidden');
-    }
-
-    function dualRispondiNumero(tipo) {
-        if (dualStato.fase !== 'numero') return;
-        const risultato = document.getElementById('dual-risultato');
-
-        if (tipo === dualStato.tipoCorretto) {
-            dualStato.corrette++;
-            risultato.textContent = '✅ Numero corretto!';
-            risultato.style.color = '#22c55e';
-        } else {
-            risultato.textContent = `❌ Era ${dualStato.tipoCorretto}`;
-            risultato.style.color = '#ef4444';
-        }
-
-        setTimeout(dualNuovoRound, 700);
     }
 
     function dualFine() {
-        document.getElementById('dual-parola').textContent = `🎉 ${dualStato.corrette}/${dualStato.totale}`;
-        document.getElementById('dual-numero').textContent = '—';
-        document.getElementById('dual-progresso').textContent = 'Completato!';
-        document.getElementById('dual-risultato').textContent = dualStato.corrette >= 11 ? '🏆 Mente multitasking!' : `Hai fatto ${dualStato.corrette} punti`;
+        dualStato.attivo = false;
+        document.getElementById('dual-parola1').textContent = `🎉 ${dualStato.corrette}/${dualStato.totale}`;
+        document.getElementById('dual-parola2').textContent = '—';
+        document.getElementById('dual-risultato').textContent = dualStato.corrette >= 10 ? '🏆 Multitasking!' : `${dualStato.corrette} punti`;
         document.getElementById('dual-risultato').style.color = '#f59e0b';
-        document.getElementById('dual-fase-colore').classList.add('hidden');
-        document.getElementById('dual-fase-numero').classList.add('hidden');
+        aggiornaRecord('tesiflash_pausa_dual', dualStato.corrette);
+    }
 
-        const record = parseInt(localStorage.getItem('tesiflash_pausa_dual') || '0');
-        if (dualStato.corrette > record) {
-            localStorage.setItem('tesiflash_pausa_dual', dualStato.corrette);
+    // ============================================================
+    // 6. STOP THE CLOCK
+    // ============================================================
+    let clockStato = { target: 10, corrente: 0, attivo: false, interval: null, inCorso: false };
+
+    function clockScegliTarget(t) {
+        clockStato.target = t;
+        document.getElementById('clock-target').textContent = `Target: ${t}.00 s`;
+        document.getElementById('clock-display').textContent = '0.00';
+    }
+
+    function clockInizializza() {
+        if (clockStato.inCorso) return;
+        clockStato.corrente = 0;
+        clockStato.inCorso = true;
+        clockStato.attivo = true;
+        document.getElementById('clock-diff').textContent = 'Corre...';
+        document.getElementById('clock-risultato').textContent = '';
+
+        const start = Date.now();
+        clockStato.interval = setInterval(() => {
+            clockStato.corrente = (Date.now() - start) / 1000;
+            document.getElementById('clock-display').textContent = clockStato.corrente.toFixed(2);
+            // Ferma automaticamente a 2x target
+            if (clockStato.corrente > clockStato.target * 2) {
+                clockStop();
+            }
+        }, 20);
+    }
+
+    function clockStop() {
+        if (!clockStato.inCorso) return;
+        clearInterval(clockStato.interval);
+        clockStato.inCorso = false;
+        clockStato.attivo = false;
+
+        const diff = Math.abs(clockStato.corrente - clockStato.target);
+        document.getElementById('clock-display').textContent = clockStato.corrente.toFixed(2);
+        document.getElementById('clock-diff').textContent = `Differenza: ${diff.toFixed(2)}s`;
+
+        const risultato = document.getElementById('clock-risultato');
+        if (diff <= 0.10) {
+            risultato.textContent = `🎯 Perfetto! (${diff.toFixed(2)}s di scarto)`;
+            risultato.style.color = '#22c55e';
+        } else if (diff <= 0.50) {
+            risultato.textContent = `👍 Vicino (${diff.toFixed(2)}s)`;
+            risultato.style.color = '#f59e0b';
+        } else {
+            risultato.textContent = `❌ Fuori di ${diff.toFixed(2)}s`;
+            risultato.style.color = '#ef4444';
         }
+
+        // Record = minor differenza
+        aggiornaRecord('tesiflash_pausa_clock', diff, true);
+    }
+
+    // ============================================================
+    // STREAK
+    // ============================================================
+    function aggiornaStreak() {
+        const oggi = new Date().toISOString().split('T')[0];
+        const ieri = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+        const ultimo = localStorage.getItem('tesiflash_pausa_ultimo') || '';
+        let streak = parseInt(localStorage.getItem('tesiflash_pausa_streak') || '0');
+
+        if (ultimo === oggi) return;
+        streak = (ultimo === ieri) ? streak + 1 : 1;
+        localStorage.setItem('tesiflash_pausa_streak', streak);
+        localStorage.setItem('tesiflash_pausa_ultimo', oggi);
     }
 
     // ============================================================
     // STATISTICHE
     // ============================================================
     function statsAggiorna() {
-        const stroop = localStorage.getItem('tesiflash_pausa_stroop') || '—';
-        const memory = localStorage.getItem('tesiflash_pausa_memory') || '—';
-        const nback = localStorage.getItem('tesiflash_pausa_nback') || '—';
+        const stroop = localStorage.getItem('tesiflash_pausa_stroop');
+        const memory = localStorage.getItem('tesiflash_pausa_memory');
+        const nback = localStorage.getItem('tesiflash_pausa_nback');
         const reaction = localStorage.getItem('tesiflash_pausa_reaction');
-        const dual = localStorage.getItem('tesiflash_pausa_dual') || '—';
+        const dual = localStorage.getItem('tesiflash_pausa_dual');
+        const clock = localStorage.getItem('tesiflash_pausa_clock');
 
-        document.getElementById('stat-stroop').textContent = stroop === '—' ? '—' : stroop + '/15';
-        document.getElementById('stat-memory').textContent = memory === '—' ? '—' : memory + ' numeri';
-        document.getElementById('stat-nback').textContent = nback === '—' ? '—' : nback + '/25';
-        document.getElementById('stat-reaction').textContent = reaction ? reaction + 's' : '—';
-        document.getElementById('stat-dual').textContent = dual === '—' ? '—' : dual + '/15';
+        document.getElementById('stat-stroop').textContent = stroop ? stroop + '/15' : '—';
+        document.getElementById('stat-memory').textContent = memory ? memory + ' num' : '—';
+        document.getElementById('stat-nback').textContent = nback ? nback + '/25' : '—';
+        document.getElementById('stat-reaction').textContent = reaction ? parseFloat(reaction).toFixed(2) + 's' : '—';
+        document.getElementById('stat-dual').textContent = dual ? dual + '/12' : '—';
+        document.getElementById('stat-clock').textContent = clock ? '±' + parseFloat(clock).toFixed(2) + 's' : '—';
     }
 
     function resetStats() {
-        if (confirm('Cancellare tutte le statistiche? Operazione non reversibile.')) {
-            localStorage.removeItem('tesiflash_pausa_stroop');
-            localStorage.removeItem('tesiflash_pausa_memory');
-            localStorage.removeItem('tesiflash_pausa_nback');
-            localStorage.removeItem('tesiflash_pausa_reaction');
-            localStorage.removeItem('tesiflash_pausa_dual');
+        if (confirm('Cancellare tutti i record e i badge? Operazione non reversibile.')) {
+            ['stroop','memory','nback','reaction','dual','clock','streak','ultimo'].forEach(k => {
+                localStorage.removeItem('tesiflash_pausa_' + k);
+            });
             statsAggiorna();
+            renderBadge();
         }
     }
 </script>
+
+       
         
         
     </main>
