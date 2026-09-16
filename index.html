@@ -16002,7 +16002,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </div>
 
 
-        <!-- ========== PAGINA 81: CALENDARIO SETTIMANALE ========== -->
+ <!-- ========== PAGINA 81: CALENDARIO SETTIMANALE ========== -->
 <div class="page" data-page="81">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -16010,44 +16010,55 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </span>
         <div class="time-badge mb-3">⏱️ Tempo di utilizzo: libero</div>
         <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
-            <i data-lucide="calendar" style="width:28px;height:28px;color:#f59e0b;"></i> Calendario Settimanale
+            <i data-lucide="calendar" style="width:28px;height:28px;color:#f59e0b;"></i> Calendario
         </h2>
 
         <p class="text-neutral-300 text-sm leading-relaxed mb-4">
-            Organizza la settimana a colpo d'occhio. Aggiungi esami, scadenze, obiettivi e lezioni: tutto in un unico posto, sempre visibile.
+            Organizza la settimana e il mese a colpo d'occhio. Aggiungi esami, scadenze, obiettivi e lezioni: tutto in un unico posto.
         </p>
 
-        <!-- BADGE INFO -->
         <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
             <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
             <div>
                 <p class="text-green-400 font-bold text-sm">🔒 Dati sul tuo dispositivo</p>
-                <p class="text-neutral-400 text-xs">Tutto salvato nel tuo browser. Nessun account, nessun server, nessuna sincronizzazione esterna.</p>
+                <p class="text-neutral-400 text-xs">Tutto salvato nel tuo browser. Nessun account, nessun server.</p>
             </div>
         </div>
 
         <div class="flash-strategy mb-6">
-            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Chi vede la settimana, non perde giorni. Chi improvvisa, rincorre."</p>
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Chi vede il mese, non perde giorni. Chi improvvisa, rincorre."</p>
         </div>
 
         <!-- ============================================================
-             CONTROLLI: NAVIGAZIONE SETTIMANA
+             TOGGLE VISTA + NAVIGAZIONE
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
+            <!-- Toggle Mese / Settimana -->
+            <div class="flex bg-neutral-900 rounded-lg p-1 mb-4">
+                <button id="btn-vista-mese" onclick="cambiaVista('mese')" class="flex-1 text-xs font-bold py-2 rounded-md transition">
+                    📅 Mese
+                </button>
+                <button id="btn-vista-settimana" onclick="cambiaVista('settimana')" class="flex-1 text-xs font-bold py-2 rounded-md transition">
+                    📋 Settimana
+                </button>
+            </div>
+
+            <!-- Navigazione periodo -->
             <div class="flex items-center justify-between gap-3 mb-3">
-                <button onclick="cambiaSettimana(-1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
+                <button onclick="cambiaPeriodo(-1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
                     <i data-lucide="chevron-left" style="width:16px;height:16px;display:inline;"></i>
                 </button>
                 <div class="text-center flex-1">
-                    <p id="settimana-label" class="text-white font-bold text-sm">—</p>
-                    <p id="settimana-range" class="text-neutral-400 text-xs">—</p>
+                    <p id="periodo-label" class="text-white font-bold text-sm">—</p>
+                    <p id="periodo-range" class="text-neutral-400 text-xs">—</p>
                 </div>
-                <button onclick="cambiaSettimana(1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
+                <button onclick="cambiaPeriodo(1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
                     <i data-lucide="chevron-right" style="width:16px;height:16px;display:inline;"></i>
                 </button>
             </div>
+
             <button onclick="tornaOggi()" class="w-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs py-2 rounded-lg transition">
-                📍 Torna a questa settimana
+                📍 Torna a oggi
             </button>
         </div>
 
@@ -16067,16 +16078,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Giorno</label>
-                        <select id="cal-giorno" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                            <option value="0">Lunedì</option>
-                            <option value="1">Martedì</option>
-                            <option value="2">Mercoledì</option>
-                            <option value="3">Giovedì</option>
-                            <option value="4">Venerdì</option>
-                            <option value="5">Sabato</option>
-                            <option value="6">Domenica</option>
-                        </select>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Data</label>
+                        <input type="date" id="cal-data" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">🏷️ Tipo</label>
@@ -16111,17 +16114,31 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </div>
 
         <!-- ============================================================
-             CALENDARIO SETTIMANALE
+             VISTA MESE
              ============================================================ -->
-        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6 overflow-x-auto">
-            <div id="calendario" class="grid grid-cols-7 gap-2 min-w-[700px]">
-                <!-- generato da JS -->
+        <div id="vista-mese-container" class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
+            <!-- Header giorni settimana -->
+            <div class="grid grid-cols-7 gap-1 mb-2">
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">LUN</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">MAR</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">MER</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">GIO</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">VEN</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">SAB</div>
+                <div class="text-center text-[10px] font-bold text-neutral-400 py-1">DOM</div>
             </div>
+            <!-- Griglia giorni -->
+            <div id="griglia-mese" class="grid grid-cols-7 gap-1"></div>
         </div>
 
         <!-- ============================================================
-             AZIONI
+             VISTA SETTIMANA
              ============================================================ -->
+        <div id="vista-settimana-container" class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6 overflow-x-auto hidden">
+            <div id="calendario" class="grid grid-cols-7 gap-2 min-w-[700px]"></div>
+        </div>
+
+        <!-- AZIONI -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
                 <i data-lucide="download" style="width:20px;height:20px;"></i> Esporta o Azzera
@@ -16141,48 +16158,167 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // CALENDARIO SETTIMANALE
+    // CALENDARIO MESE + SETTIMANA
     // ============================================================
     let eventiCal = JSON.parse(localStorage.getItem('tesiflash_calendario') || '[]');
-    let offsetSettimana = 0; // 0 = questa settimana, -1 = precedente, +1 = prossima
+    let vistaCorrente = 'mese'; // 'mese' o 'settimana'
+    let dataRiferimento = new Date(); // data di riferimento per la navigazione
+    dataRiferimento.setHours(0, 0, 0, 0);
 
-    // Ritorna il lunedì della settimana corrente + offset
-    function getLunediSettimana(offset) {
-        const oggi = new Date();
-        const giorno = oggi.getDay(); // 0 = domenica, 1 = lunedì...
-        const diff = (giorno === 0 ? -6 : 1 - giorno); // sposta al lunedì
-        const lunedi = new Date(oggi);
-        lunedi.setDate(oggi.getDate() + diff + (offset * 7));
-        lunedi.setHours(0, 0, 0, 0);
-        return lunedi;
-    }
+    const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
 
-    function formattaData(data) {
+    function formattaDataShort(data) {
         return data.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' });
     }
 
-    function getNomeGiorno(index) {
-        return ['LUN', 'MAR', 'MER', 'GIO', 'VEN', 'SAB', 'DOM'][index];
+    function formattaDataISO(data) {
+        const y = data.getFullYear();
+        const m = String(data.getMonth() + 1).padStart(2, '0');
+        const d = String(data.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
     }
 
-    function cambiaSettimana(delta) {
-        offsetSettimana += delta;
-        renderCalendario();
+    // Ritorna il lunedì della settimana di una data
+    function getLunedi(data) {
+        const d = new Date(data);
+        const giorno = d.getDay();
+        const diff = (giorno === 0 ? -6 : 1 - giorno);
+        d.setDate(d.getDate() + diff);
+        d.setHours(0, 0, 0, 0);
+        return d;
+    }
+
+    function cambiaVista(vista) {
+        vistaCorrente = vista;
+        document.getElementById('vista-mese-container').classList.toggle('hidden', vista !== 'mese');
+        document.getElementById('vista-settimana-container').classList.toggle('hidden', vista !== 'settimana');
+
+        // Aggiorna stile toggle
+        const btnMese = document.getElementById('btn-vista-mese');
+        const btnSett = document.getElementById('btn-vista-settimana');
+        if (vista === 'mese') {
+            btnMese.className = 'flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black';
+            btnSett.className = 'flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white';
+        } else {
+            btnMese.className = 'flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white';
+            btnSett.className = 'flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black';
+        }
+
+        renderTutto();
+    }
+
+    function cambiaPeriodo(delta) {
+        if (vistaCorrente === 'mese') {
+            dataRiferimento = new Date(dataRiferimento.getFullYear(), dataRiferimento.getMonth() + delta, 1);
+        } else {
+            const nuova = new Date(dataRiferimento);
+            nuova.setDate(nuova.getDate() + (delta * 7));
+            dataRiferimento = nuova;
+        }
+        renderTutto();
     }
 
     function tornaOggi() {
-        offsetSettimana = 0;
-        renderCalendario();
+        dataRiferimento = new Date();
+        dataRiferimento.setHours(0, 0, 0, 0);
+        renderTutto();
     }
 
-    function renderCalendario() {
-        const lunedi = getLunediSettimana(offsetSettimana);
+    function vaiAlGiorno(data) {
+        dataRiferimento = new Date(data);
+        dataRiferimento.setHours(0, 0, 0, 0);
+        cambiaVista('settimana');
+    }
+
+    function renderTutto() {
+        if (vistaCorrente === 'mese') {
+            renderMese();
+        } else {
+            renderSettimana();
+        }
+        if (window.lucide) lucide.createIcons();
+    }
+
+    // ============================================================
+    // VISTA MESE
+    // ============================================================
+    function renderMese() {
+        const anno = dataRiferimento.getFullYear();
+        const mese = dataRiferimento.getMonth();
+
+        document.getElementById('periodo-label').textContent = `${MESI[mese]} ${anno}`;
+        document.getElementById('periodo-range').textContent = `${new Date(anno, mese, 1).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' })} — ${new Date(anno, mese + 1, 0).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' })}`;
+
+        const griglia = document.getElementById('griglia-mese');
+        griglia.innerHTML = '';
+
+        const primoGiorno = new Date(anno, mese, 1);
+        const ultimoGiorno = new Date(anno, mese + 1, 0);
+
+        // Offset: quanti giorni vuoti prima del 1° del mese (partendo da lunedì)
+        let offsetInizio = primoGiorno.getDay() - 1;
+        if (offsetInizio < 0) offsetInizio = 6;
+
+        const oggi = new Date();
+        oggi.setHours(0, 0, 0, 0);
+
+        // Celle vuote all'inizio
+        for (let i = 0; i < offsetInizio; i++) {
+            const vuoto = document.createElement('div');
+            vuoto.className = 'aspect-square';
+            griglia.appendChild(vuoto);
+        }
+
+        // Giorni del mese
+        for (let d = 1; d <= ultimoGiorno.getDate(); d++) {
+            const dataCorrente = new Date(anno, mese, d);
+            const dataISO = formattaDataISO(dataCorrente);
+            const isOggi = dataCorrente.getTime() === oggi.getTime();
+
+            // Eventi di questo giorno
+            const eventiGiorno = eventiCal.filter(e => e.data === dataISO);
+
+            const cella = document.createElement('button');
+            cella.className = `aspect-square rounded-lg p-1 flex flex-col items-center justify-start transition border ${isOggi ? 'border-amber-500 bg-amber-500/10' : 'border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900'}`;
+            cella.onclick = () => vaiAlGiorno(dataCorrente);
+
+            let pallini = '';
+            if (eventiGiorno.length > 0) {
+                const tipiUnici = [...new Set(eventiGiorno.map(e => e.tipo))];
+                pallini = `<div class="flex flex-wrap gap-0.5 justify-center mt-0.5">` +
+                    tipiUnici.slice(0, 3).map(tipo => {
+                        const colori = {
+                            studio: 'bg-green-400',
+                            esame: 'bg-red-400',
+                            scadenza: 'bg-orange-400',
+                            lezione: 'bg-blue-400',
+                            tassa: 'bg-yellow-400'
+                        };
+                        return `<span class="w-1.5 h-1.5 rounded-full ${colori[tipo] || 'bg-neutral-400'}"></span>`;
+                    }).join('') +
+                    (eventiGiorno.length > 3 ? `<span class="text-[8px] text-neutral-500">+${eventiGiorno.length - 3}</span>` : '') +
+                    `</div>`;
+            }
+
+            cella.innerHTML = `
+                <span class="text-[11px] font-bold ${isOggi ? 'text-amber-400' : 'text-neutral-300'}">${d}</span>
+                ${pallini}
+            `;
+
+            griglia.appendChild(cella);
+        }
+    }
+
+    // ============================================================
+    // VISTA SETTIMANA
+    // ============================================================
+    function renderSettimana() {
+        const lunedi = getLunedi(dataRiferimento);
         const domenica = new Date(lunedi);
         domenica.setDate(lunedi.getDate() + 6);
 
-        // Label settimana
-        document.getElementById('settimana-label').textContent = offsetSettimana === 0 ? 'Questa settimana' : (offsetSettimana === -1 ? 'Settimana scorsa' : (offsetSettimana === 1 ? 'Prossima settimana' : `Settimana ${offsetSettimana > 0 ? '+' : ''}${offsetSettimana}`));
-        document.getElementById('settimana-range').textContent = `${formattaData(lunedi)} — ${formattaData(domenica)}`;
+        document.getElementById('periodo-label').textContent = 'Settimana';
+        document.getElementById('periodo-range').textContent = `${formattaDataShort(lunedi)} — ${formattaDataShort(domenica)}`;
 
         const oggi = new Date();
         oggi.setHours(0, 0, 0, 0);
@@ -16194,28 +16330,28 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             const dataGiorno = new Date(lunedi);
             dataGiorno.setDate(lunedi.getDate() + i);
             const isOggi = dataGiorno.getTime() === oggi.getTime();
+            const dataISO = formattaDataISO(dataGiorno);
 
-            const eventiGiorno = eventiCal.filter(e => e.giorno === i);
+            const eventiGiorno = eventiCal.filter(e => e.data === dataISO);
 
             const col = document.createElement('div');
             col.className = `bg-neutral-900/60 border ${isOggi ? 'border-amber-500' : 'border-neutral-800'} rounded-lg p-2 min-h-[180px] flex flex-col`;
-            col.dataset.giorno = i;
+            col.dataset.data = dataISO;
 
-            // Header giorno
             col.innerHTML = `
                 <div class="text-center mb-2 pb-2 border-b border-neutral-800">
-                    <p class="text-[10px] font-bold ${isOggi ? 'text-amber-400' : 'text-neutral-400'}">${getNomeGiorno(i)}</p>
-                    <p class="text-[10px] ${isOggi ? 'text-amber-400' : 'text-neutral-500'}">${formattaData(dataGiorno)}</p>
+                    <p class="text-[10px] font-bold ${isOggi ? 'text-amber-400' : 'text-neutral-400'}">${['LUN','MAR','MER','GIO','VEN','SAB','DOM'][i]}</p>
+                    <p class="text-[10px] ${isOggi ? 'text-amber-400' : 'text-neutral-500'}">${formattaDataShort(dataGiorno)}</p>
                 </div>
-                <div class="space-y-1 flex-1" data-dropzone="${i}">
-                    ${eventiGiorno.map((e, idx) => renderCardEvento(e, eventiCal.indexOf(e))).join('')}
+                <div class="space-y-1 flex-1" data-dropzone="${dataISO}">
+                    ${eventiGiorno.map(e => renderCardEvento(e)).join('')}
                 </div>
             `;
 
             container.appendChild(col);
         }
 
-        // Drop zone: permette di spostare card tra giorni
+        // Drop zone
         container.querySelectorAll('[data-dropzone]').forEach(zone => {
             zone.addEventListener('dragover', (e) => {
                 e.preventDefault();
@@ -16228,16 +16364,13 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 e.preventDefault();
                 zone.classList.remove('bg-amber-500/10');
                 const idEvento = e.dataTransfer.getData('text/plain');
-                const nuovoGiorno = parseInt(zone.dataset.dropzone);
-                spostaEvento(idEvento, nuovoGiorno);
+                const nuovaData = zone.dataset.dropzone;
+                spostaEvento(idEvento, nuovaData);
             });
         });
-
-        // Re-inizializza icone Lucide
-        if (window.lucide) lucide.createIcons();
     }
 
-    function renderCardEvento(evento, index) {
+    function renderCardEvento(evento) {
         const colori = {
             studio: 'bg-green-500/20 border-green-500/40 text-green-100',
             esame: 'bg-red-500/20 border-red-500/40 text-red-100',
@@ -16272,12 +16405,12 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         e.dataTransfer.setData('text/plain', id);
     }
 
-    function spostaEvento(id, nuovoGiorno) {
+    function spostaEvento(id, nuovaData) {
         const evento = eventiCal.find(e => e.id === id);
         if (evento) {
-            evento.giorno = nuovoGiorno;
+            evento.data = nuovaData;
             salvaCalendario();
-            renderCalendario();
+            renderTutto();
         }
     }
 
@@ -16286,30 +16419,28 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         if (evento) {
             evento.completato = !evento.completato;
             salvaCalendario();
-            renderCalendario();
+            renderTutto();
         }
     }
 
     function rimuoviEvento(id) {
         eventiCal = eventiCal.filter(e => e.id !== id);
         salvaCalendario();
-        renderCalendario();
+        renderTutto();
     }
 
     function aggiungiEvento() {
         const titolo = document.getElementById('cal-titolo').value.trim();
-        const giorno = parseInt(document.getElementById('cal-giorno').value);
+        const dataInput = document.getElementById('cal-data').value;
         const tipo = document.getElementById('cal-tipo').value;
 
-        if (!titolo) {
-            alert('Inserisci un titolo');
-            return;
-        }
+        if (!titolo) { alert('Inserisci un titolo'); return; }
+        if (!dataInput) { alert('Scegli una data'); return; }
 
         eventiCal.push({
             id: 'ev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
             titolo: titolo,
-            giorno: giorno,
+            data: dataInput,
             tipo: tipo,
             completato: false,
             creato: new Date().toISOString()
@@ -16317,7 +16448,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
         salvaCalendario();
         document.getElementById('cal-titolo').value = '';
-        renderCalendario();
+        document.getElementById('cal-data').value = '';
+        renderTutto();
     }
 
     function salvaCalendario() {
@@ -16325,10 +16457,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     function exportCalendario() {
-        const dati = {
-            eventi: eventiCal,
-            esportato: new Date().toISOString()
-        };
+        const dati = { eventi: eventiCal, esportato: new Date().toISOString() };
         const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -16339,15 +16468,15 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     function resetCalendario() {
-        if (confirm('Cancellare tutti gli eventi del calendario? Operazione non reversibile.')) {
+        if (confirm('Cancellare tutti gli eventi? Operazione non reversibile.')) {
             eventiCal = [];
             salvaCalendario();
-            renderCalendario();
+            renderTutto();
         }
     }
 
     // Inizializza
-    renderCalendario();
+    cambiaVista('mese');
 </script>
         
         
@@ -16355,7 +16484,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     <!-- ==================== JAVASCRIPT COMPLETO ==================== -->
     <script>
-        const TOTAL_PAGES = 80;
+        const TOTAL_PAGES = 81;
         let currentPage = 1;
 
         // ==================== CONFIGURAZIONE AUDIO ====================
