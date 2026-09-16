@@ -14208,13 +14208,16 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             Organizza i tuoi esami, le scadenze e le sessioni in un unico posto. <strong class="text-white">Tutto resta salvato sul tuo browser.</strong>
         </p>
 
-        <!-- RIFERIMENTO AL CALENDARIO (PAGINA 81) -->
+<!-- RIFERIMENTO AL CALENDARIO (PAGINA 81) -->
 <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-6 flex items-start gap-3">
     <i data-lucide="calendar" style="width:20px;height:20px;color:#3b82f6;flex-shrink:0;margin-top:2px;"></i>
     <div>
         <p class="text-blue-400 font-bold text-sm mb-1">📅 Trovi tutto nel Calendario</p>
+        <p class="text-neutral-400 text-xs leading-relaxed mb-2">
+            Gli esami, le scadenze e gli obiettivi che inserisci qui appaiono automaticamente nel <strong class="text-white">Calendario</strong> (pagina 81), in vista mensile e settimanale.
+        </p>
         <p class="text-neutral-400 text-xs leading-relaxed">
-            Gli esami, le scadenze e gli obiettivi che inserisci qui appaiono automaticamente nel <strong class="text-white">Calendario</strong> (pagina 81), in vista mensile e settimanale. Inserisci una volta, vedi ovunque.
+            💡 <strong class="text-white">Come funziona:</strong> inserisci qui una volta, poi apri il Calendario per vederli. Se modifichi qualcosa qui, torna ad aprire il Calendario per vedere le modifiche aggiornate.
         </p>
     </div>
 </div>
@@ -16045,8 +16048,11 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <i data-lucide="info" style="width:20px;height:20px;color:#3b82f6;flex-shrink:0;margin-top:2px;"></i>
             <div>
                 <p class="text-blue-400 font-bold text-sm mb-1">📌 Come funziona</p>
-                <p class="text-neutral-400 text-xs leading-relaxed">
+                <p class="text-neutral-400 text-xs leading-relaxed mb-2">
                     Gli <strong class="text-white">esami</strong>, le <strong class="text-white">scadenze</strong> e gli <strong class="text-white">obiettivi</strong> arrivano automaticamente dal Pianificatore (pagina 76). Qui puoi solo <strong class="text-white">vederli</strong> nel calendario e aggiungere <strong class="text-white">eventi extra</strong> come lezioni o tasse.
+                </p>
+                <p class="text-neutral-400 text-xs leading-relaxed">
+                    💡 <strong class="text-white">Per modificarli:</strong> torna al Pianificatore (pagina 76). Le modifiche appariranno qui automaticamente la prossima volta che apri questa pagina.
                 </p>
             </div>
         </div>
@@ -16166,6 +16172,9 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <i data-lucide="download" style="width:20px;height:20px;"></i> Azioni
             </h3>
             <div class="flex gap-3 flex-wrap">
+                <button onclick="window.print()" class="flex-1 min-w-[140px] bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                    🖨️ Stampa / Salva PDF
+                </button>
                 <button onclick="exportCalendario()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
                     📥 Export eventi extra
                 </button>
@@ -16231,7 +16240,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         });
 
         // Obiettivi → oggi, tipo "studio" (verdi)
-        // Gli obiettivi non hanno data nel Pianificatore: li mettiamo su oggi
         if (obiettivi.length > 0) {
             const oggi = new Date().toISOString().split('T')[0];
             obiettivi.forEach((o, i) => {
@@ -16453,8 +16461,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const completato = evento.completato ? 'opacity-50 line-through' : '';
         const isPianificatore = evento.origine === 'pianificatore';
 
-        // Se dal Pianificatore: niente drag, niente checkbox, niente delete
-        // Solo visualizzazione (si modifica nella pagina 76)
         const attrs = isPianificatore
             ? `title="Dal Pianificatore — modifica nella pagina 76"`
             : `draggable="true" ondragstart="dragStart(event, '${evento.id}')" title="Trascina o modifica"`;
@@ -16553,19 +16559,34 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     }
 
     // ============================================================
-    // INIZIALIZZAZIONE
+    // INIZIALIZZAZIONE + AGGIORNAMENTO AUTOMATICO
     // ============================================================
     document.addEventListener('DOMContentLoaded', function() {
         cambiaVista('mese');
     });
 
-    // Se la pagina viene mostrata dopo il caricamento (SPA), ridisegna
+    // Ridisegna il calendario ogni volta che la pagina 81 diventa visibile
     // (utile se l'utente modifica la 76 e poi torna alla 81)
-    window.addEventListener('focus', function() {
-        if (document.querySelector('[data-page="81"]') && !document.querySelector('[data-page="81"]').classList.contains('hidden')) {
+    function aggiornaCalendarioSeVisibile() {
+        const pagina = document.querySelector('[data-page="81"]');
+        if (pagina && !pagina.classList.contains('hidden')) {
             renderTutto();
         }
+    }
+
+    // Observer: intercetta quando la pagina 81 diventa visibile
+    document.addEventListener('DOMContentLoaded', function() {
+        const pagina81 = document.querySelector('[data-page="81"]');
+        if (pagina81) {
+            const observer = new MutationObserver(function() {
+                aggiornaCalendarioSeVisibile();
+            });
+            observer.observe(pagina81, { attributes: true, attributeFilter: ['class'] });
+        }
     });
+
+    // Ridisegna anche quando la finestra torna in focus (utile su mobile)
+    window.addEventListener('focus', aggiornaCalendarioSeVisibile);
 </script>
         
         
