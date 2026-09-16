@@ -16002,7 +16002,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </div>
 
 
- <!-- ========== PAGINA 81: CALENDARIO SETTIMANALE ========== -->
+<!-- ========== PAGINA 81: CALENDARIO ========== -->
 <div class="page" data-page="81">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -16014,7 +16014,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </h2>
 
         <p class="text-neutral-300 text-sm leading-relaxed mb-4">
-            Organizza la settimana e il mese a colpo d'occhio. Aggiungi esami, scadenze, obiettivi e lezioni: tutto in un unico posto.
+            La tua settimana e il tuo mese a colpo d'occhio. Il calendario mostra automaticamente <strong class="text-white">esami, scadenze e obiettivi</strong> che hai inserito nel Pianificatore (pagina 76).
         </p>
 
         <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
@@ -16029,11 +16029,21 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Chi vede il mese, non perde giorni. Chi improvvisa, rincorre."</p>
         </div>
 
+        <!-- INFO INTEGRAZIONE -->
+        <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 mb-6 flex items-start gap-3">
+            <i data-lucide="info" style="width:20px;height:20px;color:#3b82f6;flex-shrink:0;margin-top:2px;"></i>
+            <div>
+                <p class="text-blue-400 font-bold text-sm mb-1">📌 Come funziona</p>
+                <p class="text-neutral-400 text-xs leading-relaxed">
+                    Gli <strong class="text-white">esami</strong>, le <strong class="text-white">scadenze</strong> e gli <strong class="text-white">obiettivi</strong> arrivano automaticamente dal Pianificatore (pagina 76). Qui puoi solo <strong class="text-white">vederli</strong> nel calendario e aggiungere <strong class="text-white">eventi extra</strong> come lezioni o tasse.
+                </p>
+            </div>
+        </div>
+
         <!-- ============================================================
              TOGGLE VISTA + NAVIGAZIONE
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
-            <!-- Toggle Mese / Settimana -->
             <div class="flex bg-neutral-900 rounded-lg p-1 mb-4">
                 <button id="btn-vista-mese" onclick="cambiaVista('mese')" class="flex-1 text-xs font-bold py-2 rounded-md transition">
                     📅 Mese
@@ -16043,7 +16053,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 </button>
             </div>
 
-            <!-- Navigazione periodo -->
             <div class="flex items-center justify-between gap-3 mb-3">
                 <button onclick="cambiaPeriodo(-1)" class="bg-neutral-900 hover:bg-neutral-700 border border-neutral-700 text-white font-bold text-sm px-3 py-2 rounded-lg transition">
                     <i data-lucide="chevron-left" style="width:16px;height:16px;display:inline;"></i>
@@ -16063,17 +16072,20 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         </div>
 
         <!-- ============================================================
-             AGGIUNTA RAPIDA
+             AGGIUNTA EVENTI EXTRA
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
-            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
-                <i data-lucide="plus-circle" style="width:20px;height:20px;"></i> Aggiungi un evento
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="plus-circle" style="width:20px;height:20px;"></i> Aggiungi evento extra
             </h3>
+            <p class="text-neutral-400 text-xs mb-3">
+                Solo per cose che <strong class="text-white">non</strong> stanno nel Pianificatore (es. lezioni, tasse, impegni personali).
+            </p>
 
             <div class="space-y-3">
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📝 Titolo</label>
-                    <input type="text" id="cal-titolo" placeholder="es. Studiare capitolo 3" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cal-titolo" placeholder="es. Lezione di Analisi" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
 
                 <div class="grid grid-cols-2 gap-3">
@@ -16084,16 +16096,14 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">🏷️ Tipo</label>
                         <select id="cal-tipo" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                            <option value="studio">🟢 Studio</option>
-                            <option value="esame">🔴 Esame</option>
-                            <option value="scadenza">🟠 Scadenza</option>
                             <option value="lezione">🔵 Lezione</option>
                             <option value="tassa">🟡 Tassa</option>
+                            <option value="extra">⚪ Altro</option>
                         </select>
                     </div>
                 </div>
 
-                <button onclick="aggiungiEvento()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                <button onclick="aggiungiEventoExtra()" class="w-full bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
                     ➕ Aggiungi al calendario
                 </button>
             </div>
@@ -16104,12 +16114,15 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
             <p class="text-neutral-300 text-xs font-bold mb-2">🏷️ Legenda</p>
+            <div class="flex flex-wrap gap-2 mb-2">
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-red-500/20 text-red-300 border border-red-500/30">🔴 Esame (dal Pianificatore)</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">🟠 Scadenza (dal Pianificatore)</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-green-500/20 text-green-300 border border-green-500/30">🟢 Obiettivo (dal Pianificatore)</span>
+            </div>
             <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-green-500/20 text-green-300 border border-green-500/30">🟢 Studio</span>
-                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-red-500/20 text-red-300 border border-red-500/30">🔴 Esame</span>
-                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">🟠 Scadenza</span>
-                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">🔵 Lezione</span>
-                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">🟡 Tassa</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">🔵 Lezione (extra)</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/30">🟡 Tassa (extra)</span>
+                <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-neutral-500/20 text-neutral-300 border border-neutral-500/30">⚪ Altro (extra)</span>
             </div>
         </div>
 
@@ -16117,7 +16130,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              VISTA MESE
              ============================================================ -->
         <div id="vista-mese-container" class="bg-neutral-800 border border-neutral-700 rounded-xl p-4 mb-6">
-            <!-- Header giorni settimana -->
             <div class="grid grid-cols-7 gap-1 mb-2">
                 <div class="text-center text-[10px] font-bold text-neutral-400 py-1">LUN</div>
                 <div class="text-center text-[10px] font-bold text-neutral-400 py-1">MAR</div>
@@ -16127,7 +16139,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                 <div class="text-center text-[10px] font-bold text-neutral-400 py-1">SAB</div>
                 <div class="text-center text-[10px] font-bold text-neutral-400 py-1">DOM</div>
             </div>
-            <!-- Griglia giorni -->
             <div id="griglia-mese" class="grid grid-cols-7 gap-1"></div>
         </div>
 
@@ -16141,16 +16152,19 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         <!-- AZIONI -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
             <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
-                <i data-lucide="download" style="width:20px;height:20px;"></i> Esporta o Azzera
+                <i data-lucide="download" style="width:20px;height:20px;"></i> Azioni
             </h3>
             <div class="flex gap-3 flex-wrap">
                 <button onclick="exportCalendario()" class="flex-1 min-w-[140px] bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">
-                    📥 Export JSON
+                    📥 Export eventi extra
                 </button>
-                <button onclick="resetCalendario()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
-                    🗑️ Azzera Tutto
+                <button onclick="resetEventiExtra()" class="flex-1 min-w-[140px] bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">
+                    🗑️ Azzera eventi extra
                 </button>
             </div>
+            <p class="text-neutral-500 text-xs mt-3">
+                ℹ️ Gli eventi provenienti dal Pianificatore <strong class="text-white">non</strong> vengono toccati da queste azioni. Modificali nella pagina 76.
+            </p>
         </div>
 
     </div>
@@ -16158,15 +16172,79 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // CALENDARIO MESE + SETTIMANA
+    // CALENDARIO — INTEGRATO CON PIANIFICATORE (PAGINA 76)
     // ============================================================
-    let eventiCal = JSON.parse(localStorage.getItem('tesiflash_calendario') || '[]');
-    let vistaCorrente = 'mese'; // 'mese' o 'settimana'
-    let dataRiferimento = new Date(); // data di riferimento per la navigazione
+    let eventiExtra = JSON.parse(localStorage.getItem('tesiflash_calendario_extra') || '[]');
+    let vistaCorrente = 'mese';
+    let dataRiferimento = new Date();
     dataRiferimento.setHours(0, 0, 0, 0);
 
     const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
 
+    // ============================================================
+    // CARICA DATI DAL PIANIFICATORE (PAGINA 76)
+    // ============================================================
+    function caricaEventiPianificatore() {
+        const esami = JSON.parse(localStorage.getItem('tesiflash_piano_esami') || '[]');
+        const scadenze = JSON.parse(localStorage.getItem('tesiflash_piano_scadenze') || '[]');
+        const obiettivi = JSON.parse(localStorage.getItem('tesiflash_piano_obiettivi') || '[]');
+
+        const eventi = [];
+
+        // Esami → tipo "esame" (rossi)
+        esami.forEach((e, i) => {
+            if (e.data) {
+                eventi.push({
+                    id: 'piano_esame_' + i,
+                    titolo: e.nome + (e.cfu ? ` (${e.cfu} CFU)` : ''),
+                    data: e.data,
+                    tipo: 'esame',
+                    completato: e.completato || false,
+                    origine: 'pianificatore'
+                });
+            }
+        });
+
+        // Scadenze → tipo "scadenza" (arancioni)
+        scadenze.forEach((s, i) => {
+            if (s.data) {
+                eventi.push({
+                    id: 'piano_scad_' + i,
+                    titolo: s.descrizione,
+                    data: s.data,
+                    tipo: 'scadenza',
+                    completato: false,
+                    origine: 'pianificatore'
+                });
+            }
+        });
+
+        // Obiettivi → oggi, tipo "studio" (verdi)
+        // Gli obiettivi non hanno data nel Pianificatore: li mettiamo su oggi
+        if (obiettivi.length > 0) {
+            const oggi = new Date().toISOString().split('T')[0];
+            obiettivi.forEach((o, i) => {
+                eventi.push({
+                    id: 'piano_ob_' + i,
+                    titolo: o.testo,
+                    data: oggi,
+                    tipo: 'studio',
+                    completato: o.completato || false,
+                    origine: 'pianificatore'
+                });
+            });
+        }
+
+        return eventi;
+    }
+
+    function tuttiGliEventi() {
+        return [...caricaEventiPianificatore(), ...eventiExtra];
+    }
+
+    // ============================================================
+    // UTILITY
+    // ============================================================
     function formattaDataShort(data) {
         return data.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' });
     }
@@ -16178,7 +16256,6 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         return `${y}-${m}-${d}`;
     }
 
-    // Ritorna il lunedì della settimana di una data
     function getLunedi(data) {
         const d = new Date(data);
         const giorno = d.getDay();
@@ -16188,12 +16265,14 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         return d;
     }
 
+    // ============================================================
+    // NAVIGAZIONE
+    // ============================================================
     function cambiaVista(vista) {
         vistaCorrente = vista;
         document.getElementById('vista-mese-container').classList.toggle('hidden', vista !== 'mese');
         document.getElementById('vista-settimana-container').classList.toggle('hidden', vista !== 'settimana');
 
-        // Aggiorna stile toggle
         const btnMese = document.getElementById('btn-vista-mese');
         const btnSett = document.getElementById('btn-vista-settimana');
         if (vista === 'mese') {
@@ -16245,6 +16324,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
     function renderMese() {
         const anno = dataRiferimento.getFullYear();
         const mese = dataRiferimento.getMonth();
+        const eventi = tuttiGliEventi();
 
         document.getElementById('periodo-label').textContent = `${MESI[mese]} ${anno}`;
         document.getElementById('periodo-range').textContent = `${new Date(anno, mese, 1).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' })} — ${new Date(anno, mese + 1, 0).toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' })}`;
@@ -16255,28 +16335,24 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const primoGiorno = new Date(anno, mese, 1);
         const ultimoGiorno = new Date(anno, mese + 1, 0);
 
-        // Offset: quanti giorni vuoti prima del 1° del mese (partendo da lunedì)
         let offsetInizio = primoGiorno.getDay() - 1;
         if (offsetInizio < 0) offsetInizio = 6;
 
         const oggi = new Date();
         oggi.setHours(0, 0, 0, 0);
 
-        // Celle vuote all'inizio
         for (let i = 0; i < offsetInizio; i++) {
             const vuoto = document.createElement('div');
             vuoto.className = 'aspect-square';
             griglia.appendChild(vuoto);
         }
 
-        // Giorni del mese
         for (let d = 1; d <= ultimoGiorno.getDate(); d++) {
             const dataCorrente = new Date(anno, mese, d);
             const dataISO = formattaDataISO(dataCorrente);
             const isOggi = dataCorrente.getTime() === oggi.getTime();
 
-            // Eventi di questo giorno
-            const eventiGiorno = eventiCal.filter(e => e.data === dataISO);
+            const eventiGiorno = eventi.filter(e => e.data === dataISO);
 
             const cella = document.createElement('button');
             cella.className = `aspect-square rounded-lg p-1 flex flex-col items-center justify-start transition border ${isOggi ? 'border-amber-500 bg-amber-500/10' : 'border-neutral-800 bg-neutral-900/40 hover:bg-neutral-900'}`;
@@ -16292,7 +16368,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
                             esame: 'bg-red-400',
                             scadenza: 'bg-orange-400',
                             lezione: 'bg-blue-400',
-                            tassa: 'bg-yellow-400'
+                            tassa: 'bg-yellow-400',
+                            extra: 'bg-neutral-400'
                         };
                         return `<span class="w-1.5 h-1.5 rounded-full ${colori[tipo] || 'bg-neutral-400'}"></span>`;
                     }).join('') +
@@ -16323,6 +16400,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         const oggi = new Date();
         oggi.setHours(0, 0, 0, 0);
 
+        const eventi = tuttiGliEventi();
         const container = document.getElementById('calendario');
         container.innerHTML = '';
 
@@ -16332,42 +16410,23 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             const isOggi = dataGiorno.getTime() === oggi.getTime();
             const dataISO = formattaDataISO(dataGiorno);
 
-            const eventiGiorno = eventiCal.filter(e => e.data === dataISO);
+            const eventiGiorno = eventi.filter(e => e.data === dataISO);
 
             const col = document.createElement('div');
             col.className = `bg-neutral-900/60 border ${isOggi ? 'border-amber-500' : 'border-neutral-800'} rounded-lg p-2 min-h-[180px] flex flex-col`;
-            col.dataset.data = dataISO;
 
             col.innerHTML = `
                 <div class="text-center mb-2 pb-2 border-b border-neutral-800">
                     <p class="text-[10px] font-bold ${isOggi ? 'text-amber-400' : 'text-neutral-400'}">${['LUN','MAR','MER','GIO','VEN','SAB','DOM'][i]}</p>
                     <p class="text-[10px] ${isOggi ? 'text-amber-400' : 'text-neutral-500'}">${formattaDataShort(dataGiorno)}</p>
                 </div>
-                <div class="space-y-1 flex-1" data-dropzone="${dataISO}">
+                <div class="space-y-1 flex-1">
                     ${eventiGiorno.map(e => renderCardEvento(e)).join('')}
                 </div>
             `;
 
             container.appendChild(col);
         }
-
-        // Drop zone
-        container.querySelectorAll('[data-dropzone]').forEach(zone => {
-            zone.addEventListener('dragover', (e) => {
-                e.preventDefault();
-                zone.classList.add('bg-amber-500/10');
-            });
-            zone.addEventListener('dragleave', () => {
-                zone.classList.remove('bg-amber-500/10');
-            });
-            zone.addEventListener('drop', (e) => {
-                e.preventDefault();
-                zone.classList.remove('bg-amber-500/10');
-                const idEvento = e.dataTransfer.getData('text/plain');
-                const nuovaData = zone.dataset.dropzone;
-                spostaEvento(idEvento, nuovaData);
-            });
-        });
     }
 
     function renderCardEvento(evento) {
@@ -16376,60 +16435,63 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             esame: 'bg-red-500/20 border-red-500/40 text-red-100',
             scadenza: 'bg-orange-500/20 border-orange-500/40 text-orange-100',
             lezione: 'bg-blue-500/20 border-blue-500/40 text-blue-100',
-            tassa: 'bg-yellow-500/20 border-yellow-500/40 text-yellow-100'
+            tassa: 'bg-yellow-500/20 border-yellow-500/40 text-yellow-100',
+            extra: 'bg-neutral-500/20 border-neutral-500/40 text-neutral-100'
         };
         const classe = colori[evento.tipo] || colori.studio;
         const completato = evento.completato ? 'opacity-50 line-through' : '';
+        const isPianificatore = evento.origine === 'pianificatore';
+
+        // Se dal Pianificatore: niente drag, niente checkbox, niente delete
+        // Solo visualizzazione (si modifica nella pagina 76)
+        const attrs = isPianificatore
+            ? `title="Dal Pianificatore — modifica nella pagina 76"`
+            : `draggable="true" ondragstart="dragStart(event, '${evento.id}')" title="Trascina o modifica"`;
+
+        const checkboxHtml = isPianificatore
+            ? `<span class="mt-0.5 flex-shrink-0" style="width:12px;height:12px;">${evento.completato ? '✅' : '⏳'}</span>`
+            : `<input type="checkbox" ${evento.completato ? 'checked' : ''} onchange="toggleCompletato('${evento.id}')" class="mt-0.5 accent-amber-500 flex-shrink-0" style="width:12px;height:12px;">`;
+
+        const deleteHtml = isPianificatore
+            ? `<span class="text-[8px] opacity-40" title="Modifica nella pagina 76">🔒</span>`
+            : `<button onclick="rimuoviEventoExtra('${evento.id}')" class="opacity-0 group-hover:opacity-100 text-red-300 hover:text-red-100 flex-shrink-0 transition" title="Elimina">✕</button>`;
 
         return `
-            <div draggable="true"
+            <div ${attrs}
                  data-id="${evento.id}"
-                 class="${classe} ${completato} border rounded-md p-1.5 cursor-move text-[10px] leading-tight group relative"
-                 ondragstart="dragStart(event, '${evento.id}')">
+                 class="${classe} ${completato} border rounded-md p-1.5 ${isPianificatore ? 'cursor-default' : 'cursor-move'} text-[10px] leading-tight group relative">
                 <div class="flex items-start gap-1">
-                    <input type="checkbox"
-                           ${evento.completato ? 'checked' : ''}
-                           onchange="toggleCompletato('${evento.id}')"
-                           class="mt-0.5 accent-amber-500 flex-shrink-0"
-                           style="width:12px;height:12px;">
+                    ${checkboxHtml}
                     <span class="flex-1 break-words font-semibold">${evento.titolo}</span>
-                    <button onclick="rimuoviEvento('${evento.id}')"
-                            class="opacity-0 group-hover:opacity-100 text-red-300 hover:text-red-100 flex-shrink-0 transition"
-                            title="Elimina">✕</button>
+                    ${deleteHtml}
                 </div>
             </div>
         `;
     }
 
+    // ============================================================
+    // DRAG & DROP (solo eventi extra)
+    // ============================================================
     function dragStart(e, id) {
         e.dataTransfer.setData('text/plain', id);
     }
 
-    function spostaEvento(id, nuovaData) {
-        const evento = eventiCal.find(e => e.id === id);
-        if (evento) {
-            evento.data = nuovaData;
-            salvaCalendario();
-            renderTutto();
-        }
-    }
-
     function toggleCompletato(id) {
-        const evento = eventiCal.find(e => e.id === id);
+        const evento = eventiExtra.find(e => e.id === id);
         if (evento) {
             evento.completato = !evento.completato;
-            salvaCalendario();
+            salvaEventiExtra();
             renderTutto();
         }
     }
 
-    function rimuoviEvento(id) {
-        eventiCal = eventiCal.filter(e => e.id !== id);
-        salvaCalendario();
+    function rimuoviEventoExtra(id) {
+        eventiExtra = eventiExtra.filter(e => e.id !== id);
+        salvaEventiExtra();
         renderTutto();
     }
 
-    function aggiungiEvento() {
+    function aggiungiEventoExtra() {
         const titolo = document.getElementById('cal-titolo').value.trim();
         const dataInput = document.getElementById('cal-data').value;
         const tipo = document.getElementById('cal-tipo').value;
@@ -16437,46 +16499,62 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         if (!titolo) { alert('Inserisci un titolo'); return; }
         if (!dataInput) { alert('Scegli una data'); return; }
 
-        eventiCal.push({
-            id: 'ev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
+        eventiExtra.push({
+            id: 'extra_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5),
             titolo: titolo,
             data: dataInput,
             tipo: tipo,
             completato: false,
+            origine: 'extra',
             creato: new Date().toISOString()
         });
 
-        salvaCalendario();
+        salvaEventiExtra();
         document.getElementById('cal-titolo').value = '';
         document.getElementById('cal-data').value = '';
         renderTutto();
     }
 
-    function salvaCalendario() {
-        localStorage.setItem('tesiflash_calendario', JSON.stringify(eventiCal));
+    function salvaEventiExtra() {
+        localStorage.setItem('tesiflash_calendario_extra', JSON.stringify(eventiExtra));
     }
 
     function exportCalendario() {
-        const dati = { eventi: eventiCal, esportato: new Date().toISOString() };
+        const dati = {
+            eventiExtra: eventiExtra,
+            esportato: new Date().toISOString()
+        };
         const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'tesiflash-calendario-' + new Date().toISOString().split('T')[0] + '.json';
+        a.download = 'tesiflash-calendario-extra-' + new Date().toISOString().split('T')[0] + '.json';
         a.click();
         URL.revokeObjectURL(url);
     }
 
-    function resetCalendario() {
-        if (confirm('Cancellare tutti gli eventi? Operazione non reversibile.')) {
-            eventiCal = [];
-            salvaCalendario();
+    function resetEventiExtra() {
+        if (confirm('Cancellare tutti gli eventi extra? Gli eventi del Pianificatore NON verranno toccati.')) {
+            eventiExtra = [];
+            salvaEventiExtra();
             renderTutto();
         }
     }
 
-    // Inizializza
-    cambiaVista('mese');
+    // ============================================================
+    // INIZIALIZZAZIONE
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        cambiaVista('mese');
+    });
+
+    // Se la pagina viene mostrata dopo il caricamento (SPA), ridisegna
+    // (utile se l'utente modifica la 76 e poi torna alla 81)
+    window.addEventListener('focus', function() {
+        if (document.querySelector('[data-page="81"]') && !document.querySelector('[data-page="81"]').classList.contains('hidden')) {
+            renderTutto();
+        }
+    });
 </script>
         
         
