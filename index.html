@@ -17925,6 +17925,1780 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         document.getElementById('simon-progresso').textContent = 'Round 0 · Record: ' + (localStorage.getItem('tesiflash_pausa_simon') || '0');
     });
 </script>
+
+        <!-- ========== PAGINA 83: STRUMENTI DI STUDIO ATTIVO ========== -->
+<div class="page" data-page="83">
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <i data-lucide="graduation-cap" style="width:16px;height:16px;"></i> Modulo Extra & Toolkit
+        </span>
+        <div class="time-badge mb-3">⏱️ Tempo di utilizzo: 5-15 minuti</div>
+        <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
+            <i data-lucide="book-open" style="width:28px;height:28px;color:#f59e0b;"></i> Strumenti di Studio Attivo
+        </h2>
+
+        <div class="bg-gradient-to-br from-purple-500/10 to-neutral-800 border border-purple-500/30 rounded-xl p-5 mb-5">
+            <p class="text-purple-300 font-bold text-sm mb-2 flex items-center gap-2">
+                <i data-lucide="sparkles" style="width:18px;height:18px;"></i> Non solo scrivere la tesi, ma anche ricordarla
+            </p>
+            <p class="text-neutral-300 text-sm leading-relaxed mb-2">
+                Con <strong class="text-white">Evidenzia</strong>, <strong class="text-white">Flashcard automatiche</strong>, <strong class="text-white">Ripetizione Spaziata</strong> e <strong class="text-white">Quiz intelligente</strong>, trasformi il materiale che leggi in <strong class="text-white">conoscenza che rimane</strong>.
+            </p>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+                🎯 Perfetto per preparare l'esame di laurea, la discussione orale e — perché no — anche gli esami universitari.
+            </p>
+        </div>
+
+        <!-- AVVISO NO-AI -->
+        <div class="bg-amber-500/10 border border-amber-500/40 rounded-xl p-4 mb-5 flex items-start gap-3">
+            <i data-lucide="info" style="width:22px;height:22px;color:#f59e0b;flex-shrink:0;margin-top:2px;"></i>
+            <div>
+                <p class="text-amber-300 font-bold text-sm mb-1">⚙️ Nessuna Intelligenza Artificiale</p>
+                <p class="text-neutral-300 text-xs leading-relaxed">
+                    Tutte le <strong class="text-white">domande e risposte sono estratte direttamente dal testo</strong> che carichi, tramite pattern linguistici. <strong class="text-white">Nessun modello AI</strong> viene usato, quindi <strong class="text-white">non ci sono allucinazioni</strong>: quello che vedi è esattamente quello che hai scritto. Il testo resta sul tuo dispositivo.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
+            <div>
+                <p class="text-green-400 font-bold text-sm">🔒 Dati sul tuo dispositivo</p>
+                <p class="text-neutral-400 text-xs">Tutto salvato nel tuo browser. Nessun account, nessun server.</p>
+            </div>
+        </div>
+
+        <div class="flash-strategy mb-6">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Leggere non basta. Il vero studio è ricordare, connettere, applicare."</p>
+        </div>
+
+        <!-- SELETTORE STRUMENTI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-3 mb-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button onclick="mostraStrumento('evidenzia')" data-strumento="evidenzia" class="btn-strumento bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition">🖍️ Evidenzia</button>
+                <button onclick="mostraStrumento('flashcard')" data-strumento="flashcard" class="btn-strumento bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">📇 Flashcard</button>
+                <button onclick="mostraStrumento('studio')" data-strumento="studio" class="btn-strumento bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700">🧠 Studia</button>
+                <button onclick="mostraStrumento('quiz')" data-strumento="quiz" class="btn-strumento bg-neutral-900 text-neutral-300 font-bold text-xs py-2 px-2 rounded-lg transition hover:bg-neutral-700">❓ Quiz</button>
+            </div>
+        </div>
+
+        <!-- STRUMENTO 1: EVIDENZIA -->
+        <div id="strumento-evidenzia" class="strumento-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="highlighter" style="width:20px;height:20px;"></i> Evidenzia il tuo materiale
+            </h3>
+            <p class="text-neutral-400 text-xs mb-4">Incolla il testo, importa un file o carica quello salvato. Seleziona le parti importanti e clicca "Evidenzia".</p>
+
+            <div class="bg-neutral-900/60 rounded-lg p-4 mb-3">
+                <div id="testo-evidenzia" contenteditable="true" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white text-sm focus:border-amber-500 focus:outline-none h-48 overflow-y-auto" style="min-height:12rem;">
+                    Incolla qui il tuo testo di studio...
+                </div>
+                <div class="flex justify-between items-center mt-2 text-[10px] text-neutral-500">
+                    <span id="contatore-testo">0 caratteri · 0 parole</span>
+                    <span>💡 Seleziona con il mouse e clicca "Evidenzia"</span>
+                </div>
+            </div>
+
+            <input type="file" id="file-input" accept=".txt,.md,.csv,.json,.docx" style="display:none;" onchange="s83_importaFile(event)">
+
+            <!-- PALETTE COLORI COMPATTA -->
+            <div class="flex items-center gap-2 mb-3 mt-4">
+                <span class="text-neutral-500 text-[9px] uppercase font-bold">🎨 Colore:</span>
+                <div class="flex gap-1.5" id="s83-palette">
+                    <button onclick="s83_setColore('#facc15')" data-colore="#facc15" class="s83-colore-btn w-7 h-7 rounded-md border-2 border-white transition" style="background-color:#facc15;" title="Giallo"></button>
+                    <button onclick="s83_setColore('#22c55e')" data-colore="#22c55e" class="s83-colore-btn w-7 h-7 rounded-md border-2 border-neutral-700 transition hover:border-neutral-400" style="background-color:#22c55e;" title="Verde"></button>
+                    <button onclick="s83_setColore('#3b82f6')" data-colore="#3b82f6" class="s83-colore-btn w-7 h-7 rounded-md border-2 border-neutral-700 transition hover:border-neutral-400" style="background-color:#3b82f6;" title="Blu"></button>
+                    <button onclick="s83_setColore('#ec4899')" data-colore="#ec4899" class="s83-colore-btn w-7 h-7 rounded-md border-2 border-neutral-700 transition hover:border-neutral-400" style="background-color:#ec4899;" title="Rosa"></button>
+                    <button onclick="s83_setColore('#f97316')" data-colore="#f97316" class="s83-colore-btn w-7 h-7 rounded-md border-2 border-neutral-700 transition hover:border-neutral-400" style="background-color:#f97316;" title="Arancione"></button>
+                </div>
+            </div>
+
+            <p class="text-neutral-500 text-[10px] uppercase font-bold mb-2">📝 Azioni sul testo</p>
+            <div class="grid grid-cols-2 gap-2 mb-3">
+                <button onclick="evidenziaSelezione()" class="bg-amber-500 text-black font-bold px-4 py-2 rounded-lg hover:bg-amber-400 transition text-sm">🖍️ Evidenzia selezione</button>
+                <button onclick="rimuoviTutteEvidenziazioni()" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-sm">🧹 Pulisci evidenziazioni</button>
+            </div>
+
+            <p class="text-neutral-500 text-[10px] uppercase font-bold mb-2">💾 Salvataggio e importazione</p>
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="salvaTesto()" class="bg-green-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-green-500 transition text-sm">💾 Salva nel browser</button>
+                <button onclick="caricaTesto()" class="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-blue-500 transition text-sm">📂 Carica dal browser</button>
+                <button onclick="document.getElementById('file-input').click()" class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-indigo-500 transition text-sm">📁 Importa file</button>
+                <button onclick="stampaTesto()" class="bg-neutral-700 text-white font-bold px-4 py-2 rounded-lg hover:bg-neutral-600 transition text-sm">🖨️ Stampa / PDF</button>
+            </div>
+            <p class="text-neutral-500 text-[10px] mt-2">📎 Formati supportati: .txt · .md · .csv · .json · .docx (Word)</p>
+
+            <div id="lista-evidenziazioni" class="space-y-2 max-h-60 overflow-y-auto mt-4"></div>
+        </div>
+
+        <!-- STRUMENTO 2: FLASHCARD -->
+        <div id="strumento-flashcard" class="strumento-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="layers" style="width:20px;height:20px;"></i> Genera Flashcard
+            </h3>
+            <p class="text-neutral-400 text-xs mb-4">Aggiungi flashcard a mano oppure generane automaticamente dal testo. Clicca su una flashcard per modificarla.</p>
+
+            <div class="space-y-3 mb-4">
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">❓ Domanda</label>
+                    <input type="text" id="fc-domanda" placeholder="es. Cos'è la media ponderata?" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">💡 Risposta</label>
+                    <input type="text" id="fc-risposta" placeholder="es. La media calcolata tenendo conto dei CFU." class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <button onclick="aggiungiFlashcard()" class="bg-amber-500 text-black font-bold px-4 py-3 rounded-lg hover:bg-amber-400 transition text-sm">
+                        ➕ Aggiungi Flashcard
+                    </button>
+                    <button onclick="generaFlashcardDaTesto()" class="bg-purple-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-purple-500 transition text-sm">
+                        🤖 Genera dal testo
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900/60 rounded-lg p-4 mb-4">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-neutral-300 text-xs font-bold">📚 Le tue flashcard (<span id="fc-count">0</span>)</p>
+                    <p class="text-neutral-500 text-[10px]">💡 Clicca per modificare</p>
+                </div>
+                <div id="lista-flashcard" class="space-y-2 max-h-60 overflow-y-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <button onclick="avviaStudioFlashcard()" class="bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">▶️ Inizia a studiare</button>
+                <button onclick="resetFlashcard()" class="bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">🗑️ Azzera mazzo</button>
+            </div>
+        </div>
+
+        <!-- STRUMENTO 3: STUDIA -->
+        <div id="strumento-studio" class="strumento-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="brain" style="width:20px;height:20px;"></i> Studia Efficacemente
+            </h3>
+            <p class="text-neutral-400 text-xs mb-4">Ripetizione spaziata: le carte che sbagli tornano più spesso.</p>
+
+            <div id="studio-area" class="bg-neutral-900/60 rounded-lg p-8 text-center mb-4 min-h-[200px] flex flex-col items-center justify-center">
+                <p id="studio-fase" class="text-neutral-400 text-xs mb-3">Premi START per iniziare</p>
+                <div id="studio-carta" class="w-full max-w-sm">
+                    <p class="text-neutral-500 text-xs mb-1">DOMANDA</p>
+                    <p id="studio-domanda" class="text-lg font-bold text-white mb-4">—</p>
+                    <div id="studio-risposta-box" class="hidden">
+                        <p class="text-neutral-500 text-xs mb-1">RISPOSTA</p>
+                        <p id="studio-risposta" class="text-lg font-bold text-amber-400 mb-4">—</p>
+                    </div>
+                </div>
+                <p id="studio-progresso" class="text-neutral-500 text-xs mt-3"></p>
+                <div class="w-full max-w-sm mt-3 bg-neutral-800 rounded-full h-1.5 overflow-hidden">
+                    <div id="studio-progress-bar" class="bg-amber-500 h-1.5 rounded-full transition-all duration-300" style="width:0%"></div>
+                </div>
+            </div>
+
+            <div id="studio-bottoni" class="grid grid-cols-1 gap-2 mb-3 hidden">
+                <button onclick="studioRivela()" class="bg-blue-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-blue-500 transition text-sm">👁️ Rivela risposta</button>
+            </div>
+            <div id="studio-valutazione" class="grid grid-cols-3 gap-2 mb-3 hidden">
+                <button onclick="studioValuta('facile')" class="bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm">😎 Facile</button>
+                <button onclick="studioValuta('medio')" class="bg-yellow-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-yellow-500 transition text-sm">🤔 Medio</button>
+                <button onclick="studioValuta('difficile')" class="bg-red-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-500 transition text-sm">😰 Difficile</button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2">
+                <button onclick="avviaStudio()" class="bg-amber-500 text-black font-bold px-3 py-2 rounded-lg hover:bg-amber-400 text-sm">▶️ Start</button>
+                <button onclick="stopStudio()" class="bg-red-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-red-500 text-sm">⏹️ Stop</button>
+                <button onclick="resetStudio()" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-3 py-2 rounded-lg hover:bg-neutral-700 text-sm">🗑️ Reset</button>
+            </div>
+        </div>
+
+        <!-- STRUMENTO 4: QUIZ -->
+        <div id="strumento-quiz" class="strumento-container bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6 hidden">
+            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
+                <i data-lucide="help-circle" style="width:20px;height:20px;"></i> Quiz
+            </h3>
+            <p class="text-neutral-400 text-xs mb-4">Metti alla prova le tue conoscenze. Il quiz è generato dalle tue flashcard e dal testo, oppure puoi crearne uno manualmente.</p>
+
+            <!-- TAB SELEZIONE MODALITÀ -->
+            <div class="flex bg-neutral-900 rounded-lg p-1 mb-4">
+                <button id="quiz-tab-auto" onclick="s83_quizTab('auto')" class="flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black">🤖 Automatico</button>
+                <button id="quiz-tab-manuale" onclick="s83_quizTab('manuale')" class="flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white">✏️ Manuale</button>
+            </div>
+
+            <!-- ============ QUIZ AUTOMATICO ============ -->
+            <div id="quiz-panel-auto">
+                <!-- SELEZIONE NUMERO DOMANDE -->
+                <div class="bg-neutral-900/60 rounded-lg p-4 mb-4">
+                    <p class="text-neutral-300 text-xs font-bold mb-3">📊 Quante domande vuoi?</p>
+                    <div class="grid grid-cols-4 gap-2 mb-3">
+                        <button onclick="s83_setNumDomande(5)" data-num="5" class="s83-num-btn bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold text-xs py-2 rounded-lg hover:bg-neutral-700 transition">5</button>
+                        <button onclick="s83_setNumDomande(10)" data-num="10" class="s83-num-btn bg-amber-500 text-black font-bold text-xs py-2 rounded-lg transition">10</button>
+                        <button onclick="s83_setNumDomande(15)" data-num="15" class="s83-num-btn bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold text-xs py-2 rounded-lg hover:bg-neutral-700 transition">15</button>
+                        <button onclick="s83_setNumDomande(20)" data-num="20" class="s83-num-btn bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold text-xs py-2 rounded-lg hover:bg-neutral-700 transition">20</button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label class="text-neutral-400 text-xs">Personalizzato:</label>
+                        <input type="number" id="quiz-num-custom" min="1" max="200" value="10"
+                               onkeydown="if(event.key==='Enter'){s83_setNumDomande(parseInt(this.value)||10);}"
+                               class="w-20 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-1 text-white text-xs focus:border-amber-500 focus:outline-none">
+                        <button onclick="s83_setNumDomande(parseInt(document.getElementById('quiz-num-custom').value) || 10)" class="bg-amber-500 text-black font-bold text-xs px-3 py-1 rounded-lg hover:bg-amber-400 transition">OK</button>
+                    </div>
+                    <p class="text-neutral-500 text-[10px] mt-2" id="quiz-num-display">Domande selezionate: 10</p>
+                </div>
+
+                <div id="quiz-container" class="bg-neutral-900/60 rounded-lg p-5 mb-4">
+                    <p id="quiz-domanda" class="text-white font-bold text-sm mb-4">Premi START per iniziare</p>
+                    <div id="quiz-opzioni" class="space-y-2"></div>
+                    <p id="quiz-feedback" class="text-sm mt-3 font-bold"></p>
+                    <p id="quiz-contatore" class="text-center text-neutral-500 text-xs mt-3 hidden"></p>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 mb-2">
+                    <button onclick="avviaQuiz()" class="bg-amber-500 text-black font-bold px-3 py-2 rounded-lg hover:bg-amber-400 text-sm">▶️ Start</button>
+                    <button onclick="stopQuiz()" class="bg-red-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-red-500 text-sm">⏹️ Stop</button>
+                    <button onclick="resetQuiz()" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-3 py-2 rounded-lg hover:bg-neutral-700 text-sm">🗑️ Reset</button>
+                </div>
+                <p id="quiz-punteggio" class="text-center mt-3 font-bold text-sm text-amber-400"></p>
+            </div>
+
+            <!-- ============ QUIZ MANUALE ============ -->
+            <div id="quiz-panel-manuale" class="hidden">
+                <div class="bg-neutral-900/60 rounded-lg p-4 mb-4">
+                    <p class="text-neutral-300 text-xs font-bold mb-3">✏️ Crea le tue domande</p>
+
+                    <div class="space-y-3 mb-4">
+                        <div>
+                            <label class="text-neutral-300 text-xs font-bold mb-1 block">❓ Domanda</label>
+                            <textarea id="qm-domanda" rows="2" placeholder="es. Qual è la differenza tra media aritmetica e ponderata?" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none resize-none"></textarea>
+                        </div>
+                        <div>
+                            <p class="text-neutral-300 text-xs font-bold mb-2">Risposte (indica quella corretta)</p>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" name="qm-corretta" value="0" checked class="accent-green-500">
+                                    <input type="text" id="qm-risp-0" placeholder="Risposta A (corretta)" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" name="qm-corretta" value="1" class="accent-green-500">
+                                    <input type="text" id="qm-risp-1" placeholder="Risposta B" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" name="qm-corretta" value="2" class="accent-green-500">
+                                    <input type="text" id="qm-risp-2" placeholder="Risposta C" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <input type="radio" name="qm-corretta" value="3" class="accent-green-500">
+                                    <input type="text" id="qm-risp-3" placeholder="Risposta D" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="s83_aggiungiQuizManuale()" class="w-full bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm">
+                            ➕ Aggiungi domanda
+                        </button>
+                    </div>
+
+                    <div class="border-t border-neutral-700 pt-3">
+                        <p class="text-neutral-300 text-xs font-bold mb-2">📚 Le tue domande (<span id="qm-count">0</span>)</p>
+                        <p class="text-neutral-500 text-[10px] mb-2">💡 Clicca su una domanda per modificarla</p>
+                        <div id="qm-lista" class="space-y-2 max-h-60 overflow-y-auto"></div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900/60 rounded-lg p-5 mb-4">
+                    <p id="qm-domanda-attiva" class="text-white font-bold text-sm mb-4">Premi START per iniziare</p>
+                    <div id="qm-opzioni" class="space-y-2"></div>
+                    <p id="qm-feedback" class="text-sm mt-3 font-bold"></p>
+                    <p id="qm-contatore" class="text-center text-neutral-500 text-xs mt-3 hidden"></p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="s83_avviaQuizManuale()" class="bg-amber-500 text-black font-bold px-3 py-2 rounded-lg hover:bg-amber-400 text-sm">▶️ Start quiz manuale</button>
+                    <button onclick="s83_resetQuizManuale()" class="bg-red-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-red-500 text-sm">🗑️ Azzera tutto</button>
+                </div>
+                <p id="qm-punteggio" class="text-center mt-3 font-bold text-sm text-amber-400"></p>
+            </div>
+        </div>
+
+        <!-- AZIONI GLOBALI -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="settings" style="width:20px;height:20px;"></i> Azioni Globali
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
+                <button onclick="stampaTutto()" class="bg-neutral-700 text-white font-bold px-4 py-3 rounded-lg hover:bg-neutral-600 transition text-sm">
+                    🖨️ Stampa tutto / Salva PDF
+                </button>
+                <button onclick="esportaFlashcard()" class="bg-teal-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-teal-500 transition text-sm">
+                    📤 Esporta flashcard (.txt)
+                </button>
+            </div>
+            <div class="grid grid-cols-1 gap-2">
+                <button onclick="pulisciTutto()" class="bg-red-700 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-600 transition text-sm">
+                    🗑️ Pulisci tutto
+                </button>
+            </div>
+            <p class="text-neutral-500 text-[10px] mt-2">
+                "Pulisci tutto" cancella testo, evidenziazioni, flashcard, quiz manuali e progressi. Operazione irreversibile.
+            </p>
+
+            <!-- PANNELLO ISTRUZIONI STAMPA COLORI -->
+            <div class="mt-4 border-t border-neutral-700 pt-4">
+                <button onclick="s83_toggleGuidaStampa()" class="text-neutral-300 text-xs font-bold hover:text-amber-400 transition flex items-center gap-2">
+                    <i data-lucide="info" style="width:14px;height:14px;"></i>
+                    <span>Non vedi i colori nell'anteprima di stampa? Clicca qui</span>
+                </button>
+
+                <div id="s83-guida-stampa" class="hidden mt-3 bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                    <p class="text-blue-300 font-bold text-sm mb-3 flex items-center gap-2">
+                        🎨 Come attivare la stampa dei colori
+                    </p>
+                    <p class="text-neutral-300 text-xs leading-relaxed mb-3">
+                        I browser, per impostazione predefinita, <strong class="text-white">non stampano gli sfondi colorati</strong> per risparmiare inchiostro. È una protezione, non un errore. Ecco come attivarla:
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="bg-neutral-900/60 rounded-lg p-3">
+                            <p class="text-white font-bold text-xs mb-1">🔷 Chrome / Edge / Brave</p>
+                            <p class="text-neutral-400 text-xs leading-relaxed">
+                                Finestra di stampa → <strong class="text-white">"Altre impostazioni"</strong> (in basso a sinistra) → spunta <strong class="text-white">"Grafica di sfondo"</strong>
+                            </p>
+                        </div>
+
+                        <div class="bg-neutral-900/60 rounded-lg p-3">
+                            <p class="text-white font-bold text-xs mb-1">🦊 Firefox</p>
+                            <p class="text-neutral-400 text-xs leading-relaxed">
+                                Finestra di stampa → <strong class="text-white">"Imposta pagina"</strong> in alto → spunta <strong class="text-white">"Stampa sfondi e immagini"</strong>
+                            </p>
+                        </div>
+
+                        <div class="bg-neutral-900/60 rounded-lg p-3">
+                            <p class="text-white font-bold text-xs mb-1">🧭 Safari (Mac / iPhone / iPad)</p>
+                            <p class="text-neutral-400 text-xs leading-relaxed">
+                                Finestra di stampa → <strong class="text-white">"Mostra dettagli"</strong> → spunta <strong class="text-white">"Stampa sfondi"</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-3 mt-3">
+                        <p class="text-amber-300 text-xs leading-relaxed">
+                            💡 <strong>Consiglio:</strong> dopo aver salvato come PDF con l'opzione attiva, potrai <strong class="text-white">rimuovere la spunta</strong> per le stampe future. Il PDF mantiene i colori per sempre.
+                        </p>
+                    </div>
+
+                    <div class="flex justify-end mt-4">
+                        <button onclick="s83_nonMostrarePiu()" class="text-neutral-500 text-[10px] hover:text-neutral-300 transition underline">
+                            Non mostrare più questo avviso
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-neutral-900/60 border border-neutral-800 rounded-xl p-4 mb-4">
+            <p class="text-neutral-400 text-xs leading-relaxed">
+                💡 <strong class="text-white">Consiglio:</strong> Incolla un testo lungo in "Evidenzia", poi vai in "Flashcard" e clicca <strong class="text-purple-400">🤖 Genera dal testo</strong>. Clicca su una flashcard per modificarla. Infine usa "Studia" e "Quiz" per verificare.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODALE MODIFICA FLASHCARD -->
+<div id="s83-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);z-index:9998;align-items:center;justify-content:center;padding:16px;">
+    <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-6 max-w-md w-full">
+        <h3 class="text-amber-400 font-bold text-base mb-4">✏️ Modifica Flashcard</h3>
+        <div class="space-y-3 mb-4">
+            <div>
+                <label class="text-neutral-300 text-xs font-bold mb-1 block">❓ Domanda</label>
+                <textarea id="s83-modal-domanda" rows="2" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none resize-none"></textarea>
+            </div>
+            <div>
+                <label class="text-neutral-300 text-xs font-bold mb-1 block">💡 Risposta</label>
+                <textarea id="s83-modal-risposta" rows="3" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none resize-none"></textarea>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+            <button onclick="s83_salvaModifica()" class="bg-green-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-green-500 transition text-sm">💾 Salva</button>
+            <button onclick="s83_chiudiModale()" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-sm">✕ Annulla</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODALE MODIFICA QUIZ MANUALE -->
+<div id="s83-modal-qm" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);z-index:9998;align-items:center;justify-content:center;padding:16px;">
+    <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
+        <h3 class="text-amber-400 font-bold text-base mb-4">✏️ Modifica Domanda Quiz</h3>
+        <div class="space-y-3 mb-4">
+            <div>
+                <label class="text-neutral-300 text-xs font-bold mb-1 block">❓ Domanda</label>
+                <textarea id="s83-modal-qm-domanda" rows="2" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none resize-none"></textarea>
+            </div>
+            <div>
+                <p class="text-neutral-300 text-xs font-bold mb-2">Risposte (indica la corretta)</p>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="s83-qm-modal-corretta" value="0" class="accent-green-500">
+                        <input type="text" id="s83-modal-qm-risp-0" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="s83-qm-modal-corretta" value="1" class="accent-green-500">
+                        <input type="text" id="s83-modal-qm-risp-1" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="s83-qm-modal-corretta" value="2" class="accent-green-500">
+                        <input type="text" id="s83-modal-qm-risp-2" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="s83-qm-modal-corretta" value="3" class="accent-green-500">
+                        <input type="text" id="s83-modal-qm-risp-3" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+            <button onclick="s83_salvaModificaQM()" class="bg-green-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-green-500 transition text-sm">💾 Salva</button>
+            <button onclick="s83_chiudiModaleQM()" class="bg-neutral-900 border border-neutral-700 text-neutral-300 font-bold px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-sm">✕ Annulla</button>
+        </div>
+    </div>
+</div>
+
+<!-- MAMMOTH.JS per importare .docx -->
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+
+<script>
+    // ============================================================
+    // LOGICA STRUMENTI DI STUDIO ATTIVO (PAGINA 51)
+    // Nessuna AI: parsing deterministico del testo
+    // ============================================================
+
+    function s83_init() {
+        const salvato = localStorage.getItem('tesiflash_studio_testo');
+        const editor = document.getElementById('testo-evidenzia');
+        if (salvato && editor) editor.innerHTML = salvato;
+        s83_aggiornaListaEvidenziazioni();
+        s83_renderFlashcard();
+        s83_aggiornaContatore();
+        s83_renderListaQM();
+
+        const coloreSalvato = localStorage.getItem('tesiflash_studio_colore');
+        if (coloreSalvato) s83_setColore(coloreSalvato);
+
+        if (editor) editor.addEventListener('input', s83_aggiornaContatore);
+
+        const modale = document.getElementById('s83-modal');
+        if (modale) modale.style.display = 'none';
+        const modaleQm = document.getElementById('s83-modal-qm');
+        if (modaleQm) modaleQm.style.display = 'none';
+
+        s83_setNumDomande(10);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', s83_init);
+    } else {
+        s83_init();
+    }
+
+    function s83_aggiornaContatore() {
+        const editor = document.getElementById('testo-evidenzia');
+        const contatore = document.getElementById('contatore-testo');
+        if (!editor || !contatore) return;
+        const testo = (editor.innerText || editor.textContent || '').trim();
+        const caratteri = testo.length;
+        const parole = testo ? testo.split(/\s+/).filter(w => w.length > 0).length : 0;
+        contatore.textContent = caratteri + ' caratteri · ' + parole + ' parole';
+        // Aggiorna anche il conteggio delle domande disponibili
+        s83_aggiornaDisplayNumDomande();
+    }
+
+    // ============================================================
+    // SELEZIONE STRUMENTO
+    // ============================================================
+    function s83_mostraStrumento(nome) {
+        document.querySelectorAll('#strumento-evidenzia, #strumento-flashcard, #strumento-studio, #strumento-quiz').forEach(el => el.classList.add('hidden'));
+        const target = document.getElementById('strumento-' + nome);
+        if (target) target.classList.remove('hidden');
+
+        document.querySelectorAll('.btn-strumento').forEach(btn => {
+            btn.className = 'btn-strumento bg-neutral-900 text-neutral-300 font-bold text-xs py-3 px-2 rounded-lg transition hover:bg-neutral-700';
+        });
+        const btnAttivo = document.querySelector('[data-strumento="' + nome + '"]');
+        if (btnAttivo) btnAttivo.className = 'btn-strumento bg-amber-500 text-black font-bold text-xs py-3 px-2 rounded-lg transition';
+
+        if (window.lucide) lucide.createIcons();
+    }
+    window.mostraStrumento = s83_mostraStrumento;
+
+    // ============================================================
+    // PALETTE COLORI
+    // ============================================================
+    let s83_coloreEvidenziazione = '#facc15';
+
+    function s83_setColore(colore) {
+        s83_coloreEvidenziazione = colore;
+        document.querySelectorAll('#s83-palette .s83-colore-btn').forEach(btn => {
+            const isAttivo = btn.dataset.colore === colore;
+            btn.className = 's83-colore-btn w-7 h-7 rounded-md border-2 transition ' +
+                (isAttivo ? 'border-white scale-110' : 'border-neutral-700 hover:border-neutral-400');
+        });
+        localStorage.setItem('tesiflash_studio_colore', colore);
+    }
+    window.s83_setColore = s83_setColore;
+
+    // ============================================================
+    // EVIDENZIA
+    // ============================================================
+    function s83_evidenziaSelezione() {
+        const sel = window.getSelection();
+        if (!sel || sel.rangeCount === 0 || sel.isCollapsed) {
+            alert('Seleziona prima del testo da evidenziare.');
+            return;
+        }
+
+        const range = sel.getRangeAt(0);
+        const editor = document.getElementById('testo-evidenzia');
+        if (!editor.contains(range.commonAncestorContainer)) {
+            alert('Seleziona del testo dentro l\'area di studio.');
+            return;
+        }
+
+        const span = document.createElement('span');
+        span.style.backgroundColor = s83_coloreEvidenziazione;
+        const coloriSc = ['#3b82f6', '#22c55e', '#ec4899'];
+        span.style.color = coloriSc.includes(s83_coloreEvidenziazione) ? '#fff' : '#000';
+        span.style.borderRadius = '3px';
+        span.style.padding = '0 2px';
+        span.className = 'evidenziato';
+
+        try {
+            range.surroundContents(span);
+        } catch (e) {
+            const testo = range.toString();
+            range.deleteContents();
+            span.textContent = testo;
+            range.insertNode(span);
+        }
+
+        sel.removeAllRanges();
+        s83_aggiornaListaEvidenziazioni();
+        s83_salvaTesto(true);
+    }
+    window.evidenziaSelezione = s83_evidenziaSelezione;
+
+    function s83_aggiornaListaEvidenziazioni() {
+        const editor = document.getElementById('testo-evidenzia');
+        const container = document.getElementById('lista-evidenziazioni');
+        if (!editor || !container) return;
+
+        const spans = editor.querySelectorAll('.evidenziato');
+        if (spans.length === 0) {
+            container.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna evidenziazione.</p>';
+            return;
+        }
+
+        container.innerHTML = Array.from(spans).map((s, i) => {
+            const colore = s.style.backgroundColor || '#facc15';
+            return `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex justify-between items-start gap-2">
+                <div class="flex-1 flex items-start gap-2">
+                    <span style="width:12px;height:12px;border-radius:3px;background-color:${colore};flex-shrink:0;margin-top:2px;"></span>
+                    <p class="text-amber-200 text-xs break-words">"${s.textContent}"</p>
+                </div>
+                <button onclick="rimuoviEvidenziazione(${i})" class="text-red-400 hover:text-red-300 text-xs font-bold flex-shrink-0">✕</button>
+            </div>
+        `;
+        }).join('');
+    }
+
+    function s83_rimuoviEvidenziazione(index) {
+        const editor = document.getElementById('testo-evidenzia');
+        const spans = editor.querySelectorAll('.evidenziato');
+        if (spans[index]) {
+            const span = spans[index];
+            const parent = span.parentNode;
+            while (span.firstChild) parent.insertBefore(span.firstChild, span);
+            parent.removeChild(span);
+            parent.normalize();
+        }
+        s83_aggiornaListaEvidenziazioni();
+        s83_salvaTesto(true);
+    }
+    window.rimuoviEvidenziazione = s83_rimuoviEvidenziazione;
+
+    function s83_rimuoviTutteEvidenziazioni() {
+        if (!confirm('Rimuovere tutte le evidenziazioni?')) return;
+        const editor = document.getElementById('testo-evidenzia');
+        editor.querySelectorAll('.evidenziato').forEach(span => {
+            const parent = span.parentNode;
+            while (span.firstChild) parent.insertBefore(span.firstChild, span);
+            parent.removeChild(span);
+            parent.normalize();
+        });
+        s83_aggiornaListaEvidenziazioni();
+        s83_salvaTesto(true);
+    }
+    window.rimuoviTutteEvidenziazioni = s83_rimuoviTutteEvidenziazioni;
+
+    function s83_salvaTesto(silenzioso) {
+        const editor = document.getElementById('testo-evidenzia');
+        if (!editor) return;
+        localStorage.setItem('tesiflash_studio_testo', editor.innerHTML);
+        if (!silenzioso) s83_toast('💾 Testo salvato nel browser');
+    }
+    window.salvaTesto = s83_salvaTesto;
+
+    function s83_caricaTesto() {
+        const salvato = localStorage.getItem('tesiflash_studio_testo');
+        if (!salvato) {
+            alert('Nessun testo salvato nel browser.\n\nUsa "Salva nel browser" per salvare il testo corrente oppure "Importa file" per caricare un file dal computer.');
+            return;
+        }
+        document.getElementById('testo-evidenzia').innerHTML = salvato;
+        s83_aggiornaListaEvidenziazioni();
+        s83_aggiornaContatore();
+        s83_toast('📂 Testo caricato dal browser');
+    }
+    window.caricaTesto = s83_caricaTesto;
+
+    function s83_importaFile(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const estensione = file.name.split('.').pop().toLowerCase();
+        const editor = document.getElementById('testo-evidenzia');
+
+        if (estensione === 'docx') {
+            if (typeof mammoth === 'undefined') {
+                alert('Libreria per file Word non caricata. Ricarica la pagina e riprova.');
+                event.target.value = '';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                mammoth.extractRawText({ arrayBuffer: e.target.result })
+                    .then(function(result) {
+                        const testo = result.value;
+                        editor.innerHTML = s83_escapeHtml(testo).replace(/\n/g, '<br>');
+                        s83_aggiornaListaEvidenziazioni();
+                        s83_aggiornaContatore();
+                        s83_salvaTesto(true);
+                        s83_toast('📁 Word importato: ' + file.name);
+                    })
+                    .catch(function(err) {
+                        alert('Errore nella lettura del file Word: ' + err.message);
+                    });
+            };
+            reader.readAsArrayBuffer(file);
+            event.target.value = '';
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const contenuto = e.target.result;
+            editor.innerHTML = s83_escapeHtml(contenuto).replace(/\n/g, '<br>');
+            s83_aggiornaListaEvidenziazioni();
+            s83_aggiornaContatore();
+            s83_salvaTesto(true);
+            s83_toast('📁 File importato: ' + file.name);
+        };
+        reader.onerror = function() {
+            alert('Errore nella lettura del file.');
+        };
+        reader.readAsText(file);
+        event.target.value = '';
+    }
+    window.s83_importaFile = s83_importaFile;
+
+    function s83_stampaTesto() {
+        s83_mostraGuidaSePrimaVolta();
+        const editor = document.getElementById('testo-evidenzia');
+        const contenuto = editor.innerHTML;
+
+        const finestra = window.open('', '_blank');
+        finestra.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>Testo di Studio</title>
+                <style>
+                    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+                    body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; color: #000; background: #fff; }
+                    h1 { font-size: 18px; border-bottom: 2px solid #f59e0b; padding-bottom: 8px; }
+                    .evidenziato { padding: 2px 4px; border-radius: 2px; display: inline; }
+                    @media print { body { margin: 20px; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } }
+                </style>
+            </head>
+            <body>
+                <h1>📖 Testo di Studio — ${new Date().toLocaleDateString('it-IT')}</h1>
+                <div>${contenuto}</div>
+            </body>
+            </html>
+        `);
+        finestra.document.close();
+        setTimeout(() => { finestra.print(); }, 300);
+    }
+    window.stampaTesto = s83_stampaTesto;
+
+    function s83_toast(msg) {
+        let toast = document.getElementById('s83-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 's83-toast';
+            toast.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:10px 18px;border-radius:8px;font-weight:bold;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:opacity 0.3s;opacity:0;pointer-events:none;';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.style.opacity = '1';
+        clearTimeout(window.s83_toastTimeout);
+        window.s83_toastTimeout = setTimeout(() => { toast.style.opacity = '0'; }, 2000);
+    }
+
+    function s83_escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    // ============================================================
+    // GUIDA STAMPA COLORI
+    // ============================================================
+    function s83_toggleGuidaStampa() {
+        const guida = document.getElementById('s83-guida-stampa');
+        if (!guida) return;
+        guida.classList.toggle('hidden');
+        if (window.lucide) lucide.createIcons();
+    }
+    window.s83_toggleGuidaStampa = s83_toggleGuidaStampa;
+
+    function s83_nonMostrarePiu() {
+        localStorage.setItem('tesiflash_studio_no_guida_stampa', '1');
+        const guida = document.getElementById('s83-guida-stampa');
+        if (guida) guida.classList.add('hidden');
+        s83_toast('👍 Non mostreremo più questo avviso');
+    }
+    window.s83_nonMostrarePiu = s83_nonMostrarePiu;
+
+    function s83_mostraGuidaSePrimaVolta() {
+        const maiVista = !localStorage.getItem('tesiflash_studio_no_guida_stampa');
+        const maiAperta = !localStorage.getItem('tesiflash_studio_guida_vista');
+        if (maiVista && maiAperta) {
+            const guida = document.getElementById('s83-guida-stampa');
+            if (guida) {
+                guida.classList.remove('hidden');
+                if (window.lucide) lucide.createIcons();
+            }
+            localStorage.setItem('tesiflash_studio_guida_vista', '1');
+        }
+    }
+
+    // ============================================================
+    // FLASHCARD
+    // ============================================================
+    let s83_flashcard = JSON.parse(localStorage.getItem('tesiflash_studio_flashcard') || '[]');
+    let s83_modificaIdCorrente = null;
+
+    function s83_aggiungiFlashcard() {
+        const domanda = document.getElementById('fc-domanda').value.trim();
+        const risposta = document.getElementById('fc-risposta').value.trim();
+
+        if (!domanda || !risposta) {
+            alert('Compila sia domanda che risposta.');
+            return;
+        }
+
+        s83_flashcard.push({
+            id: Date.now() + Math.random(),
+            domanda: domanda,
+            risposta: risposta,
+            livello: 0,
+            ultimaVisita: null,
+            origine: 'manuale'
+        });
+
+        s83_salvaFlashcard();
+        document.getElementById('fc-domanda').value = '';
+        document.getElementById('fc-risposta').value = '';
+        s83_renderFlashcard();
+        s83_aggiornaDisplayNumDomande();
+        s83_toast('➕ Flashcard aggiunta');
+    }
+    window.aggiungiFlashcard = s83_aggiungiFlashcard;
+
+    function s83_generaFlashcardDaTesto() {
+        const editor = document.getElementById('testo-evidenzia');
+        if (!editor) return;
+
+        const evidenziati = Array.from(editor.querySelectorAll('.evidenziato')).map(s => s.textContent.trim()).filter(t => t.length > 10);
+
+        const testoIntero = editor.innerText || editor.textContent || '';
+        const frasi = testoIntero
+            .replace(/\n+/g, ' . ')
+            .split(/(?<=[.!?])\s+/)
+            .map(f => f.trim())
+            .filter(f => f.length > 25 && f.length < 500);
+
+        let generate = 0;
+        let scartate = 0;
+
+        if (evidenziati.length > 0) {
+            evidenziati.forEach(testo => {
+                const fc = s83_estraiFlashcard(testo);
+                if (fc) { s83_flashcard.push(fc); generate++; } else { scartate++; }
+            });
+        }
+
+        if (frasi.length > 0) {
+            frasi.forEach(frase => {
+                const fc = s83_estraiFlashcard(frase);
+                if (fc) { s83_flashcard.push(fc); generate++; } else { scartate++; }
+            });
+        }
+
+        if (generate === 0) {
+            alert('Non riesco a generare flashcard da questo testo.\n\nProva con:\n• Testo più lungo e discorsivo\n• Frasi con definizioni ("X è Y", "X significa Y")\n• Frasi con "si divide in", "comprende", "secondo [Autore]"\n\nOppure aggiungi le flashcard a mano.');
+            return;
+        }
+
+        s83_salvaFlashcard();
+        s83_renderFlashcard();
+        s83_aggiornaDisplayNumDomande();
+        s83_toast('🤖 Generate ' + generate + ' flashcard (' + scartate + ' frasi non adatte)');
+    }
+    window.generaFlashcardDaTesto = s83_generaFlashcardDaTesto;
+
+    function s83_estraiFlashcard(frase) {
+        frase = frase.trim();
+        if (frase.length < 25) return null;
+
+        let pulita = frase
+            .replace(/\s+/g, ' ')
+            .replace(/^(Inoltre|Pertanto|Quindi|Tuttavia|Comunque|Invece|Dunque|Inoltre,|Pertanto,|Quindi,)\s+/i, '')
+            .replace(/^[-•*]\s*/, '')
+            .trim();
+
+        if (pulita.endsWith('?')) return null;
+
+        const patternDuePunti = pulita.match(/^(.{5,100}?):\s+(.{15,400})$/);
+        if (patternDuePunti) {
+            const titolo = patternDuePunti[1].trim();
+            const contenuto = patternDuePunti[2].trim().replace(/[.,;]$/, '');
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `Cosa riguarda "${titolo}"?`,
+                risposta: contenuto.charAt(0).toUpperCase() + contenuto.slice(1),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        const verbiAccademici = [
+            'rappresenta', 'costituisce', 'richiede', 'richiedono', 'garantisce', 'garantiscono',
+            'si configura come', 'si presta a', 'si prestano a', 'agevola', 'agevolano',
+            'facilita', 'facilitano', 'permette di', 'permettono di', 'consente di', 'consentono di',
+            'implica', 'comporta', 'determina', 'determinano', 'favorisce', 'favoriscono',
+            'si basa su', 'si fonda su', 'si fondano su', 'dipende da', 'dipendono da',
+            'contribuisce a', 'contribuiscono a', 'porta a', 'portano a',
+            'si articola in', 'si articolano in', 'si sviluppa attraverso', 'si sviluppa in',
+            'è volto a', 'è volta a', 'sono volti a', 'sono volte a',
+            'mira a', 'mirano a', 'serve a', 'servono a'
+        ];
+
+        for (const verbo of verbiAccademici) {
+            const regex = new RegExp(`^(.{5,120}?)\\s+${verbo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s+(.{15,400})$`, 'i');
+            const match = pulita.match(regex);
+            if (match) {
+                const soggetto = s83_pulisciSoggetto(match[1]);
+                const predicato = match[2].trim().replace(/[.,;]$/, '');
+                if (soggetto.length >= 3 && predicato.length >= 10) {
+                    let domanda;
+                    if (/^rappresenta|^costituisce/i.test(verbo)) domanda = `Cosa ${verbo} ${soggetto}?`;
+                    else if (/^richiede|^richiedono/i.test(verbo)) domanda = `Cosa richiede ${soggetto}?`;
+                    else if (/^garantisce|^garantiscono/i.test(verbo)) domanda = `Cosa garantisce ${soggetto}?`;
+                    else if (/^permette|^permettono|^consente|^consentono/i.test(verbo)) domanda = `Cosa permette ${soggetto}?`;
+                    else if (/^serve a|^servono a|^mira a|^mirano a/i.test(verbo)) domanda = `A cosa serve ${soggetto}?`;
+                    else if (/^si basa su|^si fonda su|^dipende da/i.test(verbo)) domanda = `Su cosa si basa ${soggetto}?`;
+                    else if (/^si articola in|^si sviluppa/i.test(verbo)) domanda = `Come si articola ${soggetto}?`;
+                    else domanda = `In che modo ${soggetto} ${verbo}?`;
+                    return {
+                        id: Date.now() + Math.random(),
+                        domanda: domanda,
+                        risposta: predicato.charAt(0).toUpperCase() + predicato.slice(1),
+                        livello: 0, ultimaVisita: null, origine: 'auto'
+                    };
+                }
+            }
+        }
+
+        const patternDef = pulita.match(/^(.{3,100}?)\s+(è|sono|significa|indica|consiste in|consiste nel|si definisce come|si riferisce a|si intende per|si intende con)\s+(.{10,400})$/i);
+        if (patternDef) {
+            const soggetto = s83_pulisciSoggetto(patternDef[1]);
+            const verbo = patternDef[2].toLowerCase();
+            const predicato = patternDef[3].trim().replace(/[.,;]$/, '');
+            if (soggetto.length >= 3 && predicato.length >= 10) {
+                return {
+                    id: Date.now() + Math.random(),
+                    domanda: `Cosa ${verbo} ${soggetto}?`,
+                    risposta: predicato.charAt(0).toUpperCase() + predicato.slice(1),
+                    livello: 0, ultimaVisita: null, origine: 'auto'
+                };
+            }
+        }
+
+        const patternDiv = pulita.match(/^(.{5,80}?)\s+(si divide in|si suddivide in|comprende|è composto da|è costituito da|include|contiene|si articola in)\s+(.{10,300})$/i);
+        if (patternDiv) {
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `In cosa ${patternDiv[2].toLowerCase().replace('si ', '')} ${s83_pulisciSoggetto(patternDiv[1])}?`,
+                risposta: patternDiv[3].trim().replace(/[.,;]$/, ''),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        const patternCausa = pulita.match(/^(.{10,100}?)\s+(perché|poiché|in quanto|dato che|in virtù di)\s+(.{15,300})$/i);
+        if (patternCausa) {
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `Perché ${s83_pulisciSoggetto(patternCausa[1]).toLowerCase()}?`,
+                risposta: patternCausa[3].trim().replace(/[.,;]$/, '').charAt(0).toUpperCase() + patternCausa[3].trim().replace(/[.,;]$/, '').slice(1),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        const patternAttr = pulita.match(/^(Secondo|Stando a|Come afferma|Come sostiene|Come evidenzia)\s+(.{2,60}?)[,]\s+(.{15,300})$/i);
+        if (patternAttr) {
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `Cosa afferma ${patternAttr[2].trim()}?`,
+                risposta: patternAttr[3].trim().replace(/[.,;]$/, '').charAt(0).toUpperCase() + patternAttr[3].trim().replace(/[.,;]$/, '').slice(1),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        const patternCar = pulita.match(/^(.{3,80}?)\s+(è caratterizzato da|è caratterizzata da|presenta|mostra|si contraddistingue per)\s+(.{10,250})$/i);
+        if (patternCar) {
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `Quali sono le caratteristiche di ${s83_pulisciSoggetto(patternCar[1])}?`,
+                risposta: patternCar[3].trim().replace(/[.,;]$/, ''),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        const patternData = pulita.match(/^(Nel|Nell'anno|A partire dal)\s+(\d{4})[,]?\s+(.{15,250})$/i);
+        if (patternData) {
+            return {
+                id: Date.now() + Math.random(),
+                domanda: `Cosa è successo nel ${patternData[2]}?`,
+                risposta: patternData[3].trim().replace(/[.,;]$/, '').charAt(0).toUpperCase() + patternData[3].trim().replace(/[.,;]$/, '').slice(1),
+                livello: 0, ultimaVisita: null, origine: 'auto'
+            };
+        }
+
+        if (pulita.length >= 50 && pulita.length <= 350) {
+            const parole = pulita.split(' ');
+            const lunghezzaConcetto = Math.min(8, Math.ceil(parole.length / 3));
+            const concetto = parole.slice(0, lunghezzaConcetto).join(' ').replace(/[.,;:]$/, '');
+            const resto = parole.slice(lunghezzaConcetto).join(' ').trim();
+            if (concetto.length >= 15 && resto.length >= 20) {
+                return {
+                    id: Date.now() + Math.random(),
+                    domanda: `Cosa si può dire riguardo a "${concetto}"?`,
+                    risposta: resto.charAt(0).toUpperCase() + resto.slice(1),
+                    livello: 0, ultimaVisita: null, origine: 'auto'
+                };
+            }
+        }
+
+        return null;
+    }
+
+    function s83_pulisciSoggetto(soggetto) {
+        return soggetto.trim()
+            .replace(/^(Il|Lo|La|I|Gli|Le|Un|Uno|Una)\s+/i, '')
+            .replace(/[.,;:]+$/, '')
+            .trim();
+    }
+
+    function s83_salvaFlashcard() {
+        localStorage.setItem('tesiflash_studio_flashcard', JSON.stringify(s83_flashcard));
+        const counter = document.getElementById('fc-count');
+        if (counter) counter.textContent = s83_flashcard.length;
+    }
+
+    function s83_renderFlashcard() {
+        const container = document.getElementById('lista-flashcard');
+        const counter = document.getElementById('fc-count');
+        if (counter) counter.textContent = s83_flashcard.length;
+        if (!container) return;
+
+        if (s83_flashcard.length === 0) {
+            container.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna flashcard creata.</p>';
+            return;
+        }
+
+        container.innerHTML = s83_flashcard.map(f => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 hover:border-amber-500/50 transition cursor-pointer" onclick="s83_apriModale(${f.id})">
+                <div class="flex justify-between items-start gap-2">
+                    <div class="flex-1">
+                        <p class="text-white text-xs font-bold">${s83_escapeHtml(f.domanda)}</p>
+                        <p class="text-neutral-400 text-xs mt-1">${s83_escapeHtml(f.risposta)}</p>
+                        ${f.origine === 'auto' ? '<p class="text-purple-400 text-[10px] mt-1">🤖 dal testo · clicca per modificare</p>' : '<p class="text-neutral-500 text-[10px] mt-1">✏️ manuale · clicca per modificare</p>'}
+                    </div>
+                    <button onclick="event.stopPropagation(); rimuoviFlashcard(${f.id})" class="text-red-400 hover:text-red-300 text-xs font-bold flex-shrink-0">🗑️</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function s83_apriModale(id) {
+        const fc = s83_flashcard.find(f => f.id === id);
+        if (!fc) return;
+        s83_modificaIdCorrente = id;
+        document.getElementById('s83-modal-domanda').value = fc.domanda;
+        document.getElementById('s83-modal-risposta').value = fc.risposta;
+        const modale = document.getElementById('s83-modal');
+        modale.style.display = 'flex';
+    }
+    window.s83_apriModale = s83_apriModale;
+
+    function s83_salvaModifica() {
+        if (!s83_modificaIdCorrente) return;
+        const fc = s83_flashcard.find(f => f.id === s83_modificaIdCorrente);
+        if (!fc) return;
+
+        const nuovaDomanda = document.getElementById('s83-modal-domanda').value.trim();
+        const nuovaRisposta = document.getElementById('s83-modal-risposta').value.trim();
+
+        if (!nuovaDomanda || !nuovaRisposta) {
+            alert('Domanda e risposta non possono essere vuote.');
+            return;
+        }
+
+        fc.domanda = nuovaDomanda;
+        fc.risposta = nuovaRisposta;
+        s83_salvaFlashcard();
+        s83_renderFlashcard();
+        s83_chiudiModale();
+        s83_toast('✏️ Flashcard modificata');
+    }
+    window.s83_salvaModifica = s83_salvaModifica;
+
+    function s83_chiudiModale() {
+        document.getElementById('s83-modal').style.display = 'none';
+        s83_modificaIdCorrente = null;
+    }
+    window.s83_chiudiModale = s83_chiudiModale;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const modale = document.getElementById('s83-modal');
+        if (modale) {
+            modale.addEventListener('click', function(e) {
+                if (e.target === modale) s83_chiudiModale();
+            });
+        }
+        const modaleQm = document.getElementById('s83-modal-qm');
+        if (modaleQm) {
+            modaleQm.addEventListener('click', function(e) {
+                if (e.target === modaleQm) s83_chiudiModaleQM();
+            });
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modale = document.getElementById('s83-modal');
+            if (modale && modale.style.display === 'flex') s83_chiudiModale();
+            const modaleQm = document.getElementById('s83-modal-qm');
+            if (modaleQm && modaleQm.style.display === 'flex') s83_chiudiModaleQM();
+        }
+    });
+
+    function s83_rimuoviFlashcard(id) {
+        s83_flashcard = s83_flashcard.filter(f => f.id !== id);
+        s83_salvaFlashcard();
+        s83_renderFlashcard();
+        s83_aggiornaDisplayNumDomande();
+    }
+    window.rimuoviFlashcard = s83_rimuoviFlashcard;
+
+    function s83_resetFlashcard() {
+        if (confirm('Cancellare tutte le flashcard?')) {
+            s83_flashcard = [];
+            s83_salvaFlashcard();
+            s83_renderFlashcard();
+            s83_aggiornaDisplayNumDomande();
+        }
+    }
+    window.resetFlashcard = s83_resetFlashcard;
+
+    function s83_avviaStudioFlashcard() {
+        if (s83_flashcard.length === 0) {
+            alert('Crea almeno una flashcard prima di studiare.');
+            return;
+        }
+        s83_mostraStrumento('studio');
+        s83_avviaStudio();
+    }
+    window.avviaStudioFlashcard = s83_avviaStudioFlashcard;
+
+    // ============================================================
+    // STUDIA
+    // ============================================================
+    let s83_studioStato = { mazzo: [], indice: 0, attivo: false, rispostaMostrata: false };
+
+    function s83_avviaStudio() {
+        if (s83_flashcard.length === 0) {
+            alert('Crea almeno una flashcard prima di studiare.');
+            return;
+        }
+
+        s83_studioStato.mazzo = [...s83_flashcard].sort((a, b) => {
+            if (a.livello === 0 && b.livello !== 0) return 1;
+            if (a.livello !== 0 && b.livello === 0) return -1;
+            return b.livello - a.livello;
+        });
+
+        s83_studioStato.indice = 0;
+        s83_studioStato.attivo = true;
+        s83_studioStato.rispostaMostrata = false;
+
+        document.getElementById('studio-fase').textContent = '📖 Studiando...';
+        document.getElementById('studio-bottoni').classList.remove('hidden');
+        document.getElementById('studio-valutazione').classList.add('hidden');
+        document.getElementById('studio-risposta-box').classList.add('hidden');
+
+        s83_mostraCartaStudio();
+    }
+    window.avviaStudio = s83_avviaStudio;
+
+    function s83_mostraCartaStudio() {
+        if (!s83_studioStato.attivo) return;
+        if (s83_studioStato.indice >= s83_studioStato.mazzo.length) {
+            s83_fineStudio();
+            return;
+        }
+
+        const carta = s83_studioStato.mazzo[s83_studioStato.indice];
+        document.getElementById('studio-domanda').textContent = carta.domanda;
+        document.getElementById('studio-risposta').textContent = carta.risposta;
+        document.getElementById('studio-progresso').textContent = `Carta ${s83_studioStato.indice + 1} di ${s83_studioStato.mazzo.length}`;
+
+        const progressBar = document.getElementById('studio-progress-bar');
+        if (progressBar) progressBar.style.width = ((s83_studioStato.indice) / s83_studioStato.mazzo.length * 100) + '%';
+
+        document.getElementById('studio-risposta-box').classList.add('hidden');
+        document.getElementById('studio-bottoni').classList.remove('hidden');
+        document.getElementById('studio-valutazione').classList.add('hidden');
+        s83_studioStato.rispostaMostrata = false;
+    }
+
+    function s83_studioRivela() {
+        if (!s83_studioStato.attivo) return;
+        document.getElementById('studio-risposta-box').classList.remove('hidden');
+        document.getElementById('studio-bottoni').classList.add('hidden');
+        document.getElementById('studio-valutazione').classList.remove('hidden');
+        s83_studioStato.rispostaMostrata = true;
+    }
+    window.studioRivela = s83_studioRivela;
+
+    function s83_studioValuta(livello) {
+        if (!s83_studioStato.attivo || !s83_studioStato.rispostaMostrata) return;
+
+        const carta = s83_studioStato.mazzo[s83_studioStato.indice];
+        const originale = s83_flashcard.find(f => f.id === carta.id);
+        if (originale) {
+            if (livello === 'facile') originale.livello = 1;
+            else if (livello === 'medio') originale.livello = 2;
+            else if (livello === 'difficile') originale.livello = 3;
+            originale.ultimaVisita = new Date().toISOString();
+        }
+
+        s83_salvaFlashcard();
+        s83_studioStato.indice++;
+        s83_mostraCartaStudio();
+    }
+    window.studioValuta = s83_studioValuta;
+
+    function s83_fineStudio() {
+        s83_studioStato.attivo = false;
+        document.getElementById('studio-fase').textContent = '🎉 Sessione completata!';
+        document.getElementById('studio-domanda').textContent = 'Hai finito tutte le carte.';
+        document.getElementById('studio-risposta-box').classList.add('hidden');
+        document.getElementById('studio-bottoni').classList.add('hidden');
+        document.getElementById('studio-valutazione').classList.add('hidden');
+        document.getElementById('studio-progresso').textContent = '';
+        const progressBar = document.getElementById('studio-progress-bar');
+        if (progressBar) progressBar.style.width = '100%';
+        s83_renderFlashcard();
+    }
+
+    function s83_stopStudio() {
+        s83_studioStato.attivo = false;
+        document.getElementById('studio-fase').textContent = '⏹️ Sessione interrotta';
+        document.getElementById('studio-bottoni').classList.add('hidden');
+        document.getElementById('studio-valutazione').classList.add('hidden');
+    }
+    window.stopStudio = s83_stopStudio;
+
+    function s83_resetStudio() {
+        s83_studioStato = { mazzo: [], indice: 0, attivo: false, rispostaMostrata: false };
+        document.getElementById('studio-fase').textContent = 'Premi START per iniziare';
+        document.getElementById('studio-domanda').textContent = '—';
+        document.getElementById('studio-risposta').textContent = '—';
+        document.getElementById('studio-risposta-box').classList.add('hidden');
+        document.getElementById('studio-bottoni').classList.add('hidden');
+        document.getElementById('studio-valutazione').classList.add('hidden');
+        document.getElementById('studio-progresso').textContent = '';
+        const progressBar = document.getElementById('studio-progress-bar');
+        if (progressBar) progressBar.style.width = '0%';
+    }
+    window.resetStudio = s83_resetStudio;
+
+    // ============================================================
+    // QUIZ - TAB AUTO / MANUALE
+    // ============================================================
+    function s83_quizTab(tab) {
+        const tabAuto = document.getElementById('quiz-tab-auto');
+        const tabManuale = document.getElementById('quiz-tab-manuale');
+        const panelAuto = document.getElementById('quiz-panel-auto');
+        const panelManuale = document.getElementById('quiz-panel-manuale');
+
+        if (tab === 'auto') {
+            tabAuto.className = 'flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black';
+            tabManuale.className = 'flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white';
+            panelAuto.classList.remove('hidden');
+            panelManuale.classList.add('hidden');
+        } else {
+            tabAuto.className = 'flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white';
+            tabManuale.className = 'flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black';
+            panelAuto.classList.add('hidden');
+            panelManuale.classList.remove('hidden');
+        }
+    }
+    window.s83_quizTab = s83_quizTab;
+
+    // ============================================================
+    // QUIZ AUTOMATICO
+    // ============================================================
+    let s83_quizStato = { indice: 0, punteggio: 0, attivo: false, domandeGenerate: [] };
+    let s83_numDomande = 10;
+
+    function s83_setNumDomande(n) {
+        if (isNaN(n) || n < 1) n = 1;
+        if (n > 200) n = 200;
+        s83_numDomande = n;
+
+        // Sincronizza TUTTI i pulsanti
+        document.querySelectorAll('.s83-num-btn').forEach(btn => {
+            const isAttivo = parseInt(btn.dataset.num) === n;
+            btn.className = 's83-num-btn font-bold text-xs py-2 rounded-lg transition ' +
+                (isAttivo ? 'bg-amber-500 text-black' : 'bg-neutral-900 border border-neutral-700 text-neutral-300 hover:bg-neutral-700');
+        });
+
+        // Sincronizza il campo personalizzato
+        const custom = document.getElementById('quiz-num-custom');
+        if (custom && parseInt(custom.value) !== n) custom.value = n;
+
+        // Aggiorna il display
+        s83_aggiornaDisplayNumDomande();
+    }
+    window.s83_setNumDomande = s83_setNumDomande;
+
+    function s83_contaDomandeDisponibili() {
+        let totale = 0;
+
+        if (s83_flashcard.length >= 4) {
+            totale += s83_flashcard.length;
+        }
+
+        const editor = document.getElementById('testo-evidenzia');
+        if (editor) {
+            const testo = editor.innerText || editor.textContent || '';
+            const frasi = testo.split(/(?<=[.!?])\s+/).map(f => f.trim()).filter(f => f.length > 40 && f.length < 300);
+            totale += frasi.length;
+        }
+
+        return totale;
+    }
+    window.s83_contaDomandeDisponibili = s83_contaDomandeDisponibili;
+
+    function s83_aggiornaDisplayNumDomande() {
+        const display = document.getElementById('quiz-num-display');
+        if (!display) return;
+        const disponibili = s83_contaDomandeDisponibili();
+        if (s83_numDomande > disponibili) {
+            display.innerHTML = `⚠️ Hai chiesto <strong class="text-amber-400">${s83_numDomande}</strong> domande, ma al momento ne hai a disposizione solo <strong class="text-amber-400">${disponibili}</strong>. Verranno generate tutte quelle disponibili.`;
+            display.className = 'text-amber-400 text-[10px] mt-2';
+        } else {
+            display.innerHTML = `✅ Domande selezionate: <strong class="text-white">${s83_numDomande}</strong> (disponibili: ${disponibili})`;
+            display.className = 'text-neutral-500 text-[10px] mt-2';
+        }
+    }
+    window.s83_aggiornaDisplayNumDomande = s83_aggiornaDisplayNumDomande;
+
+    function s83_generaDomandeQuiz() {
+        const domande = [];
+
+        // A. Dalle flashcard — genera 1 domanda per ogni flashcard
+        if (s83_flashcard.length >= 4) {
+            const flashcardMescolate = [...s83_flashcard].sort(() => Math.random() - 0.5);
+            flashcardMescolate.forEach(fc => {
+                const altri = s83_flashcard.filter(f => f.id !== fc.id);
+                const distrattori = altri.sort(() => Math.random() - 0.5).slice(0, 3).map(f => f.risposta);
+                if (distrattori.length < 3) return;
+                const opzioni = [fc.risposta, ...distrattori].sort(() => Math.random() - 0.5);
+                const corretta = opzioni.indexOf(fc.risposta);
+                domande.push({ domanda: fc.domanda, opzioni: opzioni, corretta: corretta, origine: 'flashcard' });
+            });
+        }
+
+        // B. Dal testo — genera 1 domanda per OGNI frase significativa
+        const editor = document.getElementById('testo-evidenzia');
+        if (editor) {
+            const testoIntero = editor.innerText || editor.textContent || '';
+            const frasi = testoIntero
+                .split(/(?<=[.!?])\s+/)
+                .map(f => f.trim())
+                .filter(f => f.length > 40 && f.length < 300);
+
+            const frasiMescolate = frasi.sort(() => Math.random() - 0.5);
+
+            frasiMescolate.forEach(frase => {
+                const parole = frase.split(' ');
+                if (parole.length < 10) return;
+
+                const taglio = Math.floor(parole.length * 0.6);
+                const primaParte = parole.slice(0, taglio).join(' ');
+                const parteMancante = parole.slice(taglio, taglio + 4).join(' ');
+                const resto = parole.slice(taglio + 4).join(' ');
+                if (parteMancante.length < 3) return;
+
+                const distrattori = ['nessuna delle precedenti', 'tutte le precedenti', 'non è specificato'];
+                const opzioni = [parteMancante, ...distrattori].sort(() => Math.random() - 0.5);
+                const corretta = opzioni.indexOf(parteMancante);
+                domande.push({ domanda: `Completa: "${primaParte} ___ ${resto}"`, opzioni: opzioni, corretta: corretta, origine: 'testo' });
+            });
+        }
+
+        const tutteMescolate = domande.sort(() => Math.random() - 0.5);
+        return tutteMescolate.slice(0, s83_numDomande);
+    }
+
+    function s83_avviaQuiz() {
+        const domande = s83_generaDomandeQuiz();
+        if (domande.length === 0) {
+            alert('Non riesco a generare il quiz.\n\nPer creare un quiz hai bisogno di:\n• Almeno 4 flashcard\n• OPPURE del testo caricato nell\'area "Evidenzia"');
+            return;
+        }
+
+        if (domande.length < s83_numDomande) {
+            const continua = confirm(
+                `⚠️ Hai chiesto ${s83_numDomande} domande, ma al momento ne ho potute generare solo ${domande.length}.\n\n` +
+                `Vuoi continuare con ${domande.length} domande?`
+            );
+            if (!continua) return;
+        }
+
+        s83_quizStato.domandeGenerate = domande;
+        s83_quizStato.indice = 0;
+        s83_quizStato.punteggio = 0;
+        s83_quizStato.attivo = true;
+        document.getElementById('quiz-punteggio').textContent = '';
+        document.getElementById('quiz-feedback').textContent = '';
+        document.getElementById('quiz-contatore').classList.remove('hidden');
+        s83_toast('❓ Quiz generato: ' + domande.length + ' domande');
+        s83_mostraDomandaQuiz();
+    }
+    window.avviaQuiz = s83_avviaQuiz;
+
+    function s83_mostraDomandaQuiz() {
+        if (!s83_quizStato.attivo) return;
+        if (s83_quizStato.indice >= s83_quizStato.domandeGenerate.length) {
+            s83_fineQuiz();
+            return;
+        }
+        const d = s83_quizStato.domandeGenerate[s83_quizStato.indice];
+        document.getElementById('quiz-domanda').textContent = `${s83_quizStato.indice + 1}. ${d.domanda}`;
+        const contatore = document.getElementById('quiz-contatore');
+        if (contatore) contatore.textContent = `Domanda ${s83_quizStato.indice + 1} di ${s83_quizStato.domandeGenerate.length}`;
+
+        const opzioniContainer = document.getElementById('quiz-opzioni');
+        opzioniContainer.innerHTML = d.opzioni.map((op, i) => `
+            <button onclick="rispondiQuiz(${i})" class="w-full text-left bg-neutral-900 border border-neutral-700 text-neutral-300 px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-sm">${s83_escapeHtml(op)}</button>
+        `).join('');
+        document.getElementById('quiz-feedback').textContent = '';
+    }
+
+    function s83_rispondiQuiz(indice) {
+        if (!s83_quizStato.attivo) return;
+        const d = s83_quizStato.domandeGenerate[s83_quizStato.indice];
+        const feedback = document.getElementById('quiz-feedback');
+        document.querySelectorAll('#quiz-opzioni button').forEach((btn, i) => {
+            btn.style.pointerEvents = 'none';
+            if (i === d.corretta) btn.classList.add('bg-green-600', 'text-white', 'border-green-500');
+            else if (i === indice && i !== d.corretta) btn.classList.add('bg-red-600', 'text-white', 'border-red-500');
+        });
+        if (indice === d.corretta) {
+            s83_quizStato.punteggio++;
+            feedback.textContent = '✅ Esatto!';
+            feedback.style.color = '#22c55e';
+        } else {
+            feedback.textContent = `❌ Sbagliato. La risposta corretta era: ${d.opzioni[d.corretta]}`;
+            feedback.style.color = '#ef4444';
+        }
+        s83_quizStato.indice++;
+        setTimeout(s83_mostraDomandaQuiz, 1800);
+    }
+    window.rispondiQuiz = s83_rispondiQuiz;
+
+    function s83_fineQuiz() {
+        s83_quizStato.attivo = false;
+        document.getElementById('quiz-domanda').textContent = '🎉 Quiz completato!';
+        document.getElementById('quiz-opzioni').innerHTML = '';
+        document.getElementById('quiz-feedback').textContent = '';
+        document.getElementById('quiz-punteggio').textContent = `Punteggio: ${s83_quizStato.punteggio} / ${s83_quizStato.domandeGenerate.length}`;
+    }
+
+    function s83_stopQuiz() {
+        s83_quizStato.attivo = false;
+        document.getElementById('quiz-domanda').textContent = '⏹️ Quiz interrotto';
+        document.getElementById('quiz-opzioni').innerHTML = '';
+        document.getElementById('quiz-feedback').textContent = '';
+    }
+    window.stopQuiz = s83_stopQuiz;
+
+    function s83_resetQuiz() {
+        s83_quizStato = { indice: 0, punteggio: 0, attivo: false, domandeGenerate: [] };
+        document.getElementById('quiz-domanda').textContent = 'Premi START per iniziare';
+        document.getElementById('quiz-opzioni').innerHTML = '';
+        document.getElementById('quiz-feedback').textContent = '';
+        document.getElementById('quiz-punteggio').textContent = '';
+        const c = document.getElementById('quiz-contatore');
+        if (c) c.classList.add('hidden');
+    }
+    window.resetQuiz = s83_resetQuiz;
+
+    // ============================================================
+    // QUIZ MANUALE
+    // ============================================================
+    let s83_quizManuale = JSON.parse(localStorage.getItem('tesiflash_studio_quiz_manuale') || '[]');
+    let s83_qmStato = { indice: 0, punteggio: 0, attivo: false, domandeOrdinate: [] };
+    let s83_qmModificaId = null;
+
+    function s83_salvaQuizManuale() {
+        localStorage.setItem('tesiflash_studio_quiz_manuale', JSON.stringify(s83_quizManuale));
+        const counter = document.getElementById('qm-count');
+        if (counter) counter.textContent = s83_quizManuale.length;
+    }
+
+    function s83_aggiungiQuizManuale() {
+        const domanda = document.getElementById('qm-domanda').value.trim();
+        const risposte = [
+            document.getElementById('qm-risp-0').value.trim(),
+            document.getElementById('qm-risp-1').value.trim(),
+            document.getElementById('qm-risp-2').value.trim(),
+            document.getElementById('qm-risp-3').value.trim()
+        ];
+
+        if (!domanda) { alert('Inserisci la domanda.'); return; }
+
+        const rispostePiene = risposte.filter(r => r.length > 0);
+        if (rispostePiene.length < 2) { alert('Inserisci almeno 2 risposte.'); return; }
+
+        const radioCorretta = document.querySelector('input[name="qm-corretta"]:checked');
+        if (!radioCorretta) { alert('Indica quale risposta è corretta.'); return; }
+        const corretta = parseInt(radioCorretta.value);
+        if (!risposte[corretta]) { alert('La risposta corretta non può essere vuota.'); return; }
+
+        s83_quizManuale.push({
+            id: Date.now() + Math.random(),
+            domanda: domanda,
+            risposte: risposte,
+            corretta: corretta
+        });
+
+        s83_salvaQuizManuale();
+        document.getElementById('qm-domanda').value = '';
+        document.getElementById('qm-risp-0').value = '';
+        document.getElementById('qm-risp-1').value = '';
+        document.getElementById('qm-risp-2').value = '';
+        document.getElementById('qm-risp-3').value = '';
+        document.querySelector('input[name="qm-corretta"][value="0"]').checked = true;
+        s83_renderListaQM();
+        s83_toast('➕ Domanda aggiunta');
+    }
+    window.s83_aggiungiQuizManuale = s83_aggiungiQuizManuale;
+
+    function s83_renderListaQM() {
+        const container = document.getElementById('qm-lista');
+        const counter = document.getElementById('qm-count');
+        if (counter) counter.textContent = s83_quizManuale.length;
+        if (!container) return;
+
+        if (s83_quizManuale.length === 0) {
+            container.innerHTML = '<p class="text-neutral-500 text-xs text-center">Nessuna domanda creata.</p>';
+            return;
+        }
+
+        container.innerHTML = s83_quizManuale.map((q, i) => `
+            <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 hover:border-amber-500/50 transition cursor-pointer" onclick="s83_apriModaleQM(${q.id})">
+                <div class="flex justify-between items-start gap-2">
+                    <div class="flex-1">
+                        <p class="text-white text-xs font-bold">${i + 1}. ${s83_escapeHtml(q.domanda)}</p>
+                        <p class="text-green-400 text-[10px] mt-1">✓ ${s83_escapeHtml(q.risposte[q.corretta])}</p>
+                        <p class="text-neutral-500 text-[10px] mt-1">✏️ clicca per modificare</p>
+                    </div>
+                    <button onclick="event.stopPropagation(); s83_rimuoviQM(${q.id})" class="text-red-400 hover:text-red-300 text-xs font-bold flex-shrink-0">🗑️</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function s83_rimuoviQM(id) {
+        s83_quizManuale = s83_quizManuale.filter(q => q.id !== id);
+        s83_salvaQuizManuale();
+        s83_renderListaQM();
+    }
+    window.s83_rimuoviQM = s83_rimuoviQM;
+
+    function s83_apriModaleQM(id) {
+        const q = s83_quizManuale.find(x => x.id === id);
+        if (!q) return;
+        s83_qmModificaId = id;
+        document.getElementById('s83-modal-qm-domanda').value = q.domanda;
+        for (let i = 0; i < 4; i++) {
+            document.getElementById('s83-modal-qm-risp-' + i).value = q.risposte[i] || '';
+            const radio = document.querySelector(`input[name="s83-qm-modal-corretta"][value="${i}"]`);
+            if (radio) radio.checked = (i === q.corretta);
+        }
+        const modale = document.getElementById('s83-modal-qm');
+        modale.style.display = 'flex';
+    }
+    window.s83_apriModaleQM = s83_apriModaleQM;
+
+    function s83_salvaModificaQM() {
+        if (!s83_qmModificaId) return;
+        const q = s83_quizManuale.find(x => x.id === s83_qmModificaId);
+        if (!q) return;
+
+        const domanda = document.getElementById('s83-modal-qm-domanda').value.trim();
+        const risposte = [
+            document.getElementById('s83-modal-qm-risp-0').value.trim(),
+            document.getElementById('s83-modal-qm-risp-1').value.trim(),
+            document.getElementById('s83-modal-qm-risp-2').value.trim(),
+            document.getElementById('s83-modal-qm-risp-3').value.trim()
+        ];
+        if (!domanda) { alert('Inserisci la domanda.'); return; }
+        const radioCorretta = document.querySelector('input[name="s83-qm-modal-corretta"]:checked');
+        if (!radioCorretta) { alert('Indica la risposta corretta.'); return; }
+        const corretta = parseInt(radioCorretta.value);
+        if (!risposte[corretta]) { alert('La risposta corretta non può essere vuota.'); return; }
+
+        q.domanda = domanda;
+        q.risposte = risposte;
+        q.corretta = corretta;
+        s83_salvaQuizManuale();
+        s83_renderListaQM();
+        s83_chiudiModaleQM();
+        s83_toast('✏️ Domanda modificata');
+    }
+    window.s83_salvaModificaQM = s83_salvaModificaQM;
+
+    function s83_chiudiModaleQM() {
+        document.getElementById('s83-modal-qm').style.display = 'none';
+        s83_qmModificaId = null;
+    }
+    window.s83_chiudiModaleQM = s83_chiudiModaleQM;
+
+    function s83_avviaQuizManuale() {
+        if (s83_quizManuale.length === 0) {
+            alert('Crea almeno una domanda prima di iniziare.');
+            return;
+        }
+
+        s83_qmStato.domandeOrdinate = [...s83_quizManuale].sort(() => Math.random() - 0.5);
+        s83_qmStato.indice = 0;
+        s83_qmStato.punteggio = 0;
+        s83_qmStato.attivo = true;
+        document.getElementById('qm-punteggio').textContent = '';
+        document.getElementById('qm-feedback').textContent = '';
+        document.getElementById('qm-contatore').classList.remove('hidden');
+        s83_mostraDomandaQM();
+    }
+    window.s83_avviaQuizManuale = s83_avviaQuizManuale;
+
+    function s83_mostraDomandaQM() {
+        if (!s83_qmStato.attivo) return;
+        if (s83_qmStato.indice >= s83_qmStato.domandeOrdinate.length) {
+            s83_fineQM();
+            return;
+        }
+        const d = s83_qmStato.domandeOrdinate[s83_qmStato.indice];
+        document.getElementById('qm-domanda-attiva').textContent = `${s83_qmStato.indice + 1}. ${d.domanda}`;
+        const contatore = document.getElementById('qm-contatore');
+        if (contatore) contatore.textContent = `Domanda ${s83_qmStato.indice + 1} di ${s83_qmStato.domandeOrdinate.length}`;
+
+        const risposteVisibili = d.risposte.map((r, i) => ({ testo: r, indiceOriginale: i })).filter(x => x.testo.length > 0);
+        const mescolate = risposteVisibili.sort(() => Math.random() - 0.5);
+
+        const container = document.getElementById('qm-opzioni');
+        container.innerHTML = mescolate.map(r => `
+            <button onclick="s83_rispondiQM(${r.indiceOriginale})" class="w-full text-left bg-neutral-900 border border-neutral-700 text-neutral-300 px-4 py-2 rounded-lg hover:bg-neutral-700 transition text-sm">${s83_escapeHtml(r.testo)}</button>
+        `).join('');
+        document.getElementById('qm-feedback').textContent = '';
+    }
+
+    function s83_rispondiQM(indiceRisposta) {
+        if (!s83_qmStato.attivo) return;
+        const d = s83_qmStato.domandeOrdinate[s83_qmStato.indice];
+        const feedback = document.getElementById('qm-feedback');
+        document.querySelectorAll('#qm-opzioni button').forEach(btn => {
+            btn.style.pointerEvents = 'none';
+        });
+        if (indiceRisposta === d.corretta) {
+            s83_qmStato.punteggio++;
+            feedback.textContent = '✅ Esatto!';
+            feedback.style.color = '#22c55e';
+        } else {
+            feedback.textContent = `❌ Sbagliato. La risposta corretta era: ${d.risposte[d.corretta]}`;
+            feedback.style.color = '#ef4444';
+        }
+        s83_qmStato.indice++;
+        setTimeout(s83_mostraDomandaQM, 1800);
+    }
+    window.s83_rispondiQM = s83_rispondiQM;
+
+    function s83_fineQM() {
+        s83_qmStato.attivo = false;
+        document.getElementById('qm-domanda-attiva').textContent = '🎉 Quiz completato!';
+        document.getElementById('qm-opzioni').innerHTML = '';
+        document.getElementById('qm-feedback').textContent = '';
+        document.getElementById('qm-punteggio').textContent = `Punteggio: ${s83_qmStato.punteggio} / ${s83_qmStato.domandeOrdinate.length}`;
+    }
+
+    function s83_resetQuizManuale() {
+        if (!confirm('Cancellare tutte le domande create manualmente?')) return;
+        s83_quizManuale = [];
+        s83_salvaQuizManuale();
+        s83_renderListaQM();
+        s83_qmStato = { indice: 0, punteggio: 0, attivo: false, domandeOrdinate: [] };
+        document.getElementById('qm-domanda-attiva').textContent = 'Premi START per iniziare';
+        document.getElementById('qm-opzioni').innerHTML = '';
+        document.getElementById('qm-feedback').textContent = '';
+        document.getElementById('qm-punteggio').textContent = '';
+        const c = document.getElementById('qm-contatore');
+        if (c) c.classList.add('hidden');
+    }
+    window.s83_resetQuizManuale = s83_resetQuizManuale;
+
+    // ============================================================
+    // AZIONI GLOBALI
+    // ============================================================
+    function s83_stampaTutto() {
+        s83_mostraGuidaSePrimaVolta();
+        const testo = document.getElementById('testo-evidenzia').innerHTML;
+        const flashcard = s83_flashcard;
+        const quizManuale = s83_quizManuale;
+
+        const finestra = window.open('', '_blank');
+        finestra.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>Strumenti di Studio Attivo — Esportazione</title>
+                <style>
+                    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+                    body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; color: #000; background: #fff; }
+                    h1 { font-size: 22px; border-bottom: 3px solid #f59e0b; padding-bottom: 10px; margin-bottom: 30px; }
+                    h2 { font-size: 16px; color: #b45309; margin-top: 30px; border-bottom: 1px solid #e5e5e5; padding-bottom: 5px; }
+                    .evidenziato { padding: 2px 4px; border-radius: 2px; display: inline; }
+                    .fc { background: #f9fafb; border-left: 4px solid #f59e0b; padding: 12px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; page-break-inside: avoid; }
+                    .fc .dom { font-weight: bold; color: #111; margin-bottom: 4px; }
+                    .fc .ris { color: #555; }
+                    .fc .num { color: #f59e0b; font-weight: bold; }
+                    .qm { background: #f9fafb; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; page-break-inside: avoid; }
+                    .qm .dom { font-weight: bold; color: #111; margin-bottom: 6px; }
+                    .qm .risp { color: #555; margin-left: 15px; font-size: 14px; }
+                    .qm .corretta { color: #16a34a; font-weight: bold; }
+                    .testo-box { background: #fafafa; padding: 16px; border: 1px solid #e5e5e5; border-radius: 6px; }
+                    @media print { body { margin: 20px; } h2 { page-break-after: avoid; } * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } }
+                </style>
+            </head>
+            <body>
+                <h1>📖 Strumenti di Studio Attivo</h1>
+                <p style="color:#666;font-size:12px;">Esportato il ${new Date().toLocaleDateString('it-IT')} alle ${new Date().toLocaleTimeString('it-IT')}</p>
+
+                <h2>📝 Testo di Studio</h2>
+                <div class="testo-box">${testo || '<em style="color:#999;">Nessun testo caricato</em>'}</div>
+
+                <h2>📇 Flashcard (${flashcard.length})</h2>
+                ${flashcard.length === 0 ? '<em style="color:#999;">Nessuna flashcard</em>' : flashcard.map((f, i) => `
+                    <div class="fc">
+                        <div class="dom"><span class="num">${i + 1}.</span> ${s83_escapeHtml(f.domanda)}</div>
+                        <div class="ris">💡 ${s83_escapeHtml(f.risposta)}</div>
+                    </div>
+                `).join('')}
+
+                <h2>❓ Quiz Manuale (${quizManuale.length})</h2>
+                ${quizManuale.length === 0 ? '<em style="color:#999;">Nessuna domanda</em>' : quizManuale.map((q, i) => `
+                    <div class="qm">
+                        <div class="dom">${i + 1}. ${s83_escapeHtml(q.domanda)}</div>
+                        ${q.risposte.map((r, j) => r ? `<div class="risp ${j === q.corretta ? 'corretta' : ''}">${j === q.corretta ? '✓ ' : '○ '}${s83_escapeHtml(r)}</div>` : '').join('')}
+                    </div>
+                `).join('')}
+            </body>
+            </html>
+        `);
+        finestra.document.close();
+        setTimeout(() => { finestra.print(); }, 500);
+        s83_toast('🖨️ Aperta finestra di stampa');
+    }
+    window.stampaTutto = s83_stampaTutto;
+
+    function s83_esportaFlashcard() {
+        if (s83_flashcard.length === 0) {
+            alert('Nessuna flashcard da esportare.');
+            return;
+        }
+        const contenuto = s83_flashcard.map(f => f.domanda + '\t' + f.risposta).join('\n');
+        const blob = new Blob([contenuto], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'flashcard-' + new Date().toISOString().split('T')[0] + '.txt';
+        a.click();
+        URL.revokeObjectURL(url);
+        s83_toast('📤 Esportate ' + s83_flashcard.length + ' flashcard');
+    }
+    window.esportaFlashcard = s83_esportaFlashcard;
+
+    function s83_pulisciTutto() {
+        if (!confirm('⚠️ ATTENZIONE!\n\nStai per cancellare:\n• Tutto il testo di studio\n• Tutte le evidenziazioni\n• Tutte le flashcard\n• Tutti i quiz manuali\n• Tutti i progressi\n\nL\'operazione è IRREVERSIBILE.\n\nContinuare?')) {
+            return;
+        }
+
+        s83_flashcard = [];
+        s83_quizManuale = [];
+        localStorage.removeItem('tesiflash_studio_flashcard');
+        localStorage.removeItem('tesiflash_studio_testo');
+        localStorage.removeItem('tesiflash_studio_quiz_manuale');
+
+        document.getElementById('testo-evidenzia').innerHTML = 'Incolla qui il tuo testo di studio...';
+
+        s83_renderFlashcard();
+        s83_renderListaQM();
+        s83_aggiornaListaEvidenziazioni();
+        s83_aggiornaContatore();
+        s83_resetStudio();
+        s83_resetQuiz();
+        s83_resetQuizManuale();
+        s83_aggiornaDisplayNumDomande();
+
+        s83_toast('🗑️ Tutto pulito');
+    }
+    window.pulisciTutto = s83_pulisciTutto;
+</script>
        
         
         
@@ -17932,7 +19706,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
     <!-- ==================== JAVASCRIPT COMPLETO ==================== -->
     <script>
-        const TOTAL_PAGES = 82;
+        const TOTAL_PAGES = 83;
         let currentPage = 1;
 
         // ==================== CONFIGURAZIONE AUDIO ====================
@@ -18032,7 +19806,8 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
             {page:79, label:'📊 Dashboard di Produttività'},
             {page:80, label:'🎓 Cos\'è Tesi Flash Uni App?'},
             {page:81, label:'📅 Calendario'},
-            {page:82, label:'🧠 Pausa Mentale'}
+            {page:82, label:'🧠 Pausa Mentale'},
+            {page:83, label:'🎓 Strumenti di Studio Attivo'}
             
             
            
