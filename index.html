@@ -14687,7 +14687,7 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 </script>
 
 
-<!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE ========== -->
+<!-- ========== PAGINA 77: GENERATORE DI CITAZIONI ACCADEMICHE v2 ========== -->
 <div class="page" data-page="77">
     <div class="max-w-2xl mx-auto px-4 py-8">
         <span class="heading-font text-amber-400 text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -14697,69 +14697,36 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         <h2 class="heading-font font-bold text-2xl md:text-3xl text-white mb-4 flex items-center gap-2">
             <i data-lucide="book-marked" style="width:28px;height:28px;color:#f59e0b;"></i> 📚 Generatore di Citazioni Accademiche
         </h2>
-        
+
         <p class="text-neutral-300 text-sm leading-relaxed mb-4">
-            Inserisci i dati della tua fonte e ottieni la citazione perfetta in <strong class="text-white">APA, MLA, Chicago e Harvard</strong>. Copia e incolla direttamente nella tua tesi.
+            Crea citazioni perfette in <strong class="text-white">APA 7, MLA 9, Chicago 17 e Harvard</strong>. Salva le fonti nel tuo archivio personale ed esporta la bibliografia completa con un click.
         </p>
 
-        <!-- BADGE TRUST -->
         <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 mb-6 flex items-center gap-3">
             <i data-lucide="shield-check" style="width:24px;height:24px;color:#22c55e;"></i>
             <div>
                 <p class="text-green-400 font-bold text-sm">🔒 Privacy Totale Garantita</p>
-                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. Tutto avviene sul tuo browser.</p>
+                <p class="text-neutral-400 text-xs">Nessun account, nessuna email. Le tue fonti restano salvate sul tuo browser.</p>
             </div>
         </div>
 
-        <div class="flash-strategy">
-            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Non sbagliare mai una citazione. Copia, incolla, consegna."</p>
-        </div>
-
-        <!-- PANORAMICA RAPIDA -->
-        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
-            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="info" style="width:20px;height:20px;"></i> 📖 Come Funziona
-            </h3>
-            <p class="text-neutral-300 text-sm mb-4">
-                In 3 semplici passi hai la citazione perfetta:
-            </p>
-            <div class="space-y-2">
-                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white mb-1 text-xs">1️⃣ SCEGLI IL TIPO DI FONTE</p>
-                    <p class="text-neutral-400 text-xs">Libro, articolo, sito web o capitolo di libro.</p>
-                </div>
-                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white mb-1 text-xs">2️⃣ INSERISCI I DATI</p>
-                    <p class="text-neutral-400 text-xs">Autore, anno, titolo, editore/rivista, DOI o URL.</p>
-                </div>
-                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white mb-1 text-xs">3️⃣ COPIA LA CITAZIONE</p>
-                    <p class="text-neutral-400 text-xs">Scegli lo stile (APA, MLA, Chicago, Harvard) e copia con un clic.</p>
-                </div>
-            </div>
+        <div class="flash-strategy mb-6">
+            <p class="text-amber-200 font-semibold">⚡ FLASH STRATEGY: "Non sbagliare mai una citazione. Genera, salva, esporta."</p>
         </div>
 
         <!-- ============================================================
              SEZIONE 1: TIPO DI FONTE
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
-            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 1. Scegli il Tipo di Fonte
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="book-open" style="width:20px;height:20px;"></i> 1. Scegli il tipo di fonte
             </h3>
-            
+
             <div class="grid grid-cols-2 gap-3">
-                <button onclick="setTipoFonte('libro')" id="btn-libro" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
-                    📖 Libro
-                </button>
-                <button onclick="setTipoFonte('articolo')" id="btn-articolo" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
-                    📄 Articolo
-                </button>
-                <button onclick="setTipoFonte('sito')" id="btn-sito" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
-                    🌐 Sito Web
-                </button>
-                <button onclick="setTipoFonte('capitolo')" id="btn-capitolo" class="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-center hover:border-amber-500 transition text-sm text-white">
-                    📑 Capitolo di Libro
-                </button>
+                <button onclick="cx_setTipo('libro')" id="cx-btn-libro" class="cx-tipo-btn bg-neutral-900 border-2 border-amber-500 rounded-lg p-3 text-center transition text-sm text-white">📖 Libro</button>
+                <button onclick="cx_setTipo('articolo')" id="cx-btn-articolo" class="cx-tipo-btn bg-neutral-900 border-2 border-neutral-700 rounded-lg p-3 text-center hover:border-amber-500 transition text-sm text-white">📄 Articolo</button>
+                <button onclick="cx_setTipo('sito')" id="cx-btn-sito" class="cx-tipo-btn bg-neutral-900 border-2 border-neutral-700 rounded-lg p-3 text-center hover:border-amber-500 transition text-sm text-white">🌐 Sito Web</button>
+                <button onclick="cx_setTipo('capitolo')" id="cx-btn-capitolo" class="cx-tipo-btn bg-neutral-900 border-2 border-neutral-700 rounded-lg p-3 text-center hover:border-amber-500 transition text-sm text-white">📑 Capitolo</button>
             </div>
         </div>
 
@@ -14767,29 +14734,104 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
              SEZIONE 2: DATI DELLA FONTE
              ============================================================ -->
         <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
-            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="edit" style="width:20px;height:20px;"></i> 2. Inserisci i Dati della Fonte
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="edit-3" style="width:20px;height:20px;"></i> 2. Dati della fonte
             </h3>
 
+            <!-- AUTORI DINAMICI -->
+            <div class="mb-4">
+                <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autori</label>
+                <p class="text-neutral-500 text-[10px] mb-2">Formato: Cognome, Nome — uno per riga. Es: Rossi, Marco</p>
+                <div id="cx-autori-container" class="space-y-2 mb-2">
+                    <!-- input autori generati dinamicamente -->
+                </div>
+                <button onclick="cx_aggiungiAutore()" class="text-amber-400 hover:text-amber-300 text-xs font-bold transition">➕ Aggiungi autore</button>
+            </div>
+
+            <!-- CAMPI SPECIFICI PER TIPO -->
             <div id="campi-fonte" class="space-y-3">
-                <!-- I campi cambiano in base al tipo di fonte -->
+                <!-- generati dinamicamente in base al tipo -->
             </div>
         </div>
 
         <!-- ============================================================
-             SEZIONE 3: RISULTATO
+             SEZIONE 3: RISULTATI
              ============================================================ -->
         <div class="bg-neutral-800 border border-amber-500/40 rounded-xl p-5 mb-6 relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">📋 CITAZIONI</div>
-            <h3 class="text-amber-400 font-bold text-base mb-2 flex items-center gap-2">
-                <i data-lucide="copy" style="width:20px;height:20px;"></i> 3. La Tua Citazione
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="copy" style="width:20px;height:20px;"></i> 3. Citazioni generate
             </h3>
-            <p class="text-neutral-300 text-sm mb-4">
-                Clicca su "Copia" per copiare la citazione nello stile desiderato.
-            </p>
+
+            <!-- SELEZIONE STILE -->
+            <div class="bg-neutral-900 rounded-lg p-1 mb-4 flex">
+                <button onclick="cx_setStile('apa')" id="cx-stile-apa" class="flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black">APA 7</button>
+                <button onclick="cx_setStile('mla')" id="cx-stile-mla" class="flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white">MLA 9</button>
+                <button onclick="cx_setStile('chicago')" id="cx-stile-chicago" class="flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white">Chicago 17</button>
+                <button onclick="cx_setStile('harvard')" id="cx-stile-harvard" class="flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white">Harvard</button>
+            </div>
 
             <div id="risultati-citazioni" class="space-y-3">
-                <p class="text-neutral-500 text-xs text-center">Inserisci i dati della fonte per vedere la citazione</p>
+                <p class="text-neutral-500 text-xs text-center">Compila i campi per vedere la citazione</p>
+            </div>
+
+            <button onclick="cx_salvaFonte()" id="cx-btn-salva" class="w-full bg-green-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-green-500 transition text-sm mt-4 hidden">
+                💾 Salva nell'archivio
+            </button>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 4: ARCHIVIO FONTI
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+                <h3 class="text-amber-400 font-bold text-base flex items-center gap-2">
+                    <i data-lucide="archive" style="width:20px;height:20px;"></i> 4. Archivio fonti (<span id="cx-archivio-count">0</span>)
+                </h3>
+                <p class="text-neutral-500 text-[10px]">💡 Clicca su una fonte per modificarla</p>
+            </div>
+
+            <!-- FILTRI -->
+            <div class="flex gap-2 mb-3 flex-wrap">
+                <input type="text" id="cx-filtro-testo" placeholder="🔍 Cerca per autore, titolo, anno..." oninput="cx_renderArchivio()" class="flex-1 min-w-[150px] bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-xs focus:border-amber-500 focus:outline-none">
+                <select id="cx-filtro-tipo" onchange="cx_renderArchivio()" class="bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-xs focus:border-amber-500 focus:outline-none">
+                    <option value="tutti">Tutti i tipi</option>
+                    <option value="libro">📖 Libri</option>
+                    <option value="articolo">📄 Articoli</option>
+                    <option value="sito">🌐 Siti</option>
+                    <option value="capitolo">📑 Capitoli</option>
+                </select>
+                <select id="cx-filtro-ordine" onchange="cx_renderArchivio()" class="bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-xs focus:border-amber-500 focus:outline-none">
+                    <option value="recente">Più recenti</option>
+                    <option value="alfabetico">A-Z per autore</option>
+                    <option value="anno">Anno</option>
+                </select>
+            </div>
+
+            <div id="cx-archivio-lista" class="space-y-2 max-h-80 overflow-y-auto">
+                <p class="text-neutral-500 text-xs text-center py-4">Nessuna fonte salvata.</p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             SEZIONE 5: EXPORT BIBLIOGRAFIA
+             ============================================================ -->
+        <div class="bg-neutral-800 border border-neutral-700 rounded-xl p-5 mb-6">
+            <h3 class="text-amber-400 font-bold text-base mb-3 flex items-center gap-2">
+                <i data-lucide="download" style="width:20px;height:20px;"></i> 5. Esporta la bibliografia
+            </h3>
+            <p class="text-neutral-400 text-xs mb-3">Genera la bibliografia completa in uno stile specifico, ordinata alfabeticamente, pronta da incollare nella tesi.</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                <button onclick="cx_esportaBibliografia('apa')" class="bg-blue-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-blue-500 transition text-xs">📄 APA 7</button>
+                <button onclick="cx_esportaBibliografia('mla')" class="bg-blue-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-blue-500 transition text-xs">📄 MLA 9</button>
+                <button onclick="cx_esportaBibliografia('chicago')" class="bg-blue-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-blue-500 transition text-xs">📄 Chicago 17</button>
+                <button onclick="cx_esportaBibliografia('harvard')" class="bg-blue-600 text-white font-bold px-3 py-2 rounded-lg hover:bg-blue-500 transition text-xs">📄 Harvard</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <button onclick="cx_esportaJSON()" class="bg-teal-600 text-white font-bold px-4 py-3 rounded-lg hover:bg-teal-500 transition text-sm">📥 Export JSON (backup)</button>
+                <button onclick="cx_resetArchivio()" class="bg-red-700 text-white font-bold px-4 py-3 rounded-lg hover:bg-red-600 transition text-sm">🗑️ Azzera archivio</button>
             </div>
         </div>
 
@@ -14797,8 +14839,9 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
         <h3 class="heading-font font-bold text-lg text-white mb-3 mt-6">✅ Checklist Citazioni</h3>
         <div class="bg-neutral-800 rounded-lg p-4 space-y-2">
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho generato la citazione per una fonte</span></label>
-            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho copiato la citazione nello stile corretto</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho salvato almeno 5 fonti nell'archivio</span></label>
             <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho verificato il DOI o l'URL</span></label>
+            <label class="checklist-item flex items-start gap-3 cursor-pointer"><input type="checkbox" class="mt-1 accent-amber-500"><span class="text-neutral-200 text-sm">Ho esportato la bibliografia completa</span></label>
         </div>
 
     </div>
@@ -14806,321 +14849,806 @@ Nella Tabella \ref{tab:risultati} si può osservare che...</pre>
 
 <script>
     // ============================================================
-    // JAVASCRIPT: GENERATORE DI CITAZIONI ACCADEMICHE
+    // GENERATORE CITAZIONI ACCADEMICHE v2
+    // Archivio + In-text + Export bibliografia + Multi-autore
     // ============================================================
-    
-    let tipoFonte = 'libro';
 
-    function setTipoFonte(tipo) {
-        tipoFonte = tipo;
-        
-        // Reset bottoni
-        document.querySelectorAll('[id^="btn-"]').forEach(btn => {
-            btn.classList.remove('border-amber-500');
-            btn.classList.add('border-neutral-700');
-        });
-        
-        // Attiva bottone selezionato
-        document.getElementById('btn-' + tipo).classList.remove('border-neutral-700');
-        document.getElementById('btn-' + tipo).classList.add('border-amber-500');
-        
-        renderCampiFonte();
+    let cx_tipoFonte = 'libro';
+    let cx_stile = 'apa';
+    let cx_autori = [''];
+    let cx_fonteInModifica = null;
+    let cx_archivio = JSON.parse(localStorage.getItem('tesiflash_citazioni_archivio') || '[]');
+
+    // ============================================================
+    // INIZIALIZZAZIONE
+    // ============================================================
+    function cx_init() {
+        cx_renderAutori();
+        cx_renderCampiFonte();
+        cx_renderArchivio();
+        cx_aggiornaContatoreArchivio();
     }
 
-    function renderCampiFonte() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', cx_init);
+    } else {
+        cx_init();
+    }
+
+    // ============================================================
+    // SELEZIONE TIPO FONTE
+    // ============================================================
+    function cx_setTipo(tipo) {
+        cx_tipoFonte = tipo;
+        document.querySelectorAll('.cx-tipo-btn').forEach(btn => {
+            btn.className = 'cx-tipo-btn bg-neutral-900 border-2 border-neutral-700 rounded-lg p-3 text-center hover:border-amber-500 transition text-sm text-white';
+        });
+        document.getElementById('cx-btn-' + tipo).className = 'cx-tipo-btn bg-neutral-900 border-2 border-amber-500 rounded-lg p-3 text-center transition text-sm text-white';
+        cx_renderCampiFonte();
+    }
+    window.cx_setTipo = cx_setTipo;
+
+    function cx_setStile(stile) {
+        cx_stile = stile;
+        ['apa', 'mla', 'chicago', 'harvard'].forEach(s => {
+            const btn = document.getElementById('cx-stile-' + s);
+            if (s === stile) {
+                btn.className = 'flex-1 text-xs font-bold py-2 rounded-md transition bg-amber-500 text-black';
+            } else {
+                btn.className = 'flex-1 text-xs font-bold py-2 rounded-md transition text-neutral-400 hover:text-white';
+            }
+        });
+        cx_generaCitazioni();
+    }
+    window.cx_setStile = cx_setStile;
+
+    // ============================================================
+    // AUTORI DINAMICI
+    // ============================================================
+    function cx_aggiungiAutore() {
+        cx_autori.push('');
+        cx_renderAutori();
+    }
+    window.cx_aggiungiAutore = cx_aggiungiAutore;
+
+    function cx_rimuoviAutore(idx) {
+        if (cx_autori.length <= 1) {
+            cx_autori[0] = '';
+        } else {
+            cx_autori.splice(idx, 1);
+        }
+        cx_renderAutori();
+        cx_generaCitazioni();
+    }
+    window.cx_rimuoviAutore = cx_rimuoviAutore;
+
+    function cx_renderAutori() {
+        const container = document.getElementById('cx-autori-container');
+        container.innerHTML = cx_autori.map((a, i) => `
+            <div class="flex gap-2 items-center">
+                <input type="text" value="${cx_escapeHtml(a)}" oninput="cx_aggiornaAutore(${i}, this.value)" placeholder="es. Rossi, Marco" class="flex-1 bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                ${cx_autori.length > 1 ? `<button onclick="cx_rimuoviAutore(${i})" class="text-red-400 hover:text-red-300 text-sm font-bold flex-shrink-0 w-8 h-8 flex items-center justify-center" title="Rimuovi">✕</button>` : ''}
+            </div>
+        `).join('');
+    }
+
+    function cx_aggiornaAutore(idx, valore) {
+        cx_autori[idx] = valore;
+        cx_generaCitazioni();
+    }
+    window.cx_aggiornaAutore = cx_aggiornaAutore;
+
+    // ============================================================
+    // CAMPI FONTE (dipendono dal tipo)
+    // ============================================================
+    function cx_renderCampiFonte() {
         const container = document.getElementById('campi-fonte');
-        
-        if (tipoFonte === 'libro') {
+
+        if (cx_tipoFonte === 'libro') {
             container.innerHTML = `
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (Cognome, Nome)</label>
-                    <input type="text" id="fonte-autore" placeholder="es. Rossi, Marco" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
-                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-anno" placeholder="es. 2024" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del Libro</label>
-                    <input type="text" id="fonte-titolo" placeholder="es. L'Impatto dei Social Media" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del libro</label>
+                    <input type="text" id="cx-titolo" placeholder="es. L'Impatto dei Social Media" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Città</label>
+                        <input type="text" id="cx-citta" placeholder="es. Milano" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
+                        <input type="text" id="cx-editore" placeholder="es. Mondadori" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Città</label>
-                    <input type="text" id="fonte-citta" placeholder="es. Milano" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
-                    <input type="text" id="fonte-editore" placeholder="es. Mondadori" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine (facoltative)</label>
+                    <input type="text" id="cx-pagine" placeholder="es. 45" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
             `;
-        } else if (tipoFonte === 'articolo') {
+        } else if (cx_tipoFonte === 'articolo') {
             container.innerHTML = `
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (Cognome, Nome)</label>
-                    <input type="text" id="fonte-autore" placeholder="es. Rossi, Marco" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
-                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-anno" placeholder="es. 2024" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Titolo dell'Articolo</label>
-                    <input type="text" id="fonte-titolo" placeholder="es. L'Impatto dei Social Media sulle PMI" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Titolo dell'articolo</label>
+                    <input type="text" id="cx-titolo" placeholder="es. L'Impatto dei Social Media sulle PMI" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📰 Nome della Rivista</label>
-                    <input type="text" id="fonte-rivista" placeholder="es. Rivista di Sociologia" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📰 Nome della rivista</label>
+                    <input type="text" id="cx-rivista" placeholder="es. Journal of Business Research" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div class="grid grid-cols-3 gap-3">
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">📊 Volume</label>
-                        <input type="text" id="fonte-volume" placeholder="es. 15" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <input type="text" id="cx-volume" placeholder="es. 15" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">🔢 Numero</label>
-                        <input type="text" id="fonte-numero" placeholder="es. 2" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <input type="text" id="cx-numero" placeholder="es. 2" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine</label>
-                        <input type="text" id="fonte-pagine" placeholder="es. 45-60" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                        <input type="text" id="cx-pagine" placeholder="es. 45-60" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                     </div>
                 </div>
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">🔗 DOI (facoltativo)</label>
-                    <input type="text" id="fonte-doi" placeholder="es. 10.1016/j.jbusres.2024.113456" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-doi" placeholder="es. 10.1016/j.jbusres.2024.113456" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
             `;
-        } else if (tipoFonte === 'sito') {
+        } else if (cx_tipoFonte === 'sito') {
             container.innerHTML = `
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore (se presente)</label>
-                    <input type="text" id="fonte-autore" placeholder="es. Verdi, Luca" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno (o data completa)</label>
+                    <input type="text" id="cx-anno" placeholder="es. 2024 o 15 marzo 2024" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
-                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🌐 Titolo della pagina</label>
+                    <input type="text" id="cx-titolo" placeholder="es. Social Media e PMI Italiane" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🌐 Titolo della Pagina</label>
-                    <input type="text" id="fonte-titolo" placeholder="es. Social Media e PMI" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Nome del Sito</label>
-                    <input type="text" id="fonte-sito" placeholder="es. Repubblica.it" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Nome del sito</label>
+                    <input type="text" id="cx-sito" placeholder="es. Il Sole 24 Ore" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">🔗 URL</label>
-                    <input type="text" id="fonte-url" placeholder="es. https://www.esempio.com" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-url" placeholder="es. https://www.esempio.com/articolo" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
             `;
-        } else if (tipoFonte === 'capitolo') {
+        } else if (cx_tipoFonte === 'capitolo') {
             container.innerHTML = `
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Autore del Capitolo (Cognome, Nome)</label>
-                    <input type="text" id="fonte-autore" placeholder="es. Bianchi, Giulia" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
-                </div>
-                <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📅 Anno</label>
-                    <input type="number" id="fonte-anno" placeholder="es. 2024" min="1900" max="2030" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-anno" placeholder="es. 2024" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📑 Titolo del Capitolo</label>
-                    <input type="text" id="fonte-titolo" placeholder="es. Il Marketing Digitale" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📑 Titolo del capitolo</label>
+                    <input type="text" id="cx-titolo" placeholder="es. Il Marketing Digitale" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del Libro</label>
-                    <input type="text" id="fonte-libro" placeholder="es. Strategie di Marketing" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📖 Titolo del libro</label>
+                    <input type="text" id="cx-libro" placeholder="es. Strategie di Marketing" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
                 <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">✍️ Curatore (se presente)</label>
-                    <input type="text" id="fonte-curatore" placeholder="es. a cura di Rossi, Mario" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <label class="text-neutral-300 text-xs font-bold mb-1 block">👥 Curatore (facoltativo)</label>
+                    <input type="text" id="cx-curatore" placeholder="es. Rossi, Mario" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
-                <div>
-                    <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
-                    <input type="text" id="fonte-editore" placeholder="es. Mondadori" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">🏢 Città</label>
+                        <input type="text" id="cx-citta" placeholder="es. Milano" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="text-neutral-300 text-xs font-bold mb-1 block">📚 Editore</label>
+                        <input type="text" id="cx-editore" placeholder="es. Mondadori" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    </div>
                 </div>
                 <div>
                     <label class="text-neutral-300 text-xs font-bold mb-1 block">📄 Pagine</label>
-                    <input type="text" id="fonte-pagine" placeholder="es. 45-60" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <input type="text" id="cx-pagine" placeholder="es. 45-60" oninput="cx_generaCitazioni()" class="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-white text-sm focus:border-amber-500 focus:outline-none">
                 </div>
             `;
         }
-        
-        // Aggiungi event listener per aggiornare in tempo reale
-        container.querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', generaCitazioni);
-        });
-        
-        // Reset risultati
-        document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Inserisci i dati della fonte per vedere la citazione</p>';
+
+        cx_generaCitazioni();
     }
 
-    function getValore(id) {
+    // ============================================================
+    // GET VALORI
+    // ============================================================
+    function cx_get(id) {
         const el = document.getElementById(id);
         return el ? el.value.trim() : '';
     }
 
-    function generaCitazioni() {
-        const autore = getValore('fonte-autore');
-        const anno = getValore('fonte-anno');
-        
-        if (!autore || !anno) {
-            return;
-        }
-        
-        let risultato = '';
-        
-        if (tipoFonte === 'libro') {
-            const titolo = getValore('fonte-titolo');
-            const citta = getValore('fonte-citta');
-            const editore = getValore('fonte-editore');
-            
-            if (!titolo || !citta || !editore) return;
-            
-            risultato = `
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📖 APA 7ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). *${titolo}*. ${citta}: ${editore}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📖 MLA 9ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. *${titolo}*. ${editore}, ${anno}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📖 Chicago 17ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. *${titolo}*. ${citta}: ${editore}, ${anno}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📖 Harvard</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). *${titolo}*. ${citta}: ${editore}.</pre>
-                    </div>
-                </div>
-            `;
-        } else if (tipoFonte === 'articolo') {
-            const titolo = getValore('fonte-titolo');
-            const rivista = getValore('fonte-rivista');
-            const volume = getValore('fonte-volume');
-            const numero = getValore('fonte-numero');
-            const pagine = getValore('fonte-pagine');
-            const doi = getValore('fonte-doi');
-            
-            if (!titolo || !rivista) return;
-            
-            risultato = `
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📄 APA 7ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). ${titolo}. *${rivista}*, ${volume}${numero ? '(' + numero + ')' : ''}${pagine ? ', ' + pagine : ''}.${doi ? ' https://doi.org/' + doi : ''}</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📄 MLA 9ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titolo}." *${rivista}*, vol. ${volume}${numero ? ', no. ' + numero : ''}, ${anno}, pp. ${pagine}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📄 Chicago 17ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titolo}." *${rivista}* ${volume}${numero ? ', no. ' + numero : ''} (${anno}): ${pagine}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📄 Harvard</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). "${titolo}," *${rivista}*, ${volume}${numero ? '(' + numero + ')' : ''}, pp. ${pagine}.</pre>
-                    </div>
-                </div>
-            `;
-        } else if (tipoFonte === 'sito') {
-            const titolo = getValore('fonte-titolo');
-            const sito = getValore('fonte-sito');
-            const url = getValore('fonte-url');
-            
-            if (!titolo || !url) return;
-            
-            risultato = `
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">🌐 APA 7ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo} (${anno}). *${titolo}*. ${sito}. ${url}</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">🌐 MLA 9ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || '"' + titolo + '"'}. "${titolo}." *${sito}*, ${anno}, ${url}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">🌐 Chicago 17ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo}. "${titolo}." *${sito}*. ${anno}. ${url}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">🌐 Harvard</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore || titolo} (${anno}). *${titolo}*. Disponibile su: ${url} (Accesso: oggi).</pre>
-                    </div>
-                </div>
-            `;
-        } else if (tipoFonte === 'capitolo') {
-            // ============================================================
-            // BLOCO PER CAPITOLO DI LIBRO - CORREZIONE BUG
-            // ============================================================
-            const titoloCapitolo = getValore('fonte-titolo');
-            const titoloLibro = getValore('fonte-libro');
-            const curatore = getValore('fonte-curatore');
-            const editore = getValore('fonte-editore');
-            const pagine = getValore('fonte-pagine');
-            
-            if (!titoloCapitolo || !titoloLibro || !editore) return;
-            
-            const curatoreFormattato = curatore ? curatore.replace('a cura di ', '') : '';
-            
-            risultato = `
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📑 APA 7ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). ${titoloCapitolo}. In ${curatore ? curatore + ', ' : ''}*${titoloLibro}* (pp. ${pagine}). ${editore}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📑 MLA 9ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titoloCapitolo}." *${titoloLibro}*, ${curatore ? 'a cura di ' + curatoreFormattato + ', ' : ''}${editore}, ${anno}, pp. ${pagine}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📑 Chicago 17ª Ed.</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore}. "${titoloCapitolo}." In *${titoloLibro}*, ${curatore ? 'a cura di ' + curatoreFormattato + ', ' : ''}${pagine}. ${editore}, ${anno}.</pre>
-                    </div>
-                </div>
-                <div class="bg-neutral-900/60 p-4 rounded-lg border border-neutral-800">
-                    <p class="font-bold text-white text-xs mb-2">📑 Harvard</p>
-                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="copyPrompt(this)">
-                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${autore} (${anno}). "${titoloCapitolo}," in ${curatore ? curatore + ', ' : ''}*${titoloLibro}*, ${editore}, pp. ${pagine}.</pre>
-                    </div>
-                </div>
-            `;
-        }
-        
-        document.getElementById('risultati-citazioni').innerHTML = risultato || '<p class="text-neutral-500 text-xs text-center">Compila tutti i campi per vedere la citazione</p>';
+    function cx_getAutoriPuliti() {
+        return cx_autori.map(a => a.trim()).filter(a => a.length > 0);
     }
 
-    // Inizializza con tipo libro
-    setTipoFonte('libro');
-</script>
+    function cx_escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
 
+    // ============================================================
+    // FORMATTAZIONE AUTORI (per stile)
+    // ============================================================
+    function cx_formattaAutori(autori, stile, inText = false) {
+        if (autori.length === 0) return '';
+
+        if (inText) {
+            // Citazione nel testo
+            const cognomi = autori.map(a => a.split(',')[0].trim());
+            if (cognomi.length === 1) return cognomi[0];
+            if (cognomi.length === 2) {
+                if (stile === 'apa' || stile === 'harvard') return cognomi[0] + ' & ' + cognomi[1];
+                if (stile === 'mla') return cognomi[0] + ' and ' + cognomi[1];
+                if (stile === 'chicago') return cognomi[0] + ' and ' + cognomi[1];
+            }
+            // 3+ autori
+            if (stile === 'apa' || stile === 'harvard') return cognomi[0] + ' et al.';
+            if (stile === 'mla') return cognomi[0] + ' et al.';
+            if (stile === 'chicago') return cognomi[0] + ' et al.';
+            return cognomi[0];
+        }
+
+        // Bibliografia
+        if (autori.length === 1) {
+            return autori[0];
+        }
+
+        if (autori.length === 2) {
+            if (stile === 'apa') return autori[0] + ', & ' + autori[1];
+            if (stile === 'mla') return autori[0] + ', and ' + autori[1];
+            if (stile === 'chicago') return autori[0] + ', and ' + autori[1];
+            if (stile === 'harvard') return autori[0] + ' and ' + autori[1];
+        }
+
+        // 3+ autori
+        if (autori.length === 3) {
+            if (stile === 'apa') return autori[0] + ', ' + autori[1] + ', & ' + autori[2];
+            if (stile === 'mla') return autori[0] + ', et al.';
+            if (stile === 'chicago') return autori[0] + ', ' + autori[1] + ', and ' + autori[2];
+            if (stile === 'harvard') return autori[0] + ', ' + autori[1] + ' and ' + autori[2];
+        }
+
+        // 4+
+        if (stile === 'mla' || stile === 'chicago') return autori[0] + ', et al.';
+        // APA e Harvard: fino a 20 autori, poi ...
+        if (autori.length <= 20) {
+            return autori.slice(0, -1).join(', ') + ', & ' + autori[autori.length - 1];
+        }
+        return autori.slice(0, 19).join(', ') + ', ... ' + autori[autori.length - 1];
+    }
+
+    // ============================================================
+    // GENERAZIONE CITAZIONI
+    // ============================================================
+    function cx_generaCitazioni() {
+        const autori = cx_getAutoriPuliti();
+        const anno = cx_get('cx-anno');
+
+        // Nessun campo compilato → nascondi
+        if (autori.length === 0 && !anno) {
+            document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Compila i campi per vedere la citazione</p>';
+            document.getElementById('cx-btn-salva').classList.add('hidden');
+            return;
+        }
+
+        let voceBibliografia = '';
+        let citazioneInText = '';
+        let citazioneConPagina = '';
+
+        const autoriBibliografia = cx_formattaAutori(autori, cx_stile, false);
+        const autoriInText = cx_formattaAutori(autori, cx_stile, true);
+
+        if (cx_tipoFonte === 'libro') {
+            const titolo = cx_get('cx-titolo');
+            const citta = cx_get('cx-citta');
+            const editore = cx_get('cx-editore');
+            const pagine = cx_get('cx-pagine');
+
+            if (!titolo) {
+                document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Aggiungi il titolo del libro</p>';
+                document.getElementById('cx-btn-salva').classList.add('hidden');
+                return;
+            }
+
+            if (cx_stile === 'apa') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). *${titolo}*. ${editore}.`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine})` : `(${autoriInText}, ${anno})`;
+            } else if (cx_stile === 'mla') {
+                voceBibliografia = `${autoriBibliografia}. *${titolo}*. ${editore}, ${anno}.`;
+                citazioneInText = `(${autoriInText}${pagine ? ' ' + pagine : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'chicago') {
+                voceBibliografia = `${autoriBibliografia}. *${titolo}*. ${citta}: ${editore}, ${anno}.`;
+                citazioneInText = `(${autoriInText} ${anno}${pagine ? ', ' + pagine : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'harvard') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). *${titolo}*. ${citta}: ${editore}.`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine})` : `(${autoriInText}, ${anno})`;
+            }
+        } else if (cx_tipoFonte === 'articolo') {
+            const titolo = cx_get('cx-titolo');
+            const rivista = cx_get('cx-rivista');
+            const volume = cx_get('cx-volume');
+            const numero = cx_get('cx-numero');
+            const pagine = cx_get('cx-pagine');
+            const doi = cx_get('cx-doi');
+
+            if (!titolo || !rivista) {
+                document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Aggiungi titolo e rivista</p>';
+                document.getElementById('cx-btn-salva').classList.add('hidden');
+                return;
+            }
+
+            if (cx_stile === 'apa') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). ${titolo}. *${rivista}*${volume ? ', ' + volume : ''}${numero ? '(' + numero + ')' : ''}${pagine ? ', ' + pagine : ''}.${doi ? ' https://doi.org/' + doi : ''}`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine.split('-')[0]})` : `(${autoriInText}, ${anno})`;
+            } else if (cx_stile === 'mla') {
+                voceBibliografia = `${autoriBibliografia}. "${titolo}." *${rivista}*${volume ? ', vol. ' + volume : ''}${numero ? ', no. ' + numero : ''}, ${anno}${pagine ? ', pp. ' + pagine : ''}.`;
+                citazioneInText = `(${autoriInText}${pagine ? ' ' + pagine.split('-')[0] : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'chicago') {
+                voceBibliografia = `${autoriBibliografia}. "${titolo}." *${rivista}*${volume ? ' ' + volume : ''}${numero ? ', no. ' + numero : ''} (${anno})${pagine ? ': ' + pagine : ''}.`;
+                citazioneInText = `(${autoriInText} ${anno}${pagine ? ', ' + pagine.split('-')[0] : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'harvard') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). "${titolo}," *${rivista}*${volume ? ', ' + volume : ''}${numero ? '(' + numero + ')' : ''}${pagine ? ', pp. ' + pagine : ''}.`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine.split('-')[0]})` : `(${autoriInText}, ${anno})`;
+            }
+        } else if (cx_tipoFonte === 'sito') {
+            const titolo = cx_get('cx-titolo');
+            const sito = cx_get('cx-sito');
+            const url = cx_get('cx-url');
+
+            if (!titolo) {
+                document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Aggiungi il titolo della pagina</p>';
+                document.getElementById('cx-btn-salva').classList.add('hidden');
+                return;
+            }
+
+            const autoreDisplay = autori.length > 0 ? autoriBibliografia : (sito || titolo);
+
+            if (cx_stile === 'apa') {
+                voceBibliografia = `${autoreDisplay} (${anno}). *${titolo}*. ${sito}.${url ? ' ' + url : ''}`;
+                citazioneInText = autori.length > 0 ? `(${autoriInText}, ${anno})` : `(${titolo}, ${anno})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'mla') {
+                voceBibliografia = `${autoreDisplay}. "${titolo}." *${sito}*, ${anno}${url ? ', ' + url : ''}.`;
+                citazioneInText = autori.length > 0 ? `(${autoriInText})` : `("${titolo}")`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'chicago') {
+                voceBibliografia = `${autoreDisplay}. "${titolo}." *${sito}*${anno ? ' (' + anno + ')' : ''}.${url ? ' ' + url : ''}`;
+                citazioneInText = autori.length > 0 ? `(${autoriInText} ${anno})` : `("${titolo}")`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'harvard') {
+                voceBibliografia = `${autoreDisplay} (${anno}). *${titolo}*. Disponibile su: ${url} (Accesso: ${new Date().toLocaleDateString('it-IT')}).`;
+                citazioneInText = autori.length > 0 ? `(${autoriInText}, ${anno})` : `(${titolo}, ${anno})`;
+                citazioneConPagina = citazioneInText;
+            }
+        } else if (cx_tipoFonte === 'capitolo') {
+            const titolo = cx_get('cx-titolo');
+            const libro = cx_get('cx-libro');
+            const curatore = cx_get('cx-curatore');
+            const citta = cx_get('cx-citta');
+            const editore = cx_get('cx-editore');
+            const pagine = cx_get('cx-pagine');
+
+            if (!titolo || !libro || !editore) {
+                document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Aggiungi titolo, libro ed editore</p>';
+                document.getElementById('cx-btn-salva').classList.add('hidden');
+                return;
+            }
+
+            const curatoreClean = curatore ? cx_formattaAutori([curatore], cx_stile, false) : '';
+
+            if (cx_stile === 'apa') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). ${titolo}. In ${curatoreClean ? curatoreClean + ' (a cura di), ' : ''}*${libro}*${pagine ? ' (pp. ' + pagine + ')' : ''}. ${editore}.`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine.split('-')[0]})` : `(${autoriInText}, ${anno})`;
+            } else if (cx_stile === 'mla') {
+                voceBibliografia = `${autoriBibliografia}. "${titolo}." *${libro}*${curatoreClean ? ', edited by ' + curatoreClean : ''}, ${editore}, ${anno}${pagine ? ', pp. ' + pagine : ''}.`;
+                citazioneInText = `(${autoriInText}${pagine ? ' ' + pagine.split('-')[0] : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'chicago') {
+                voceBibliografia = `${autoriBibliografia}. "${titolo}." In *${libro}*${curatoreClean ? ', edited by ' + curatoreClean : ''}${pagine ? ', ' + pagine : ''}. ${citta}: ${editore}, ${anno}.`;
+                citazioneInText = `(${autoriInText} ${anno}${pagine ? ', ' + pagine.split('-')[0] : ''})`;
+                citazioneConPagina = citazioneInText;
+            } else if (cx_stile === 'harvard') {
+                voceBibliografia = `${autoriBibliografia} (${anno}). "${titolo}," in ${curatoreClean ? curatoreClean + ' (a cura di), ' : ''}*${libro}*. ${citta}: ${editore}${pagine ? ', pp. ' + pagine : ''}.`;
+                citazioneInText = `(${autoriInText}, ${anno})`;
+                citazioneConPagina = pagine ? `(${autoriInText}, ${anno}, p. ${pagine.split('-')[0]})` : `(${autoriInText}, ${anno})`;
+            }
+        }
+
+        // Render risultati
+        const nomeStili = { apa: 'APA 7ª Ed.', mla: 'MLA 9ª Ed.', chicago: 'Chicago 17ª Ed.', harvard: 'Harvard' };
+
+        document.getElementById('risultati-citazioni').innerHTML = `
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-amber-500/40">
+                <p class="font-bold text-amber-400 text-xs mb-2 flex items-center gap-2">📖 Voce bibliografia (${nomeStili[cx_stile]})</p>
+                <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="cx_copia(this)" title="Clicca per copiare">
+                    <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${cx_escapeHtml(voceBibliografia)}</pre>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900/60 p-4 rounded-lg border border-blue-500/40">
+                <p class="font-bold text-blue-400 text-xs mb-2 flex items-center gap-2">💬 Citazione nel testo</p>
+                <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="cx_copia(this)" title="Clicca per copiare">
+                    <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${cx_escapeHtml(citazioneInText)}</pre>
+                </div>
+            </div>
+
+            ${citazioneConPagina !== citazioneInText ? `
+                <div class="bg-neutral-900/60 p-4 rounded-lg border border-green-500/40">
+                    <p class="font-bold text-green-400 text-xs mb-2 flex items-center gap-2">📄 Citazione con pagina</p>
+                    <div class="prompt-box bg-neutral-950 border border-neutral-700 rounded-lg p-3" onclick="cx_copia(this)" title="Clicca per copiare">
+                        <pre class="text-neutral-200 text-xs whitespace-pre-wrap">${cx_escapeHtml(citazioneConPagina)}</pre>
+                    </div>
+                </div>
+            ` : ''}
+        `;
+
+        document.getElementById('cx-btn-salva').classList.remove('hidden');
+    }
+    window.cx_generaCitazioni = cx_generaCitazioni;
+
+    // ============================================================
+    // COPIA
+    // ============================================================
+    function cx_copia(el) {
+        const testo = el.querySelector('pre').textContent;
+        navigator.clipboard.writeText(testo).then(() => {
+            cx_toast('📋 Copiato negli appunti!');
+        }).catch(() => {
+            cx_toast('⚠️ Errore copia');
+        });
+    }
+    window.cx_copia = cx_copia;
+
+    // ============================================================
+    // SALVA NELL'ARCHIVIO
+    // ============================================================
+    function cx_salvaFonte() {
+        const autori = cx_getAutoriPuliti();
+        const anno = cx_get('cx-anno');
+
+        if (autori.length === 0 && !anno) {
+            alert('Compila almeno autore o anno.');
+            return;
+        }
+
+        const dati = {
+            id: cx_fonteInModifica || Date.now() + Math.random(),
+            tipo: cx_tipoFonte,
+            autori: autori,
+            anno: anno,
+            titolo: cx_get('cx-titolo'),
+            citta: cx_get('cx-citta'),
+            editore: cx_get('cx-editore'),
+            rivista: cx_get('cx-rivista'),
+            volume: cx_get('cx-volume'),
+            numero: cx_get('cx-numero'),
+            pagine: cx_get('cx-pagine'),
+            doi: cx_get('cx-doi'),
+            sito: cx_get('cx-sito'),
+            url: cx_get('cx-url'),
+            libro: cx_get('cx-libro'),
+            curatore: cx_get('cx-curatore'),
+            salvato: new Date().toISOString()
+        };
+
+        if (cx_fonteInModifica) {
+            const idx = cx_archivio.findIndex(f => f.id === cx_fonteInModifica);
+            if (idx !== -1) cx_archivio[idx] = dati;
+            cx_toast('💾 Fonte aggiornata');
+        } else {
+            cx_archivio.push(dati);
+            cx_toast('💾 Fonte salvata nell\'archivio');
+        }
+
+        cx_salvaArchivio();
+        cx_renderArchivio();
+        cx_aggiornaContatoreArchivio();
+
+        // Reset form
+        cx_resetForm();
+        cx_fonteInModifica = null;
+        document.getElementById('cx-btn-salva').textContent = '💾 Salva nell\'archivio';
+    }
+    window.cx_salvaFonte = cx_salvaFonte;
+
+    function cx_resetForm() {
+        cx_autori = [''];
+        cx_renderAutori();
+        cx_renderCampiFonte();
+        document.getElementById('risultati-citazioni').innerHTML = '<p class="text-neutral-500 text-xs text-center">Compila i campi per vedere la citazione</p>';
+        document.getElementById('cx-btn-salva').classList.add('hidden');
+    }
+
+    // ============================================================
+    // ARCHIVIO
+    // ============================================================
+    function cx_salvaArchivio() {
+        localStorage.setItem('tesiflash_citazioni_archivio', JSON.stringify(cx_archivio));
+    }
+
+    function cx_aggiornaContatoreArchivio() {
+        const el = document.getElementById('cx-archivio-count');
+        if (el) el.textContent = cx_archivio.length;
+    }
+
+    function cx_renderArchivio() {
+        const container = document.getElementById('cx-archivio-lista');
+        if (!container) return;
+
+        const filtroTesto = (document.getElementById('cx-filtro-testo')?.value || '').toLowerCase();
+        const filtroTipo = document.getElementById('cx-filtro-tipo')?.value || 'tutti';
+        const filtroOrdine = document.getElementById('cx-filtro-ordine')?.value || 'recente';
+
+        let lista = [...cx_archivio];
+
+        // Filtro tipo
+        if (filtroTipo !== 'tutti') {
+            lista = lista.filter(f => f.tipo === filtroTipo);
+        }
+
+        // Filtro testo
+        if (filtroTesto) {
+            lista = lista.filter(f => {
+                const autoreStr = (f.autori || []).join(' ').toLowerCase();
+                const titoloStr = (f.titolo || '').toLowerCase();
+                return autoreStr.includes(filtroTesto) || titoloStr.includes(filtroTesto) || (f.anno || '').includes(filtroTesto);
+            });
+        }
+
+        // Ordinamento
+        if (filtroOrdine === 'alfabetico') {
+            lista.sort((a, b) => {
+                const aAutore = (a.autori && a.autori[0]) || '';
+                const bAutore = (b.autori && b.autori[0]) || '';
+                return aAutore.localeCompare(bAutore);
+            });
+        } else if (filtroOrdine === 'anno') {
+            lista.sort((a, b) => (b.anno || '').localeCompare(a.anno || ''));
+        } else {
+            lista.sort((a, b) => new Date(b.salvato) - new Date(a.salvato));
+        }
+
+        if (lista.length === 0) {
+            container.innerHTML = '<p class="text-neutral-500 text-xs text-center py-4">Nessuna fonte trovata.</p>';
+            return;
+        }
+
+        const iconeTipo = { libro: '📖', articolo: '📄', sito: '🌐', capitolo: '📑' };
+
+        container.innerHTML = lista.map(f => {
+            const autoriStr = (f.autori || []).join('; ') || '—';
+            const titoloStr = f.titolo || '—';
+            const annoStr = f.anno || '—';
+            const tipoStr = iconeTipo[f.tipo] || '📌';
+
+            return `
+                <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 hover:border-amber-500/50 transition">
+                    <div class="flex justify-between items-start gap-2">
+                        <div class="flex-1 cursor-pointer" onclick="cx_caricaFonte(${f.id})">
+                            <div class="flex items-center gap-2 mb-1 flex-wrap">
+                                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-neutral-800 border border-neutral-700 text-neutral-300">${tipoStr} ${f.tipo}</span>
+                                <span class="text-neutral-500 text-[10px]">${annoStr}</span>
+                            </div>
+                            <p class="text-white text-xs font-bold">${cx_escapeHtml(titoloStr)}</p>
+                            <p class="text-neutral-400 text-[10px] mt-0.5">${cx_escapeHtml(autoriStr)}</p>
+                        </div>
+                        <div class="flex gap-1 flex-shrink-0">
+                            <button onclick="cx_eliminaFonte(${f.id})" class="text-red-400 hover:text-red-300 text-xs font-bold w-7 h-7 flex items-center justify-center" title="Elimina">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+    window.cx_renderArchivio = cx_renderArchivio;
+
+    function cx_caricaFonte(id) {
+        const fonte = cx_archivio.find(f => f.id === id);
+        if (!fonte) return;
+
+        cx_fonteInModifica = id;
+        cx_tipoFonte = fonte.tipo;
+        cx_autori = fonte.autori && fonte.autori.length > 0 ? [...fonte.autori] : [''];
+
+        // Aggiorna UI tipo
+        cx_setTipo(fonte.tipo);
+
+        // Render autori
+        cx_renderAutori();
+
+        // Compila campi
+        setTimeout(() => {
+            if (document.getElementById('cx-anno')) document.getElementById('cx-anno').value = fonte.anno || '';
+            if (document.getElementById('cx-titolo')) document.getElementById('cx-titolo').value = fonte.titolo || '';
+            if (document.getElementById('cx-citta')) document.getElementById('cx-citta').value = fonte.citta || '';
+            if (document.getElementById('cx-editore')) document.getElementById('cx-editore').value = fonte.editore || '';
+            if (document.getElementById('cx-rivista')) document.getElementById('cx-rivista').value = fonte.rivista || '';
+            if (document.getElementById('cx-volume')) document.getElementById('cx-volume').value = fonte.volume || '';
+            if (document.getElementById('cx-numero')) document.getElementById('cx-numero').value = fonte.numero || '';
+            if (document.getElementById('cx-pagine')) document.getElementById('cx-pagine').value = fonte.pagine || '';
+            if (document.getElementById('cx-doi')) document.getElementById('cx-doi').value = fonte.doi || '';
+            if (document.getElementById('cx-sito')) document.getElementById('cx-sito').value = fonte.sito || '';
+            if (document.getElementById('cx-url')) document.getElementById('cx-url').value = fonte.url || '';
+            if (document.getElementById('cx-libro')) document.getElementById('cx-libro').value = fonte.libro || '';
+            if (document.getElementById('cx-curatore')) document.getElementById('cx-curatore').value = fonte.curatore || '';
+
+            cx_generaCitazioni();
+            document.getElementById('cx-btn-salva').textContent = '💾 Aggiorna fonte';
+            cx_toast('✏️ Fonte caricata per la modifica');
+        }, 50);
+    }
+    window.cx_caricaFonte = cx_caricaFonte;
+
+    function cx_eliminaFonte(id) {
+        if (!confirm('Eliminare questa fonte dall\'archivio?')) return;
+        cx_archivio = cx_archivio.filter(f => f.id !== id);
+        cx_salvaArchivio();
+        cx_renderArchivio();
+        cx_aggiornaContatoreArchivio();
+        cx_toast('🗑️ Fonte eliminata');
+    }
+    window.cx_eliminaFonte = cx_eliminaFonte;
+
+    function cx_resetArchivio() {
+        if (!confirm('⚠️ Cancellare TUTTE le fonti dall\'archivio?\n\nL\'operazione è irreversibile.')) return;
+        cx_archivio = [];
+        cx_salvaArchivio();
+        cx_renderArchivio();
+        cx_aggiornaContatoreArchivio();
+        cx_toast('🗑️ Archivio azzerato');
+    }
+    window.cx_resetArchivio = cx_resetArchivio;
+
+    // ============================================================
+    // GENERAZIONE BIBLIOGRAFIA (dall'archivio)
+    // ============================================================
+    function cx_generaVoceBibliografia(fonte, stile) {
+        const autori = fonte.autori || [];
+        const autoriBib = cx_formattaAutori(autori, stile, false);
+
+        if (fonte.tipo === 'libro') {
+            if (stile === 'apa') return `${autoriBib} (${fonte.anno}). *${fonte.titolo}*. ${fonte.editore}.`;
+            if (stile === 'mla') return `${autoriBib}. *${fonte.titolo}*. ${fonte.editore}, ${fonte.anno}.`;
+            if (stile === 'chicago') return `${autoriBib}. *${fonte.titolo}*. ${fonte.citta}: ${fonte.editore}, ${fonte.anno}.`;
+            if (stile === 'harvard') return `${autoriBib} (${fonte.anno}). *${fonte.titolo}*. ${fonte.citta}: ${fonte.editore}.`;
+        } else if (fonte.tipo === 'articolo') {
+            const doi = fonte.doi ? (stile === 'apa' ? ` https://doi.org/${fonte.doi}` : '') : '';
+            if (stile === 'apa') return `${autoriBib} (${fonte.anno}). ${fonte.titolo}. *${fonte.rivista}*${fonte.volume ? ', ' + fonte.volume : ''}${fonte.numero ? '(' + fonte.numero + ')' : ''}${fonte.pagine ? ', ' + fonte.pagine : ''}.${doi}`;
+            if (stile === 'mla') return `${autoriBib}. "${fonte.titolo}." *${fonte.rivista}*${fonte.volume ? ', vol. ' + fonte.volume : ''}${fonte.numero ? ', no. ' + fonte.numero : ''}, ${fonte.anno}${fonte.pagine ? ', pp. ' + fonte.pagine : ''}.`;
+            if (stile === 'chicago') return `${autoriBib}. "${fonte.titolo}." *${fonte.rivista}*${fonte.volume ? ' ' + fonte.volume : ''}${fonte.numero ? ', no. ' + fonte.numero : ''} (${fonte.anno})${fonte.pagine ? ': ' + fonte.pagine : ''}.`;
+            if (stile === 'harvard') return `${autoriBib} (${fonte.anno}). "${fonte.titolo}," *${fonte.rivista}*${fonte.volume ? ', ' + fonte.volume : ''}${fonte.numero ? '(' + fonte.numero + ')' : ''}${fonte.pagine ? ', pp. ' + fonte.pagine : ''}.`;
+        } else if (fonte.tipo === 'sito') {
+            const autoreDisplay = autori.length > 0 ? autoriBib : (fonte.sito || fonte.titolo);
+            if (stile === 'apa') return `${autoreDisplay} (${fonte.anno}). *${fonte.titolo}*. ${fonte.sito}.${fonte.url ? ' ' + fonte.url : ''}`;
+            if (stile === 'mla') return `${autoreDisplay}. "${fonte.titolo}." *${fonte.sito}*, ${fonte.anno}${fonte.url ? ', ' + fonte.url : ''}.`;
+            if (stile === 'chicago') return `${autoreDisplay}. "${fonte.titolo}." *${fonte.sito}*${fonte.anno ? ' (' + fonte.anno + ')' : ''}.${fonte.url ? ' ' + fonte.url : ''}`;
+            if (stile === 'harvard') return `${autoreDisplay} (${fonte.anno}). *${fonte.titolo}*. Disponibile su: ${fonte.url} (Accesso: ${new Date().toLocaleDateString('it-IT')}).`;
+        } else if (fonte.tipo === 'capitolo') {
+            const curatoreClean = fonte.curatore ? cx_formattaAutori([fonte.curatore], stile, false) : '';
+            if (stile === 'apa') return `${autoriBib} (${fonte.anno}). ${fonte.titolo}. In ${curatoreClean ? curatoreClean + ' (a cura di), ' : ''}*${fonte.libro}*${fonte.pagine ? ' (pp. ' + fonte.pagine + ')' : ''}. ${fonte.editore}.`;
+            if (stile === 'mla') return `${autoriBib}. "${fonte.titolo}." *${fonte.libro}*${curatoreClean ? ', edited by ' + curatoreClean : ''}, ${fonte.editore}, ${fonte.anno}${fonte.pagine ? ', pp. ' + fonte.pagine : ''}.`;
+            if (stile === 'chicago') return `${autoriBib}. "${fonte.titolo}." In *${fonte.libro}*${curatoreClean ? ', edited by ' + curatoreClean : ''}${fonte.pagine ? ', ' + fonte.pagine : ''}. ${fonte.citta}: ${fonte.editore}, ${fonte.anno}.`;
+            if (stile === 'harvard') return `${autoriBib} (${fonte.anno}). "${fonte.titolo}," in ${curatoreClean ? curatoreClean + ' (a cura di), ' : ''}*${fonte.libro}*. ${fonte.citta}: ${fonte.editore}${fonte.pagine ? ', pp. ' + fonte.pagine : ''}.`;
+        }
+        return '';
+    }
+
+    function cx_esportaBibliografia(stile) {
+        if (cx_archivio.length === 0) {
+            alert('Nessuna fonte nell\'archivio. Salva almeno una fonte prima di esportare.');
+            return;
+        }
+
+        // Genera voci
+        const voci = cx_archivio
+            .map(f => ({ autore: (f.autori && f.autori[0]) || '', testo: cx_generaVoceBibliografia(f, stile) }))
+            .filter(v => v.testo)
+            .sort((a, b) => a.autore.localeCompare(b.autore));
+
+        const nomeStile = { apa: 'APA 7', mla: 'MLA 9', chicago: 'Chicago 17', harvard: 'Harvard' }[stile];
+        const titolo = `Bibliografia (${nomeStile})`;
+
+        const contenuto = `${titolo}\n${'='.repeat(titolo.length)}\n\n` +
+            voci.map(v => v.testo.replace(/\*/g, '')).join('\n\n') +
+            `\n\n---\nGenerate ${voci.length} voci · ${new Date().toLocaleDateString('it-IT')}`;
+
+        const finestra = window.open('', '_blank');
+        finestra.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>${titolo}</title>
+                <style>
+                    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+                    body { font-family: Georgia, serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.7; color: #000; background: #fff; }
+                    h1 { font-size: 22px; border-bottom: 3px solid #f59e0b; padding-bottom: 10px; margin-bottom: 10px; }
+                    .subtitle { color: #666; font-size: 12px; margin-bottom: 30px; }
+                    .voce { margin-bottom: 16px; text-indent: -20px; padding-left: 20px; font-size: 14px; line-height: 1.6; page-break-inside: avoid; }
+                    @media print { body { margin: 20px; } }
+                </style>
+            </head>
+            <body>
+                <h1>📚 ${titolo}</h1>
+                <p class="subtitle">${voci.length} fonti · Generate il ${new Date().toLocaleDateString('it-IT')} alle ${new Date().toLocaleTimeString('it-IT')}</p>
+                ${voci.map(v => `<div class="voce">${cx_escapeHtml(v.testo.replace(/\*/g, ''))}</div>`).join('')}
+                <hr style="margin-top:40px;border:none;border-top:1px solid #e5e5e5;">
+                <p style="text-align:center;color:#888;font-size:11px;font-style:italic;">Copia questo testo e incollalo in fondo alla tua tesi.</p>
+            </body>
+            </html>
+        `);
+        finestra.document.close();
+        setTimeout(() => { finestra.print(); }, 500);
+
+        // Copia anche negli appunti
+        navigator.clipboard.writeText(contenuto).then(() => {
+            cx_toast(`📋 Bibliografia copiata (${voci.length} voci)`);
+        }).catch(() => {
+            cx_toast('🖨️ Aperta finestra di stampa');
+        });
+    }
+    window.cx_esportaBibliografia = cx_esportaBibliografia;
+
+    // ============================================================
+    // EXPORT JSON
+    // ============================================================
+    function cx_esportaJSON() {
+        if (cx_archivio.length === 0) {
+            alert('Nessuna fonte da esportare.');
+            return;
+        }
+        const dati = {
+            archivio: cx_archivio,
+            esportato: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(dati, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'bibliografia-' + new Date().toISOString().split('T')[0] + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        cx_toast('📥 Export completato');
+    }
+    window.cx_esportaJSON = cx_esportaJSON;
+
+    // ============================================================
+    // TOAST
+    // ============================================================
+    function cx_toast(msg) {
+        let toast = document.getElementById('cx-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'cx-toast';
+            toast.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999;background:#22c55e;color:#fff;padding:10px 18px;border-radius:8px;font-weight:bold;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:opacity 0.3s;opacity:0;pointer-events:none;';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.style.opacity = '1';
+        clearTimeout(window.cx_toastTimeout);
+        window.cx_toastTimeout = setTimeout(() => { toast.style.opacity = '0'; }, 2000);
+    }
+</script>
 
 
         <!-- ========== PAGINA 78: CONVERTITORE VOTI E SCALE INTERNAZIONALI ========== -->
